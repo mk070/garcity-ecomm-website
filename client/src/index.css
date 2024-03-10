@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:'Satoshi-Regular',sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +9,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: url('../src/assets/fonts/Satoshi-Regular.woff') format('woff'), 
+}
+@font-face {
+  font-family: 'integral-Regular';
+  src: url('../src/assets/fonts/IntegralCF-ExtraBold.woff') format('woff'), 
+       url('../src/assets/fonts/IntegralCF-ExtraBold.woff2') format('woff2')
+}
+
+
+
+

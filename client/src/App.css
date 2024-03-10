@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes floatAnimation {
+    from {
+      transform: translate(-20%, -20%);
+      opacity: 0.9;
+    }
+    to {
+      transform: translate(-20%, -20%) translateY(-6px);
+      opacity: 1;
+    }
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .marquee {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 90s linear infinite;
   }
-}
+  
+  .logo {
+    width: 100px;
+    height: auto;
+    margin-right: 80px; /* Adjust the margin-right value to give more or less space between logos */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      width: 60px;
+      margin-right: 40px;
+      
+      /* Adjust other styles as needed for smaller screens */
+    }
+    .brands-container {
+        margin-bottom: 40px;
+    }
+  }
+
+  
+
+
+
+  

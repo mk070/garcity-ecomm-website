@@ -1,22 +1,12 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import { AppBar, Typography, Box, CssBaseline, Button, Toolbar, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom'; // Import Link component
+import Logo from '../assets/images/logo.png'; // Import your logo
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'Product', 'Gallery', 'About', 'Contact'];
 
 export const Nav = (props) => {
   const { window } = props;
@@ -27,15 +17,26 @@ export const Nav = (props) => {
   };
 
   const drawer = (
-    <Box sx={{ textAlign: 'center',backgroundColor: '#FFF4F1', color:'black' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
+    <Box sx={{ textAlign: 'center', backgroundColor: '', color: 'black' }}>
+      <Box sx={{ my: 2 }}>
+        <img src={Logo} alt="Logo" style={{ width: '100px' }} />
+      </Box>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
+            {/* Use Link component for routing */}
+            <ListItemButton
+              component={Link}
+              to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} // Define routes
+              sx={{
+                textAlign: 'center',
+                fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
+                '&:hover': {
+                  backgroundColor: '#FFF4F1', // Add hover effect
+                },
+              }}
+            >
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -49,28 +50,35 @@ export const Nav = (props) => {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar sx ={{ backgroundColor: '#FFF4F1', color:'#372B29'}} position="fixed">
+      <AppBar sx={{ backgroundColor: '#FFF4F1', color: '#372B29' }} position="fixed">
         <Toolbar>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { sm: 'block' } }}
-          >
-            MUI
-          </Typography>
+          <Box sx={{ mr: 2 , flexGrow:1,display: { sm: 'block' } }}>
+            <img src={Logo} alt="Logo" style={{ width: '110px' }} />
+          </Box>
           {/* Menu Icon */}
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="end"
             onClick={handleDrawerToggle}
-            sx={{ ml: 'auto', color:'#372B29', display: { sm: 'none' } }}
+            sx={{ ml: 'auto', color: '#372B29', display: { sm: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#372B29' }}>
+              <Button
+                key={item}
+                component={Link}
+                to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} // Define routes
+                sx={{
+                  color: '#372B29',
+                  '&:hover': {
+                    backgroundColor: '#FFF4F1', // Add hover effect
+                  },
+                  fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),          
+                }}
+              >
                 {item}
               </Button>
             ))}

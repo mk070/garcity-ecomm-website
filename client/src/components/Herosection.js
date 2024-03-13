@@ -39,13 +39,13 @@ export const Herosection = () => {
                 FIND <span style={{ color: '#DF9573' }}>CLOTHES</span><br />THAT MATCHES<br />YOUR STYLE
             </Typography>
               
-            <Typography mt={'10px'} variant='body1' sx={{fontSize:isSmallScreen ? '1vvvpx' : '0',}}>
+            <Typography mt={'10px'} variant='body1' sx={{fontSize:isSmallScreen ? '10px' : '17px',}}>
                 Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
             </Typography>
 
             <Button sx={{
               background:'#DF9573',
-              mt: isSmallScreen ? '20px' : '0',
+              mt: isSmallScreen ? '20px' : '60px',
               borderRadius:'30px',
               '&:hover': {
                 backgroundColor: '#1E1E1E', 

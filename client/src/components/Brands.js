@@ -12,7 +12,7 @@ import logo8 from '../assets/images/brands/image8.png'
 
 export const Brands = () => {
   // Define your logos array
-  const logos = [logo1, logo2, logo3,logo4, logo5, logo6,logo7, logo8]; // Add more logos as needed
+  const logos = [logo1, logo2, logo3,logo4, logo5, logo6,logo7, logo8,logo1, logo2, logo3,logo4, logo5, logo6,logo7, logo8]; // Add more logos as needed
 
   return (
     <div className="brands-container" >

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Box, Container, Stack, Paper, Typography } from '@mui/material';
 import woman1 from '../assets/images/Categories/woman1.png';
@@ -6,6 +7,10 @@ import men1 from '../assets/images/Categories/men1.png';
 import men2 from '../assets/images/Categories/men2.png';
 import kid1 from '../assets/images/Categories/kid1.png';
 import kid2 from '../assets/images/Categories/kid2.png';
+=======
+import React from 'react'
+import {Box,Typography,Stack} from '@mui/material'
+>>>>>>> b6bef86e4af0f813846360667f9606f203c73eba
 
 export const Categories = () => {
   const [hoveredImage, setHoveredImage] = useState(null);
@@ -27,6 +32,7 @@ export const Categories = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Typography sx={{ display: 'block', paddingLeft: '24px', fontSize: '24px', textAlign: 'center', mt: '70px' }}>Categories</Typography>
       <Container sx={{ display: 'flex', height: '50vh', mt: '00px', flexDirection: {md:'row',lg:'row',xs:'column',sm:'row'}, alignItems: 'center', paddingLeft: '1px', justifyContent: 'space-around' }}>
@@ -84,3 +90,20 @@ export const Categories = () => {
     </>
   );
 };
+=======
+    <Box sx={{
+      display:'flex',
+      justifyContent:'center',
+      mt:{sm:'10px', lg:'20px', xs:'30px'},  // lg - desktop , xs - phone , sm -tablet
+
+    }}>
+      <Typography>
+          Categories
+      </Typography>
+      <Stack>
+        
+      </Stack>
+    </Box>
+  )
+}
+>>>>>>> b6bef86e4af0f813846360667f9606f203c73eba

@@ -1,8 +1,17 @@
-import { Box } from '@mui/material'
 import React from 'react'
+import {Box, Container, Grid} from "@mui/material"
+import { Slider } from '../components/Slider'
+import { Clothes } from '../components/Clothes'
+import { Fabric } from '../components/Fabric'
 
 export const Product = () => {
   return (
-    <Box sx={{mt:'50px'}}>gfdg</Box>
+  <>
+     <Slider/>
+     <Clothes/>
+     <Clothes/>
+     <Clothes/>
+     <Fabric/>
+   </>
   )
 }

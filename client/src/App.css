@@ -47,8 +47,10 @@
     }
   }
 
+  .zoom-image {
+    transition: transform 0.2s ease-in-out; /* Add transition effect for smooth zoom */
+  }
   
-
-
-
-  
+  .zoom-image:hover {
+    transform: scale(1.1); /* Apply scale transformation on hover */
+  }

@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "npx": "^10.2.2"
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "npx": "^10.2.2",
+    "swiper": "^11.0.7"
   }
 }

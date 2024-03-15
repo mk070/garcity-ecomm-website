@@ -1,6 +1,7 @@
 import React from 'react'
 import {Box,Typography} from '@mui/material'
 import bgimg from '../assets/images/bgimg.png'
+import img from '../assets/images/feature1.png'
 
 export const Feature = () => {
   return (
@@ -10,8 +11,9 @@ export const Feature = () => {
         </Box>
 
         <Box sx={{display:'flex',alignItems:'',mt:'80px', flexDirection:'row'}}>
-            <Box sx={{width:'30%', mt:''}}>
+            <Box sx={{width:'30%', mt:'',position:'relative'}}>
                 <img width={'100%'} src={bgimg} alt="" srcset="" />
+                <img width={'100%'} src={bgimg} style={{position:'absolute', top:'10px',right:'2px', transform: 'rotate(-5deg)'}} alt="" srcset="" />
             </Box>
 
             <Box sx={{width:'50%', display:'flex',pt:'30px', flexDirection:'column', ml:'120px'}}>

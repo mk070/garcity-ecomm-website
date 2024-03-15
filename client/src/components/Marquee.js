@@ -18,17 +18,30 @@ const Marquee = ({ logos }) => {
       const animateMarquee = () => {
         const marqueeWidth = marquee.offsetWidth;
         const contentWidth = marquee.scrollWidth;
-
-        let animationDuration = 40; // Default animation speed for desktop
-
+        const logoWidth = contentWidth / logos.length;
+      
+        // Duplicate logos array to create a continuous loop
+        const cloneLogos = [...logos, ...logos];
+      
+        // Append the first logo again at the end of the marquee
+        const firstLogoClone = marquee.children[0].cloneNode(true);
+        marquee.appendChild(firstLogoClone);
+      
+        // Set negative margin on the first logo to hide it partially
+        marquee.style.marginLeft = `-${logoWidth}px`;
+      
+        let animationDuration = 25; // Default animation speed for desktop
+      
         if (isSmallScreen) {
           animationDuration = 5; // Adjusted animation speed for mobile devices
         }
-
+      
         animationDuration *= contentWidth / marqueeWidth;
-
+      
         marquee.style.animation = `marquee ${animationDuration}s linear infinite`;
       };
+      
+      
 
       animateMarquee();
 

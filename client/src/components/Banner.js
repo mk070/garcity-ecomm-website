@@ -1,6 +1,5 @@
 import React from 'react'
-import banner from "../assets/images/banner.svg";
-import pin1 from "../assets/images/pin1.png";
+import banner from "../assets/images/banner.png";import pin1 from "../assets/images/pin1.png";
 import red from "../assets/images/pin2.png";
 import blue from "../assets/images/pin3.png";
 import darkblue from "../assets/images/pin4.png";

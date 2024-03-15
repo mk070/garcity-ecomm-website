@@ -8,7 +8,7 @@ export const Popularcollection = () => {
         <Box sx={{display:'flex' , flexDirection:'row', ml:'0px', justifyContent:'space-around', alignItems:'center'}}>
           <Box sx={{width:'50%'}}>
             <Typography variant='h5'>Popular Collection</Typography>
-            <Typography variant="body2" sx={{mt:'20px'}} >What you wear is how you present yourself to the world, especially today, when human contacts are so quick. Fashion is instant language</Typography>
+            <Typography variant="body2" sx={{mt:'20px'}} >What you wear is how you present yourself to the world, especially today, when human contacts are so quick. <br /> Fashion is instant language</Typography>
           </Box>
 
           <Button sx={{

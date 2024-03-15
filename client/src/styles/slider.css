@@ -48,7 +48,7 @@
   top: 50%;
 }
 
-@media only screen and (max-width: 640px) {  /* For devices */
+@media (max-width: 640px) {  /* For devices */
     .App {
         width: 90%;
         margin: 4rem auto;
@@ -57,18 +57,20 @@
       
       .slide img {
         width: 10rem;
-        margin: 0 auto;
+        margin: 0 -30px;
       }
       
       .slide {
-        transform: scale(0.5);
+        transform: scale(0.4);
         transition: transform 300ms;
         opacity: 0.5;
+        z-index: -1;
       }
       
       .activeSlide {
-        transform: scale(1.1);
+        transform: scale(1.0);
         opacity: 1;
+        z-index: 1;
       }
       
 }

@@ -19,7 +19,7 @@ const Marquee = ({ logos }) => {
         const marqueeWidth = marquee.offsetWidth;
         const contentWidth = marquee.scrollWidth;
 
-        let animationDuration = 30; // Default animation speed for desktop
+        let animationDuration = 40; // Default animation speed for desktop
 
         if (isSmallScreen) {
           animationDuration = 5; // Adjusted animation speed for mobile devices

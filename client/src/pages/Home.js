@@ -5,6 +5,8 @@ import { Banner } from '../components/Banner';
 import { Herosection } from '../components/Herosection';
 import { Brands } from '../components/Brands';
 import { Categories } from '../components/Categories';
+import { Popularcollection } from '../components/Popularcollection';
+import { Feature } from '../components/Feature';
 
 
 export const Home = () => {
@@ -25,6 +27,8 @@ export const Home = () => {
       <Herosection /> 
       <Brands />
       <Categories />
+      <Popularcollection />
+      <Feature />
       
     </Box>
   );

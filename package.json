@@ -1,11 +1,8 @@
 {
   "dependencies": {
-<<<<<<< HEAD
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-=======
->>>>>>> 926ab9058d625a59bc5213129ad3dff59e9aaee2
     "npx": "^10.2.2",
     "react-fast-marquee": "^1.6.4",
     "swiper": "^11.0.7"

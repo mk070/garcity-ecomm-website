@@ -7,7 +7,7 @@ import { Fabric } from '../components/Fabric'
 export const Product = () => {
   return (
   <>
-     <Slider/>
+     {/* <Slider/> */}
      <Clothes/>
      <Clothes/>
      <Clothes/>

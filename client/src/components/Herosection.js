@@ -11,7 +11,7 @@ export const Herosection = () => {
       sx={{
         display: 'flex',
         flexDirection: isSmallScreen ? 'column-reverse': 'row',
-        marginTop: '64px',
+      
         alignItems: 'center',
         padding: isSmallScreen ? '0': '0 130px',
         height: isSmallScreen ? '90vh':'95vh', // Adjust height to auto for responsiveness

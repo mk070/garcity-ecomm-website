@@ -1,7 +1,7 @@
 import { Box , Typography,Button} from '@mui/material'
 import React from 'react'
-import { Slidercom } from './Slider'
-
+import { Homeslider } from './Homeslider'
+ 
 export const Popularcollection = () => {
   return (
       <Box sx={{display:'flex', justifyContent:'center', flexDirection:'column', bgcolor:'#FFF4F1'}}>
@@ -23,7 +23,7 @@ export const Popularcollection = () => {
             }} variant="contained">Know More</Button>
         </Box>
         <Box >
-          <Slidercom />
+          <Homeslider />
         </Box>
       </Box>
     )

@@ -48,7 +48,7 @@ export const Nav = (props) => {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' , marginBottom:'64px'}}>
       <CssBaseline />
       <AppBar sx={{ backgroundColor: '#FFF4F1', color: '#372B29' }} position="fixed">
         <Toolbar>

@@ -8,7 +8,7 @@ import Marquee from 'react-fast-marquee';
 // import img6 from './images/six.png';
 // import img7 from './images/seven.png';
 // import img8 from './images/eight.png';
-// import img9 from './images/nine.png';
+// import img9 from './images/nine.png'; 
 // import img10 from './images/ten.png';
 // import './App.css';
 

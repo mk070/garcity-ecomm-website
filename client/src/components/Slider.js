@@ -14,10 +14,7 @@ export const Slider = () => {
   return (
     <>
     <Box bgcolor="transparent" mx={isSmallScreen ? 2 : 10} 
-<<<<<<< HEAD
-=======
     
->>>>>>> 3a8a5e97ec5e43e28f9f84542c85352b075be00a
      height={400} display="flex" sx={{
     borderRadius:"20px",overflow:"hidden", 
     height: isSmallScreen ? '200px': '350px',

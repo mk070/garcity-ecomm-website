@@ -1,11 +1,8 @@
 import { Box , Typography,Button} from '@mui/material'
 import React from 'react'
 import { Homeslider } from './Homeslider'
-<<<<<<< HEAD
 
-=======
  
->>>>>>> 3a8a5e97ec5e43e28f9f84542c85352b075be00a
 export const Popularcollection = () => {
   return (
       <Box sx={{display:'flex', justifyContent:'center', flexDirection:'column', bgcolor:'#FFF4F1'}}>

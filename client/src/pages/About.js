@@ -1,14 +1,20 @@
 import React from 'react'
-import {Box,Typography} from '@mui/material'
-import { Marquee2 } from '../components/Marquee2'
-
+import { Hero } from '../components/aboutpage/Hero'
+import { Marquee } from '../components/aboutpage/Marquee'
+import { Feature } from '../components/aboutpage/Feature'
+import { Printing } from '../components/aboutpage/Printing'
+import { Colors } from '../components/aboutpage/Colors'
+import { Gsm } from '../components/aboutpage/Gsm'
 
 export const About = () => {
   return (
     <>
-      <Box>
-        <Marquee2 />
-      </Box>
+      <Hero />
+      <Marquee />
+      <Feature />
+      <Printing />
+      <Colors />
+      <Gsm />
     </>
   )
 }

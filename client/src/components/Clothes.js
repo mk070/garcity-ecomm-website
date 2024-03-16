@@ -9,14 +9,11 @@ import { Navigation } from 'swiper/modules'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../App.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 
 export const Clothes = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return(
-    
       <>
         <Typography marginTop={"50px"} mx={10} variant='h3'
           sx={{

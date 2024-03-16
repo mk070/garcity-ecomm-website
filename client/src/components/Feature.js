@@ -13,7 +13,7 @@ export const Feature = () => {
         <Box sx={{display:'flex',alignItems:'',mt:'80px', flexDirection:'row'}}>
             <Box sx={{width:'30%', mt:'',position:'relative'}}>
                 <img width={'100%'} src={bgimg} alt="" srcset="" />
-                <img width={'100%'} src={bgimg} style={{position:'absolute', top:'10px',right:'2px', transform: 'rotate(-5deg)'}} alt="" srcset="" />
+                <img width={'102%'} src={img} style={{position:'absolute', top:'1px',right:'2px', transform: 'rotate(1deg)'}} alt="" srcset="" />
             </Box>
 
             <Box sx={{width:'50%', display:'flex',pt:'30px', flexDirection:'column', ml:'120px'}}>

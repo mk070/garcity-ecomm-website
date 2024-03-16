@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3a8a5e97ec5e43e28f9f84542c85352b075be00a
 import "../styles/slider.css";
 import { useState } from "react";
 import Slider from "react-slick";

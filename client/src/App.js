@@ -7,7 +7,6 @@ import { Product } from './pages/Product';
 import {Gallery} from './pages/Gallery';
 import {About} from './pages/About';
 import {Contact} from "./pages/Contact";
-import { ProductDetails } from './pages/ProductDetails';
 import { MensWear } from './pages/MensWear';
 import { WomensWear } from './pages/WomensWear';
 import Fqa from './components/Fqa'
@@ -26,6 +25,7 @@ function App() {
         <Route path='/about'  element={<About />}/>
         <Route path='/contact'  element={<Contact />}/>
         <Route path='/fqa'  element={<Fqa />}/>
+        <Route path='/order & fqa'  element={<Fqa />}/>
         {/* <Route path='/*'  element={< />}/> */}
 
         

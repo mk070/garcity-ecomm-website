@@ -1,55 +1,95 @@
 import React, { useEffect, useState } from "react";
 import Faq from "react-faq-component";
 import { Box } from "@mui/material";
+import CatalogueIcon from '../assets/images/fqa/catalogue.svg'
  
 const data = {
     title: "FAQ (How it works)",
     rows: [
-        {
-            title: "Lorem ipsum dolor sit amet,",
-            content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tempor sem. Aenean vel turpis feugiat,
-              ultricies metus at, consequat velit. Curabitur est nibh, varius in tellus nec, mattis pulvinar metus.
-              In maximus cursus lorem, nec laoreet velit eleifend vel. Ut aliquet mauris tortor, sed egestas libero interdum vitae.
-              Fusce sed commodo purus, at tempus turpis.`,
+        {   
+            title: "Do You Have A Catalogue? ",
+            content: <p>No, We Don’t Have A Ready-made Catalogue.</p>
         },
         {
-            title: "Nunc maximus, magna at ultricies elementum",
-            content:
-                "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam, vitae convallis ex tortor sed dolor.",
+            title: "What Is Your MOQ?",
+            content: <p> "For Ready-made Available Fabric, The Moq Is 100 Pieces Per Colour And Design, With 4 Custom Sizes. We Also Accommodate Fabrication For Higher Quantities.</p>
         },
         {
-            title: "Curabitur laoreet, mauris vel blandit fringilla",
-            content: `Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc, ac sagittis leo elit vel lorem.
-            Fusce tempor lacus ut libero posuere viverra. Nunc velit dolor, tincidunt at varius vel, laoreet vel quam.
-            Sed dolor urna, lobortis in arcu auctor, tincidunt mattis ante. Vivamus venenatis ultricies nibh in volutpat.
-            Cras eu metus quis leo vestibulum feugiat nec sagittis lacus.Mauris vulputate arcu sed massa euismod dignissim. `,
+            title: "Do You Do Printing & Embroidery?",
+            content: <p> Yes, We Offer Various Printing Options, Including Screen Printing, Puff Printing, Hd Printing, DTF Sticker Printing, Emboss Printing, Embroidery, Etc. </p>
         },
         {
-            title: "What is the package version",
-            content: <p>current version is 1.2.1</p>,
+            title: "Do You Provide Samples?",
+            content: <p>Yes, We Provide Sample Swatches And Customised Design Samples.
+            </p>,
+        },
+        {
+            title: "What Is The Pricing?",
+            content: <p>Upon Submission Of Your Specific Requirements, We Will Calculate The Pricing Accordingly.
+            </p>,
+        },
+        {
+            title: "Do You Take Corporate Orders? ",
+            content: <p> Yes, We Do Accept Corporate Orders. </p>,
+        },
+        {
+            title: "What Is Your Delivery Timeline?  ",
+            content: <p>The Delivery Timeline Depends On The Quantity Of The Product. </p>,
+        },
+        {
+            title: "Do You Provide Low MOQ? ",
+            content: <p> Yes, We Offer A Low MOQ Of 50 Pieces Per Colour/design, Specifically For Dtf Sticker Printing.
+            </p>,
+        },
+        {
+            title: "What Is Your Production Capacity? ",
+            content: <p>Our Production Capacity Allows Us To Deliver A Minimum 1000 Pieces Per Day.
+            </p>,
+        },
+        {
+            title: "Do You Provide Customization? ",
+            content: <p>Yes, We Provide Customization Options For GSM, Colour, Material, And Design.
+            </p>,
         },
     ],
 };
  
 const styles = {
-    // bgColor: 'white',
+    
     titleTextColor: "#372b29",
     rowTitleColor: "rgb(223, 149, 115)",
-    // rowContentColor: 'grey',
-    // arrowColor: "red",
+    bgcolor:'red'
+ 
 };
  
 const config = {
-    // animate: true,
-    // arrowIcon: "V",
-    // tabFocus: true
 };
  
 export default function Fqa (){
- 
+   // Custom CSS to add icon to each FAQ item
+   const customCss = `
+   .row-title-text:before {
+     content: url(${CatalogueIcon}); // Add icon before each FAQ item
+     margin-right: 1px;
+     width:5%;
+     display:flex; // Adjust margin as needed
+   }
+   .row-title-text{
+    display: flex;
+    flex-direction: row;
+    width:100%   }
+    .faq-row-wrapper{
+        background-color:#cbcbcb; 
+        padding:60px;
+        border-radius:30px;
+    }
+ `;
     return (
-        <Box>
-            <Faq
+        <Box sx={{margin:{sm:'20px 120px'}}}>
+               <style>{customCss}</style> {/* Inject custom CSS */}
+
+            <Faq 
+                icon
                 data={data}
                 styles={styles}
                 config={config}

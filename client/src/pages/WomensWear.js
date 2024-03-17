@@ -1,10 +1,17 @@
 import React from 'react'
-import { Slider } from '../components/Product/Slider'
+import  Banner  from '../components/categories/Banner'
+import { Breadcrumbs } from '@mui/material'
+import IconBreadcrumbs from '../components/categories/Breadcrums'
+import tshirts from "../assets/images/mens.png"
+import { Collections } from '../components/categories/Collections'
+
 
 export const WomensWear = () => {
   return (
     <>
-        <Slider />
+        <Banner image={tshirts} />
+        <IconBreadcrumbs lastBreadcrumb='Mens wear'/>
+        <Collections />
     </>
   )
 }

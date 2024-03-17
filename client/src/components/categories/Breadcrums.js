@@ -7,9 +7,9 @@ import WhatshotIcon from '@mui/icons-material/Whatshot';
 import GrainIcon from '@mui/icons-material/Grain';
 
 
-export default function IconBreadcrumbs() {
+export default function IconBreadcrumbs({lastBreadcrumb} ) {
   return (
-    <Box sx={{paddingLeft: { sm: '110px' }}}>
+    <Box sx={{paddingLeft: { sm: '110px' }, mb:{sm:'30px'}}}>
       <Breadcrumbs aria-label="breadcrumb">
         <Link
           underline="hover"
@@ -34,7 +34,7 @@ export default function IconBreadcrumbs() {
           color="text.primary"
         >
           <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Breadcrumb
+            {lastBreadcrumb}
         </Typography>
       </Breadcrumbs>
     </Box>

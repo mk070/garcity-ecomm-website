@@ -1,12 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Nav } from './components/Nav';
-import { Footer } from './components/Footer';
+import  Footer  from './components/Footer';
 import { Home } from './pages/Home';
 import { Product } from './pages/Product';
 import {Gallery} from './pages/Gallery';
 import {About} from './pages/About';
 import {Contact} from "./pages/Contact";
+import { ProductDetails } from './pages/ProductDetails';
+import { MensWear } from './pages/MensWear';
+import { WomensWear } from './pages/WomensWear';
+import Fqa from './components/Fqa'
 
 function App() {
   return (
@@ -15,9 +19,16 @@ function App() {
       <Routes>
         <Route path='/'  element={<Home />}/>
         <Route path='/product'  element={<Product />}/>
+        <Route path='/product/menswear'  element={<MensWear />}/>
+        <Route path='/product/womenswear'  element={<WomensWear />}/>
+        <Route path='/product/menswear'  element={<MensWear />}/>
         <Route path='/gallery'  element={<Gallery />}/>
         <Route path='/about'  element={<About />}/>
         <Route path='/contact'  element={<Contact />}/>
+        <Route path='/fqa'  element={<Fqa />}/>
+        {/* <Route path='/*'  element={< />}/> */}
+
+        
       </Routes>
       <Footer />
     </>

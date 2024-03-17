@@ -1,88 +1,58 @@
 import React from 'react';
-import { Typography, Box, Paper } from '@mui/material';
-import MuiLink from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
-import { styled } from '@mui/material/styles';
+import { useMediaQuery,Typography, Box, Grid, Link } from '@mui/material';
 import logo from '../assets/images/logo2.png';
-import { Link } from 'react-router-dom';
 
-const FooterContainer = styled(Box)({
-  backgroundColor: '#372B29',
-  height: '55vh',
-  width: '100%',
-  color: 'white',
-  display: 'flex',
-  flexDirection: 'column',
-  padding: '20px'
-});
 
-const FooterSection = styled(Box)({
-  display: 'flex',
-  flexDirection: 'column',
-  marginRight: '20px',
-  marginTop:'30px'
-});
+const Footer = () => {
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
-const FooterLink = styled(Link)({
-  color: 'white',
-  textDecoration: 'none',
-  '&:hover': {
-    textDecoration: 'underline'
-  }
-});
-
-const CopyrightLink = styled(MuiLink)({
-  color: 'white',
-  textDecoration: 'none',
-  marginTop: '20px',
-  '&:hover': {
-    textDecoration: 'underline'
-  }
-});
-
-export const Footer = () => {
   return (
-    <FooterContainer>
-      <Grid container spacing={2}> {/* Reduced spacing from 3 to 2 */}
-        <Grid item xs={12} sm={4} md={3}sx={{marginLeft:'50px'}}>
+    <Box sx={{ backgroundColor: '#372B29', color: 'white', padding: '20px',width:{xs:'100%'} , height:{sm:'60vh'}}}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={4} md={3} sx={{ textAlign: 'center' }}>
           <Box>
-            <img src={logo} width={'30%'} alt="" srcset="" />
-            <Typography variant='body1' mt={'20px'}>Garcity, is more than just a garment manufacturer – we are the architects of your unique style.</Typography>
+            <img src={logo} width={isSmallScreen? '30%' :'40%'} alt="" />
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}, textAlign:{sm:'start'},paddingLeft:{sm:'80px'}}} mt={2}>Garcity, is more than just a garment manufacturer – we are the architects of your unique style.</Typography>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={6} md={3} sx={{marginLeft:'160px'}}>
-          <FooterSection>
-            <Typography variant='h5' marginBottom={'30px'}>Social</Typography>
-            <Typography variant='body1'  marginBottom={'14px'}><FooterLink to="#">Facebook</FooterLink></Typography>
-            <Typography variant='body1' marginBottom={'14px'}><FooterLink to="#">Instagram</FooterLink></Typography>
-            <Typography variant='body1' marginBottom={'14px'}><FooterLink to="#">Whatsapp</FooterLink></Typography>
-            <Typography variant='body1' ><FooterLink to="#">Youtube</FooterLink></Typography>
-          </FooterSection>
+        <Grid item xs={6} sm={6} md={3} sx={{ textAlign: 'center', mt:{sm:'40px'}}}>
+          <Box sx={{ paddingLeft:{sm:'130px'},marginBottom: '20px' ,textAlign:'start'}}>
+            <Typography variant='h5' sx={{fontSize:{xs:'18px',sm:'26px'}}} mb={2}>Social</Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}}} mb={1}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Facebook</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}}} mb={1}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Instagram</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}}} mb={1}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Whatsapp</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}}}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Youtube</Link></Typography>
+          </Box>
         </Grid>
-        <Grid item xs={12} sm={6} md={3} sx={{marginLeft:'-110px'}}>
-          <FooterSection>
-            <Typography variant='h5' marginBottom={'30px'}>Info</Typography>
-            <Typography variant='body1'marginBottom={'14px'}><FooterLink to="#">Home</FooterLink></Typography>
-            <Typography variant='body1'marginBottom={'14px'}><FooterLink to="#">Products</FooterLink></Typography>
-            <Typography variant='body1'marginBottom={'14px'}><FooterLink to="#">Gallery</FooterLink></Typography>
-            <Typography variant='body1'marginBottom={'14px'}><FooterLink to="#">About us</FooterLink></Typography>
-            <Typography variant='body1'><FooterLink to="#">Contact Us</FooterLink></Typography>
-          </FooterSection>
+        <Grid item xs={6} sm={6} md={3} sx={{ textAlign: 'center' , mt:{sm:'40px'}}}>
+          <Box sx={{  paddingLeft:{sm:'60px'},marginBottom: '20px' , textAlign:'start'}}>
+            <Typography variant='h5' sx={{fontSize:{xs:'18px',sm:'26px'}}} mb={2}>Info</Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}}} mb={1}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Home</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}}} mb={1}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Product</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}}} mb={1}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Gallery</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}}} mb={1}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>About us</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}}} ><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Contact us</Link></Typography>
+          </Box>
         </Grid>
-        <Grid item xs={12} sm={6} md={3} sx={{marginLeft:'-110px'}}>
-          <FooterSection>
-            <Typography variant='h5' marginBottom={'30px'}>Contact</Typography>
-            <Typography variant='body1'>1/354 H Asm garden Ksn puram 3rd street semmipalayam palladam, Tiruppur - 641662</Typography>
-          </FooterSection>
+        <Grid item xs={12} sm={6} md={3} sx={{ textAlign: 'center' , mt:{sm:'40px'}}}>
+          <Box textAlign={'start'} sx={{paddingRight:{sm:'30px'}}}>
+            <Typography variant='h5' sx={{fontSize:{xs:'18px',sm:'26px'}}} mb={2}>Contact</Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}}}>1/354 H Asm garden Ksn puram 3rd street semmipalayam palladam, Tiruppur - 641662</Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}, mt:{sm:'20px'}}}>Phone : 9038493274</Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'12px',sm:'16px'}, mt:{sm:'20px'}}}>Mail : test@gamil.com</Typography>
+          </Box>
         </Grid>
+        {/* Other Grid items follow similar pattern */}
       </Grid>
-      <Typography marginTop={'90px'} variant="body2" color="white" align="center">
+      <Typography sx={{fontSize:{xs:'12px',sm:'16px'},mt:{sm:'100px', xs:'80px'}}} variant="body2" align="center">
         {'Copyright © '}
-        <CopyrightLink href="https://mui.com/">
-          Garcity
-        </CopyrightLink>{' '}
-        {new Date().getFullYear()}.
+        Garcity {new Date().getFullYear()}.
       </Typography>
-    </FooterContainer>
+      <Typography sx={{fontSize:{xs:'12px',sm:'16px'},mt:{sm:'10px', xs:'10px'}}} variant="body2" align="center">
+        Crafted by - Varloom
+      </Typography>
+    </Box>
   )
 }
+
+export default Footer;

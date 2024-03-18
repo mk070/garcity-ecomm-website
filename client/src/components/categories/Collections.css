@@ -1,0 +1,14 @@
+.collection-card-container {
+    perspective: 1000px; /* Define perspective for 3D effect */
+  }
+  
+  .collection-card {
+    width: 345px;
+    height: 300px;
+    transition: transform 0.5s; /* Apply transition for smooth animation */
+  }
+  
+  .collection-card:hover {
+    transform: translateZ(50px); /* Move card towards the viewer on hover */
+  }
+  

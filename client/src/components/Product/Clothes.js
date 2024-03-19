@@ -6,21 +6,33 @@ import tshirts from "../../assets/images/productpage/3.png"
 import colors from "../../assets/images/productpage/2.png"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
+import { Link } from 'react-router-dom'
 import 'swiper/css';
 import 'swiper/css/navigation';
 // import '../App.css'
 
 
-export const Clothes = () => {
+export const Clothes = ({categorie}) => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return(
-      <>
+      <> 
         <Typography marginTop={"50px"} mx={10} variant='h3'
           sx={{
             fontSize: isSmallScreen ? '30px' : '50px',
             fontFamily: ['integral-Regular', 'sans-serif'].join(','),
             marginBottom: '50px',
-          }}>MEN'S Wear </Typography>
+            '& a': {
+              color: 'inherit', // Inherit text color
+              textDecoration: 'none', // Remove underline
+              transition: 'transform 10s ease-in-out',
+            },
+            '& a:hover':{
+              color:"#DF9573", 
+              transform: 'scale(8)',
+              textDecoration:'underline'
+            }
+
+          }}> <Link  to={`/product/${categorie.toLowerCase().replace(/\s+/g, '')}`}>{categorie}</Link> </Typography>
       <Container  maxWidth={"xl"} sx={{
         width:"93%",
         marginBottom:"80px"

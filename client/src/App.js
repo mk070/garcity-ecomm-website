@@ -9,7 +9,8 @@ import {About} from './pages/About';
 import {Contact} from "./pages/Contact";
 import { MensWear } from './pages/MensWear';
 import { WomensWear } from './pages/WomensWear';
-import Fqa from './components/Fqa'
+import Fqa from './components/order&Fqa/Fqa'
+import { OrderFqa } from './pages/OrderFqa';
 
 function App() {
   return (
@@ -24,8 +25,7 @@ function App() {
         <Route path='/gallery'  element={<Gallery />}/>
         <Route path='/about'  element={<About />}/>
         <Route path='/contact'  element={<Contact />}/>
-        <Route path='/fqa'  element={<Fqa />}/>
-        <Route path='/order & fqa'  element={<Fqa />}/>
+        <Route path='/order & fqa'  element={<OrderFqa />}/>
         {/* <Route path='/*'  element={< />}/> */}
 
         

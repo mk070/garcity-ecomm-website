@@ -1,14 +1,17 @@
-<<<<<<< HEAD
-=======
 import { Slider } from '../components/Product/Slider'
->>>>>>> 1b2a781dd3feb73a30fc891738a1f8c0df3ea79c
 import React from 'react'
 import { InputForm } from '../components/ContactUs/InputForm'
+import { CatchLine } from '../components/ContactUs/CatchLine'
+import { Detials } from '../components/ContactUs/Detials'
+import { Maps } from '../components/ContactUs/Maps'
 
 export const Contact = () => {
   return (
     <> 
     <InputForm/>
+    <CatchLine/>
+    <Detials/>
+    <Maps/>
     </>
   )
 }

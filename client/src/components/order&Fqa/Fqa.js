@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Faq from "react-faq-component";
 import { Box } from "@mui/material";
-import CatalogueIcon from '../assets/images/fqa/catalogue.svg'
+import CatalogueIcon from '../../assets/images/fqa/catalogue.svg'
  
 const data = {
     title: "FAQ (How it works)",

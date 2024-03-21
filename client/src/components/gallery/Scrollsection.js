@@ -1,20 +1,22 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import './gallery.css'
-import img1 from '../../assets/images/popularcollection/image1.png'
-import img2 from '../../assets/images/popularcollection/image2.png'
-import img3 from '../../assets/images/popularcollection/image3.png'
-import img4 from '../../assets/images/popularcollection/image4.png'
+import { ScrollTrigger } from "gsap/all";
+import { Box } from "@mui/material";
 
 
-function Scrollsection() {
+import './gallery.css';
+import img1 from '../../assets/images/popularcollection/image1.png';
+import img2 from '../../assets/images/popularcollection/image2.png';
+import img3 from '../../assets/images/popularcollection/image3.png';
+import img4 from '../../assets/images/popularcollection/image4.png';
+
+const Scrollsection = () => {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
-  gsap.registerPlugin(ScrollTrigger);
-
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     const pin = gsap.fromTo(
       sectionRef.current,
       {
@@ -33,36 +35,67 @@ function Scrollsection() {
         },
       }
     );
+
     return () => {
-      {/* A return function for killing the animation on component unmount */ }
       pin.kill();
     };
   }, []);
 
   return (
-    <section className="scroll-section-outer">
-      {/* The section up act just as a wrapper. If the trigger (below) is the
-      first jsx element in the component, you get an error on route change */}
+    <section className="scroll-section-outer" style={{position:'relative'}}>
+      <Box sx={{marginLeft:{sm:'150px'}}}> 
+        <svg  
+                    style={{
+                    position:'absolute',
+                    top:'0px'
+                    
+                    }}  width="3cm" height="130cm" viewBox="0 0 400 600"
+                        xmlns="http://www.w3.org/2000/svg" version="1.1">
+                    
+                        <path d="M375,300 v-20750" fill="yellow" stroke="#372b29" stroke-width="3" />
 
-      {/* The div below act just as a trigger. As the doc suggests, the trigger and 
-      the animation should alway be two separated refs */}
+        </svg>
+        </Box>
+        <Box sx={{marginLeft:{sm:'700px'}}}>
+          <svg  
+                      style={{
+                      position:'absolute',
+                      top:'0px'
+                      
+                      }}  width="3cm" height="130cm" viewBox="0 0 400 600"
+                          xmlns="http://www.w3.org/2000/svg" version="1.1">
+                      
+                          <path d="M275,300 v-20750" fill="yellow" stroke="#372b29" stroke-width="3" />
+
+          </svg>
+        </Box>
+        <Box sx={{marginLeft:{sm:'1200px'}}}>
+          <svg  
+                      style={{
+                      position:'absolute',
+                      top:'0px'
+                      
+                      }}  width="3cm" height="130cm" viewBox="0 0 400 600"
+                          xmlns="http://www.w3.org/2000/svg" version="1.1">
+                      
+                          <path d="M275,300 v-20750" fill="yellow" stroke="#372b29" stroke-width="3" />
+
+          </svg>
+        </Box>
       <div ref={triggerRef}>
         <div ref={sectionRef} className="scroll-section-inner">
           <div className="scroll-section">
-                <img width={'350px'} style={{marginRight:'100px', marginBottom:'80px'}} src={img1} alt="" />
-                <img width={'350px'} style={{marginRight:'100px',marginTop:'70px'}} src={img2} alt="" />
-                <img width={'350px'} style={{marginRight:'100px',marginTop:'70px'}} src={img3} alt="" />
-                <img width={'350px'} style={{marginRight:'100px',marginTop:'70px'}} src={img4} alt="" />
-                <img width={'350px'} style={{ marginBottom:'150px'}} src={img3} alt="" />
+            <img width={'350px'} style={{marginRight:'100px', marginBottom:'80px'}} src={img1} alt="" />
+            <img width={'350px'} style={{marginRight:'100px',marginTop:'20px'}} src={img2} alt="" />
+            <img width={'350px'} style={{marginRight:'100px',marginTop:'100px'}} src={img4} alt="" />
+            <img width={'350px'} style={{marginRight:'100px',marginTop:'10px'}} src={img3} alt="" />
+            <img width={'350px'} style={{marginRight:'100px',marginTop:'70px'}} src={img2} alt="" />
+            <img width={'350px'} style={{marginRight:'100px',marginTop:'70px'}} src={img3} alt="" />
+            <img width={'350px'} style={{ marginBottom:'150px'}} src={img3} alt="" />
           </div>
-          {/* <div className="scroll-section">
-                 <img width={'350px'} style={{marginRight:'100px', marginBottom:'0px'}} src={img4} alt="" />
-                <img width={'350px'} style={{marginRight:'100px',marginTop:'140px'}} src={img3} alt="" />
-               
-          </div> */}
-          
         </div>
       </div>
+      
     </section>
   );
 }

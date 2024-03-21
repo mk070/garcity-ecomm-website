@@ -9,7 +9,7 @@ body,
 }
 
 :root {
-  --backgroundColor: #292929;
+  --backgroundColor: #ffe9e5;
   --primaryColor: #0aa1ff;
   --primaryTextColor: #e6e6e6;
 
@@ -48,6 +48,7 @@ body {
 
 .scroll-section-outer {
   overflow: hidden;
+  background-color:#FFF4F1;
 }
 
 .scroll-section-inner {
@@ -60,7 +61,7 @@ body {
 
 .scroll-section {
   height: 100vh;
-  width: 150vw;
+  width: 190vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,4 +72,105 @@ body {
   letter-spacing: var(--headlineMedium);
   font-size: var(--headlineMedium);
   text-transform: uppercase;
+}
+body {
+  height: 300vh;
+}
+
+/* hero */
+.container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.scaleDown {
+  width: 100vw;
+  height: 90vh;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  display: flex;
+  justify-content: center;
+  background-color: #FFF4F1;
+  transform-origin: center center;
+  transform: translate(-20%, -40%) scale(50);
+}
+
+.main-section{
+  width: 100vw;
+  position: relative;
+}
+
+/* section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h2 {
+  font-size: 60px;
+  text-align: center;
+  font-weight: 900;
+} */
+
+
+/* text */
+
+.text-ani {
+  display: grid;
+  place-content: center;
+  height: 50vh;
+}
+
+.my-text {
+  font-size: 7rem;
+  text-transform: uppercase;
+  font-family: 'Bebas Neue';
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  line-height: 5.9rem;
+}
+
+.char {
+  transform: translateY(115px);
+  transition: transform .5s;
+}
+
+/* SCROLL-button animation */
+
+.mouse {
+	width: 20px;
+	height: 40px;
+	border: 2px solid #333;
+	border-radius: 60px;
+	position: relative;
+	&::before {
+		content: '';
+		width: 8px;
+		height: 8px;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #333;
+		border-radius: 50%;
+		opacity: 1;
+		animation: wheel 2s infinite;
+		-webkit-animation: wheel 2s infinite;
+	}
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 60px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 60px;
+	}
 }

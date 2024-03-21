@@ -36,7 +36,7 @@ const Hero = () => {
         <div ref={sectionRef} className="scaleDown">
           <div className="main-section">
              <Text />
-             <Box sx={{position:'absolute',bottom:'-80px',left:"51%", width:{sm:'30%'}}}>
+             <Box sx={{position:'absolute',bottom:'-70px',left:"51%", width:{sm:'30%'}}}>
              <div class="mouse"></div>
              </Box>
             <img width={'100%'} style={{ marginRight: '100px', marginBottom: '80px' }} src={img1} alt="" />

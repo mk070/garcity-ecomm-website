@@ -7,7 +7,7 @@ import { Maps } from '../components/ContactUs/Maps'
 
 export const Contact = () => {
   return (
-    <> 
+    <>   
     <InputForm/>
     <CatchLine/>
     <Detials/>

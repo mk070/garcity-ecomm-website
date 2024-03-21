@@ -6,7 +6,7 @@ export const CatchLine = () => {
   return (
     <>
     
-  <Box mx={10} marginTop={5}   >
+  <Box mx={10} marginTop={5} >
     <Typography
                 height={100}
                 sx={{

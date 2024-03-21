@@ -44,12 +44,12 @@ export const Printing = () => {
           paddingRight:"40px",
           flexDirection:"row"
         }} >
-         <Card number = "1" type={"Puff Printing"} bgImage={puff}  />
+         {/* <Card number = "1" type={"Puff Printing"} bgImage={puff}  />
          <Card number = "2" type={"Screen Printing"} bgImage={screen}/>
          <Card number = "3" type={"Embroid"} bgImage={embroidry} />
          <Card number = "4" type={"Emboss printing"} bgImage={emboss} />
          <Card number = "5" type={"Direct to Flim"} bgImage={dtf} />
-         <Card number = "6" type={"Hign Density"} bgImage={hd}/>
+         <Card number = "6" type={"Hign Density"} bgImage={hd}/> */}
         </Grid>
       </Grid>
     </Box>

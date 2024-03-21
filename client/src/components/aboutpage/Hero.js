@@ -1,11 +1,13 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 import hero from '../../assets/images/about/dress.png';
 
 export const Hero = () => {
+    const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
   return (
-        <Box sx={{display:'flex', flexDirection:'row',margin:'0 120px',height:"65vh", marginTop:'140px'}}>
-            <Box sx={{ width:'32%'}}> <img width={'100%'} src={hero} alt="" /></Box>
+        <Box sx={{display:'flex', flexDirection:isSmallScreen ? 'column': 'row',margin:isSmallScreen ? '0 30px':'0 120px',height:"65vh", marginTop:'140px'}}>
+            <Box sx={{ width:isSmallScreen?  '70%':'32%'}}> <img width={'100%'} src={hero} alt="" /></Box>
             <Box sx={{width:'65%', marginLeft:{sm:'60px'}}}>
                 <Typography
                     variant='h3'

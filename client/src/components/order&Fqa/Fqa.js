@@ -79,7 +79,7 @@ export default function Fqa (){
     flex-direction: row;
     width:100%   }
     .faq-row-wrapper{
-        background-color:#cbcbcb; 
+        background-color:#FFF4F1; 
         padding:60px;
         border-radius:30px;
     }

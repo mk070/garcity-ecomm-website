@@ -14,7 +14,7 @@ const Colors = () => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: { sm: 'row' },
+          flexDirection: { xs: 'column',sm:'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
           padding: { sm: '80px 1px' },

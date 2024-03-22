@@ -15,11 +15,12 @@ export const Hero = () => {
                         fontSize:{xs : '30px',sm:'50px'},
                         fontFamily: ['integral-Regular', 'sans-serif'].join(','),
                     }}
-                >
-                    ‘ WE ARE MORE THAN  <br /> A <span style={{ color: '#DF9573' }}>GARMENT</span> MANUFACTURER ‘</Typography>
+                >                   
+                    ‘ MAKE YOUR OWN<br/> CLOTHING STYLE<br/> WITH<span style={{ color: '#DF9573', fontWeight:700 }}>  GARCITY ‘</span></Typography>
 
                     <Typography sx={{marginTop:{sm:'20px'}}}>
-                        Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style. <br /> <br /> Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
+                    We're a leading garment manufacturer in Tirupur, boasting over <strong>15+
+                    years</strong> of experience.Crafting quality clothing for men, women, kids, infants, and babies is our specialty.<br/>We're committed to embracing future technologies to deliver the best to our clients.<br/><br/>Our focus is on providing competitive pricing without sacrificing quality.<br/>Choose us for fashion-forward, durable, and affordable clothing solutions.
                     </Typography>
             </Box>
         </Box>

@@ -4,8 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 import tshirts from '../../assets/images/printing/tshirts.png'; 
 import { Typography, useMediaQuery, Box, TextField } from "@mui/material";
-import videoSource from '../../assets/images/contactus/tshirts.mp4';
-import gifSource from '../../assets/images/contactus/tshirt.gif';
+
 const Section = styled.div`
   height: 100vh;
   width:100%;
@@ -70,8 +69,8 @@ const Right = styled.div`
 `;
 
 const Img = styled.img`
-  width:550px;
-  height: 550px;
+  width:350px;
+  height: 350px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -93,16 +92,6 @@ const Img = styled.img`
   }
 `;
 
-const Video = styled.video`
-  width: 500px;
-  height: 500px;
-  object-fit: cover;
-  position: absolute;
-  top: 100px;
-  left: 150px;
-  z-index: 1;
-`;
-
 export const InputForm = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
@@ -111,10 +100,6 @@ export const InputForm = () => {
     <Section>
       {/* <Model >
         <Right>
-        {/* <Video autoPlay loop muted>
-              <source src={videoSource} type="video/mp4" />
-              Your browser does not support the video tag.
-            </Video> */}
           <Canvas>
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
@@ -130,9 +115,7 @@ export const InputForm = () => {
               </Sphere>
             </Suspense>
           </Canvas>
-          {/* <Img src={tshirts} /> */}
-          <Img src={gifSource} loop />
-          
+          <Img src={tshirts} />
         </Right>
         <Left>
           <Typography  mx={10} variant='h3'

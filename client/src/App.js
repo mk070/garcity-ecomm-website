@@ -11,6 +11,7 @@ import { MensWear } from './pages/MensWear';
 import { WomensWear } from './pages/WomensWear';
 import Fqa from './components/order&Fqa/Fqa'
 import { OrderFqa } from './pages/OrderFqa';
+import VismeEmbed from './pages/VismeEmbed';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/about'  element={<About />}/>
         <Route path='/contact'  element={<Contact />}/>
         <Route path='/order & faq'  element={<OrderFqa />}/>
+        <Route path='/test'  element={<VismeEmbed />}/>
         {/* <Route path='/*'  element={< />}/> */}
 
         

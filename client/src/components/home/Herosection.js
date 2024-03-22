@@ -32,15 +32,18 @@ export const Herosection = () => {
                 variant='h3'
                 sx={{
                     fontSize:isSmallScreen ? '30px':'60px',
-                    fontFamily: ['integral-Regular', 'sans-serif'].join(','),
-                    marginBottom: '20px',
+                    fontFamily: ['integral-Regular'].join(','),
+                    marginBottom: '1px',
                 }}
             >
-                FIND <span style={{ color: '#DF9573' }}>CLOTHES</span><br />THAT MATCHES<br />YOUR STYLE
+                KINGDOM OF <span style={{ fontFamily: ['integral-Regular'].join(','),color: '#DF9573' }}>CUSTOMISATION</span><br /><br />
             </Typography>
               
             <Typography mt={'10px'} variant='body1' sx={{fontSize:isSmallScreen ? '12px' : '18px',}}>
-                Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
+            Your destination for custom clothing !
+            From premium fabric to superior finish, we assist in
+            launching your brand with custom clothing & printing
+            services! 
             </Typography>
 
             <Button sx={{

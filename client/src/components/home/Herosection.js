@@ -41,15 +41,9 @@ export const Herosection = () => {
               
             <Typography mt={'10px'} variant='body1' sx={{fontSize:isSmallScreen ? '12px' : '18px',}}>
             Your destination for custom clothing !
-<<<<<<< HEAD
-From premium fabric to superior finish, we assist in
-launching your brand with custom clothing & printing
-services! 
-=======
             From premium fabric to superior finish, we assist in
             launching your brand with custom clothing & printing
             services! 
->>>>>>> 982c03bb72378ec4ea3958c114776fa992a55441
             </Typography>
 
             <Button sx={{

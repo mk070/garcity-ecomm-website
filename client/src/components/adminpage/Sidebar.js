@@ -9,12 +9,32 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
-export const Sidebar = ({ setShowGallery }) => {
+export const Sidebar = ({ setShowGallery, setshowPopularWork ,setshowYoutube}) => {
+
   const handleGalleryClick = () => {
-    setShowGallery(true); // Set showGallery to true when Gallery is clicked
+    setShowGallery(true); 
+    setshowYoutube(false)
+    setshowPopularWork(false)
+
   };
   const handleDashboardClick = () => {
-    setShowGallery(false); // Set showGallery to true when Gallery is clicked
+    setShowGallery(true); 
+    
+   
+  };
+  const handlePopularWorkClick = () => {
+    setshowPopularWork(true)
+    setShowGallery(false); 
+    setshowYoutube(false)
+
+
+  };
+  const handleYoutubeClick = () => {
+    setshowYoutube(true)
+    setShowGallery(false); 
+    setshowPopularWork(false)
+
+
   };
 
   return (
@@ -37,13 +57,13 @@ export const Sidebar = ({ setShowGallery }) => {
             </ListItemIcon>
             <ListItemText primary="Gallery" />
           </ListItem>
-          <ListItem button component={Link} to="/settings">
+          <ListItem button onClick={handlePopularWorkClick}>
             <ListItemIcon>
                <FavoriteIcon /> 
             </ListItemIcon>
-            <ListItemText primary="PopularCoollection" />
+            <ListItemText primary="PopularWork" />
           </ListItem>
-          <ListItem button >
+          <ListItem button  onClick={handleYoutubeClick}>
             <ListItemIcon>
                <YouTubeIcon />
             </ListItemIcon>

@@ -5,7 +5,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import image1 from '../../assets/images/gallery/banner.jpg'; // Import your image file
 
-export const ManageGallery = () => {
+export const PopularWork = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [isUploadSuccess, setUploadSuccess] = useState(false);
   const [isDeleteSuccess, setDeleteSuccess] = useState(false);
@@ -42,7 +42,7 @@ export const ManageGallery = () => {
         {/* Upload your image heading */}
         <Box sx={{ flexGrow: 1 }}>
           <Typography variant="h5" gutterBottom>
-            Upload Gallery images here
+            Upload Popular Work imags here
           </Typography>
         </Box>
 

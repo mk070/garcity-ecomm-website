@@ -15,7 +15,10 @@ export const CatchLine = () => {
                   textAlign:"center"
                 }}
               >
-                Clothing of superior quality is constructed mostly of natural fibers such as cotton, linen, wool, or silk. High-quality apparel is long-lasting, comfy, and meticulously constructed like robust zippers, wooden buttons, additional accessories, but also lining, facing, and excellent stitchwork
+               Feel free to reach out to us for any inquiries or assistance at
+garcitystyle@gmail.com, where our dedicated team is ready to help
+you with your queries and provide personalized support.
+
               </Typography>
     </Box>
     </>

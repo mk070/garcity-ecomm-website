@@ -81,7 +81,9 @@ export const Detials = () => {
                   justifyContent:"center",
                   textAlign:"center"
                 }}
-              ><span>+91 7904545341</span> <br/><br/> remindme.garments@gmail.com
+              ><span>+91 9363091528
+              </span> <br/><br/>garcitystyle@gmail.com
+
               </Typography>
                 </Card>
         </Grid>
@@ -116,7 +118,9 @@ export const Detials = () => {
                   justifyContent:"center",
                   textAlign:"center"
                 }}
-              >Monday to Sunday <br/><strong> 9Am to 6Pm</strong> <br/><br/> Sunday:Holiday
+              >Monday to Saturday
+               <br/><strong>10am - 8pm</strong> <br/><br/>Sunday
+10am - 2pm
               </Typography>
                 </Card>
         </Grid>

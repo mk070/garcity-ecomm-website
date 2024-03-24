@@ -42,13 +42,13 @@ function getStepContent(step) {
             name="lastName"
           />
           <TextField
-            id="nick-name"
-            label="Nick Name"
+            id="contact"
+            label="Contact Number"
             variant="outlined"
-            placeholder="Enter Your Nick Name"
+            placeholder="Enter Your Contact Number"
             fullWidth
             margin="normal"
-            name="nickName"
+            name="contactNum"
           />
         </>
       );

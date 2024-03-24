@@ -20,8 +20,8 @@ export const Printing = () => {
       <Grid container height={600} spacing ={2} sx={{
          display:"flex",justifyContent:"space-between"
       }}>
-        <Grid item >
-        <Typography marginTop={"140px"} mx={10} variant='h3'
+        <Grid item marginLeft={10}>
+        <Typography marginTop={"100px"} mx={10} variant='h3'
           sx={{
             fontSize: isSmallScreen ? '30px' : '50px',
             fontFamily: ['integral-Regular', 'sans-serif'].join(','),
@@ -35,21 +35,21 @@ export const Printing = () => {
                   marginBottom: '50px',
                 }}
               >
-                Clothing of superior quality is constructed mostly of natural fibers such as cotton, linen, wool, or silk. High-quality apparel is long-lasting, comfy, and meticulously constructed like robust zippers, wooden buttons, additional accessories, but also lining, facing, and excellent stitchwork
+                Unlock endless possibilities with our custom printing services, where your designs come to life with  recision and vibrancy, tailored to meet your unique branding and personalization needs.
               </Typography>
            </Grid>
         <Grid item
         display={"flex"}
          sx={{ 
-          paddingRight:"40px",
+          paddingRight:"70px",
           flexDirection:"row"
         }} >
-         {/* <Card number = "1" type={"Puff Printing"} bgImage={puff}  />
+         <Card number = "1" type={"Puff Printing"} bgImage={puff}  />
          <Card number = "2" type={"Screen Printing"} bgImage={screen}/>
          <Card number = "3" type={"Embroid"} bgImage={embroidry} />
          <Card number = "4" type={"Emboss printing"} bgImage={emboss} />
          <Card number = "5" type={"Direct to Flim"} bgImage={dtf} />
-         <Card number = "6" type={"Hign Density"} bgImage={hd}/> */}
+         <Card number = "6" type={"Hign Density"} bgImage={hd}/>
         </Grid>
       </Grid>
     </Box>

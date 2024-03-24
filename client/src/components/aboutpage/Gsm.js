@@ -6,7 +6,7 @@ import fabric from '../../assets/images/about/fabric.jpg';
 
 export const Gsm = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-  const [sliderValue, setSliderValue] = useState(30);
+  const [sliderValue, setSliderValue] = useState(100);
 
   const handleSliderChange = (event, newValue) => {
     setSliderValue(newValue);
@@ -93,12 +93,12 @@ export const Gsm = () => {
         <Typography
           height={100}
           sx={{
-            width: "400px",
+            width: "450px",
             marginLeft: "80px",
             marginBottom: "50px",
           }}
         >
-          Clothing of superior quality is constructed mostly of natural fibers such as cotton, linen, wool, or silk. High-quality apparel is long-lasting, comfy, and meticulously constructed like robust zippers, wooden buttons, additional accessories, but also lining, facing, and excellent stitchwork.
+          We offer customizable GSM options, allowing you to select the perfect weight and thickness for your garments, ensuring comfort and durability according to your preferences.
         </Typography>
         <Box marginTop={10} marginLeft={10} sx={{ width: 300 }}>
           <Slider

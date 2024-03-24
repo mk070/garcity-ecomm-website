@@ -98,7 +98,7 @@ export const InputForm = () => {
   return (
     <>
     <Section>
-      {/* <Model >
+      <Model >
         <Right>
           <Canvas>
             <Suspense fallback={null}>
@@ -157,7 +157,7 @@ export const InputForm = () => {
 
           </Box>
         </Left>
-      </Model> */}
+      </Model> 
       <div class="visme_d" data-title="Blog Contact Form" data-url="x4zeo69w-blog-contact-form" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="9748"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
     </Section>
     </>

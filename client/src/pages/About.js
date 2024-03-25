@@ -8,6 +8,7 @@ import { Gsm } from '../components/aboutpage/Gsm'
 import { Typography, useMediaQuery } from '@mui/material'
 import { Measurement } from '../components/aboutpage/Measurement'
 import Packaging from '../components/aboutpage/Packaging'
+import Fabric from '../components/aboutpage/Fabric'
 
 export const About = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
@@ -34,6 +35,7 @@ export const About = () => {
       <Gsm />
       <Measurement />
       <Packaging/>
+      <Fabric/>
     </>
   )
 }

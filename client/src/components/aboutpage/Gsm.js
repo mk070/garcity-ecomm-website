@@ -39,6 +39,7 @@ export const Gsm = () => {
          <Grid item>
         <Box bgcolor="#fff" height={400} width={500} display="flex" borderRadius={5} sx={{
           boxShadow: "0px 5px 30px -5px rgba(0,0,0,0.8) inset",flexDirection:'column',overflow:'hidden',
+          marginLeft:'100px'
 
         }}>
           <Box

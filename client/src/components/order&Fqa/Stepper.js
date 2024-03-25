@@ -12,9 +12,8 @@ import {useForm} from 'react-hook-form';
 function getSteps() {
   return [
     "Basic information",
-    "Contact Information",
-    "Personal Information",
-    "Payment",
+    "Requirements Form ",
+    
   ];
 }
 
@@ -50,6 +49,119 @@ function getStepContent(step) {
             margin="normal"
             name="contactNum"
           />
+          <TextField
+            id="mail"
+            label="Email-ID"
+            variant="outlined"
+            placeholder="Enter Your Email-ID"
+            fullWidth
+            margin="normal"
+            name="Email"
+          />
+        </>
+      );
+    case 1:
+      return (
+        <>
+          <TextField
+            id="product_name"
+            label="Product Name"
+            variant="outlined"
+            placeholder="Enter the Product"
+            fullWidth
+            margin="normal"
+            name="Product Name"
+          />
+          <TextField
+            id="material"
+            label="Product Material"
+            variant="outlined"
+            placeholder="Enter the material"
+            fullWidth
+            margin="normal"
+            name="Product Material"
+          />
+          <TextField
+            id="contact"
+            label="Product GSM"
+            variant="outlined"
+            placeholder="Enter the GSM"
+            fullWidth
+            margin="normal"
+            name="GSM"
+          />
+          <TextField
+            id="quantity"
+            label="Quantity"
+            variant="outlined"
+            placeholder="Enter Quantity"
+            fullWidth
+            margin="normal"
+            name="quantity"
+          />
+          <TextField
+            id="color"
+            label="Fabric Colour"
+            variant="outlined"
+            placeholder="Enter the colour"
+            fullWidth
+            margin="normal"
+            name="color"
+          />
+          <TextField
+            id="size"
+            label="Sizes"
+            variant="outlined"
+            placeholder="Enter the Size"
+            fullWidth
+            margin="normal"
+            name="size"
+          />
+            <TextField
+              id="Fwidth"
+              label=" Front Design width"
+              variant="outlined"
+              placeholder=" Design height"
+              fullWidth
+              margin="normal"
+              name="F_width"
+            />
+          <TextField
+            id="Bwidth"
+            label="Back Design width"
+            variant="outlined"
+            placeholder=" Design height"
+            fullWidth
+            margin="normal"
+            name="B_width"
+          />
+          <TextField
+            id="Ptype"
+            label="Printing Type"
+            variant="outlined"
+            placeholder="Enter the printing Type "
+            fullWidth
+            margin="normal"
+            name="Ptype"
+          />
+          <TextField
+            id="Brand"
+            label="Branding"
+            variant="outlined"
+            placeholder="Enter your Branding"
+            fullWidth
+            margin="normal"
+            name="B_width"
+          />
+          <TextField
+            id="chart"
+            label="Custom Measurement chart"
+            variant="outlined"
+            placeholder="Enter your Chart"
+            fullWidth
+            margin="normal"
+            name="chart"
+          />
         </>
       );
 
@@ -65,16 +177,10 @@ const LinaerStepper = () => {
   const steps = getSteps();
 
   const buttonStyles = css`
-    margin-right: 8px;
+    margin-right: 10px;
   `;
 
-  const isStepOptional = (step) => {
-    return step === 1 || step === 2;
-  };
 
-  const isStepSkipped = (step) => {
-    return skippedSteps.includes(step);
-  };
 
   const handleNext = () => {
     setActiveStep(activeStep + 1);
@@ -85,12 +191,7 @@ const LinaerStepper = () => {
     setActiveStep(activeStep - 1);
   };
 
-  const handleSkip = () => {
-    if (!isStepSkipped(activeStep)) {
-      setSkippedSteps([...skippedSteps, activeStep]);
-    }
-    setActiveStep(activeStep + 1);
-  };
+
 
   return (
     <div>
@@ -98,20 +199,6 @@ const LinaerStepper = () => {
         {steps.map((step, index) => {
           const labelProps = {};
           const stepProps = {};
-          if (isStepOptional(index)) {
-            labelProps.optional = (
-              <Typography
-                variant="caption"
-                align="center"
-                style={{ display: "block" }}
-              >
-                optional
-              </Typography>
-            );
-          }
-          if (isStepSkipped(index)) {
-            stepProps.completed = false;
-          }
           return (
             <Step {...stepProps} key={index}>
               <StepLabel {...labelProps}>{step}</StepLabel>
@@ -121,9 +208,14 @@ const LinaerStepper = () => {
       </Stepper>
 
       {activeStep === steps.length ? (
-        <Typography variant="h3" align="center">
+        <>
+        <Typography marginTop={15} marginBottom={5} variant="h3" align="center" fontWeight={700}>
           Thank You
         </Typography>
+        <Typography marginTop={1} marginBottom={15} variant="h4" align="center" fontWeight={700}>
+         YOur Requirements have been Submitted 
+        </Typography>
+        </>
       ) : (
         <>
           <form>{getStepContent(activeStep)}</form>
@@ -134,16 +226,7 @@ const LinaerStepper = () => {
           >
             back
           </Button>
-          {isStepOptional(activeStep) && (
-            <Button
-              css={buttonStyles}
-              variant="contained"
-              color="primary"
-              onClick={handleSkip}
-            >
-              skip
-            </Button>
-          )}
+
           <Button
             css={buttonStyles}
             variant="contained"

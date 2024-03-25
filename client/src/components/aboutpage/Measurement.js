@@ -50,18 +50,31 @@ export const Measurement = () => {
                 marginBottom: '50px',
               }}
             >
-              We offer custom measurements for a perfect fit, ensuring your garment is tailored precisely to your body shape and size, enhancing comfort and style.
+              We offer custom measurements for a perfect fit, ensuring your garment is tailored precisely to your body shape and size,enhancing comfort and style.
             </Typography>
             <Stack marginLeft={10} spacing={2} direction="row">
-              <Button variant="contained">S</Button>
-              <Button variant="contained">L</Button>
-              <Button variant="contained">XL</Button>
-              <Button variant="contained">XLL</Button>
+              <Button variant="contained" sx={{
+                width:'50px',height:'60px',borderRadius:'60px',backgroundColor:'#FFF4F1',color:'black','&:hover':{
+                    backgroundColor:'#DF9573'}, fontWeight:'900',
+              }}>S</Button>
+              <Button variant="contained" sx={{
+                width:'50px',height:'60px',borderRadius:'60px',backgroundColor:'#FFF4F1',color:'black','&:hover':{
+                    backgroundColor:'#DF9573'},fontWeight:'900',
+              }}>L</Button>
+              <Button variant="contained" sx={{
+                width:'50px',height:'60px',borderRadius:'60px',backgroundColor:'#FFF4F1',color:'black','&:hover':{
+                    backgroundColor:'#DF9573'},fontWeight:'900', 
+              }}>XL</Button>
+              <Button variant="contained" sx={{
+                width:'50px',height:'60px',borderRadius:'60px',backgroundColor:'#FFF4F1',color:'black', '&:hover':{
+                    backgroundColor:'#DF9573'
+                },fontWeight:'900',
+              }}>XLL</Button>
       
             </Stack>
           </Grid>
           <Grid item>
-            <Box bgcolor="#fff" height={400} width={500} display="flex" borderRadius={5} sx={{ boxShadow: '0px 5px 30px -5px rgba(0,0,0,0.8)', flexDirection: 'column', overflow: 'hidden' }}>
+            <Box bgcolor="#fff" height={400} width={500} display="flex" borderRadius={5} sx={{ boxShadow: '0px 5px 30px -5px rgba(0,0,0,0.8)', flexDirection: 'column', overflow: 'hidden',marginRight:'100px' }}>
               <Video src={tshirtsVideo} controls loop/>
             </Box>
           </Grid>

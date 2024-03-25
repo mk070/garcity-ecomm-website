@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import { Container, Grid, Slider, Typography, useMediaQuery, Box } from '@mui/material';
 import puff from '../../assets/images/printing/puff.jpg';
-import fabric from '../../assets/images/about/fabric.jpg';
+import packaging from '../../assets/images/about/packaging.mp4';
+import styled from '@emotion/styled';
+const Video = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 
 
 export const Packaging = () => {
@@ -25,8 +31,10 @@ export const Packaging = () => {
          <Grid item>
         <Box bgcolor="#fff" height={400} width={500} display="flex" borderRadius={5} sx={{
           boxShadow: "0px 5px 30px -5px rgba(0,0,0,0.8) ",flexDirection:'column',overflow:'hidden',
+          marginLeft:'100px'
 
         }}>
+          <Video src={packaging} controls loop muted />
         </Box>
       </Grid>
       <Grid item width={700}>

@@ -1,25 +1,30 @@
 import React, { useState } from 'react';
-import { Box, Typography, Button, TextField } from '@mui/material';
+import { Box, Typography, Button, TextField, Table, TableBody, TableCell, TableContainer, TableHead,Snackbar, TableRow } from '@mui/material';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const YoutubeVideo = () => {
   const [videoLink, setVideoLink] = useState('');
   const [uploadedVideos, setUploadedVideos] = useState([]);
+  const [isUploadSuccess, setUploadSuccess] = useState(false);
+  const [isDeleteSuccess, setDeleteSuccess] = useState(false);
 
   const handleUpload = () => {
-    // Implement upload functionality here
     // Add the video link to the uploaded videos list
     setUploadedVideos([...uploadedVideos, videoLink]);
     // Clear the input field after uploading
     setVideoLink('');
+    // Set upload success snackbar to true
+    setUploadSuccess(true);
   };
 
   const handleDelete = (index) => {
-    // Implement delete functionality here
     // Remove the video at the specified index from the uploaded videos list
     const updatedVideos = [...uploadedVideos];
     updatedVideos.splice(index, 1);
     setUploadedVideos(updatedVideos);
+    // Set delete success snackbar to true
+    setDeleteSuccess(true);
   };
 
   return (
@@ -49,16 +54,53 @@ const YoutubeVideo = () => {
       </Box>
 
       {/* Gallery Section */}
-      <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-        {uploadedVideos.map((link, index) => (
-          <Box key={index} sx={{ p: 2 }}>
-            {/* Render individual video component */}
-            {/* Display video thumbnail, title, and delete button */}
-            <div>{link}</div> {/* Display the video link */}
-            <Button variant="outlined" color="error" onClick={() => handleDelete(index)}>Delete</Button>
-          </Box>
-        ))}
-      </Box>
+      <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Video Link</TableCell>
+              <TableCell align="right">Actions</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {uploadedVideos.map((link, index) => (
+              <TableRow key={index}>
+                <TableCell component="th" scope="row">
+                  {link}
+                </TableCell>
+                <TableCell align="right">
+                  <Button
+                    variant="outlined"
+                    color="error"
+                    startIcon={<DeleteIcon />}
+                    onClick={() => handleDelete(index)}
+                  >
+                    Delete
+                  </Button>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      
+      {/* Snackbar for upload success */}
+      <Snackbar
+        open={isUploadSuccess}
+        autoHideDuration={6000}
+        onClose={() => setUploadSuccess(false)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        message="Video uploaded successfully!"
+      />
+
+      {/* Snackbar for delete success */}
+      <Snackbar
+        open={isDeleteSuccess}
+        autoHideDuration={6000}
+        onClose={() => setDeleteSuccess(false)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        message="Video deleted successfully!"
+      />
     </Box>
   );
 };

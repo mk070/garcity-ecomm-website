@@ -9,9 +9,6 @@ import {About} from './pages/About';
 import {Contact} from "./pages/Contact";
 import { MensWear } from './pages/MensWear';
 import { WomensWear } from './pages/WomensWear';
-import Fqa from './components/order&Fqa/Fqa'
-import { OrderFqa } from './pages/OrderFqa';
-import VismeEmbed from './pages/VismeEmbed';
 import { Admin } from './pages/Admin';
 import { Dashboard } from './components/adminpage/Dashboard';
 
@@ -39,7 +36,6 @@ function App() {
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/order & faq' element={<OrderFqa />} />
         {/* <Route path='/*' element={< />} /> */}
 
         {/* Route for AdminDashboard */}

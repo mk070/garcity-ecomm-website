@@ -22,7 +22,7 @@ const Hero = () => {
     });
 
     tl.to(sectionRef.current, {
-      scale: 0.7,
+      scale: 0.8,
     });
 
     return () => {
@@ -39,7 +39,7 @@ const Hero = () => {
              <Box sx={{position:'absolute',bottom:'-70px',left:"51%", width:{sm:'30%'}}}>
              <div class="mouse"></div>
              </Box>
-            <img width={'100%'} style={{ marginRight: '100px', marginBottom: '80px' }} src={img1} alt="" />
+              <img width={'100%'} style={{ marginRight: '0px', marginBottom: '80px' }} src={img1} alt="" />
             
           </div>
         </div>

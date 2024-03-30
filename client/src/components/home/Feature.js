@@ -5,7 +5,7 @@ import img from '../../assets/images/feature1.png'
 
 export const Feature = () => {
   return (
-    <Box  sx={{marginTop:{sm:'80px'}, marginBottom:{sm:'80px'},display:'flex', justifyContent:'space-around', alignItems:'center',padding:{sm:'0 180px', xs:'40px 20px'}, flexDirection:'column', bgcolor:'#fff'}}>
+    <Box  sx={{marginTop:{sm:'80px'}, marginBottom:{sm:'10px'},display:'flex', justifyContent:'space-around', alignItems:'center',padding:{sm:'0 180px', xs:'40px 20px'}, flexDirection:'column', bgcolor:'#fff'}}>
         <Box sx={{display:'flex' ,width:'100%', flexDirection:'row', ml:'0px', justifyContent:'center', alignItems:'center'}}>
             {/* <Typography variant='h5' sx={{fontSize:{xs:"", sm:'26px'}}}> Don’t let anyone tell you that you have to be a certain way. <span style={{ color: '#DF9573' }}> Be unique</span>, be what you feel like being. <br /> <span style={{ color: '#DF9573' }}> Life is too short </span>to be perfect.  </Typography> */}
         </Box>

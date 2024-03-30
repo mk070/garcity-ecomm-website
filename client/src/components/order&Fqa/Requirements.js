@@ -13,10 +13,10 @@ export const Requirements = () => {
                 <Box>
                 <Typography marginTop={"40px"} mx={3} variant='h3'
           sx={{
-            fontSize: isSmallScreen ? '30px' : '50px',
+            fontSize: isSmallScreen ? '30px' : '40px',
             fontFamily: ['integral-Regular', 'sans-serif'].join(','),
             marginBottom: '50px',
-          }}>Place your order</Typography>
+          }}>give us your Requirements </Typography>
                 </Box>
             </Box>
         </>

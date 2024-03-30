@@ -11,7 +11,7 @@ export const Contact = () => {
     <InputForm/>
     <CatchLine/>
     <Detials/>
-    {/* <Maps/> */}
+     <Maps/> 
     </>
   )
 }

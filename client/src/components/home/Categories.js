@@ -6,6 +6,7 @@ import men1 from '../../assets/images/Categories/men1.png';
 import men2 from '../../assets/images/Categories/men2.png';
 import kid1 from '../../assets/images/Categories/kid1.png';
 import kid2 from '../../assets/images/Categories/kid2.png';
+import { Feature } from '../aboutpage/Feature';
 
 export const Categories = () => {
   const [hoveredImage, setHoveredImage] = useState(null);
@@ -28,7 +29,9 @@ export const Categories = () => {
 
   return (
     <>
-      <Typography sx={{ display: 'block', paddingLeft: '24px', fontSize:{sm:'42px'}, textAlign: 'center', mt: '70px' }}>Categories</Typography>
+    
+      <Feature/>
+      {/* <Typography sx={{ display: 'block', paddingLeft: '24px', fontSize:{sm:'42px'}, textAlign: 'center', mt: '70px' }}>Categories</Typography>
       <Container sx={{ display: 'flex', height: '50vh', mt: '00px', flexDirection: {md:'row',lg:'row',xs:'column',sm:'row'}, alignItems: 'center', paddingLeft: '1px', justifyContent: 'space-around' }}>
       <Box>
       <Box sx={{ width: '250px', display:{xs:'none', sm:'flex',lg:'flex'} }}> 
@@ -80,7 +83,7 @@ export const Categories = () => {
           )}
             </Box>
         </Box>
-      </Container>
+      </Container> */}
     </>
   );
 };

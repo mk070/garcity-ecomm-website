@@ -21,7 +21,11 @@ const Colors = () => {
         }}
       >
         <Box>
-          <Typography variant="h4" gutterBottom>
+          <Typography variant="h5" gutterBottom
+          sx={{            
+            fontFamily: ['integral-Regular', 'sans-serif'].join(','),
+        }}
+          >
             Choose the colour that sync your style
           </Typography>
           <ColorOptions
@@ -29,7 +33,7 @@ const Colors = () => {
             selectedColor={selectedColor}
           />
           <Typography variant="body1" mt={2}>
-            Additional information about the selected color <br />or any other details can be added here.
+          Choose from a wide range of fabric colors customizable with Pantone TPG <br/>and TPX codes, ensuring precise color  matching for your vision.
           </Typography>
         </Box>
         <TShirtImage color={selectedColor} />

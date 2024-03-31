@@ -114,12 +114,13 @@ export const Herosection = () => {
           
           <Box sx={{ position: 'relative' }}>
             <img src={tops} style={{ width: '100%' }} alt="Slide 1" />
-            <Box sx={{ position: 'absolute',backgroundColor:"#FFF4F1", top: '50%', left: '50%', padding:'50px', borderRadius:'60px 0 60px 0',  transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#372B29' }}>
+            <Box sx={{ position: 'absolute',backgroundColor:"#DF9573", color: '#FFF4F1', top: '50%', left: '50%', padding:'50px', borderRadius:'60px 0 60px 0',  transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
               <Typography variant="h4">Content for Slide 1</Typography>
               <Typography variant="body1">Additional content goes here...</Typography>
             </Box>
           </Box>
         </SwiperSlide>
+
         <SwiperSlide>
           <Box sx={{ position: 'relative' }}>
             <img src={blacks} style={{ width: '100%' }} alt="Slide 2" />
@@ -132,7 +133,7 @@ export const Herosection = () => {
         <SwiperSlide>
           <Box sx={{ position: 'relative' }}>
             <img src={tshirts} style={{ width: '100%' }} alt="Slide 3" />
-            <Box sx={{ position: 'absolute', backgroundColor:"#FFF4F1",top: '50%', padding:'50px', borderRadius:'60px 0 60px 0', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#372B29' }}>
+            <Box sx={{ position: 'absolute', backgroundColor:"#DF9573",color: '#FFF4F1',top: '50%', padding:'50px', borderRadius:'60px 0 60px 0', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
               <Typography variant="h4">Content for Slide 3</Typography>
               <Typography variant="body1">Additional content goes here...</Typography>
             </Box>

@@ -3,6 +3,7 @@ import '@splidejs/splide/dist/css/splide.min.css';
 // import { reviews } from './reviewsData';
 import Quote from '../../assets/images/Home/testimonial/blockquote.svg';
 import './Testimonial.css'
+import { Typography } from '@mui/material';
 
 const Testimonial = () => {
 
@@ -48,7 +49,7 @@ const Testimonial = () => {
   return (
     <section className="testimonial-container">
       <div className="title">
-        <h2>Testimonial</h2>
+        <Typography sx={{fontSize:{sm:"32px"}, fontFamily: "integral-Regular  !important" }}>Testimonial</Typography>
         <p>What members are saying.</p>
       </div>
 

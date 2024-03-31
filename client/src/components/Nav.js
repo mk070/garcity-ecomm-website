@@ -84,7 +84,8 @@ export const Nav = (props) => {
                     >
                       <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/menswear">Mens wear</MenuItem>
                       <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/womenswear">Womens wear</MenuItem>
-                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/womenswear">Kids wear</MenuItem>
+                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/kidswear">Kids wear</MenuItem>
+                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/sportswear">Sports wear</MenuItem>
                     </Menu>
                   </React.Fragment>
                 ) : (

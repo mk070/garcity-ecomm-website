@@ -24,7 +24,6 @@
 }
 
 .arrow {
-  background-color: #fff;
   position: absolute;
   cursor: pointer;
   z-index: 10;

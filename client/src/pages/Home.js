@@ -1,26 +1,27 @@
-import { Box, Typography, useMediaQuery } from '@mui/material';
-import React from 'react';
+import { Box, Typography, useMediaQuery, Fab } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { ArrowUpward } from '@mui/icons-material';
 import '../App.css'
-// import { Banner } from '../components/home/';
 import { Herosection } from '../components/home/Herosection';
 import { Brands } from '../components/home/Brands';
-import { Categories } from '../components/home/Categories';
 import { Popularcollection } from '../components/home/Popularcollection';
 import { Feature } from '../components/home/Feature';
-
+import { MoveupButton } from '../components/MoveupButton';
+import { ContactButton } from '../components/ContactButton';
+import Testimonial from '../components/home/Testimonial';
+import { Specialities } from '../components/home/Specialities';
 
 export const Home = () => {
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-
   return (
     <Box>
-      
       <Herosection /> 
       <Brands />
-      <Categories />
+      <Specialities />
       <Popularcollection />
       <Feature />
-      
+      <Testimonial />
+      <MoveupButton />
+      <ContactButton />
     </Box>
   );
 };

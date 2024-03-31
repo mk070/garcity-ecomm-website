@@ -7,7 +7,7 @@ import Logo from '../assets/images/logo.png'; // Import your logo
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; // Import ExpandMoreIcon
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Product', 'Gallery', 'About', 'Contact','Order & Faq'];
+const navItems = ['Home', 'Product', 'Gallery', 'About', 'Contact'];
 
 export const Nav = (props) => {
   const { window } = props;
@@ -84,7 +84,8 @@ export const Nav = (props) => {
                     >
                       <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/menswear">Mens wear</MenuItem>
                       <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/womenswear">Womens wear</MenuItem>
-                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/womenswear">Kids wear</MenuItem>
+                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/kidswear">Kids wear</MenuItem>
+                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/sportswear">Sports wear</MenuItem>
                     </Menu>
                   </React.Fragment>
                 ) : (

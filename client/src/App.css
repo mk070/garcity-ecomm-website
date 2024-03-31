@@ -1,3 +1,10 @@
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @keyframes floatAnimation {
     from {
       transform: translate(-20%, -20%);
@@ -56,4 +63,43 @@
   }
 
 
+  .css-7dv1rb-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab{
+    background-color: #372B29 !important;
+  }
+
+  .css-5lbw0b-MuiTypography-root, .css-ahj2mt-MuiTypography-root{
+  font-family:'Satoshi-Regular',sans-serif !important;
+
+  }
+  .speciality-box {
+    margin-right: 80px;
+    width: 100%;
+    background-color: #372B29;
+    color: #FFF4F1 !important;
+    transition: background-color ease-in-out 0.5s; /* Changed transition property */
+  }
+  
+  .speciality-box:hover {
+    background-color: #FFF4F1;
+    color: #372B29!important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .visible {
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .hidden {
+    opacity: 0;
+  }
   

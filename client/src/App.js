@@ -14,6 +14,9 @@ import { Admin } from './pages/Admin';
 import { Dashboard } from './components/adminpage/Dashboard';
 import { KidsWear } from './pages/KidsWear';
 import PageLoader from './components/Pageloader';
+import { MoveupButton } from './components/MoveupButton';
+import { ContactButton } from './components/ContactButton';
+import { NotFound } from './components/NotFound';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,7 +44,7 @@ function App() {
 
   return (
     <>
-      {!isAdminDashboard(currentPath) && !isDashboard(currentPath) && <Nav />}
+      {!isAdminDashboard(currentPath) && !isDashboard(currentPath) && <Nav /> }
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product' element={<Product />} />
@@ -55,9 +58,12 @@ function App() {
         <Route path='/only-admin' element={<Admin />} />
         <Route path='/only-admin/dashboard' element={<Dashboard />} />
         <Route path='/only-admin/dashboard/gallery' element={<Gallery />} />
+        <Route path='/*' element={<NotFound />} />
       </Routes>
       {isLoading && <PageLoader />}
       {!isAdminDashboard(currentPath) && !isDashboard(currentPath) && <Footer />}
+      {!isAdminDashboard(currentPath) && !isDashboard(currentPath) && <MoveupButton />}
+      {!isAdminDashboard(currentPath) && !isDashboard(currentPath) && <ContactButton />}
     </>
   );
 }

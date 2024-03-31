@@ -13,12 +13,12 @@ export const Hero = () => {
                     variant='h3'
                     sx={{
                         fontSize:{xs : '30px',sm:'50px'},
-                        fontFamily: ['integral-Regular', 'sans-serif'].join(','),
+                         fontFamily:"integral-Regular  !important",
                     }}
                 >                   
-                    ‘ MAKE YOUR OWN<br/> CLOTHING STYLE<br/> WITH<span style={{ color: '#DF9573', fontWeight:700 }}>  GARCITY ‘</span></Typography>
+                    ‘ MAKE YOUR OWN<br/> CLOTHING STYLE<br/> WITH<span style={{ color: '#DF9573', fontWeight:700, fontFamily:'inherit' }}>  GARCITY ‘</span></Typography>
 
-                    <Typography sx={{marginTop:{sm:'20px'}}}>
+                    <Typography sx={{marginTop:{sm:'20px' , fontSize:{sm:"18px !important"}}}}>
                     We're a leading garment manufacturer in Tirupur, boasting over <strong>15+
                     years</strong> of experience.Crafting quality clothing for men, women, kids, infants, and babies is our specialty.<br/>We're committed to embracing future technologies to deliver the best to our clients.<br/><br/>Our focus is on providing competitive pricing without sacrificing quality.<br/>Choose us for fashion-forward, durable, and affordable clothing solutions.
                     </Typography>

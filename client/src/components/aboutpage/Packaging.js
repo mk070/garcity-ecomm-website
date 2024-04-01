@@ -3,6 +3,10 @@ import { Container, Grid, Slider, Typography, useMediaQuery, Box } from '@mui/ma
 import puff from '../../assets/images/printing/puff.jpg';
 import packaging from '../../assets/images/about/packaging.mp4';
 import styled from '@emotion/styled';
+import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
+import '@dotlottie/react-player/dist/index.css';
+import packaginganimation from "../../assets/images/about/packing.lottie"
+
 const Video = styled.video`
   width: 100%;
   height: 100%;
@@ -30,11 +34,17 @@ export const Packaging = () => {
         >
          <Grid item>
         <Box bgcolor="#fff" height={400} width={500} display="flex" borderRadius={5} sx={{
-          boxShadow: "0px 5px 30px -5px rgba(0,0,0,0.8) ",flexDirection:'column',overflow:'hidden',
+         flexDirection:'column',overflow:'hidden',
           marginLeft:'100px'
 
         }}>
-          <Video src={packaging} controls loop muted />
+          {/* <Video src={packaging} controls loop muted /> */}
+          <DotLottiePlayer
+              src={packaginganimation}
+              autoplay
+              loop
+            >
+          </DotLottiePlayer>
         </Box>
       </Grid>
       <Grid item width={700}>

@@ -7,14 +7,16 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import { Link } from 'react-router-dom';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import WebStoriesIcon from '@mui/icons-material/WebStories';
+import FitbitIcon from '@mui/icons-material/Fitbit';
 
-
-export const Sidebar = ({ setShowGallery, setshowPopularWork ,setshowYoutube}) => {
+export const Sidebar = ({ setShowGallery, setshowPopularWork ,setshowYoutube,setshowClientLogo}) => {
 
   const handleGalleryClick = () => {
     setShowGallery(true); 
     setshowYoutube(false)
     setshowPopularWork(false)
+    setshowClientLogo(false)
 
   };
   const handleDashboardClick = () => {
@@ -26,6 +28,7 @@ export const Sidebar = ({ setShowGallery, setshowPopularWork ,setshowYoutube}) =
     setshowPopularWork(true)
     setShowGallery(false); 
     setshowYoutube(false)
+    setshowClientLogo(false)
 
 
   };
@@ -33,7 +36,14 @@ export const Sidebar = ({ setShowGallery, setshowPopularWork ,setshowYoutube}) =
     setshowYoutube(true)
     setShowGallery(false); 
     setshowPopularWork(false)
+    setshowClientLogo(false)
 
+  };
+  const handleClientsLogoClick = () => {
+    setshowClientLogo(true)
+    setshowYoutube(false)
+    setShowGallery(false); 
+    setshowPopularWork(false)
 
   };
 
@@ -59,7 +69,7 @@ export const Sidebar = ({ setShowGallery, setshowPopularWork ,setshowYoutube}) =
           </ListItem>
           <ListItem button onClick={handlePopularWorkClick}>
             <ListItemIcon>
-               <FavoriteIcon /> 
+               <WebStoriesIcon /> 
             </ListItemIcon>
             <ListItemText primary="PopularWork" />
           </ListItem>
@@ -68,6 +78,12 @@ export const Sidebar = ({ setShowGallery, setshowPopularWork ,setshowYoutube}) =
                <YouTubeIcon />
             </ListItemIcon>
             <ListItemText primary="Youtube Video " />
+          </ListItem>
+          <ListItem button  onClick={handleClientsLogoClick}>
+            <ListItemIcon>
+               <FitbitIcon />
+            </ListItemIcon>
+            <ListItemText primary="Clients Logo " />
           </ListItem>
         </List>
       </Box>

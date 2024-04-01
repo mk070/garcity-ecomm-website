@@ -38,7 +38,6 @@ export const Login = () => {
               label="Username"
               variant="outlined"
               fullWidth
-              placeholder="Enter your username"
             />
             <TextField
               required
@@ -47,7 +46,6 @@ export const Login = () => {
               label="Password"
               variant="outlined"
               fullWidth
-              placeholder="Enter your password"
               InputProps={{
                 endAdornment: (
                   <IconButton onClick={handleTogglePassword} edge="end">

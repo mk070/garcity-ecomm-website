@@ -7,9 +7,6 @@ body,
 }
 
 :root {
-  --backgroundColor: #ffe9e5;
-  --primaryColor: #0aa1ff;
-  --primaryTextColor: #e6e6e6;
 
   --headlineBig: clamp(5rem, 9.9vw, 15rem);
   --headlineMedium: clamp(1rem, 2vw, 4rem);
@@ -18,7 +15,7 @@ body,
 }
 
 body {
-  background-color: var(--backgroundColor);
+  background-color: #ffe9e5;
 }
 
 .hero__header {
@@ -33,7 +30,7 @@ body {
 
 .hero__header h1 {
   font-size: var(--headlineBig);
-  color: var(--primaryTextColor);
+  color: #e6e6e6;
 }
 
 .hero__header h2 {
@@ -65,7 +62,7 @@ body {
 }
 
 .scroll-section h3 {
-  color: var(--primaryTextColor);
+  color: #e6e6e6;
   letter-spacing: var(--headlineMedium);
   font-size: var(--headlineMedium);
   text-transform: uppercase;

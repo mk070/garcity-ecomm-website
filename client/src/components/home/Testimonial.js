@@ -1,4 +1,5 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import React from 'react';
 import '@splidejs/splide/dist/css/splide.min.css';
 // import { reviews } from './reviewsData';
 import Quote from '../../assets/images/Home/testimonial/blockquote.svg';

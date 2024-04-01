@@ -1,6 +1,5 @@
-import React from 'react'
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import {Box, Container, Typography, useMediaQuery} from "@mui/material"
 import tops from "../../assets/images/productpage/1.png"

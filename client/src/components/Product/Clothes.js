@@ -1,13 +1,12 @@
 import React from 'react'
-import {Item, Box, Grid,Typography,useMediaQuery, Card, Container, CardActionArea, CardMedia, CardContent} from "@mui/material"
-import tops from "../../assets/images/productpage/1.png"
-import blacks from "../../assets/images/productpage/4.png"
-import tshirts from "../../assets/images/productpage/3.png"
-import colors from "../../assets/images/productpage/2.png"
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper/modules'
-import { Link } from 'react-router-dom'
-import 'swiper/css';
+import {Item, Box, Grid,Typography,useMediaQuery, Card, Container, CardActionArea, CardMedia, CardContent} from "@mui/material";
+import tops from "../../assets/images/productpage/1.png";
+import blacks from "../../assets/images/productpage/4.png";
+import tshirts from "../../assets/images/productpage/3.png";
+import colors from "../../assets/images/productpage/2.png";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 import 'swiper/css/navigation';
 // import '../App.css'
 

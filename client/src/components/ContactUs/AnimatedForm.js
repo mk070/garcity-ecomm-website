@@ -64,7 +64,7 @@ export const AnimatedForm = () => {
                 </Typography>
                 
                 <Box border={1} sx={{
-                    height: '800px',
+                    height: '400px',
                     width: '700px',
                     borderRadius: '10px',
                     border: '2px solid',
@@ -122,7 +122,7 @@ export const AnimatedForm = () => {
                             }}
                         />
                     </Box>
-                    <Typography sx={{
+                    {/* <Typography sx={{
                         fontSize: '20px',
                         fontWeight: 900,
                         marginLeft: '30px',
@@ -185,7 +185,7 @@ export const AnimatedForm = () => {
                                 </RadioGroup>
                             </FormControl>
                         </Box>
-                    </Box >  
+                    </Box >   */}
                     <Typography sx={{
                                 fontSize: '18px',
                                 fontWeight: 900,

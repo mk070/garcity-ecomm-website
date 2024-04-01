@@ -7,18 +7,20 @@ import { Appbar } from './Appbar';
 import { ManageGallery } from './ManageGallery';
 import { PopularWork } from './PopularWork';
 import  YoutubeVideo  from './YoutubeVideo';
+import { ManageClientLogos } from './ManageClientLogos';
 
 export const Dashboard = () => {
   const [showGallery, setShowGallery] = React.useState(false);
   const [showPopularWork, setshowPopularWork] = React.useState(false);
   const [showYoutube, setshowYoutube] = React.useState(false);
+  const [showClientLogo, setshowClientLogo] = React.useState(false);
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       {/* Main content */}
       <Box component="main" sx={{ flexGrow: 1, display: 'flex' }}>
         {/* Sidebar */}
-        <Sidebar setShowGallery={setShowGallery} setshowPopularWork={setshowPopularWork} setshowYoutube={setshowYoutube} />
+        <Sidebar setShowGallery={setShowGallery} setshowPopularWork={setshowPopularWork} setshowYoutube={setshowYoutube} setshowClientLogo={setshowClientLogo} />
         
         {/* Main content */}
         <Box sx={{ flexGrow: 1, backgroundColor: '#f0f0f0' }}>
@@ -26,7 +28,8 @@ export const Dashboard = () => {
             {showGallery && <ManageGallery />}
             {showPopularWork && <PopularWork />}
             {showYoutube && <YoutubeVideo />}
-            {!showGallery && !showPopularWork && !showYoutube && (
+            {showClientLogo && <ManageClientLogos />}
+            {!showGallery && !showPopularWork && !showYoutube && !showClientLogo && (
             <Box sx={{ p: 3, mt: { sm: '65px' } }}>
                 <Typography variant="h4" gutterBottom>
                 Welcome to Admin Dashboard

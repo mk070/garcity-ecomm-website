@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Container, Grid, Slider, Typography, useMediaQuery, Box, Stack, Button } from '@mui/material';
 import tshirtsVideo from '../../assets/images/contactus/tshirts.mp4'; // Assuming the video path is correct
-import tshirt from '../../assets/images/contactus/tshirt.gif'; // Assuming the video path is correct
+import tshirts from '../../assets/images/contactus/tshirt.gif'; // Assuming the video path is correct
 import styled from '@emotion/styled';
+import { Canvas } from '@react-three/fiber';
+import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei';
 
 const Video = styled.video`
   width: 100%;
@@ -10,10 +12,23 @@ const Video = styled.video`
   object-fit: cover;
 `;
 
+const Model = styled.div`
+  height: 100%;
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+`;
 
 const Img = styled.img`
-  width:350px;
-  height: 350px;
+  width:400px;
+  height: 400px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -100,10 +115,29 @@ export const Measurement = () => {
             </Stack>
           </Grid>
           <Grid item>
-            <Box bgcolor="#fff" height={400} width={500} display="flex" borderRadius={5} sx={{ boxShadow: '0px 5px 30px -5px rgba(0,0,0,0.8)', flexDirection: 'column', overflow: 'hidden',marginRight:'100px' }}>
-              <Video src={tshirtsVideo} controls loop/>
-              {/* <Img src={tshirt} /> */}
-            </Box>
+           <Box
+           sx={{
+            height:'500px',
+            width:'500px',
+            position:'relative'
+           }}>
+                <Canvas>
+            <Suspense fallback={null}>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2.4}>
+                <MeshDistortMaterial
+                  color="gray"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Suspense>
+          </Canvas>
+          <Img src={tshirts} />
+           </Box>
           </Grid>
         </Grid>
       </Container>

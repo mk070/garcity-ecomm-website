@@ -9,6 +9,7 @@ import { Typography, useMediaQuery } from '@mui/material'
 import { Measurement } from '../components/aboutpage/Measurement'
 import Packaging from '../components/aboutpage/Packaging'
 import Fabric from '../components/aboutpage/Fabric'
+import InputForm from '../components/ContactUs/InputForm'
 
 export const About = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));

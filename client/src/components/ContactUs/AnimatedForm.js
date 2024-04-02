@@ -46,11 +46,10 @@ export const AnimatedForm = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                height: '900px',
+                height: '600px',
                 border: '1px solid',
                 marginTop: '100px',
             }}>
-                <Img src={tshirts} />
            
                 <Typography
                     variant='h3'
@@ -209,19 +208,20 @@ export const AnimatedForm = () => {
                                     width: '95%', // Adjust the width here
                                 }}
                                 />
-                                <Button sx={{
-              background:'#DF9573',
-              mt: isSmallScreen ? '20px' : '60px',
-              borderRadius:'30px',
-              '&:hover': {
-                backgroundColor: '#1E1E1E', 
-                color:'',// Add hover effect
-                transition: 'background-color 0.3s ease-in-out',
-              },
-            }} variant="contained">Submit </Button>
 
 
                 </Box>
+                                <Button sx={{
+                                  background:'#DF9573',
+                                  mt: isSmallScreen ? '20px' : '60px',
+                                  borderRadius:'30px',
+                                  '&:hover': {
+                                    backgroundColor: '#1E1E1E', 
+                                    color:'',// Add hover effect
+                                    transition: 'background-color 0.3s ease-in-out',
+                                  },
+                                }} variant="contained">Submit 
+                                </Button>
             </Container>
         </>
     );

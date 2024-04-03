@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Button, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Snackbar } from '@mui/material';
+import { Box, Button, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Snackbar, CircularProgress, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
@@ -9,39 +9,54 @@ export const ManageGallery = () => {
   const [uploadedImages, setUploadedImages] = useState([]);
   const [isUploadSuccess, setUploadSuccess] = useState(false);
   const [isDeleteSuccess, setDeleteSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [deleteConfirmationOpen, setDeleteConfirmationOpen] = useState(false);
+  const [imageToDeleteId, setImageToDeleteId] = useState(null);
+  const [showUploadConfirmation, setShowUploadConfirmation] = useState(false);
 
   const handleFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
-    setImageName(event.target.files[0].name); // Extracting name from the file
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedFile(file);
+      setImageName(file.name);
+    }
   };
+  
 
   const handleUpload = async () => {
     try {
+      setIsLoading(true);
       const formData = new FormData();
       formData.append('image', selectedFile);
       formData.append('name', imageName);
-
+  
       const response = await fetch('/api/gallery/upload', {
         method: 'POST',
         body: formData,
       });
-
+  
       if (response.ok) {
         setUploadSuccess(true);
         setSelectedFile(null);
         setImageName('');
-        fetchImages();
+        await fetchImages(); // Wait for the images to be fetched again
+        setShowUploadConfirmation(true); // Show upload confirmation message
+        // Hide upload confirmation message after 3 seconds
+        setTimeout(() => setShowUploadConfirmation(false), 3000);
       } else {
         console.error('Upload failed');
       }
     } catch (error) {
       console.error('Error uploading image:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
-
-  const handleDelete = async (name) => {
+  
+  const handleDelete = async (id) => {
     try {
-      const response = await fetch(`/api/gallery/images/${name}`, {
+      setIsLoading(true);
+      const response = await fetch(`/api/gallery/images/${id}`, {
         method: 'DELETE',
       });
 
@@ -53,11 +68,25 @@ export const ManageGallery = () => {
       }
     } catch (error) {
       console.error('Error deleting image:', error);
+    } finally {
+      setIsLoading(false);
+      setDeleteConfirmationOpen(false);
     }
+  };
+
+  const handleDeleteConfirmation = (id) => {
+    setDeleteConfirmationOpen(true);
+    setImageToDeleteId(id);
+  };
+
+  const handleCloseDeleteConfirmation = () => {
+    setDeleteConfirmationOpen(false);
+    setImageToDeleteId(null);
   };
 
   const fetchImages = async () => {
     try {
+      setIsLoading(true);
       const response = await fetch('/api/gallery/images');
       if (response.ok) {
         const images = await response.json();
@@ -67,6 +96,8 @@ export const ManageGallery = () => {
       }
     } catch (error) {
       console.error('Error fetching images:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -99,37 +130,44 @@ export const ManageGallery = () => {
       </Box>
 
       <Box sx={{ p: { sm: '20px 130px' } }}>
-        <TableContainer>
-          <Table>
-            <TableHead>
-              <TableRow>
-                <TableCell>Image</TableCell>
-                <TableCell>Name</TableCell>
-                <TableCell align="right">Action</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {uploadedImages.map((image) => (
-                <TableRow key={image._id}>
-                  <TableCell component="th" scope="row">
-                    <img src={`data:${image.contentType};base64,${Buffer.from(image.data).toString('base64')}`} alt={image.name} style={{ width: '100px', height: 'auto' }} />
-                  </TableCell>
-                  <TableCell>{image.name}</TableCell>
-                  <TableCell align="right">
-                    <Button
-                      variant="outlined"
-                      color="error"
-                      startIcon={<DeleteIcon />}
-                      onClick={() => handleDelete(image.name)}
-                    >
-                      Delete
-                    </Button>
-                  </TableCell>
+        {isLoading && <CircularProgress />}
+        {!isLoading && (
+          <TableContainer>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>Image</TableCell>
+                  <TableCell>Name</TableCell>
+                  <TableCell align="right">Action</TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+              </TableHead>
+              <TableBody>
+                {uploadedImages.map((image) => (
+                  <TableRow key={image._id}>
+                    <TableCell component="th" scope="row">
+                      <img
+                        src={image.img}
+                        alt={image.name}
+                        style={{ width: '100px', height: 'auto' }}
+                      />
+                    </TableCell>
+                    <TableCell>{image.name}</TableCell>
+                    <TableCell align="right">
+                      <Button
+                        variant="outlined"
+                        color="error"
+                        startIcon={<DeleteIcon />}
+                        onClick={() => handleDeleteConfirmation(image._id)}
+                      >
+                        Delete
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        )}
       </Box>
 
       <Snackbar
@@ -147,6 +185,25 @@ export const ManageGallery = () => {
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         message="Image deleted successfully!"
       />
+
+      <Snackbar
+        open={showUploadConfirmation}
+        autoHideDuration={3000}
+        onClose={() => setShowUploadConfirmation(false)}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        message="Image uploaded successfully!"
+      />
+
+      <Dialog open={deleteConfirmationOpen} onClose={handleCloseDeleteConfirmation}>
+        <DialogTitle>Confirm Deletion</DialogTitle>
+        <DialogContent>
+          Are you sure you want to delete this image?
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDeleteConfirmation}>Cancel</Button>
+          <Button onClick={() => handleDelete(imageToDeleteId)} color="error">Delete</Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 };

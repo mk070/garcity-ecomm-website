@@ -30,7 +30,7 @@ const upload = multer({
 });
 
 // Use gallery routes
-app.use('/api/gallery', upload.single('image'), galleryRoutes);
+app.use('/api/gallery', galleryRoutes);
 
 // Define a route handler for the root path ("/")
 app.get('/', (req, res) => {

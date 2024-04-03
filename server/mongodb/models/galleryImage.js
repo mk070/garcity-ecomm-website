@@ -1,5 +1,3 @@
-// mongodb/models/galleryImage.js
-
 import mongoose from 'mongoose';
 
 const galleryImageSchema = new mongoose.Schema({
@@ -7,11 +5,7 @@ const galleryImageSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    data: {
-        type: Buffer,
-        required: true
-    },
-    contentType: {
+    img: {
         type: String,
         required: true
     }

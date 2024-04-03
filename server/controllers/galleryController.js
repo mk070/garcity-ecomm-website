@@ -5,11 +5,11 @@ import GalleryImage from '../mongodb/models/galleryImage.js';
 export const uploadImage = async (req, res) => {
     try {
         const { buffer, mimetype } = req.file;
+        const imgData = `data:${mimetype};base64,${buffer.toString('base64')}`;
 
         const image = new GalleryImage({
-            name: req.file.originalname, // Extracting name from the file
-            data: buffer,
-            contentType: mimetype
+            name: req.file.originalname,
+            img: imgData
         });
         await image.save();
         res.status(201).json({ message: 'Image uploaded successfully!' });
@@ -21,7 +21,7 @@ export const uploadImage = async (req, res) => {
 
 export const getImages = async (req, res) => {
     try {
-        const images = await GalleryImage.find({}, 'name contentType');
+        const images = await GalleryImage.find({}, 'name img');
         res.json(images);
     } catch (error) {
         console.error('Error fetching images:', error);

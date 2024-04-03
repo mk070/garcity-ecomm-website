@@ -1,228 +1,208 @@
+import React, { useState, useEffect, useRef } from 'react';
+import { DotLottiePlayer } from '@dotlottie/react-player';
 import styled from '@emotion/styled';
-import { Typography, useMediaQuery, Container, Box, TextField, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, Button } from '@mui/material';
-import React, { useRef } from 'react';
-import tshirts from '../../assets/images/printing/tshirts.png'; 
+import { Typography, useMediaQuery, Container, Box, TextField, Button } from '@mui/material';
+import dtf from '../../assets/images/printing/dt.webp'; 
+import emboss from '../../assets/images/printing/emboss.jpeg'; 
+import hd from '../../assets/images/printing/hd.jpg'; 
+import puff from '../../assets/images/printing/puff.jpg'; 
+import screen from '../../assets/images/printing/screen.jpg'; 
+import embroidry from '../../assets/images/printing/embroidry.jpg'; 
 
-
-
-const Img = styled.img`
-  width:350px;
-  height: 350px;
-  object-fit: contain;
+const Image = styled.img`
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
-  animation: animate 2s infinite ease alternate;
-
-  @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
-  }
-
-  @keyframes animate {
-    to {
-      transform: translateY(20px);
-    }
-  }
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease-out; 
 `;
 
 export const AnimatedForm = () => {
-    const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-    const multilineRef = useRef(null);
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  const multilineRef = useRef(null);
 
-    const handleRadioChange = (event) => {
-        if (event.target.value === 'Other') {
-            multilineRef.current.focus();
-        }
-    };  
+  const handleRadioChange = (event) => {
+    if (event.target.value === 'Other') {
+      multilineRef.current.focus();
+    }
+  };
+  useEffect(() => {
+    const parallax = (e) => {
+      console.log('Mousemove event:', e.clientX, e.clientY);
 
-    return (
-        <>
-            <Container sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '600px',
-                border: '1px solid',
-                marginTop: '100px',
-            }}>
-           
-                <Typography
-                    variant='h3'
-                    sx={{
-                        fontSize: isSmallScreen ? '10px' : '30px',
-                        fontFamily: ['integral-Regular'].join(','),
-                        marginBottom: '50px',
-                    }}
-                >
-                    Get in touch
-                </Typography>
-                
-                <Box border={1} sx={{
-                    height: '400px',
-                    width: '700px',
-                    borderRadius: '10px',
-                    border: '2px solid',
-                }}>
-                    <Typography sx={{
-                        fontSize: '20px',
-                        fontWeight: 900,
-                        marginLeft: '30px',
-                        marginTop: '10px',
-                    }}>
-                        Personal Info
-                    </Typography>
-                    <hr style={{ width: '80%', marginTop: '10px', marginLeft: '30px', borderColor: '#FFF4F1', borderWidth: '2px' }} />
+      document.querySelectorAll(".object").forEach(function (move) {
+        var moving_value = move.getAttribute('data-value');
+        console.log('Data value:', moving_value);
+        
+        var x = (e.clientX * moving_value) / 250;
+        var y = (e.clientY * moving_value) / 250;
+        console.log('Transform values:', x, y);
 
-                    <Box my={5} sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        flexDirection: 'row',
-                        gap: '10px',
-                    }}>
-                        <TextField
-                            required
-                            id="outlined-required"
-                            label="Name"
-                            defaultValue=""
-                            size='medium'
-                            color='secondary'
-                        />
-                        <TextField
-                            required
-                            id="outlined-required"
-                            label="Email"
-                            defaultValue=""
-                            size='medium'
-                            InputProps={{
-                                style: {
-                                    borderColor: '#CCC',
-                                    '&:focused': { borderColor: '#ff0000' },
-                                    '&:active': { borderColor: '#ff0000' },
-                                },
-                            }}
-                        />
-                        <TextField
-                            required
-                            id="outlined-required"
-                            label="Contact"
-                            defaultValue=""
-                            size='medium'
-                            InputProps={{
-                                style: {
-                                    borderColor: '#CCC',
-                                    '&:focused': { borderColor: 'orange' },
-                                    '&:active': { borderColor: 'red' },
-                                },
-                            }}
-                        />
-                    </Box>
-                    {/* <Typography sx={{
-                        fontSize: '20px',
-                        fontWeight: 900,
-                        marginLeft: '30px',
-                        marginTop: '10px',
-                    }}>
-                        Project Info
-                    </Typography>
-                    <hr style={{ width: '80%', marginTop: '10px', marginLeft: '30px', borderColor: '#FFF4F1', borderWidth: '2px' }} />
-                    
-                    <Box  sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        flexDirection: 'row',
-                        gap: '50px',
-                        marginTop:'10px'
-                    }}>
-                        <Box flexDirection={'row'}>
-                            <Typography sx={{
-                                fontSize: '18px',
-                                fontWeight: 900,
-                                marginLeft: '0px',
-                                marginTop: '10px',
-                            }}>
-                                Tell us more about your company
-                            </Typography>
-                            <FormControl>
-                                <FormLabel id="demo-radio-buttons-group-label"></FormLabel>
-                                <RadioGroup
-                                    aria-labelledby="demo-radio-buttons-group-label"
-                                    defaultValue="none"
-                                    name="radio-buttons-group"
-                                    onChange={handleRadioChange}
-                                >
-                                    <FormControlLabel value="A Startup" control={<Radio />} label="A Startup" />
-                                    <FormControlLabel value="Retailer" control={<Radio />} label="Retailer" />
-                                    <FormControlLabel value="Other" control={<Radio />} label="Other" />
-                                </RadioGroup>
-                            </FormControl>
-                        </Box>
-                        <Box flexDirection={'row'}>
-                            <Typography sx={{
-                                fontSize: '18px',
-                                fontWeight: 900,
-                                marginLeft: '0px',
-                                marginTop: '10px',
-                            }}>
-                                Tell us more about your company
-                            </Typography>
-                            <FormControl>
-                                <FormLabel id="demo-radio-buttons-group-label"></FormLabel>
-                                <RadioGroup
-                                    aria-labelledby="demo-radio-buttons-group-label"
-                                    defaultValue="none"
-                                    name="radio-buttons-group"
-                                    onChange={handleRadioChange}
-                                >
-                                    <FormControlLabel value="Female" control={<Radio />} label="Female" />
-                                    <FormControlLabel value="Male" control={<Radio />} label="Male" />
-                                    <FormControlLabel value="Other" control={<Radio />} label="Other" />
-                                </RadioGroup>
-                            </FormControl>
-                        </Box>
-                    </Box >   */}
-                    <Typography sx={{
-                                fontSize: '18px',
-                                fontWeight: 900,
-                                marginLeft: '30px',
-                                marginTop: '50px',
-                            }}>
-                                Tell us more about your company
-                            </Typography>
-                            <TextField
-                                fullWidth 
-                                id="outlined-multiline-static"
-                                label="Others"
-                                multiline
-                                rows={5}
-                                inputRef={multilineRef}
-                                sx={{
-                                    marginLeft: '10px',
-                                    marginRight: '10px',
-                                    marginTop: '10px',
-                                    textAlign: 'center',
-                                    width: '95%', // Adjust the width here
-                                }}
-                                />
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+      });
+    };
+
+    document.addEventListener("mousemove", parallax);
+
+    return () => {
+      document.removeEventListener("mousemove", parallax);
+    };
+  }, []); // Empty dependency array to run the effect only once
+
+  return (
+    <>
+      <Container sx={{
+        display: 'flex',
+        position:'relative',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '600px',
+        marginTop: '100px',
+      }}>
+         <img  src={puff} class="object" data-value='-6' style={{position: 'absolute', top: '0',height:'200px',width:'200px', left:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px", objectFit:'cover'
+        }} />
+         {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', top: '100px',height:'120px',width:'auto', left:'120px', borderRadius:'10px',zIndex:-3,
+        }} /> */}
+        
+        {/* front */}
+
+         <img  src={dtf} class="object" data-value='-4' style={{position: 'absolute', top: '0',height:'200px',width:'200px', right:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px", objectFit:'cover'
+        }} />
+         {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', top: '100px',height:'120px',width:'auto', right:'120px', borderRadius:'10px',zIndex:-1, boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px"
+        }} /> */}
+
+        {/* right */}
 
 
-                </Box>
-                                <Button sx={{
-                                  background:'#DF9573',
-                                  mt: isSmallScreen ? '20px' : '60px',
-                                  borderRadius:'30px',
-                                  '&:hover': {
-                                    backgroundColor: '#1E1E1E', 
-                                    color:'',// Add hover effect
-                                    transition: 'background-color 0.3s ease-in-out',
-                                  },
-                                }} variant="contained">Submit 
-                                </Button>
-            </Container>
-        </>
-    );
+         <img  src={screen} class="object" data-value='-5' style={{position: 'absolute', bottom: '10px',height:'200px',width:'200px', left:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px",objectFit:'cover'
+
+        }} />
+         {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', bottom: '130px',height:'120px',width:'auto', left:'150px', borderRadius:'10px',zIndex:-1,boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px"
+        }} /> */}
+
+        {/* bottom left */}
+         <img  src={embroidry} class="object" data-value='-7' style={{position: 'absolute', bottom: '10px',height:'200px',width:'200px', right:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px", objectFit:'cover'
+        }} />
+         {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', bottom: '130px',height:'120px',width:'auto', right:'130px', borderRadius:'10px', zIndex:-1,boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px"
+        }} /> */}
+        
+       
+        <Typography variant='h1' sx={{
+          fontSize: isSmallScreen ? '10px' : '84px',
+          fontFamily: ['integral-Regular !important' ].join(','),
+          marginBottom: '50px',
+          fontWeight:1000
+        }}>
+         CONTACT US
+        </Typography>
+        <Box sx={{
+          
+        }}></Box>
+{/* 
+        <Box border={1} sx={{
+          height: '400px',
+          width: '700px',
+          borderRadius: '10px',
+          border: '2px solid',
+          zIndex: '2',
+          backgroundColor: 'white',
+        }}>
+          <Typography sx={{
+            fontSize: '20px',
+            fontWeight: 900,
+            marginLeft: '30px',
+            marginTop: '10px',
+          }}>
+            Personal Info
+          </Typography>
+          <hr style={{ width: '80%', marginTop: '10px', marginLeft: '30px', borderColor: '#FFF4F1', borderWidth: '2px' }} />
+
+          <Box my={5} sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexDirection: 'row',
+            gap: '10px',
+          }}>
+            <TextField
+              required
+              id="outlined-required"
+              label="Name"
+              defaultValue=""
+              size='medium'
+              color='secondary'
+            />
+            <TextField
+              required
+              id="outlined-required"
+              label="Email"
+              defaultValue=""
+              size='medium'
+              InputProps={{
+                style: {
+                  borderColor: '#CCC',
+                  '&:focused': { borderColor: '#ff0000' },
+                  '&:active': { borderColor: '#ff0000' },
+                },
+              }}
+            />
+            <TextField
+              required
+              id="outlined-required"
+              label="Contact"
+              defaultValue=""
+              size='medium'
+              InputProps={{
+                style: {
+                  borderColor: '#CCC',
+                  '&:focused': { borderColor: 'orange' },
+                  '&:active': { borderColor: 'red' },
+                },
+              }}
+            />
+          </Box>
+
+          <Typography sx={{
+            fontSize: '18px',
+            fontWeight: 900,
+            marginLeft: '30px',
+            marginTop: '50px',
+          }}>
+            Tell us more about your company
+          </Typography>
+          <TextField
+            fullWidth
+            id="outlined-multiline-static"
+            label="Others"
+            multiline
+            rows={5}
+            inputRef={multilineRef}
+            sx={{
+              marginLeft: '10px',
+              marginRight: '10px',
+              marginTop: '10px',
+              textAlign: 'center',
+              width: '95%', // Adjust the width here
+            }}
+          />
+        </Box>
+
+        <Button sx={{
+          background: '#DF9573',
+          mt: isSmallScreen ? '20px' : '60px',
+          borderRadius: '30px',
+          '&:hover': {
+            backgroundColor: '#1E1E1E',
+            transition: 'background-color 0.3s ease-in-out',
+          },
+        }} variant="contained">
+          Submit
+        </Button> */}
+      </Container>
+    </>
+  );
 };

@@ -4,6 +4,7 @@ import React from 'react'
 import { CatchLine } from '../components/ContactUs/CatchLine'
 import { Detials } from '../components/ContactUs/Detials'
 import { Maps } from '../components/ContactUs/Maps'
+import { RevealImage } from '../components/ContactUs/RevealImage'
 import { AnimatedForm } from '../components/ContactUs/AnimatedForm'
 
 export const Contact = () => {
@@ -11,13 +12,14 @@ export const Contact = () => {
     <>   
 
     <AnimatedForm/>
+    {/* <RevealImage/> */}
     <CatchLine/>
     <Detials/>
      {/* <Maps/>  */}
 
       {/* <InputForm/> */}
       <CatchLine/>
-      <Detials/>
+      
       <Maps/> 
     </>
   )

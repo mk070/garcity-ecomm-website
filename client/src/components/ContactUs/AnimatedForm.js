@@ -1,7 +1,6 @@
+import { gsap } from 'gsap';
 import React, { useState, useEffect, useRef } from 'react';
-import { DotLottiePlayer } from '@dotlottie/react-player';
-import styled from '@emotion/styled';
-import { Typography, useMediaQuery, Container, Box, TextField, Button } from '@mui/material';
+import { Typography, useMediaQuery, Container, Box, TextField, Button, Hidden } from '@mui/material';
 import dtf from '../../assets/images/printing/dt.webp'; 
 import emboss from '../../assets/images/printing/emboss.jpeg'; 
 import hd from '../../assets/images/printing/hd.jpg'; 
@@ -9,28 +8,21 @@ import puff from '../../assets/images/printing/puff.jpg';
 import screen from '../../assets/images/printing/screen.jpg'; 
 import embroidry from '../../assets/images/printing/embroidry.jpg'; 
 
-const Image = styled.img`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease-out; 
-`;
-
 export const AnimatedForm = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const multilineRef = useRef(null);
 
-  const handleRadioChange = (event) => {
-    if (event.target.value === 'Other') {
-      multilineRef.current.focus();
-    }
-  };
+
   useEffect(() => {
+    const tl = gsap.timeline({ defaults: { ease: "SlowMo.easeOut" } });
+    tl.from(".contact-us", { y: '200%',opacity:0, duration: 0.6, delay: 0.2 });
+
     const parallax = (e) => {
       console.log('Mousemove event:', e.clientX, e.clientY);
 
@@ -64,47 +56,65 @@ export const AnimatedForm = () => {
         height: '600px',
         marginTop: '100px',
       }}>
-         <img  src={puff} class="object" data-value='-6' style={{position: 'absolute', top: '0',height:'200px',width:'200px', left:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px", objectFit:'cover'
-        }} />
+         <img  src={puff} class="object" data-value='-6' style={{position: 'absolute', top: '0',height:'200px',width:'200px', left:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px", objectFit:'cover',opacity: imageLoaded ? 1 : 0, // Set opacity based on imageLoaded state
+        transition: 'opacity 0.5s ease-in-out 500ms',
+        }}onLoad={handleImageLoad} />
          {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', top: '100px',height:'120px',width:'auto', left:'120px', borderRadius:'10px',zIndex:-3,
         }} /> */}
         
         {/* front */}
 
-         <img  src={dtf} class="object" data-value='-4' style={{position: 'absolute', top: '0',height:'200px',width:'200px', right:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px", objectFit:'cover'
-        }} />
+         <img  src={dtf} class="object" data-value='-4' style={{position: 'absolute', top: '0',height:'200px',width:'200px', right:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px", objectFit:'cover',opacity: imageLoaded ? 1 : 0, // Set opacity based on imageLoaded state
+        transition: 'opacity 0.5s ease-in-out 300ms',
+        }} onLoad={handleImageLoad}/>
          {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', top: '100px',height:'120px',width:'auto', right:'120px', borderRadius:'10px',zIndex:-1, boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px"
         }} /> */}
 
         {/* right */}
 
 
-         <img  src={screen} class="object" data-value='-5' style={{position: 'absolute', bottom: '10px',height:'200px',width:'200px', left:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px",objectFit:'cover'
+         <img  src={screen} class="object" data-value='-5' style={{position: 'absolute', bottom: '10px',height:'200px',width:'200px', left:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px",objectFit:'cover',opacity: imageLoaded ? 1 : 0, // Set opacity based on imageLoaded state
+        transition: 'opacity 0.5s ease-in-out 200ms',
 
-        }} />
+        }} onLoad={handleImageLoad}/>
          {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', bottom: '130px',height:'120px',width:'auto', left:'150px', borderRadius:'10px',zIndex:-1,boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px"
         }} /> */}
 
         {/* bottom left */}
-         <img  src={embroidry} class="object" data-value='-7' style={{position: 'absolute', bottom: '10px',height:'200px',width:'200px', right:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px", objectFit:'cover'
-        }} />
+        <img
+      src={embroidry}
+      className="object"
+      data-value="-7"
+      style={{
+        position: 'absolute',
+        bottom: '10px',
+        height: '200px',
+        width: '200px',
+        right: '10px',
+        borderRadius: '10px',
+        boxShadow: 'rgba(0, 0, 0, 1) 0px 5px 15px',
+        objectFit: 'cover',
+        opacity: imageLoaded ? 1 : 0, // Set opacity based on imageLoaded state
+        transition: 'opacity 0.5s ease-in-out 120ms', // Add transition for opacity change
+      }}
+      onLoad={handleImageLoad} // Call handleImageLoad when the image is loaded
+    />
          {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', bottom: '130px',height:'120px',width:'auto', right:'130px', borderRadius:'10px', zIndex:-1,boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px"
         }} /> */}
         
        
-        <Typography variant='h1' sx={{
+        <Typography className="contact-us" variant='h1' sx={{
           fontSize: isSmallScreen ? '10px' : '84px',
-          fontFamily: ['integral-Regular !important' ].join(','),
+          fontFamily: ['integral-Regular !important'].join(','),
           marginBottom: '50px',
-          fontWeight:1000
-        }}>
-         CONTACT US
-        </Typography>
-        <Box sx={{
-          
-        }}></Box>
-{/* 
-        <Box border={1} sx={{
+          fontWeight: 1000,
+          overflow:"hidden",
+            }}>
+            CONTACT US
+          </Typography>
+       
+
+        {/* <Box border={1} sx={{
           height: '400px',
           width: '700px',
           borderRadius: '10px',
@@ -201,8 +211,9 @@ export const AnimatedForm = () => {
           },
         }} variant="contained">
           Submit
-        </Button> */}
+        </Button>  */}
       </Container>
     </>
   );
 };
+

@@ -1,16 +1,15 @@
-// controllers/galleryController.js
-
 import GalleryImage from '../mongodb/models/galleryImage.js';
 
 export const uploadImage = async (req, res) => {
     try {
-        const { buffer, mimetype } = req.file;
-        const imgData = `data:${mimetype};base64,${buffer.toString('base64')}`;
+        const { buffer } = req.file;
+        const img = buffer.toString('base64');
 
         const image = new GalleryImage({
-            name: req.file.originalname,
-            img: imgData
+            name: req.file.originalname, // Using originalname as the image name
+            img: img
         });
+        
         await image.save();
         res.status(201).json({ message: 'Image uploaded successfully!' });
     } catch (error) {
@@ -31,8 +30,8 @@ export const getImages = async (req, res) => {
 
 export const deleteImage = async (req, res) => {
     try {
-        const { name } = req.params;
-        await GalleryImage.findOneAndDelete({ name });
+        const { id } = req.params;
+        await GalleryImage.findByIdAndDelete(id);
         res.status(204).end();
     } catch (error) {
         console.error('Error deleting image:', error);

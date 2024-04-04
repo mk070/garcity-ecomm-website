@@ -4,8 +4,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
 export const ManageGallery = () => {
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [imageName, setImageName] = useState('');
   const [uploadedImages, setUploadedImages] = useState([]);
   const [isUploadSuccess, setUploadSuccess] = useState(false);
   const [isDeleteSuccess, setDeleteSuccess] = useState(false);
@@ -13,32 +11,35 @@ export const ManageGallery = () => {
   const [deleteConfirmationOpen, setDeleteConfirmationOpen] = useState(false);
   const [imageToDeleteId, setImageToDeleteId] = useState(null);
   const [showUploadConfirmation, setShowUploadConfirmation] = useState(false);
+  const [imageName, setImageName] = useState('');
 
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      setSelectedFile(file);
-      setImageName(file.name);
+  const convertTobase64 = (e) => {
+    var reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+    reader.onload = () => {
+      console.log(reader.result);
+      setUploadedImages(reader.result);
+      setImageName(e.target.files[0].name); // Set the image name here
+    };
+    reader.onerror = error => {
+      console.log(error);
     }
   };
-  
 
   const handleUpload = async () => {
     try {
       setIsLoading(true);
-      const formData = new FormData();
-      formData.append('image', selectedFile);
-      formData.append('name', imageName);
-  
+
       const response = await fetch('/api/gallery/upload', {
         method: 'POST',
-        body: formData,
+        body: JSON.stringify({
+          base64: uploadedImages,
+          name: imageName // Pass image name in the request
+        }),
       });
-  
+
       if (response.ok) {
         setUploadSuccess(true);
-        setSelectedFile(null);
-        setImageName('');
         await fetchImages(); // Wait for the images to be fetched again
         setShowUploadConfirmation(true); // Show upload confirmation message
         // Hide upload confirmation message after 3 seconds
@@ -52,7 +53,7 @@ export const ManageGallery = () => {
       setIsLoading(false);
     }
   };
-  
+
   const handleDelete = async (id) => {
     try {
       setIsLoading(true);
@@ -115,14 +116,15 @@ export const ManageGallery = () => {
         </Box>
         <Box>
           <input
+           enctype="multipart/form-data"
             accept="image/*"
             style={{ display: 'none' }}
             id="upload-button"
             type="file"
-            onChange={handleFileChange}
+            onChange={convertTobase64}
           />
           <label htmlFor="upload-button">
-            <Button variant="contained" component="span" startIcon={<CloudUploadIcon />} onClick={handleUpload}>
+            <Button variant="contained" enctype="multipart/form-data" component="span" startIcon={<CloudUploadIcon />} onClick={handleUpload}>
               Upload
             </Button>
           </label>

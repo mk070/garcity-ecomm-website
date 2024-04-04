@@ -73,7 +73,7 @@ export const Nav = (props) => {
                         fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
                       }}
                     >
-                      {item} <ExpandMoreIcon    onMouseEnter={handleProductMenuOpen} />
+                      {item} <ExpandMoreIcon  onMouseEnter={handleProductMenuOpen} />
                     </Button>
 
                     <Menu
@@ -82,9 +82,9 @@ export const Nav = (props) => {
                       open={Boolean(anchorEl)}
                       onClose={handleProductMenuClose}
                     >
-                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/menswear">Mens wear</MenuItem>
-                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/womenswear">Womens wear</MenuItem>
-                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/kidswear">Kids wear</MenuItem>
+                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/men'swear">Mens wear</MenuItem>
+                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/women'swear">Womens wear</MenuItem>
+                      <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/kid'swear">Kids wear</MenuItem>
                       <MenuItem onClick={handleProductMenuItemClick} component={Link} to="/product/sportswear">Sports wear</MenuItem>
                     </Menu>
                   </React.Fragment>

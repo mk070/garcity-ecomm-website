@@ -17,6 +17,7 @@ import PageLoader from './components/Pageloader';
 import { MoveupButton } from './components/MoveupButton';
 import { ContactButton } from './components/ContactButton';
 import { NotFound } from './components/NotFound';
+import { SportsWear } from './pages/SportsWear';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -48,10 +49,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product' element={<Product />} />
-        <Route path='/product/menswear' element={<MensWear />} />
-        <Route path='/product/womenswear' element={<WomensWear />} />
-        <Route path='/product/kidswear' element={<KidsWear />} />
-        <Route path='/product/sportswear' element={<WomensWear />} />
+        <Route path="/product/men'swear" element={<MensWear />} />
+        <Route path="/product/women'swear" element={<WomensWear />} />
+        <Route path="/product/kid'swear" element={<KidsWear />} />
+        <Route path='/product/sportswear' element={<SportsWear />} />
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />

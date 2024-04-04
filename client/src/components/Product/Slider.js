@@ -9,19 +9,35 @@ import colors from "../../assets/images/productpage/2.png"
 
 
 export const Slider = () => {
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   return (
     <>
-    <Box bgcolor="transparent" mx={isSmallScreen ? 2 : 10} 
-    
+    <Box bgcolor="transparent"
+        
        display="flex" sx={{
+        alignItems:"center",
+        margin:'0 100px',
+        position:"relative",
       borderRadius:"20px",overflow:"hidden", 
-      height: isSmallScreen ? '200px': '350px',
+      height: { sm: '390px' },
       boxShadow:" rgba(0, 0, 0, 0.25) 0px 10px 20px -12px",
-      marginBottom: '100px',
+      marginBottom: '60px',
     }}>
-    
-    <Swiper
+      <Typography
+          sx={{
+            position: 'absolute',
+            fontSize: '100px',
+            zIndex: '100',
+            color: 'white',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+            fontFamily: 'integral-Regular !important',
+            top: '50%', // Adjusted top value to center vertically
+            transform: 'translateY(-50%) ', // Added this line to center vertically
+            left: '350px'
+          }}
+        >
+          Products
+        </Typography>    
+        <Swiper
       spaceBetween={0}
       slidesPerView={1}
       autoplay={{

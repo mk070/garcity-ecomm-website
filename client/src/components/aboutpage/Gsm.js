@@ -99,7 +99,7 @@ export const Gsm = () => {
             marginBottom: "50px",
           }}
         >
-          We offer customizable GSM options, allowing you to select the perfect weight and thickness for your garments, ensuring comfort and durability according to your preferences.
+          We provide accurate GSM (Grams per Square Meter) services to ensure the desired fabric weight and quality suitable for your garment.
         </Typography>
         <Box marginTop={10} marginLeft={10} sx={{ width: 300 }}>
           <Slider

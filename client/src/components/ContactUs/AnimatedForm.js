@@ -6,10 +6,13 @@ import emboss from '../../assets/images/printing/emboss.jpeg';
 import hd from '../../assets/images/printing/hd.jpg'; 
 import puff from '../../assets/images/printing/puff.jpg'; 
 import screen from '../../assets/images/printing/screen.jpg'; 
-import embroidry from '../../assets/images/printing/embroidry.jpg'; 
+import embroidry from '../../assets/images/printing/embroidry.jpg';
+import { AnimatedButton } from 'react-genie'; 
 
 export const AnimatedForm = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [showFormBox, setShowFormBox] = useState(false);
+
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -37,24 +40,37 @@ export const AnimatedForm = () => {
         move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
       });
     };
-
     document.addEventListener("mousemove", parallax);
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const threshold = 200; // Adjust this threshold as needed
+
+      if (scrollY > threshold) {
+        setShowFormBox(true);
+      } else {
+        setShowFormBox(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       document.removeEventListener("mousemove", parallax);
+      window.removeEventListener("scroll", handleScroll);
+
     };
   }, []); // Empty dependency array to run the effect only once
 
   return (
     <>
       <Container sx={{
-        display: 'flex',
-        position:'relative',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '600px',
-        marginTop: '100px',
+          display: 'flex',
+          position: 'relative',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '600px',
+          marginTop: '100px',
       }}>
          <img  src={puff} class="object" data-value='-6' style={{position: 'absolute', top: '0',height:'200px',width:'200px', left:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px", objectFit:'cover',opacity: imageLoaded ? 1 : 0, // Set opacity based on imageLoaded state
         transition: 'opacity 0.5s ease-in-out 500ms',
@@ -114,14 +130,17 @@ export const AnimatedForm = () => {
           </Typography>
        
 
-        {/* <Box border={1} sx={{
-          height: '400px',
-          width: '700px',
-          borderRadius: '10px',
-          border: '2px solid',
-          zIndex: '2',
-          backgroundColor: 'white',
-        }}>
+        
+          {showFormBox && (
+          <Box border={1} sx={{
+            height: '400px',
+            width: '700px',
+            borderRadius: '10px',
+            border: '2px solid',
+            zIndex: '2',
+            backgroundColor: 'white',
+            marginTop: isSmallScreen ? '20px' : '60px',
+          }}>
           <Typography sx={{
             fontSize: '20px',
             fontWeight: 900,
@@ -199,7 +218,7 @@ export const AnimatedForm = () => {
               width: '95%', // Adjust the width here
             }}
           />
-        </Box>
+        </Box>)}
 
         <Button sx={{
           background: '#DF9573',
@@ -211,7 +230,7 @@ export const AnimatedForm = () => {
           },
         }} variant="contained">
           Submit
-        </Button>  */}
+        </Button>  
       </Container>
     </>
   );

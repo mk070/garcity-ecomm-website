@@ -6,15 +6,42 @@ import styled from '@emotion/styled';
 import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
 import '@dotlottie/react-player/dist/index.css';
 import packaginganimation from "../../assets/images/about/packing.lottie"
+import svg5 from '../../assets/images/about/printing/shipping.svg'; 
+import ship from '../../assets/images/about/shipping.png'; 
+
+
 
 const Video = styled.video`
   width: 100%;
   height: 100%;
   object-fit: cover;
 `;
+const Img = styled.img`
+  width:400px;
+  height: 400px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
+
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @keyframes animate {
+    to {
+      transform: translateY(20px);
+    }
+  }
+`;
 
 
-export const Packaging = () => {
+export const Shipping = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (
@@ -24,7 +51,6 @@ export const Packaging = () => {
       }}>
         <Grid
           container
-          marginTop={10}
           height={600}
           spacing={2}
           sx={{
@@ -33,19 +59,23 @@ export const Packaging = () => {
           }}
         >
          <Grid item>
-        <Box bgcolor="#fff" height={400} width={500} display="flex" borderRadius={5} sx={{
-         flexDirection:'column',overflow:'hidden',
-          marginLeft:'100px'
-
-        }}>
-          {/* <Video src={packaging} controls loop muted /> */}
-          <DotLottiePlayer
-              src={packaginganimation}
-              autoplay
-              loop
-            >
-          </DotLottiePlayer>
-        </Box>
+         <Box 
+        height={400} 
+        width={500} 
+        display="flex" 
+        borderRadius={5} 
+        sx={{ 
+          position:'relative',
+          flexDirection: 'column', 
+          marginLeft:'60px' , 
+          marginTop:'30px',}}>
+          
+          <img src={svg5} style={{
+            position:'absolute',
+            zIndex:-1,
+          }} />
+          <Img src={ship}/>
+            </Box>  
       </Grid>
       <Grid item width={700}>
         <Typography
@@ -53,12 +83,12 @@ export const Packaging = () => {
           variant="h3"
           sx={{
             fontSize: "50px",
-            fontFamily: ["integral-Regular", "sans-serif"].join(","),
+            fontFamily: "integral-Regular !important",
             marginBottom: "50px",
             marginTop:{xs:'50px',sm:"50px"}
           }}
         >
-          packaging
+          Shipping
         </Typography>
         <Typography
           height={100}
@@ -68,8 +98,8 @@ export const Packaging = () => {
             marginBottom: "50px",
           }}
         >
-         Experience personalized packaging options tailored to your brand's identity and preferences, adding a unique touch to every order and leaving a lasting impression on your customers.
-        </Typography>
+         Facilitating timely and reliable shipping services worldwide to deliver your products to their destination safely and promptly.
+         </Typography>
         <Box marginTop={10} marginLeft={10} sx={{ width: 300 }}>
             </Box>
           </Grid>
@@ -79,4 +109,4 @@ export const Packaging = () => {
   );
 };
 
-export default Packaging;
+export default Shipping;

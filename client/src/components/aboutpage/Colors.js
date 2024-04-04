@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import tshirt from '../../assets/images/about/tshirt.svg'; // Change to your SVG t-shirt image
+import svg6 from '../../assets/images/about/printing/Measurement.svg'; 
+
 
 const Colors = () => {
   const [selectedColor, setSelectedColor] = useState('#BA68C8');
@@ -14,7 +16,7 @@ const Colors = () => {
       <Box
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'column',sm:'row' },
+          flexDirection: { xs: 'column',sm:'row-reverse' },
           justifyContent: 'space-between',
           alignItems: 'center',
           padding: { sm: '80px 1px' },
@@ -23,7 +25,8 @@ const Colors = () => {
         <Box>
           <Typography variant="h5" gutterBottom
           sx={{            
-            fontFamily: ['integral-Regular', 'sans-serif'].join(','),
+            fontFamily: 'integral-Regular !important',
+            marginLeft:'50px'
         }}
           >
             Choose the colour that sync your style
@@ -33,9 +36,9 @@ const Colors = () => {
             selectedColor={selectedColor}
           />
           <Typography variant="body1" mt={2}>
-          Choose from a wide range of fabric colors customizable with Pantone TPG <br/>and TPX codes, ensuring precise color  matching for your vision.
+          Our dyeing services offer vibrant and long-lasting colors, enhancing the appeal of your clothing products. Using Pantone color codes, we ensure precision and accuracy throughout the dyeing process, resulting in consistent and stunning color outcomes.
           </Typography>
-        </Box>
+        </Box>    
         <TShirtImage color={selectedColor} />
       </Box>
     </Container>
@@ -89,17 +92,21 @@ const TShirtImage = ({ color }) => {
   return (
     <Box
       sx={{
-        backgroundColor: '#f3cebcd9',
+        // backgroundColor: '#f3cebcd9',
         borderRadius: '30px',
         transition: 'background-color 0.3s ease-in-out', // Add transition effect
         boxShadow: '0px 0px 2px rgba(0, 0, 0, 0.5)', // Move boxShadow to here
+
       }}
     >
+      
       <svg
         width="360"
         height="360"
         viewBox="0 0 260 260"
         xmlns="http://www.w3.org/2000/svg"
+        position='absolute'
+
       >
         {/* Add background rectangle */}
         {/* T-shirt image with color overlay */}

@@ -4,13 +4,44 @@ import { Card } from './Card';
 import dtf from '../../assets/images/printing/dt.webp'; 
 import emboss from '../../assets/images/printing/emboss.jpeg'; 
 import hd from '../../assets/images/printing/hd.jpg'; 
+import tshirts from '../../assets/images/contactus/tshirt.gif'; // Assuming the video path is correct
 import puff from '../../assets/images/printing/puff.jpg'; 
 import screen from '../../assets/images/printing/screen.jpg'; 
 import embroidry from '../../assets/images/printing/embroidry.jpg'; 
+import svg1 from '../../assets/images/about/printing/color.svg'; 
+import print from '../../assets/images/about/print.png'; 
+import svg2 from '../../assets/images/about/printing/Fabric.svg'; 
+import svg3 from '../../assets/images/about/printing/gsm.svg'; 
+import svg4 from '../../assets/images/about/printing/package.svg'; 
+import svg5 from '../../assets/images/about/printing/shipping.svg'; 
+import svg6 from '../../assets/images/about/printing/Measurement.svg'; 
+import styled from '@emotion/styled';
 
 
 
+const Img = styled.img`
+  width:400px;
+  height: 400px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
 
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @keyframes animate {
+    to {
+      transform: translateY(20px);
+    }
+  }
+`;
 export const Printing = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
@@ -24,7 +55,7 @@ export const Printing = () => {
         <Typography marginTop={"100px"} mx={10} variant='h3'
           sx={{
             fontSize: isSmallScreen ? '30px' : '50px',
-            fontFamily: ['integral-Regular', 'sans-serif'].join(','),
+            fontFamily: ['integral-Regular !important', 'sans-serif'].join(','),
             marginBottom: '50px',
           }}>PRINTING<br/>SERVICES</Typography>
           <Typography
@@ -35,7 +66,7 @@ export const Printing = () => {
                   marginBottom: '50px',
                 }}
               >
-                Unlock endless possibilities with our custom printing services, where your designs come to life with  recision and vibrancy, tailored to meet your unique branding and personalization needs.
+                From screen printing and digital printing to sublimation and heat transfer, our printing services offer a wide range of options to bring your creative vision to life on fabric with vibrant colors and precise detailing. We also specialize in puff printing, vinyl printing, high-density printing, embroidery, and  mboss printing, providing you with even more ways to customize your garments to perfection.
               </Typography>
            </Grid>
         <Grid item
@@ -44,12 +75,30 @@ export const Printing = () => {
           paddingRight:"70px",
           flexDirection:"row"
         }} >
-         <Card number = "1" type={"Puff Printing"} bgImage={puff}  />
+         {/* <Card number = "1" type={"Puff Printing"} bgImage={puff}  />
          <Card number = "2" type={"Screen Printing"} bgImage={screen}/>
          <Card number = "3" type={"Embroid"} bgImage={embroidry} />
          <Card number = "4" type={"Emboss printing"} bgImage={emboss} />
          <Card number = "5" type={"Direct to Flim"} bgImage={dtf} />
-         <Card number = "6" type={"Hign Density"} bgImage={hd}/>
+         <Card number = "6" type={"Hign Density"} bgImage={hd}/> */}
+
+        <Box 
+        height={400} 
+        width={500} 
+        display="flex" 
+        borderRadius={5} 
+        sx={{ 
+          position:'relative',
+          flexDirection: 'column', 
+          marginRight:'100px' , 
+          marginTop:'30px',}}>
+          
+          <img src={svg1} style={{
+            position:'absolute',
+            zIndex:-1,
+          }} />
+          <Img src={print}/>
+            </Box>  
         </Grid>
       </Grid>
     </Box>

@@ -2,9 +2,12 @@ import React, { Suspense, useState } from 'react';
 import { Container, Grid, Slider, Typography, useMediaQuery, Box, Stack, Button } from '@mui/material';
 import tshirtsVideo from '../../assets/images/contactus/tshirts.mp4'; // Assuming the video path is correct
 import tshirts from '../../assets/images/contactus/tshirt.gif'; // Assuming the video path is correct
+import measurement from '../../assets/images/about/measurement.png'; 
 import styled from '@emotion/styled';
 import { Canvas } from '@react-three/fiber';
 import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei';
+import svg6 from '../../assets/images/about/printing/Measurement.svg'; 
+
 
 const Video = styled.video`
   width: 100%;
@@ -27,8 +30,8 @@ const Model = styled.div`
 `;
 
 const Img = styled.img`
-  width:400px;
-  height: 400px;
+  width:550px;
+  height: 550px;
   object-fit: contain;
   position: absolute;
   top: 0;
@@ -91,7 +94,8 @@ export const Measurement = () => {
                 marginBottom: '50px',
               }}
             >
-              We offer custom measurements for a perfect fit, ensuring your garment is tailored precisely to your body shape and size,enhancing comfort and style.
+              We offer custom measurements for a perfect fit, ensuring your garment is tailored precisely to your body shape and size, enhancing comfort  and style.
+
             </Typography>
             <Stack marginLeft={10} spacing={2} direction="row">
               <Button variant="contained" sx={{
@@ -121,7 +125,7 @@ export const Measurement = () => {
             width:'500px',
             position:'relative'
            }}>
-                <Canvas>
+                {/* <Canvas>
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={1} />
@@ -135,8 +139,9 @@ export const Measurement = () => {
                 />
               </Sphere>
             </Suspense>
-          </Canvas>
-          <Img src={tshirts} />
+          </Canvas> */}
+          <img src = {svg6}/>
+          <Img src={measurement} />
            </Box>
           </Grid>
         </Grid>

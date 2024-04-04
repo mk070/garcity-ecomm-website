@@ -6,12 +6,14 @@ import { Detials } from '../components/ContactUs/Detials'
 import { Maps } from '../components/ContactUs/Maps'
 import { RevealImage } from '../components/ContactUs/RevealImage'
 import { AnimatedForm } from '../components/ContactUs/AnimatedForm'
+import GenieModal from '../components/ContactUs/GenieModal'
 
 export const Contact = () => {
   return (
     <>   
 
     <AnimatedForm/>
+    {/* <GenieModal/> */}
     {/* <RevealImage/> */}
     <CatchLine/>
     <Detials/>

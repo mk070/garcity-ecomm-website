@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Container, Grid, Slider, Typography, useMediaQuery, Box, Stack, Button } from '@mui/material';
 import tshirt from '../../assets/images/mensWear/mens.png'; // Assuming the video path is correct
 import styled from '@emotion/styled';
+import fabric from '../../assets/images/about/fabric.png'; 
+import svg2 from '../../assets/images/about/printing/Fabric.svg'; 
+
 
 const Video = styled.video`
   width: 100%;
@@ -9,6 +12,29 @@ const Video = styled.video`
   object-fit: cover;
 `;
 
+const Img = styled.img`
+  width:250px;
+  height: 250px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: animate 2s infinite ease alternate;
+
+  @media only screen and (max-width: 768px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @keyframes animate {
+    to {
+      transform: translateY(20px);
+    }
+  }
+`;
 export const Fabric = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const [sliderValue, setSliderValue] = useState(30);
@@ -29,13 +55,13 @@ export const Fabric = () => {
             justifyContent: 'space-around',
           }}
         >
-          <Grid item width={700}>
+          <Grid item width={700} marginTop={10}>
             <Typography
               mx={10}
               variant="h3"
               sx={{
                 fontSize: '50px',
-                fontFamily: ['integral-Regular', 'sans-serif'].join(','),
+                fontFamily: 'integral-Regular !important',
                 marginBottom: '50px',
                 marginTop: { xs: '50px', sm: '50px' },
               }}
@@ -50,13 +76,26 @@ export const Fabric = () => {
                 marginBottom: '50px',
               }}
             >
-              Explore our fabric options, including 100% cotton, organic cotton, Supimacotton, cotton blends, polyester, viscose, and custom fabric choices, ensuring versatility for your garment needs.
+              We specialize in crafting garments with precision and expertise, ensuring top notch quality and durability. We make fabrics in 100% cotton, organic cotton, Supima cotton, cotton-poly blend, polyester, polyester-spandex blend, modal, and viscose.
             </Typography>
             
           </Grid>
           <Grid item>
-            <Box bgcolor="#fff" height={400} width={500} display="flex" borderRadius={5} sx={{ boxShadow: '0px 5px 30px -5px rgba(0,0,0,0.8)', flexDirection: 'column', overflow: 'hidden',marginRight:'100px' , backgroundImage:`url(${tshirt})`}}>
-            </Box>
+          <Box 
+        height={400} 
+        width={500} 
+        display="flex" 
+        borderRadius={5} 
+        sx={{ 
+          position:'relative',
+          flexDirection: 'column', 
+          marginRight:'100px',}}>
+          
+          <img src={svg2} style={{
+            zIndex:-1,
+          }} />
+          <Img src={fabric}/>
+            </Box>  
           </Grid>
         </Grid>
       </Container>

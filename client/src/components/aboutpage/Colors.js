@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import tshirt from '../../assets/images/about/tshirt.svg'; // Change to your SVG t-shirt image
-import svg6 from '../../assets/images/about/printing/Measurement.svg'; 
+import svg1 from '../../assets/images/about/printing/color.svg'; 
+
 
 
 const Colors = () => {
@@ -12,16 +13,51 @@ const Colors = () => {
   };
 
   return (
-    <Container>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: { xs: 'column',sm:'row-reverse' },
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: { sm: '80px 1px' },
-        }}
-      >
+    <Container maxWidth={'xl'} 
+    sx={{
+       marginTop: { xs: '10px' }, 
+       display:'flex',
+       flexDirection: { xs: 'column',sm:'row' },
+       justifyContent: 'center',
+       alignItems:'space-around',
+       marginTop:'200px', }}>
+        <Box border={1}>
+        {/* <img src ={svg1} style={{
+        }}/> */}
+        <TShirtImage color={selectedColor} />
+        </Box>
+        <Box>
+        <Typography
+              mx={10}
+              variant="h3"
+              sx={{
+                fontSize: '50px',
+                fontFamily: 'integral-Regular !important',
+                marginBottom: '50px',
+                marginTop: { xs: '50px', sm: '50px' },
+              }}
+            >
+              Dyeing
+            </Typography>
+            <Typography
+              height={100}
+              sx={{
+                width: '450px',
+                marginLeft: '80px',
+                marginBottom: '50px',
+              }}
+            >
+              Our dyeing services offer vibrant and long-lasting colors, enhancing the appeal of your clothing products. Using Pantone color codes, we ensure precision and accuracy throughout the dyeing process, resulting in consistent and stunning color outcomes.
+            </Typography>
+            </Box>
+        
+        {/* <ColorOptions
+            handleColorChange={handleColorChange}
+            selectedColor={selectedColor}
+          /> */}
+
+
+        {/* <Box>
         <Box>
           <Typography variant="h5" gutterBottom
           sx={{            
@@ -41,7 +77,7 @@ const Colors = () => {
           </Typography>
         </Box>    
         <TShirtImage color={selectedColor} />
-      </Box>
+      </Box> */}
     </Container>
   );
 };
@@ -94,12 +130,13 @@ const TShirtImage = ({ color }) => {
     <Box
       sx={{
         // backgroundColor: '#f3cebcd9',
-     
         transition: 'background-color 0.3s ease-in-out', // Add transition effect
         // Move boxShadow to here
+        position:'relative'
 
       }}
     >
+    
       
       <svg
         width="360"

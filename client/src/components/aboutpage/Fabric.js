@@ -44,15 +44,63 @@ export const Fabric = () => {
   };
   return (
     <>
-      <Container maxWidth={'xl'} sx={{ marginTop: { xs: '10px' } }}>
-        <Grid
+      <Container maxWidth={'xl'} 
+      sx={{
+         marginTop: { xs: '10px' }, 
+         display:'flex',
+         flexDirection: { xs: 'column',sm:'row' },
+         justifyContent: 'center',
+         alignItems:'center', }}>
+        <Box>
+        <Typography
+              mx={10}
+              variant="h3"
+              sx={{
+                fontSize: '50px',
+                fontFamily: 'integral-Regular !important',
+                marginBottom: '50px',
+                marginTop: { xs: '50px', sm: '50px' },
+              }}
+            >
+              Fabric
+            </Typography>
+            <Typography
+              height={100}
+              sx={{
+                width: '450px',
+                marginLeft: '80px',
+                marginBottom: '50px',
+              }}
+            >
+              We specialize in crafting garments with precision and expertise, ensuring top notch quality and durability. We make fabrics in 100% cotton, organic cotton, Supima cotton, cotton-poly blend, polyester, polyester-spandex blend, modal, and viscose.
+            </Typography>
+            </Box>
+            
+            <Box 
+        height={400} 
+        width={500} 
+        display="flex" 
+        borderRadius={5} 
+        sx={{ 
+          position:'relative',
+          flexDirection: 'column', 
+          marginRight:'100px',}}>
+          
+          <img src={svg2} style={{
+            zIndex:-1,
+          }} />
+          <Img src={fabric}/>
+            </Box>  
+          
+        
+        {/* <Grid
           container
           marginTop={10}
           height={600}
           spacing={2}
           sx={{
             display: 'flex',
-            justifyContent: 'space-around',
+            justifyContent: 'center',
           }}
         >
           <Grid item width={700} marginTop={10}>
@@ -97,7 +145,7 @@ export const Fabric = () => {
           <Img src={fabric}/>
             </Box>  
           </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
     </>
   );

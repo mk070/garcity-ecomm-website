@@ -62,8 +62,50 @@ export const Packaging = () => {
   };
   return (
     <>
-      <Container maxWidth={'xl'} sx={{ marginTop: { xs: '10px' } }}>
-        <Grid
+<Container maxWidth={'xl'} 
+      sx={{
+         marginTop: { xs: '10px' }, 
+         display:'flex',
+         flexDirection: { xs: 'column',sm:'row' },
+         justifyContent: 'center',
+         alignItems:'center', }}>
+          
+
+          <Box
+           sx={{
+            height:'500px',
+            width:'500px',
+            position:'relative'
+           }}>
+            <img src = {svg4}/>
+          <Img src={packaging} />
+          </Box>
+
+          <Box>
+          <Typography
+              mx={10}
+              variant="h3"
+              sx={{
+                fontSize: '50px',
+                fontFamily: 'integral-Regular !important',
+                marginBottom: '50px',
+                marginTop: { xs: '50px', sm: '50px' },
+              }}
+            >
+              Packaging
+            </Typography>
+            <Typography
+              height={100}
+              sx={{
+                width: '450px',
+                marginLeft: '80px',
+                marginBottom: '50px',
+              }}
+            >
+             Experience personalized packaging options tailored to your brand's identity and preferences, adding a unique touch to every order and leaving a lasting impression on your customers.
+            </Typography>
+          </Box>
+          {/* <Grid
           container
           marginTop={10}
           height={600}
@@ -81,7 +123,7 @@ export const Packaging = () => {
             width:'500px',
             position:'relative'
            }}>
-                {/* <Canvas>
+              <Canvas>
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={1} />
@@ -95,7 +137,7 @@ export const Packaging = () => {
                 />
               </Sphere>
             </Suspense>
-          </Canvas> */}
+          </Canvas>
           <img src = {svg4}/>
           <Img src={packaging} />
            </Box>
@@ -145,7 +187,7 @@ export const Packaging = () => {
       
             </Stack>
           </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
     </>
   );

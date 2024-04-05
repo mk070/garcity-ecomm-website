@@ -45,10 +45,51 @@ export const Print = () => {
 
   return (
     <>
-      <Container maxWidth={'xl'} sx={{
-        marginTop: {xs:'10px'}
-      }}>
-        <Grid
+      <Container maxWidth={'xl'} 
+      sx={{
+         marginTop: { xs: '10px' }, 
+         display:'flex',
+         flexDirection: { xs: 'column',sm:'row' },
+         justifyContent: 'center',
+         alignItems:'center', }}>
+
+          <Box marginLeft={1}>
+      <Typography marginTop={"100px"} mx={10} variant='h3'
+          sx={{
+            fontSize: isSmallScreen ? '30px' : '50px',
+            fontFamily: 'integral-Regular !important',
+            marginBottom: '50px',
+          }}>PRINTING<br/>SERVICES</Typography>
+          <Typography
+                height={100}
+                sx={{
+                  width: isSmallScreen ? '300px' : '400px',
+                  marginLeft: isSmallScreen ? '20px' : '80px',
+                  marginBottom: '50px',
+                }}
+              >
+                From screen printing and digital printing to sublimation and heat transfer, our printing services offer a wide range of options to bring your creative vision to life on fabric with vibrant colors and precise detailing. We also specialize in puff printing, vinyl printing, high-density printing, embroidery, and  mboss printing, providing you with even more ways to customize your garments to perfection.
+              </Typography>
+              </Box>
+
+          <Box 
+        height={400} 
+        width={500} 
+        display="flex" 
+        borderRadius={5} 
+        sx={{ 
+          position:'relative',
+          flexDirection: 'column', 
+          marginLeft:'60px' , 
+          marginTop:'30px',}}>
+          
+          <img src={svg1} style={{
+            position:'absolute',
+            zIndex:-1,
+          }} />
+          <Img src={print}/>
+            </Box>  
+        {/* <Grid
           container
           marginTop={10}
           height={600}
@@ -99,7 +140,7 @@ export const Print = () => {
           <Img src={print}/>
             </Box>  
       </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
     </>
   );

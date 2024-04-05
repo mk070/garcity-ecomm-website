@@ -48,11 +48,63 @@ export const Gsm = () => {
 
   return (
     <>
-      <Container maxWidth={'xl'} sx={{
-        marginTop: {xs:'10px'},
-        display:'flex',
-      }}>
-        <Grid
+      <Container maxWidth={'xl'} 
+      sx={{
+         marginTop: { xs: '10px' }, 
+         display:'flex',
+         flexDirection: { xs: 'column',sm:'row' },
+         justifyContent: 'center',
+         alignItems:'center', }}>
+
+          <Box>
+          <Typography
+          mx={10}
+          variant="h3"
+          sx={{
+            fontSize: "50px",
+            fontFamily: "integral-Regular !important",
+            marginBottom: "50px",
+            marginTop:{xs:'50px',sm:"50px"}
+          }}
+        >
+          GSM
+        </Typography>
+        <Typography
+          height={100}
+          sx={{
+            width: "450px",
+            marginLeft: "80px",
+            marginBottom: "50px",
+          }}
+        >
+          We provide accurate GSM (Grams per Square Meter) services to ensure the desired fabric weight and quality suitable for your garment.
+        </Typography>
+        <Box marginTop={10} marginLeft={10} sx={{ width: 300 }}>
+          <Slider
+            aria-label="Temperature"
+            defaultValue={80}
+            value={sliderValue}
+            onChange={handleSliderChange}
+            valueLabelDisplay="auto"
+            step={null}
+            marks={marks}
+            min={100}
+            max={350}
+          />
+          </Box>
+          </Box>
+
+            
+          <Box sx={{
+            height:'500px',
+            width:'500px',
+            position:'relative'
+           }}>
+          <img src = {svg3}/>
+          <Img src={gsm} />
+           </Box>
+          
+        {/* <Grid
           container
           marginTop={10}
           height={600}
@@ -108,7 +160,7 @@ export const Gsm = () => {
             width:'500px',
             position:'relative'
            }}>
-                {/* <Canvas>
+               <Canvas>
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={1} />
@@ -122,11 +174,11 @@ export const Gsm = () => {
                 />
               </Sphere>
             </Suspense>
-          </Canvas> */}
+          </Canvas> 
           <img src = {svg3}/>
           <Img src={gsm} />
            </Box>
-          {/* <Box
+          <Box
             display="flex"
             flexDirection="column"
             alignItems="center"
@@ -159,9 +211,9 @@ export const Gsm = () => {
         >
          GSM : {sliderValue}
         </Typography>
-        </Box> */}
+        </Box> 
       </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
     </>
   );

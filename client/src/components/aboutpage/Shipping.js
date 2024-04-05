@@ -46,10 +46,52 @@ export const Shipping = () => {
 
   return (
     <>
-      <Container maxWidth={'xl'} sx={{
-        marginTop: {xs:'10px'}
-      }}>
-        <Grid
+     <Container maxWidth={'xl'} 
+      sx={{
+         marginTop: { xs: '10px' }, 
+         display:'flex',
+         flexDirection: { xs: 'column',sm:'row' },
+         justifyContent: 'center',
+         alignItems:'center',
+         }}>
+
+      <Box marginLeft={10}>
+      <Typography  mx={10} variant='h3'
+          sx={{
+            fontSize: isSmallScreen ? '30px' : '50px',
+            fontFamily: 'integral-Regular !important',
+            marginBottom: '50px',
+          }}>Shipping</Typography>
+          <Typography
+                height={100}
+                sx={{
+                  width: isSmallScreen ? '300px' : '400px',
+                  marginLeft: isSmallScreen ? '20px' : '80px',
+                  marginBottom: '50px',
+                }}
+              >
+                Facilitating timely and reliable shipping services worldwide to deliver your products to their destination safely and promptly.
+                </Typography>
+              </Box>
+
+              <Box 
+        height={400} 
+        width={500} 
+        display="flex" 
+        borderRadius={5} 
+        sx={{ 
+          position:'relative',
+          flexDirection: 'column', 
+          marginLeft:'60px',
+          marginBottom:'130px'}}>
+          
+          <img src={svg5} style={{
+            position:'absolute',
+            zIndex:-1,
+          }} />
+          <Img src={ship}/>
+            </Box>  
+        {/* <Grid
           container
           height={600}
           spacing={2}
@@ -98,7 +140,7 @@ export const Shipping = () => {
             </Box>  
       </Grid>
      
-        </Grid>
+        </Grid> */}
       </Container>
     </>
   );

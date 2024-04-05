@@ -62,21 +62,77 @@ export const Measurement = () => {
   };
   return (
     <>
-      <Container maxWidth={'xl'} sx={{ marginTop: { xs: '10px' } }}>
-        <Grid
+      <Container maxWidth={'xl'} 
+      sx={{
+         marginTop: { xs: '10px' }, 
+         display:'flex',
+         flexDirection: { xs: 'column',sm:'row' },
+         justifyContent: 'center',
+         alignItems:'center', }}>   
+
+        <Box sx={{
+            height:'500px',
+            width:'500px',
+            position:'relative'
+           }}>
+          <img src = {svg6}/>
+          <Img src={measurement} />
+          </Box> 
+
+          <Box>
+          <Typography
+              mx={10}
+              variant="h3"
+              sx={{
+                fontSize: '50px',
+                fontFamily: 'integral-Regular !important',
+                marginBottom: '50px',
+                marginTop: { xs: '50px', sm: '50px' },
+              }}
+            >
+              Measurement
+            </Typography>
+            <Typography
+              height={100}
+              sx={{
+                width: '450px',
+                marginLeft: '80px',
+                marginBottom: '50px',
+              }}
+            >
+              We offer custom measurements for a perfect fit, ensuring your garment is tailored precisely to your body shape and size, enhancing comfort  and style.
+
+            </Typography>
+            <Stack marginLeft={10} spacing={2} direction="row">
+              <Button variant="contained" sx={{
+                width:'50px',height:'60px',borderRadius:'60px',backgroundColor:'#FFF4F1',color:'black','&:hover':{
+                    backgroundColor:'#DF9573'}, fontWeight:'900',
+              }}>S</Button>
+              <Button variant="contained" sx={{
+                width:'50px',height:'60px',borderRadius:'60px',backgroundColor:'#FFF4F1',color:'black','&:hover':{
+                    backgroundColor:'#DF9573'},fontWeight:'900',
+              }}>L</Button>
+              <Button variant="contained" sx={{
+                width:'50px',height:'60px',borderRadius:'60px',backgroundColor:'#FFF4F1',color:'black','&:hover':{
+                    backgroundColor:'#DF9573'},fontWeight:'900', 
+              }}>XL</Button>
+              <Button variant="contained" sx={{
+                width:'50px',height:'60px',borderRadius:'60px',backgroundColor:'#FFF4F1',color:'black', '&:hover':{
+                    backgroundColor:'#DF9573'
+                },fontWeight:'900',
+              }}>XLL</Button>
+      
+            </Stack>
+          </Box>
+        {/* <Grid
           container
           marginTop={10}
           height={600}
           spacing={2}
           sx={{
             display: 'flex',
-<<<<<<< HEAD
-            justifyContent: 'center',
-            alignItems:'center',
-=======
             flexDirection: 'column',
             justifyContent: 'space-around',
->>>>>>> 153d38f7fd12aab2f73fb7b71b775a9472c59595
           }}
         >
           
@@ -87,7 +143,7 @@ export const Measurement = () => {
             width:'500px',
             position:'relative'
            }}>
-                {/* <Canvas>
+               <Canvas>
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={1} />
@@ -101,7 +157,7 @@ export const Measurement = () => {
                 />
               </Sphere>
             </Suspense>
-          </Canvas> */}
+          </Canvas> 
           <img src = {svg6}/>
           <Img src={measurement} />
            </Box>
@@ -151,7 +207,7 @@ export const Measurement = () => {
       
             </Stack>
           </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
     </>
   );

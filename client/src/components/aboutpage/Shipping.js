@@ -48,11 +48,12 @@ export const Shipping = () => {
     <>
      <Container maxWidth={'xl'} 
       sx={{
-         marginTop: { xs: '10px' }, 
+         marginTop: { xs: '100px' }, 
          display:'flex',
          flexDirection: { xs: 'column',sm:'row' },
          justifyContent: 'center',
          alignItems:'center',
+         gap:'100px'
          }}>
 
       <Box marginLeft={10}>

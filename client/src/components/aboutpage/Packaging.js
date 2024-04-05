@@ -64,11 +64,12 @@ export const Packaging = () => {
     <>
 <Container maxWidth={'xl'} 
       sx={{
-         marginTop: { xs: '10px' }, 
+         marginTop: { xs: '200px' }, 
          display:'flex',
          flexDirection: { xs: 'column',sm:'row' },
          justifyContent: 'center',
-         alignItems:'center', }}>
+         alignItems:'center', 
+         gap:'100px'}}>
           
 
           <Box

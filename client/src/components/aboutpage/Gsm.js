@@ -50,11 +50,12 @@ export const Gsm = () => {
     <>
       <Container maxWidth={'xl'} 
       sx={{
-         marginTop: { xs: '10px' }, 
+         marginTop: { xs: '200px' }, 
          display:'flex',
          flexDirection: { xs: 'column',sm:'row' },
          justifyContent: 'center',
-         alignItems:'center', }}>
+         alignItems:'center',
+         gap:'100px' }}>
 
           <Box>
           <Typography
@@ -79,7 +80,7 @@ export const Gsm = () => {
         >
           We provide accurate GSM (Grams per Square Meter) services to ensure the desired fabric weight and quality suitable for your garment.
         </Typography>
-        <Box marginTop={10} marginLeft={10} sx={{ width: 300 }}>
+        {/* <Box marginTop={10} marginLeft={10} sx={{ width: 300 }}>
           <Slider
             aria-label="Temperature"
             defaultValue={80}
@@ -91,7 +92,7 @@ export const Gsm = () => {
             min={100}
             max={350}
           />
-          </Box>
+          </Box> */}
           </Box>
 
             
@@ -104,7 +105,7 @@ export const Gsm = () => {
           <Img src={gsm} />
            </Box>
           
-        {/* <Grid
+         {/* <Grid
           container
           marginTop={10}
           height={600}
@@ -213,7 +214,7 @@ export const Gsm = () => {
         </Typography>
         </Box> 
       </Grid>
-        </Grid> */}
+        </Grid>  */}
       </Container>
     </>
   );

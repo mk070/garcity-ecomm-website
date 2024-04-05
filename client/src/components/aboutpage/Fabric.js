@@ -50,7 +50,8 @@ export const Fabric = () => {
          display:'flex',
          flexDirection: { xs: 'column',sm:'row' },
          justifyContent: 'center',
-         alignItems:'center', }}>
+         alignItems:'center',
+         gap:'100px' }}>
         <Box>
         <Typography
               mx={10}

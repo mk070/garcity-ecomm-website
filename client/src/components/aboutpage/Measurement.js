@@ -64,11 +64,12 @@ export const Measurement = () => {
     <>
       <Container maxWidth={'xl'} 
       sx={{
-         marginTop: { xs: '10px' }, 
+         marginTop: { sm: '200px' }, 
          display:'flex',
          flexDirection: { xs: 'column',sm:'row' },
          justifyContent: 'center',
-         alignItems:'center', }}>   
+         alignItems:'center',
+         gap:'100px' }}>   
 
         <Box sx={{
             height:'500px',

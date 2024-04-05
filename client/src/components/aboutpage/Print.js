@@ -47,14 +47,15 @@ export const Print = () => {
     <>
       <Container maxWidth={'xl'} 
       sx={{
-         marginTop: { xs: '10px' }, 
+         marginTop: { xs: '200px' }, 
          display:'flex',
          flexDirection: { xs: 'column',sm:'row' },
          justifyContent: 'center',
-         alignItems:'center', }}>
+         alignItems:'center', 
+         gap:'100px'}}>
 
-          <Box marginLeft={1}>
-      <Typography marginTop={"100px"} mx={10} variant='h3'
+          <Box marginLeft={5}>
+      <Typography marginTop={"100px"} variant='h3'
           sx={{
             fontSize: isSmallScreen ? '30px' : '50px',
             fontFamily: 'integral-Regular !important',
@@ -64,7 +65,6 @@ export const Print = () => {
                 height={100}
                 sx={{
                   width: isSmallScreen ? '300px' : '400px',
-                  marginLeft: isSmallScreen ? '20px' : '80px',
                   marginBottom: '50px',
                 }}
               >
@@ -80,7 +80,7 @@ export const Print = () => {
         sx={{ 
           position:'relative',
           flexDirection: 'column', 
-          marginLeft:'60px' , 
+          marginLeft:'100px' , 
           marginTop:'30px',}}>
           
           <img src={svg1} style={{

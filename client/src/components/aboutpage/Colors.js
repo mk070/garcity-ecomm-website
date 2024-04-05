@@ -15,16 +15,16 @@ const Colors = () => {
   return (
     <Container maxWidth={'xl'} 
     sx={{
-       marginTop: { xs: '10px' }, 
        display:'flex',
        flexDirection: { xs: 'column',sm:'row' },
        justifyContent: 'center',
        alignItems:'space-around',
-       marginTop:'200px', }}>
-        <Box sx={{display:'flex',position:'relative'}}>
-        <img src ={svg1} style={{
-        }}/>
-        <TShirtImage  color={selectedColor} />
+       marginTop:'250px',
+       gap:'100px' }}>
+        <Box border={1}>
+        {/* <img src ={svg1} style={{
+        }}/> */}
+        <TShirtImage color={selectedColor} />
         </Box>
         <Box>
         <Typography

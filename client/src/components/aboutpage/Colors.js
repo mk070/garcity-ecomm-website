@@ -21,10 +21,10 @@ const Colors = () => {
        justifyContent: 'center',
        alignItems:'space-around',
        marginTop:'200px', }}>
-        <Box border={1}>
-        {/* <img src ={svg1} style={{
-        }}/> */}
-        <TShirtImage color={selectedColor} />
+        <Box sx={{display:'flex',position:'relative'}}>
+        <img src ={svg1} style={{
+        }}/>
+        <TShirtImage  color={selectedColor} />
         </Box>
         <Box>
         <Typography
@@ -129,6 +129,7 @@ const TShirtImage = ({ color }) => {
   return (
     <Box
       sx={{
+        position:"ab",
         // backgroundColor: '#f3cebcd9',
         transition: 'background-color 0.3s ease-in-out', // Add transition effect
         // Move boxShadow to here

@@ -21,8 +21,8 @@ const Colors = () => {
        alignItems:'space-around',
        marginTop:'250px',
        gap:'100px' }}>
-        <Box border={1}>
-        {/* <img src ={svg1} style={{
+        <Box sx={{position:"relative",backgroundImage:`url(${svg1})`}}>
+        {/* <img src ={svg1} style={{ position:"relative"
         }}/> */}
         <TShirtImage color={selectedColor} />
         </Box>
@@ -129,7 +129,7 @@ const TShirtImage = ({ color }) => {
   return (
     <Box
       sx={{
-        position:"ab",
+        position:'absolute',
         // backgroundColor: '#f3cebcd9',
         transition: 'background-color 0.3s ease-in-out', // Add transition effect
         // Move boxShadow to here

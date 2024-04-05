@@ -26,10 +26,11 @@ const Colors = () => {
           <Typography variant="h5" gutterBottom
           sx={{            
             fontFamily: 'integral-Regular !important',
+            fontSize:{sm:'36px'},
             marginLeft:'50px'
         }}
           >
-            Choose the colour that sync your style
+            Dyeing
           </Typography>
           <ColorOptions
             handleColorChange={handleColorChange}
@@ -49,7 +50,7 @@ const ColorOptions = ({ handleColorChange, selectedColor }) => {
   const colors = ['#3F91A6', '#64B5F6', '#3400FF', '#BA68C8', '#FFD54F', '#68916E', '#E6495E', '#9281D4'];
 
   // Calculate angle for each color button
-  const angleIncrement = (2 * Math.PI) / colors.length;
+  const angleIncrement =0;
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '50px' }}>
@@ -68,7 +69,7 @@ const ColorOptions = ({ handleColorChange, selectedColor }) => {
             borderRadius: '50%',
             cursor: 'pointer',
             border: selectedColor === color ? '3px solid #000' : 'none', // Add border for selected color
-            transform: 'translate(-50%, -50%)', // Center the button
+            // transform: 'translate(-50%, -50%)', // Center the button
             transition: 'transform 0.3s ease-in-out', // Add transition effect
           };
 
@@ -93,9 +94,9 @@ const TShirtImage = ({ color }) => {
     <Box
       sx={{
         // backgroundColor: '#f3cebcd9',
-        borderRadius: '30px',
+     
         transition: 'background-color 0.3s ease-in-out', // Add transition effect
-        boxShadow: '0px 0px 2px rgba(0, 0, 0, 0.5)', // Move boxShadow to here
+        // Move boxShadow to here
 
       }}
     >

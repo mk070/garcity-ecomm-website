@@ -70,8 +70,13 @@ export const Measurement = () => {
           spacing={2}
           sx={{
             display: 'flex',
+<<<<<<< HEAD
             justifyContent: 'center',
             alignItems:'center',
+=======
+            flexDirection: 'column',
+            justifyContent: 'space-around',
+>>>>>>> 153d38f7fd12aab2f73fb7b71b775a9472c59595
           }}
         >
           

@@ -70,6 +70,7 @@ export const Measurement = () => {
           spacing={2}
           sx={{
             display: 'flex',
+            flexDirection: 'column',
             justifyContent: 'space-around',
           }}
         >

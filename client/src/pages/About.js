@@ -26,12 +26,12 @@ export const About = () => {
                 variant='h3'
                 sx={{
                     fontSize:isSmallScreen ? '30px':'50px',
-                    fontFamily: ['integral-Regular'].join(','),
+                    fontFamily: 'integral-Regular !important',
                     marginBottom: '1px',
                 }}
             >
                 Services we <span style={{ fontFamily: ['integral-Regular'].join(','),color: '#DF9573' }}>offer</span><br /><br />
-            </Typography>
+      </Typography>
       <Fabric/>
       <Colors />
       <Gsm />

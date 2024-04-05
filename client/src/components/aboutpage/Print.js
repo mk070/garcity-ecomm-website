@@ -57,7 +57,7 @@ export const Print = () => {
           <Box marginLeft={5}>
       <Typography marginTop={"100px"} variant='h3'
           sx={{
-            fontSize: isSmallScreen ? '30px' : '50px',
+            fontSize: isSmallScreen ? '30px' : '40px',
             fontFamily: 'integral-Regular !important',
             marginBottom: '50px',
           }}>PRINTING<br/>SERVICES</Typography>

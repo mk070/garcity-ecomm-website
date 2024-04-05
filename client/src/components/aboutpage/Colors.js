@@ -31,7 +31,7 @@ const Colors = () => {
               mx={10}
               variant="h3"
               sx={{
-                fontSize: '50px',
+                fontSize: '40px',
                 fontFamily: 'integral-Regular !important',
                 marginBottom: '50px',
                 marginTop: { xs: '50px', sm: '50px' },

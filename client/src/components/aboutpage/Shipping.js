@@ -59,7 +59,7 @@ export const Shipping = () => {
       <Box marginLeft={10}>
       <Typography  mx={10} variant='h3'
           sx={{
-            fontSize: isSmallScreen ? '30px' : '50px',
+            fontSize: isSmallScreen ? '30px' : '40px',
             fontFamily: 'integral-Regular !important',
             marginBottom: '50px',
           }}>Shipping</Typography>

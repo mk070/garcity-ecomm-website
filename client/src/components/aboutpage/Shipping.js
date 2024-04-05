@@ -58,6 +58,26 @@ export const Shipping = () => {
             justifyContent: 'space-around',
           }}
         >
+            <Grid item width={700}>
+        <Box marginLeft={10}>
+      <Typography marginTop={"100px"} mx={10} variant='h3'
+          sx={{
+            fontSize: isSmallScreen ? '30px' : '50px',
+            fontFamily: 'integral-Regular !important',
+            marginBottom: '50px',
+          }}>Shipping</Typography>
+          <Typography
+                height={100}
+                sx={{
+                  width: isSmallScreen ? '300px' : '400px',
+                  marginLeft: isSmallScreen ? '20px' : '80px',
+                  marginBottom: '50px',
+                }}
+              >
+                Facilitating timely and reliable shipping services worldwide to deliver your products to their destination safely and promptly.
+                </Typography>
+              </Box>
+          </Grid>
          <Grid item>
          <Box 
         height={400} 
@@ -77,32 +97,7 @@ export const Shipping = () => {
           <Img src={ship}/>
             </Box>  
       </Grid>
-      <Grid item width={700}>
-        <Typography
-          mx={10}
-          variant="h3"
-          sx={{
-            fontSize: "50px",
-            fontFamily: "integral-Regular !important",
-            marginBottom: "50px",
-            marginTop:{xs:'50px',sm:"50px"}
-          }}
-        >
-          Shipping
-        </Typography>
-        <Typography
-          height={100}
-          sx={{
-            width: "450px",
-            marginLeft: "80px",
-            marginBottom: "50px",
-          }}
-        >
-         Facilitating timely and reliable shipping services worldwide to deliver your products to their destination safely and promptly.
-         </Typography>
-        <Box marginTop={10} marginLeft={10} sx={{ width: 300 }}>
-            </Box>
-          </Grid>
+     
         </Grid>
       </Container>
     </>

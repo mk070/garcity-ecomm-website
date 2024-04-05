@@ -55,30 +55,13 @@ export const Print = () => {
           spacing={2}
           sx={{
             display: 'flex',
-            justifyContent: 'space-around',
+            justifyContent: 'center',
+            alignItems:'center'
           }}
         >
-         <Grid item>
-         <Box 
-        height={400} 
-        width={500} 
-        display="flex" 
-        borderRadius={5} 
-        sx={{ 
-          position:'relative',
-          flexDirection: 'column', 
-          marginLeft:'60px' , 
-          marginTop:'30px',}}>
-          
-          <img src={svg1} style={{
-            position:'absolute',
-            zIndex:-1,
-          }} />
-          <Img src={print}/>
-            </Box>  
-      </Grid>
+        
       <Grid item width={700}>
-        <Box marginLeft={10}>
+        <Box marginLeft={1}>
       <Typography marginTop={"100px"} mx={10} variant='h3'
           sx={{
             fontSize: isSmallScreen ? '30px' : '50px',
@@ -97,6 +80,25 @@ export const Print = () => {
               </Typography>
               </Box>
           </Grid>
+          <Grid item>
+         <Box 
+        height={400} 
+        width={500} 
+        display="flex" 
+        borderRadius={5} 
+        sx={{ 
+          position:'relative',
+          flexDirection: 'column', 
+          marginLeft:'60px' , 
+          marginTop:'30px',}}>
+          
+          <img src={svg1} style={{
+            position:'absolute',
+            zIndex:-1,
+          }} />
+          <Img src={print}/>
+            </Box>  
+      </Grid>
         </Grid>
       </Container>
     </>

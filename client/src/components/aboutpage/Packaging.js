@@ -2,11 +2,11 @@ import React, { Suspense, useState } from 'react';
 import { Container, Grid, Slider, Typography, useMediaQuery, Box, Stack, Button } from '@mui/material';
 import tshirtsVideo from '../../assets/images/contactus/tshirts.mp4'; // Assuming the video path is correct
 import tshirts from '../../assets/images/contactus/tshirt.gif'; // Assuming the video path is correct
-import measurement from '../../assets/images/about/measurement.png'; 
+import packaging from '../../assets/images/about/packaging.png'; 
 import styled from '@emotion/styled';
 import { Canvas } from '@react-three/fiber';
 import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei';
-import svg6 from '../../assets/images/about/printing/Measurement.svg'; 
+import svg4 from '../../assets/images/about/printing/package.svg'; 
 
 
 const Video = styled.video`
@@ -53,7 +53,7 @@ const Img = styled.img`
   }
 `;
 
-export const Measurement = () => {
+export const Packaging = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const [sliderValue, setSliderValue] = useState(30);
 
@@ -70,8 +70,7 @@ export const Measurement = () => {
           spacing={2}
           sx={{
             display: 'flex',
-            justifyContent: 'center',
-            alignItems:'center',
+            justifyContent: 'space-around',
           }}
         >
           
@@ -97,8 +96,8 @@ export const Measurement = () => {
               </Sphere>
             </Suspense>
           </Canvas> */}
-          <img src = {svg6}/>
-          <Img src={measurement} />
+          <img src = {svg4}/>
+          <Img src={packaging} />
            </Box>
           </Grid>
           <Grid item width={700}>
@@ -152,4 +151,4 @@ export const Measurement = () => {
   );
 };
 
-export default Measurement;
+export default Packaging;

@@ -48,7 +48,7 @@ export const Shipping = () => {
     <>
      <Container maxWidth={'xl'} 
       sx={{
-         marginTop: { xs: '100px' }, 
+         marginTop: { xs: '100px', sm:"80px" }, 
          display:'flex',
          flexDirection: { xs: 'column',sm:'row' },
          justifyContent: 'center',

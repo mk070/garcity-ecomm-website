@@ -64,7 +64,7 @@ export const Packaging = () => {
     <>
 <Container maxWidth={'xl'} 
       sx={{
-         marginTop: { xs: '200px' }, 
+         marginTop: { xs: '200px', sm:'150px' }, 
          display:'flex',
          flexDirection: { xs: 'column',sm:'row' },
          justifyContent: 'center',

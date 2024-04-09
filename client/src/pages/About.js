@@ -12,6 +12,7 @@ import Fabric from '../components/aboutpage/Fabric'
 import InputForm from '../components/ContactUs/InputForm'
 import { Print } from '../components/aboutpage/Print'
 import Packaging from '../components/aboutpage/Packaging'
+import {Details} from '../components/aboutpage/Details'
 
 export const About = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
@@ -19,6 +20,7 @@ export const About = () => {
   return (
     <>
       <Hero />
+      <Details />
       <Marquees />
       {/* <Feature /> */}
      <Typography

@@ -61,6 +61,7 @@ export const AnimatedForm = () => {
     };
   }, []); // Empty dependency array to run the effect only once
 
+
   return (
     <>
       <Container sx={{
@@ -72,49 +73,56 @@ export const AnimatedForm = () => {
           height: '600px',
           marginTop: '100px',
       }}>
-         <img  src={puff} class="object" data-value='-6' style={{position: 'absolute', top: '0',height:'200px',width:'200px', left:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px", objectFit:'cover',opacity: imageLoaded ? 1 : 0, // Set opacity based on imageLoaded state
-        transition: 'opacity 0.5s ease-in-out 500ms',
-        }}onLoad={handleImageLoad} />
-         {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', top: '100px',height:'120px',width:'auto', left:'120px', borderRadius:'10px',zIndex:-3,
-        }} /> */}
+            <img
+              src={puff}
+              className="object"
+              data-value="-6"
+              style={{
+                position: 'absolute',
+                top: '0',
+                height: '200px',
+                width: '200px',
+                left: '10px',
+                borderRadius: '10px',
+                boxShadow: 'rgba(0, 0, 0, 1) 0px 5px 15px',
+                objectFit: 'cover',
+                opacity: imageLoaded ? 1 : 0,
+                transition: 'opacity 0.5s ease-in-out 500ms',
+                animation: 'animate 2s infinite ease alternate',
+              }}
+              onLoad={handleImageLoad} // Call handleImageLoad when the image is loaded
+            />
+
         
-        {/* front */}
 
          <img  src={dtf} class="object" data-value='-4' style={{position: 'absolute', top: '0',height:'200px',width:'200px', right:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px", objectFit:'cover',opacity: imageLoaded ? 1 : 0, // Set opacity based on imageLoaded state
         transition: 'opacity 0.5s ease-in-out 300ms',
         }} onLoad={handleImageLoad}/>
-         {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', top: '100px',height:'120px',width:'auto', right:'120px', borderRadius:'10px',zIndex:-1, boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px"
-        }} /> */}
-
-        {/* right */}
-
+       
 
          <img  src={screen} class="object" data-value='-5' style={{position: 'absolute', bottom: '10px',height:'200px',width:'200px', left:'10px', borderRadius:'10px',boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px",objectFit:'cover',opacity: imageLoaded ? 1 : 0, // Set opacity based on imageLoaded state
         transition: 'opacity 0.5s ease-in-out 200ms',
 
         }} onLoad={handleImageLoad}/>
-         {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', bottom: '130px',height:'120px',width:'auto', left:'150px', borderRadius:'10px',zIndex:-1,boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px"
-        }} /> */}
-
-        {/* bottom left */}
+    
         <img
-      src={embroidry}
-      className="object"
-      data-value="-7"
-      style={{
-        position: 'absolute',
-        bottom: '10px',
-        height: '200px',
-        width: '200px',
-        right: '10px',
-        borderRadius: '10px',
-        boxShadow: 'rgba(0, 0, 0, 1) 0px 5px 15px',
-        objectFit: 'cover',
-        opacity: imageLoaded ? 1 : 0, // Set opacity based on imageLoaded state
-        transition: 'opacity 0.5s ease-in-out 120ms', // Add transition for opacity change
-      }}
-      onLoad={handleImageLoad} // Call handleImageLoad when the image is loaded
-    />
+          src={embroidry}
+          className="object"
+          data-value="-7"
+          style={{
+            position: 'absolute',
+            bottom: '10px',
+            height: '200px',
+            width: '200px',
+            right: '10px',
+            borderRadius: '10px',
+            boxShadow: 'rgba(0, 0, 0, 1) 0px 5px 15px',
+            objectFit: 'cover',
+            opacity: imageLoaded ? 1 : 0, // Set opacity based on imageLoaded state
+            transition: 'opacity 0.5s ease-in-out 120ms', // Add transition for opacity change
+          }}
+          onLoad={handleImageLoad} // Call handleImageLoad when the image is loaded
+        />
          {/* <img  src={hd} class="object" data-value='10' style={{position: 'absolute', bottom: '130px',height:'120px',width:'auto', right:'130px', borderRadius:'10px', zIndex:-1,boxShadow: "rgba(0, 0, 0, 1) 0px 5px 15px"
         }} /> */}
         

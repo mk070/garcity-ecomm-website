@@ -47,7 +47,7 @@ export const Print = () => {
     <>
       <Container maxWidth={'xl'} 
       sx={{
-         marginTop: { xs: '200px' }, 
+         marginTop: { xs: '200px', sm:'100px' }, 
          display:'flex',
          flexDirection: { xs: 'column',sm:'row' },
          justifyContent: 'center',

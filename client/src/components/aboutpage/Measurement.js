@@ -64,7 +64,7 @@ export const Measurement = () => {
     <>
       <Container maxWidth={'xl'} 
       sx={{
-         marginTop: { sm: '200px' }, 
+         marginTop: { sm: '100px' }, 
          display:'flex',
          flexDirection: { xs: 'column',sm:'row' },
          justifyContent: 'center',

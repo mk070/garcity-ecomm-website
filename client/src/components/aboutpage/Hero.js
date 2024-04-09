@@ -16,12 +16,15 @@ export const Hero = () => {
                          fontFamily:"integral-Regular  !important",
                     }}
                 >                   
-                    ‘ MAKE YOUR OWN<br/> CLOTHING STYLE<br/> WITH<span style={{ color: '#DF9573', fontWeight:700, fontFamily:'inherit' }}>  GARCITY ‘</span></Typography>
-
-                    <Typography sx={{marginTop:{sm:'20px' , fontSize:{sm:"18px !important"}}}}>
-                    We're a leading garment manufacturer in Tirupur, boasting over <strong>15+
-                    years</strong> of experience.Crafting quality clothing for men, women, kids, infants, and babies is our specialty.<br/>We're committed to embracing future technologies to deliver the best to our clients.<br/><br/>Our focus is on providing competitive pricing without sacrificing quality.<br/>Choose us for fashion-forward, durable, and affordable clothing solutions.
-                    </Typography>
+                    ‘ MAKE YOUR OWN <br />CLOTHING STYLE <br /> WITH<span style={{ color: '#DF9573', fontWeight:700, fontFamily:'inherit' }}>  GARCITY ‘</span></Typography>
+                    {/* <Typography sx={{marginTop:{sm:'20px' }, paddingRight:{sm:'90px'} ,fontSize:{sm:"24px !important"}, fontWeight:'200px'}}>History:</Typography> */}
+                    <Typography sx={{marginTop:{sm:'20px' }, paddingRight:{sm:'90px'} ,fontSize:{sm:"18px !important"}}}>
+                        Founded in 2007, GARCITY began as a small garment manufacturing operation in
+                        India. Over the years, we've grown into a leader in the industry, with over 15 years of
+                        experience delivering top-quality solutions to clients worldwide. <br /> With a track record of
+                        excellence, we've served over 1200 happy clients, delivering top-quality solutions
+                        tailored to their needs.
+                     </Typography>
             </Box>
         </Box>
     )

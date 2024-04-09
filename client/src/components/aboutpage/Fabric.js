@@ -1,102 +1,45 @@
-import React, { useState } from 'react';
-import { Container, Grid, Slider, Typography, useMediaQuery, Box, Stack, Button } from '@mui/material';
-import tshirt from '../../assets/images/mensWear/mens.png'; // Assuming the video path is correct
-import styled from '@emotion/styled';
-import fabric from '../../assets/images/about/fabric.png'; 
-import svg2 from '../../assets/images/about/printing/Fabric.svg'; 
+import React, { useState, useEffect } from 'react';
+import { Container, Typography, Box } from '@mui/material';
+import img1 from "../../assets/images/about/fabric1.png";
+import img2 from "../../assets/images/about/fabric2.png";
 
+const Fabric = () => {
+  const [currentImage, setCurrentImage] = useState(img1);
+  const [isFront, setIsFront] = useState(true);
 
-const Video = styled.video`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
+  useEffect(() => {
+    // Change image and swap front/back every 5 seconds
+    const intervalId = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage === img1 ? img2 : img1));
+      setIsFront((prevIsFront) => !prevIsFront);
+    }, 2000);
 
-const Img = styled.img`
-  width:250px;
-  height: 250px;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  animation: animate 2s infinite ease alternate;
+    return () => clearInterval(intervalId);
+  }, []);
 
-  @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
-  }
-
-  @keyframes animate {
-    to {
-      transform: translateY(20px);
-    }
-  }
-`;
-export const Fabric = () => {
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-  const [sliderValue, setSliderValue] = useState(30);
-
-  const handleSliderChange = (event, newValue) => {
-    setSliderValue(newValue);
-  };
   return (
-    <>
-      <Container maxWidth={'xl'} 
-      sx={{
-         marginTop: { xs: '10px' }, 
-         display:'flex',
-         flexDirection: { xs: 'column',sm:'row' },
-         justifyContent: 'center',
-         alignItems:'center',
-         gap:'100px' }}>
-        <Box>
-          <Typography
-                mx={10}
-                variant="h3"
-                sx={{
-                  fontSize: '40px',
-                  fontFamily: 'integral-Regular !important',
-                  marginBottom: '50px',
-                  marginTop: { xs: '50px', sm: '50px' },
-                }}
-              >
-                Fabric
-          </Typography>
-          <Typography
-                height={100}
-                sx={{
-                  width: '450px',
-                  marginLeft: '80px',
-                  marginBottom: '50px',
-                }}
-              >
-                We specialize in crafting garments with precision and expertise, ensuring top notch quality and durability. We make fabrics in 100% cotton, organic cotton, Supima cotton, cotton-poly blend, polyester, polyester-spandex blend, modal, and viscose.
-          </Typography>
-        </Box>
-            
-            <Box 
-              height={400} 
-              width={500} 
-              display="flex" 
-              borderRadius={5} 
-              sx={{ 
-                position:'relative',
-                flexDirection: 'column', 
-                marginRight:'100px',}}>
-                
-                <img src={svg2} style={{
-                  zIndex:-1,
-                }} />
+    <Container maxWidth="xl" sx={{ marginTop: { xs: '10px' }, display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, justifyContent: 'center', alignItems: 'center', gap: '100px' }}>
+      
+      <Box>
+        <Typography mx={10} variant="h3" sx={{ fontSize: '40px', fontFamily: 'integral-Regular !important', marginBottom: '50px', marginTop: { xs: '50px', sm: '50px' } }}>
+          Fabric
+        </Typography>
+        <Typography height={100} sx={{ width: '450px', marginLeft: '80px', marginBottom: '50px' }}>
+          We specialize in crafting garments with precision and expertise, ensuring top-notch quality and durability. We make fabrics in 100% cotton, organic cotton, Supima cotton, cotton-poly blend, polyester, polyester-spandex blend, modal, and viscose.
+        </Typography>
+      </Box>
 
-                <Img src={fabric}/>
-            </Box>  
+      <Box height={400} width={500} display="flex" borderRadius={5} sx={{ display: 'flex', flexDirection: { sm: 'column' }, marginRight: '100px', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}>
+        <Box sx={{ width: { sm: '40%' }, height: { sm: '50%' }, border: '1px solid black', boxShadow: '5px 4px 3px 1px rgb(58 58 58 / 35%)', position: 'relative' }}>
+          <img src={currentImage} style={{ width: '100%', height: '100%', position: 'relative', zIndex: 1 }} alt="" />
           
-        
-      </Container>
-    </>
+        </Box>
+        <Box sx={{ width: { sm: '40%' }, height: { sm: '50%' }, border: '1px solid black', boxShadow: '5px 4px 3px 1px rgb(58 58 58 / 35%)', position: 'absolute', top: 0, left: 0 }}>
+          <img src={isFront ? img2 : img1} style={{ width: '100%', height: '100%', position: 'relative', zIndex: 0 }} alt="" />
+          
+        </Box>
+      </Box>
+    </Container>
   );
 };
 

@@ -12,18 +12,11 @@ import { Hero } from '../components/ContactUs/Hero'
 export const Contact = () => {
   return (
     <>   
-<<<<<<< HEAD
-      <AnimatedForm/>
-      <CatchLine/>
-      <Detials/>
-      <CatchLine/>
-=======
       {/* <AnimatedForm/>
       <CatchLine/>
       <Detials/>
       <CatchLine/> */}
       <Hero />
->>>>>>> 1b875ab647f3d31b24fc5ed62fcddd144b61d332
       <Maps/> 
       <Fqa />
     </>

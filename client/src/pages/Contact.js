@@ -8,6 +8,7 @@ import { AnimatedForm } from '../components/ContactUs/AnimatedForm'
 import GenieModal from '../components/ContactUs/GenieModal'
 import Fqa from '../components/ContactUs/Fqa'
 import { Hero } from '../components/ContactUs/Hero'
+import InputForm from '../components/ContactUs/InputForm'
 
 export const Contact = () => {
   return (
@@ -17,6 +18,7 @@ export const Contact = () => {
       <Detials/>
       <CatchLine/> */}
       <Hero />
+      <InputForm />
       <Maps/> 
       <Fqa />
     </>

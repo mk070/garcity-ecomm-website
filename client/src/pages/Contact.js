@@ -12,10 +12,11 @@ import { Hero } from '../components/ContactUs/Hero'
 export const Contact = () => {
   return (
     <>   
-      <AnimatedForm/>
+      {/* <AnimatedForm/>
       <CatchLine/>
       <Detials/>
-      <CatchLine/>
+      <CatchLine/> */}
+      <Hero />
       <Maps/> 
       <Fqa />
     </>

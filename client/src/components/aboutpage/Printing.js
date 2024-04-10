@@ -1,107 +1,50 @@
-import { Box, Grid, useMediaQuery, Typography } from '@mui/material'
-import React from 'react'
-import { Card } from './Card';
-import dtf from '../../assets/images/printing/dt.webp'; 
-import emboss from '../../assets/images/printing/emboss.jpeg'; 
-import hd from '../../assets/images/printing/hd.jpg'; 
-import tshirts from '../../assets/images/contactus/tshirt.gif'; // Assuming the video path is correct
-import puff from '../../assets/images/printing/puff.jpg'; 
-import screen from '../../assets/images/printing/screen.jpg'; 
-import embroidry from '../../assets/images/printing/embroidry.jpg'; 
-import svg1 from '../../assets/images/about/printing/color.svg'; 
-import print from '../../assets/images/about/print.png'; 
-import svg2 from '../../assets/images/about/printing/Fabric.svg'; 
-import svg3 from '../../assets/images/about/printing/gsm.svg'; 
-import svg4 from '../../assets/images/about/printing/package.svg'; 
-import svg5 from '../../assets/images/about/printing/shipping.svg'; 
-import svg6 from '../../assets/images/about/printing/Measurement.svg'; 
-import styled from '@emotion/styled';
+import React, { useState, useEffect } from 'react';
+import { Container, Typography, Box } from '@mui/material';
+import img1 from "../../assets/images/about/5 SERVICES IMAGES/CUSTOM PRINTING2.png";
+import img2 from "../../assets/images/about/5 SERVICES IMAGES/CUSTOM PRINTING.png";
 
 
+const Printing = () => {
+  const [currentImage, setCurrentImage] = useState(img1);
+  const [isFront, setIsFront] = useState(true);
 
-const Img = styled.img`
-  width:400px;
-  height: 400px;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  animation: animate 2s infinite ease alternate;
+  useEffect(() => {
+    // Change image and swap front/back every 5 seconds
+    const intervalId = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage === img1 ? img2 : img1));
+      setIsFront((prevIsFront) => !prevIsFront);
+    }, 2000);
 
-  @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
-  }
-
-  @keyframes animate {
-    to {
-      transform: translateY(20px);
-    }
-  }
-`;
-export const Printing = () => {
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
-    <>
-    <Box height={600} >
-      <Grid container height={600} spacing ={2} sx={{
-         display:"flex",justifyContent:"space-between"
-      }}>
-        <Grid item marginLeft={10}>
-        <Typography marginTop={"100px"} mx={10} variant='h3'
-          sx={{
-            fontSize: isSmallScreen ? '30px' : '50px',
-            fontFamily: ['integral-Regular !important', 'sans-serif'].join(','),
-            marginBottom: '50px',
-          }}>PRINTING<br/>SERVICES</Typography>
-          <Typography
-                height={100}
-                sx={{
-                  width: isSmallScreen ? '300px' : '400px',
-                  marginLeft: isSmallScreen ? '20px' : '80px',
-                  marginBottom: '50px',
-                }}
-              >
-                From screen printing and digital printing to sublimation and heat transfer, our printing services offer a wide range of options to bring your creative vision to life on fabric with vibrant colors and precise detailing. We also specialize in puff printing, vinyl printing, high-density printing, embroidery, and  mboss printing, providing you with even more ways to customize your garments to perfection.
-              </Typography>
-           </Grid>
-        <Grid item
-        display={"flex"}
-         sx={{ 
-          paddingRight:"70px",
-          flexDirection:"row"
-        }} >
-         {/* <Card number = "1" type={"Puff Printing"} bgImage={puff}  />
-         <Card number = "2" type={"Screen Printing"} bgImage={screen}/>
-         <Card number = "3" type={"Embroid"} bgImage={embroidry} />
-         <Card number = "4" type={"Emboss printing"} bgImage={emboss} />
-         <Card number = "5" type={"Direct to Flim"} bgImage={dtf} />
-         <Card number = "6" type={"Hign Density"} bgImage={hd}/> */}
+    <Container maxWidth="xl" position='sticky' sx={{ backgroundColor:"white",top: 80 ,height:{sm:'65vh'},marginTop: { xs: '10px' }, display: 'flex', flexDirection: { xs: 'column', sm: 'row-reverse' }, justifyContent: 'center', alignItems: 'center', gap: '100px' }}>
+      
+      <Box>
+        <Typography mx={10} variant="h3" sx={{ fontSize: '40px', fontFamily: 'integral-Regular !important', marginBottom: '50px', marginTop: { xs: '50px', sm: '50px' } }}>
+        CUSTOM PRINTING
+        </Typography>
+        <Typography height={100} sx={{ width: '450px', marginLeft: '80px', marginBottom: '50px' }}>
+        Experience high-quality printing services, including screen, puff,
+and hybrid techniques. Achieve vibrant designs with our top-notch printing options,
+ensuring your brand stands out.
+     </Typography>
+      </Box>
 
-        <Box 
-        height={400} 
-        width={500} 
-        display="flex" 
-        borderRadius={5} 
-        sx={{ 
-          position:'relative',
-          flexDirection: 'column', 
-          marginRight:'100px' , 
-          marginTop:'30px',}}>
-          
-          <img src={svg1} style={{
-            position:'absolute',
-            zIndex:-1,
-          }} />
-          <Img src={print}/>
-            </Box>  
-        </Grid>
-      </Grid>
-    </Box>
-    </>
-  )
-}
+      <Box height={400} width={500}  position={'relative'} sx={{pt:{sm:'20px'},display: 'flex', justifyContent:{sm:"center"}, alignItems:{sm:"center"},flexDirection: { sm: 'column' }, marginRight: '10px' }}>
+       
+        <Box sx={{borderRadius:"20px", width: { sm: '50%' }, height: { sm: '60%' }, position: 'absolute', top: 140, left: 180 }}>
+          <img src={currentImage} style={{borderRadius:"20px", width: '100%',boxShadow:" rgb(58 58 58 / 77%) 3px 4px 5px 3px", height: '100%', position: 'relative', zIndex: 1 }} alt="" /> 
+        </Box>
+
+        <Box sx={{borderRadius:"20px", width: { sm: '50%' }, height: { sm: '60%' }, position: 'absolute', top: 70, left: 260 }}>
+          <img src={isFront ? img2 : img1} style={{borderRadius:"20px", width: '100%', boxShadow:" rgb(58 58 58 / 77%) 3px 4px 5px 3px",height: '100%', position: 'relative', zIndex: 10 }} alt="" />  
+        </Box>
+
+      </Box>
+    </Container>
+  );
+};
+
+export default Printing;

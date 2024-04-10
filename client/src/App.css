@@ -107,3 +107,8 @@ body {
 .contact-us{
   
 }
+
+.sticky{
+  position: sticky;
+  top: 155px;
+}

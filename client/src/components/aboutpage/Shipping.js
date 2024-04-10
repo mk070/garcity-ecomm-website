@@ -1,149 +1,47 @@
-import React, { useState } from 'react';
-import { Container, Grid, Slider, Typography, useMediaQuery, Box } from '@mui/material';
-import puff from '../../assets/images/printing/puff.jpg';
-import packaging from '../../assets/images/about/packaging.mp4';
-import styled from '@emotion/styled';
-import { DotLottiePlayer, Controls } from '@dotlottie/react-player';
-import '@dotlottie/react-player/dist/index.css';
-import packaginganimation from "../../assets/images/about/packing.lottie"
-import svg5 from '../../assets/images/about/printing/shipping.svg'; 
-import ship from '../../assets/images/about/shipping.png'; 
+import React, { useState, useEffect } from 'react';
+import { Container, Typography, Box } from '@mui/material';
+import img1 from "../../assets/images/about/5 SERVICES IMAGES/WORLDWIDE SHIPPING2.png";
+import img2 from "../../assets/images/about/5 SERVICES IMAGES/WORLDWIDE SHIPPING.png";
 
 
+const Shipping = () => {
+  const [currentImage, setCurrentImage] = useState(img1);
+  const [isFront, setIsFront] = useState(true);
 
-const Video = styled.video`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
-const Img = styled.img`
-  width:400px;
-  height: 400px;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  animation: animate 2s infinite ease alternate;
+  useEffect(() => {
+    // Change image and swap front/back every 5 seconds
+    const intervalId = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage === img1 ? img2 : img1));
+      setIsFront((prevIsFront) => !prevIsFront);
+    }, 2000);
 
-  @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
-  }
-
-  @keyframes animate {
-    to {
-      transform: translateY(20px);
-    }
-  }
-`;
-
-
-export const Shipping = () => {
-  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
-    <>
-     <Container maxWidth={'xl'} 
-      sx={{
-         marginTop: { xs: '100px', sm:"80px" }, 
-         display:'flex',
-         flexDirection: { xs: 'column',sm:'row' },
-         justifyContent: 'center',
-         alignItems:'center',
-         gap:'100px'
-         }}>
+    <Container maxWidth="xl" sx={{ position: 'sticky', top: 80 ,height:{sm:'75vh'}, mb:{sm:"90px !important"},backgroundColor:"white",marginTop: { xs: '10px' }, display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, justifyContent: 'center', alignItems: 'center', gap: '100px' }}>
+      
+      <Box>
+        <Typography mx={10} variant="h3" sx={{ fontSize: '40px', fontFamily: 'integral-Regular !important', marginBottom: '50px', marginTop: { xs: '50px', sm: '50px' } }}>
+        WORLDWIDE <br />SHIPPING
+        </Typography>
+        <Typography height={100} sx={{ width: '450px', marginLeft: '80px', marginBottom: '50px' }}>
+        Ensure reliable global delivery via air and sea freight. Your
+products will reach their destination safely and on time, no matter where in the world    </Typography>
+      </Box>
 
-      <Box marginLeft={10}>
-      <Typography  mx={10} variant='h3'
-          sx={{
-            fontSize: isSmallScreen ? '30px' : '40px',
-            fontFamily: 'integral-Regular !important',
-            marginBottom: '50px',
-          }}>Shipping</Typography>
-          <Typography
-                height={100}
-                sx={{
-                  width: isSmallScreen ? '300px' : '400px',
-                  marginLeft: isSmallScreen ? '20px' : '80px',
-                  marginBottom: '50px',
-                }}
-              >
-                Facilitating timely and reliable shipping services worldwide to deliver your products to their destination safely and promptly.
-                </Typography>
-              </Box>
+      <Box height={400} width={500}  position={'relative'} sx={{pt:{sm:'20px'},display: 'flex', justifyContent:{sm:"center"}, alignItems:{sm:"center"},flexDirection: { sm: 'column' }, marginRight: '100px' }}>
+       
+        <Box sx={{borderRadius:"20px", width: { sm: '50%' }, height: { sm: '60%' },position: 'absolute', top: 140, left: 180 }}>
+          <img src={currentImage} style={{borderRadius:"20px",boxShadow:" rgb(58 58 58 / 77%) 3px 4px 5px 3px", width: '100%', height: '100%', position: 'relative', zIndex: 1 }} alt="" /> 
+        </Box>
 
-              <Box 
-        height={400} 
-        width={500} 
-        display="flex" 
-        borderRadius={5} 
-        sx={{ 
-          position:'relative',
-          flexDirection: 'column', 
-          marginLeft:'60px',
-          marginBottom:'130px'}}>
-          
-          <img src={svg5} style={{
-            position:'absolute',
-            zIndex:-1,
-          }} />
-          <Img src={ship}/>
-            </Box>  
-        {/* <Grid
-          container
-          height={600}
-          spacing={2}
-          sx={{
-            display: 'flex',
-            justifyContent: 'space-around',
-          }}
-        >
-            <Grid item width={700}>
-        <Box marginLeft={10}>
-      <Typography marginTop={"100px"} mx={10} variant='h3'
-          sx={{
-            fontSize: isSmallScreen ? '30px' : '50px',
-            fontFamily: 'integral-Regular !important',
-            marginBottom: '50px',
-          }}>Shipping</Typography>
-          <Typography
-                height={100}
-                sx={{
-                  width: isSmallScreen ? '300px' : '400px',
-                  marginLeft: isSmallScreen ? '20px' : '80px',
-                  marginBottom: '50px',
-                }}
-              >
-                Facilitating timely and reliable shipping services worldwide to deliver your products to their destination safely and promptly.
-                </Typography>
-              </Box>
-          </Grid>
-         <Grid item>
-         <Box 
-        height={400} 
-        width={500} 
-        display="flex" 
-        borderRadius={5} 
-        sx={{ 
-          position:'relative',
-          flexDirection: 'column', 
-          marginLeft:'60px' , 
-          marginTop:'30px',}}>
-          
-          <img src={svg5} style={{
-            position:'absolute',
-            zIndex:-1,
-          }} />
-          <Img src={ship}/>
-            </Box>  
-      </Grid>
-     
-        </Grid> */}
-      </Container>
-    </>
+        <Box sx={{borderRadius:"20px", width: { sm: '50%' }, height: { sm: '60%' }, position: 'absolute', top: 70, left: 100 }}>
+          <img src={isFront ? img2 : img1} style={{borderRadius:"20px",boxShadow:" rgb(58 58 58 / 77%) 3px 4px 5px 3px", width: '100%', height: '100%', position: 'relative', zIndex: 10 }} alt="" />  
+        </Box>
+
+      </Box>
+    </Container>
   );
 };
 

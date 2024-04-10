@@ -35,17 +35,19 @@ export const Specialities = () => {
   };
 
   return (
-    <Box ref={specialitiesRef} sx={{ display: "flex", flexDirection: { sm: 'column' } }}>
+    <Box ref={specialitiesRef} sx={{ display: {sm:'block', xl:"flex"}, flexDirection: { sm: 'column' } }}>
 
-      <Box sx={{ width: { sm: '100%' }, padding: { sm: '60px' }, display: 'flex', justifyContent: 'center', fontFamily: 'Satoshi-Regular' }}>
-        <Typography sx={{ fontSize: { sm: '32px' }, fontFamily: "integral-Regular  !important" }}> Our Specialities</Typography>
+      <Box sx={{ width: { sm: '100%' }, padding: { sm: '60px' },mt:{xs:'40px'} ,display: 'flex', justifyContent: 'center', fontFamily: 'Satoshi-Regular' }}>
+        <Typography  sx={{ fontSize:{xs:'24px', sm:'32px'}, fontFamily: "integral-Regular  !important" }}> Our Specialities</Typography>
       </Box>
 
-      <Box sx={{ display: 'flex', mt: { sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: '90px 0', sm: '0 100px' }, background: 'linear-gradient(to top, #FFF4F1, #fff)' }}>
+      <Box sx={{ display: 'flex', mt: { sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: '35px', sm: '0 100px' }, background: 'linear-gradient(to top, #FFF4F1, #fff)',    
+    }}>
 
-        <Box className="speciality-box" sx={{ mr: { sm: '20px' }, padding: { sm: '100px 60px' } }}>
+        <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 
+        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px'}}>
           <Typography variant='h3'>01.</Typography>
-          <Typography variant='h5' sx={{ marginTop: { sm: '30px' } }}>Customization Excellence:</Typography>
+          <Typography variant='h5' sx={{ marginBottom: '30px' }}>Customization Excellence:</Typography>
           <Typography variant='body1' sx={{ marginTop: { sm: '30px' } }}>We offer top-notch
             customization options,
             empowering you to
@@ -55,9 +57,10 @@ export const Specialities = () => {
           </Typography>
         </Box>
 
-        <Box className="speciality-box" sx={{ mr: { sm: '20px' }, padding: { sm: '100px 60px' } }}>
+        <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 
+        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px'}}>
           <Typography variant='h3'>02.</Typography>
-          <Typography variant='h5' sx={{ marginTop: { sm: '30px' } }}>Printing Services:</Typography>
+          <Typography variant='h5' sx={{ marginBottom: '30px' }}>Printing Services:</Typography>
           <Typography sx={{ marginTop: { sm: '30px' } }}>Experience professional
             printing for your custom
             designs, logos, or messages,
@@ -66,9 +69,10 @@ export const Specialities = () => {
           </Typography>
         </Box>
 
-        <Box className="speciality-box" sx={{ mr: { sm: '20px' }, padding: { sm: '100px 60px' } }}>
+        <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 
+        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px'}}>
           <Typography variant='h3'>03.</Typography>
-          <Typography variant='h5' sx={{ marginTop: { sm: '30px' } }}>Fabrication Excellence:</Typography>
+          <Typography variant='h5' sx={{ marginBottom: '30px' }}>Fabrication Excellence:</Typography>
           <Typography sx={{ marginTop: { sm: '30px' } }}>We excel in fabrication,
             crafting top-notch fabrics
             like organic cotton, Supima,

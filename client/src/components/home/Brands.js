@@ -17,7 +17,7 @@ export const Brands = () => {
   const logos = [logo1, logo2, logo3,logo4, logo5, logo6,logo7, logo8]; // Add more logos as needed
 
   return (
-    <Box>
+    <Box sx={{my:{xs:5}}}>
         <Marquee gradient autoFill speed={90}>
           <img width={'85px'} style={{marginRight:"50px"}} src={logo1} alt="" />
           <img width={'85px'} style={{marginRight:"50px"}} src={logo2} alt="" />

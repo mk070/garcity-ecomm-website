@@ -50,7 +50,7 @@ const Testimonial = () => {
   return (
     <section className="testimonial-container">
       <div className="title">
-        <Typography sx={{fontSize:{sm:"32px"}, fontFamily: "integral-Regular  !important" }}>Testimonial</Typography>
+        <Typography sx={{fontSize:{sm:"32px", xs:'24px'}, fontFamily: "integral-Regular  !important" }}>Testimonial</Typography>
         <p>What members are saying.</p>
       </div>
 

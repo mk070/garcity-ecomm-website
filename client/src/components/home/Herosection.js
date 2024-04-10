@@ -114,9 +114,10 @@ export const Herosection = () => {
           
           <Box sx={{ position: 'relative' }}>
             <img src={tops} style={{ width: '100%' }} alt="Slide 1" />
-            <Box sx={{ position: 'absolute',backgroundColor:"#DF9573", color: '#FFF4F1', top: '50%', left: '50%', padding:'50px', borderRadius:'60px 0 60px 0',  transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
-              <Typography variant="h4">Content for Slide 1</Typography>
-              <Typography variant="body1">Additional content goes here...</Typography>
+            <Box sx={{ position: 'absolute',backgroundColor:"#DF9573", color: '#FFF4F1', 
+            top: '50%', left: '50%', padding:'50px 20px', borderRadius:'60px 0 60px 0',  transform: 'translate(-50%, -50%)', textAlign: 'center', height:{xs:'40px'} }}>
+              <Typography variant={"h4"} sx={{fontSize:{lg:'35px', xs:'20px'}, margin:'0',}}>Content for Slide 1</Typography>
+              <Typography variant="body1" sx={{display:{xs:'none', sm:'block'}}}>Additional content goes here...</Typography>
             </Box>
           </Box>
         </SwiperSlide>
@@ -124,27 +125,27 @@ export const Herosection = () => {
         <SwiperSlide>
           <Box sx={{ position: 'relative' }}>
             <img src={blacks} style={{ width: '100%' }} alt="Slide 2" />
-            <Box sx={{ position: 'absolute',backgroundColor:"#FFF4F1", top: '50%', left: '50%', padding:'50px', borderRadius:'0 60px 0 60px',  transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#372B29' }}>
-              <Typography variant="h4">Content for Slide 2</Typography>
-              <Typography variant="body1">Additional content goes here...</Typography>
+            <Box sx={{ position: 'absolute',backgroundColor:"#FFF4F1", top: '50%', left: '50%', padding:'50px 20px', borderRadius:'0 60px 0 60px',  transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#372B29',height:{xs:'40px'} }}>
+              <Typography variant="h4" sx={{fontSize:{lg:'35px', xs:'20px'}, margin:'0',}}>Content for Slide 2</Typography>
+              <Typography variant="body1" sx={{display:{xs:'none', sm:'block'}}}>Additional content goes here...</Typography>
             </Box>
           </Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box sx={{ position: 'relative' }}>
             <img src={tshirts} style={{ width: '100%' }} alt="Slide 3" />
-            <Box sx={{ position: 'absolute', backgroundColor:"#DF9573",color: '#FFF4F1',top: '50%', padding:'50px', borderRadius:'60px 0 60px 0', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
-              <Typography variant="h4">Content for Slide 3</Typography>
-              <Typography variant="body1">Additional content goes here...</Typography>
+            <Box sx={{ position: 'absolute', backgroundColor:"#DF9573",color: '#FFF4F1',top: '50%', padding:'50px 20px', borderRadius:'60px 0 60px 0', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+              <Typography variant="h4" sx={{fontSize:{lg:'35px', xs:'20px'}, margin:'0',}}>Content for Slide 3</Typography>
+              <Typography variant="body1" sx={{display:{xs:'none', sm:'block'}}}>Additional content goes here...</Typography>
             </Box>
           </Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box sx={{ position: 'relative' }}>
             <img src={colors} style={{ width: '100%' }} alt="Slide 4" />
-            <Box sx={{ position: 'absolute',backgroundColor:"#FFF4F1", top: '50%', left: '50%',  padding:'50px', borderRadius:'0 60px 0 60px', transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#372B29' }}>
-              <Typography variant="h4">Content for Slide 4</Typography>
-              <Typography variant="body1">Additional content goes here...</Typography>
+            <Box sx={{ position: 'absolute',backgroundColor:"#FFF4F1", top: '50%', left: '50%',  padding:'50px 20px', borderRadius:'0 60px 0 60px', transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#372B29' }}>
+              <Typography variant="h4" sx={{fontSize:{lg:'35px', xs:'20px'}, margin:'0',}}>Content for Slide 4</Typography>
+              <Typography variant="body1" sx={{display:{xs:'none', sm:'block'}}}>Additional content goes here...</Typography>
             </Box>
           </Box>
         </SwiperSlide>

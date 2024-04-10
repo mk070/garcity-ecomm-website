@@ -16,6 +16,7 @@ export const Popularcollection = () => {
           </Box>
 
           <Button sx={{
+              
               display:{xs:'none', sm:'flex'},
               background:'#DF9573',
               mt: {xs:'0px', sm:'30px'},

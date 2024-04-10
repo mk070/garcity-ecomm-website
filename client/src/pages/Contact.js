@@ -7,14 +7,16 @@ import { RevealImage } from '../components/ContactUs/RevealImage'
 import { AnimatedForm } from '../components/ContactUs/AnimatedForm'
 import GenieModal from '../components/ContactUs/GenieModal'
 import Fqa from '../components/ContactUs/Fqa'
+import { Hero } from '../components/ContactUs/Hero'
 
 export const Contact = () => {
   return (
     <>   
-      <AnimatedForm/>
+      {/* <AnimatedForm/>
       <CatchLine/>
       <Detials/>
-      <CatchLine/>
+      <CatchLine/> */}
+      <Hero />
       <Maps/> 
       <Fqa />
     </>

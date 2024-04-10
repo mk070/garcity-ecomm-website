@@ -28,7 +28,7 @@ export const Feature = () => {
       tl.fromTo(
         featureRef.current.querySelectorAll('.point'),
         { x: '100%', opacity: 0 },
-        { x: '0%', opacity: 1, stagger: 0.9, ease: 'power3.out' }
+        { x: '0%', opacity: 1, stagger: 0.7, ease: 'power3.out' }
       );
     }
   }, [isVisible]);

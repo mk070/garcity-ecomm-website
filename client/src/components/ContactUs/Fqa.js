@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 import CatalogueIcon from '../../assets/images/fqa/catalogue.svg'
  
 const data = {
-    title: "FAQ (How it works)",
+    title: "FAQ ",
     rows: [
         {   
             title: "Do You Have A Catalogue? ",

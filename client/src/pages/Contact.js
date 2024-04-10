@@ -12,7 +12,7 @@ export const Contact = () => {
   return (
     <>   
 
-    <AnimatedForm/>
+    <AnimatedcsForm/>
     {/* <GenieModal/> */}
     {/* <RevealImage/> */}
     <CatchLine/>

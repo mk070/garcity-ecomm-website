@@ -7,7 +7,7 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { Sidebar } from './Sidebar';
 import { Appbar } from './Appbar';
 
-export const ManageGallery = () => {
+export const ManagePopularWork = () => {
   const [uploadedImages, setUploadedImages] = useState([]);
   const [isUploadSuccess, setUploadSuccess] = useState(false);
   const [isDeleteSuccess, setDeleteSuccess] = useState(false);
@@ -125,7 +125,7 @@ export const ManageGallery = () => {
           <Box sx={{ mt: { sm: '65px' }, display: 'flex', alignItems: 'center', padding: { sm: '40px 130px' } }}>
             <Box sx={{ flexGrow: 1 }}>
               <Typography variant="h5" gutterBottom>
-                Upload Gallery images here
+                Upload PopularWork images here
               </Typography>
             </Box>
             <form onSubmit={handleUpload}>

@@ -1,13 +1,14 @@
+// server/mongodb/models/galleryImage.js
 import mongoose from 'mongoose';
 
 const galleryImageSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: false
     },
     img: {
-        type: String,
-        required: true
+        type: String, // Store image data as Buffer
+        contentType: String // Store content type of the image
     }
 });
 

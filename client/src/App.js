@@ -18,6 +18,10 @@ import { MoveupButton } from './components/MoveupButton';
 import { ContactButton } from './components/ContactButton';
 import { NotFound } from './components/NotFound';
 import { SportsWear } from './pages/SportsWear';
+import { ManageGallery } from './components/adminpage/ManageGallery';
+import { ManageClientLogos } from './components/adminpage/ManageClientLogos';
+import { ManagePopularWork } from './components/adminpage/ManagePopularWork';
+import { ManageYoutubeVideo } from './components/adminpage/ManageYoutubeVideo';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,17 +39,18 @@ function App() {
   const currentPath = window.location.pathname;
 
   // Function to check if the current path is for the admin dashboard
-  const isAdminDashboard = (path) => {
-    return path === '/only-admin';
+  const isAdminPage = (path) => {
+    return path.startsWith('/only-admin');
   };
+  
+  const shouldRenderFooterButtons =
+  !isAdminPage(currentPath);
 
-  const isDashboard = (path) => {
-    return path === '/only-admin/dashboard';
-  };
 
   return (
     <>
-      {!isAdminDashboard(currentPath) && !isDashboard(currentPath) && <Nav /> }
+      {shouldRenderFooterButtons  && <Nav /> }
+      
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product' element={<Product />} />
@@ -58,13 +63,16 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/only-admin' element={<Admin />} />
         <Route path='/only-admin/dashboard' element={<Dashboard />} />
-        <Route path='/only-admin/dashboard/gallery' element={<Gallery />} />
+        <Route path='/only-admin/Managegallery' element={<ManageGallery />} />
+        <Route path='/only-admin/Managelogo' element={<ManageClientLogos />} />
+        <Route path='/only-admin/ManagePopularWork' element={<ManagePopularWork />} />
+        <Route path='/only-admin/ManageYoutubevideo' element={<ManageYoutubeVideo />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
       {isLoading && <PageLoader />}
-      {!isAdminDashboard(currentPath) && !isDashboard(currentPath) && <Footer />}
-      {!isAdminDashboard(currentPath) && !isDashboard(currentPath) && <MoveupButton />}
-      {!isAdminDashboard(currentPath) && !isDashboard(currentPath) && <ContactButton />}
+      {shouldRenderFooterButtons && <Footer />}
+      {shouldRenderFooterButtons && <MoveupButton />}
+      {shouldRenderFooterButtons && <ContactButton />}
     </>
   );
 }

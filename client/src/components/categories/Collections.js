@@ -3,7 +3,7 @@ import { Grid, Typography, Card, CardActionArea, CardMedia } from "@mui/material
 
 export const Collections = ({ images, names }) => {
   return (
-    <Grid container spacing={3} sx={{ padding: '0 120px' }}>
+    <Grid container spacing={3} sx={{ padding: '0 120px' , display:'flex', flexDirection:'column'}}>
       {images.map((image, index) => (
         <Grid item xs={3} key={index}>
           <Card

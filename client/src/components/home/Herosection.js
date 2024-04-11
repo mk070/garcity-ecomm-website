@@ -94,6 +94,7 @@ export const Herosection = () => {
       sx={{
         overflow: 'hidden',
         height: isSmallScreen ? '' : '91vh',
+        mt:'-10px',
         mb: { sm: '80px', xs: '10px' },
         position: 'relative', // Add this style for positioning the buttons
       }}
@@ -114,6 +115,7 @@ export const Herosection = () => {
           
           <Box sx={{ position: 'relative' }}>
             <img src={tops} style={{ width: '100%' }} alt="Slide 1" />
+
             <Box sx={{ position: 'absolute',backgroundColor:"#DF9573", color: '#FFF4F1', 
             top: '50%', left: '50%', padding:'50px 20px', borderRadius:'60px 0 60px 0',  transform: 'translate(-50%, -50%)', textAlign: 'center', height:{xs:'40px'} }}>
               <Typography variant={"h4"} sx={{fontSize:{lg:'35px', xs:'20px'}, margin:'0',}}>Content for Slide 1</Typography>
@@ -156,7 +158,7 @@ export const Herosection = () => {
         color: '#fff', // White text color
         padding: '10px', 
         position: 'absolute', 
-        top: '50%', 
+        top:isSmallScreen ?'60%' : '50%', 
         width:"40px",
         height:"40px",
         transform: 'translateY(-50%)',
@@ -172,7 +174,7 @@ export const Herosection = () => {
         color: '#fff', // White text color
         padding: '10px', 
         position: 'absolute', 
-        top: '50%', 
+        top:isSmallScreen ?'65%' : '50%', 
         width:"40px",
         height:"40px",
         transform: 'translateY(-90%)',

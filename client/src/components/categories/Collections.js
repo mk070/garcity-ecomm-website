@@ -3,9 +3,11 @@ import { Grid, Typography, Card, CardActionArea, CardMedia } from "@mui/material
 
 export const Collections = ({ images, names }) => {
   return (
-    <Grid container spacing={3} sx={{ padding: '0 120px' , display:'flex', flexDirection:'row'}}>
+    <Grid container  sx={{ padding: {sm:'0 120px', xs:' 0 40px'} , display:'flex', flexDirection:{sm:'row', xs:'column'} ,gap:{lg:'0px', xs:'50px'} ,marginTop:{xs:'50px'}, marginBottom:'100px'}} >
       {images.map((image, index) => (
-        <Grid item xs={3} key={index}>
+        <Grid item lg ={3} xs={30} key={index} sx={{
+          flexDirection:{xs:'column'},
+        }}>
           <Card
             sx={{
               maxWidth: 350,

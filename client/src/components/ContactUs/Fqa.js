@@ -4,51 +4,74 @@ import { Box } from "@mui/material";
 import CatalogueIcon from '../../assets/images/fqa/catalogue.svg'
  
 const data = {
-    title: "FAQ ",
+    title: "Frequently asked question ",
     rows: [
         {   
-            title: "Do You Have A Catalogue? ",
-            content: <p>No, We Don’t Have A Ready-made Catalogue.</p>
+            title: "What services does Garcity offer? ",
+            content: <p>Garcity offers a comprehensive range of garment manufacturing services,
+            including design consultation, pattern making, sample development, bulk
+            production, and quality control</p>
         },
         {
-            title: "What Is Your MOQ?",
-            content: <p> "For Ready-made Available Fabric, The Moq Is 100 Pieces Per Colour And Design, With 4 Custom Sizes. We Also Accommodate Fabrication For Higher Quantities.</p>
+            title: " What types of clothing can Garcity manufacture?",
+            content: <p> Garcity manufactures a diverse range of clothing for men, women, kids, and
+            sportswear enthusiasts. Our offerings include t-shirts, hoodies, shorts, joggers,
+            pyjama sets, dresses, frocks, and sports apparel such as tanks, leggings, and
+            jerseys</p>
         },
         {
-            title: "Do You Do Printing & Embroidery?",
-            content: <p> Yes, We Offer Various Printing Options, Including Screen Printing, Puff Printing, Hd Printing, DTF Sticker Printing, Emboss Printing, Embroidery, Etc. </p>
+            title: "What is Garcity's minimum order quantity (MOQ)?",
+            content: <p> Garcity's minimum order quantity depends on the complexity of the design and
+            the type of garment. They strive to accommodate orders of all sizes, from small
+            scale productions to large bulk orders.</p>
         },
         {
-            title: "Do You Provide Samples?",
-            content: <p>Yes, We Provide Sample Swatches And Customised Design Samples.
+            title: "Does Garcity offer customization options?",
+            content: <p>Yes, Garcity offers customization options to meet your specific requirements.
+            Whether it's fabric selection, colour choices, sizing, or branding, they can tailor
+            their services to suit your needs.
             </p>,
         },
         {
-            title: "What Is The Pricing?",
-            content: <p>Upon Submission Of Your Specific Requirements, We Will Calculate The Pricing Accordingly.
+            title: "What is Garcity's turnaround time for production?",
+            content: <p>Garcity's turnaround time varies depending on the scope and scale of the
+            project. They work closely with their clients to establish realistic timelines and
+            ensure timely delivery of high quality products.
             </p>,
         },
         {
-            title: "Do You Take Corporate Orders? ",
-            content: <p> Yes, We Do Accept Corporate Orders. </p>,
-        },
-        {
-            title: "What Is Your Delivery Timeline?  ",
-            content: <p>The Delivery Timeline Depends On The Quantity Of The Product. </p>,
-        },
-        {
-            title: "Do You Provide Low MOQ? ",
-            content: <p> Yes, We Offer A Low MOQ Of 50 Pieces Per Colour/design, Specifically For Dtf Sticker Printing.
+            title: "Can Garcity help with design development and prototyping? ",
+            content: <p> Yes, Garcity provides design development and prototyping services to bring your
+            ideas to life. Their experienced team can assist you in refining your designs,
+            creating patterns, and producing samples for testing and approval.
             </p>,
         },
         {
-            title: "What Is Your Production Capacity? ",
-            content: <p>Our Production Capacity Allows Us To Deliver A Minimum 1000 Pieces Per Day.
+            title: "What quality control measures does Garcity have in place? ",
+            content: <p>Garcity has stringent quality control measures in place throughout the production
+            process to maintain the highest standards of quality and consistency. Their team
+            conducts thorough inspections at every stage, from fabric sourcing to final
+            packaging. </p>,
+        },
+        {
+            title: "Does Garcity offer sustainable and ethical manufacturing practices? ",
+            content: <p> Yes, Garcity is committed to sustainability and ethical manufacturing practices.
+            They prioritise eco-friendly materials, responsible sourcing, and fair labour
+            practices to minimise their environmental impact and promote social responsibility.
             </p>,
         },
         {
-            title: "Do You Provide Customization? ",
-            content: <p>Yes, We Provide Customization Options For GSM, Colour, Material, And Design.
+            title: " How can I get started with my garment manufacturing project with  Garcity?",
+            content: <p>Getting started is easy! Simply reach out to Garcity through their contact form or
+            email, and one of their representatives will be in touch to discuss your project
+            requirements and provide personalised assistance
+            </p>,
+        },
+        {
+            title: " Can I schedule a factory tour or consultation with Garcity?",
+            content: <p>Yes, Garcity welcomes factory tours and consultations for clients who want to
+            learn more about their facilities, processes, and capabilities. Contact Garcity to
+            schedule a visit or arrange a virtual consultation with their team
             </p>,
         },
     ],
@@ -82,6 +105,10 @@ export default function Fqa (){
         background-color:#FFF4F1; 
         padding:60px;
         border-radius:30px;
+    }
+
+    .row-content-text{
+        margin: 20px 0;
     }
  `;
     return (

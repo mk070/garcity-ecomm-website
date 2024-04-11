@@ -1,6 +1,6 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react';
-import { Container } from '@mui/material';
+import { Container , Box} from '@mui/material';
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 export const Maps = () => {
@@ -13,21 +13,23 @@ export const Maps = () => {
       };
   return (
     <>
-    <Container>
-    <div style={{ height: '50vh', width: '100%' , marginBottom:"100px"}}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-      >
-        <AnyReactComponent
-          lat={59.955413}
-          lng={30.337844}
-          text="My Marker"
-        />
-      </GoogleMapReact>
-    </div>
-    </Container>
+    
+    <Box sx={{ height: '70vh',padding:{sm:"0 130px"} ,display:"flex", alignItems:"center",marginBottom:"100px"}}>
+      {/* <Box> */}
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: "" }}
+            defaultCenter={defaultProps.center}
+            defaultZoom={defaultProps.zoom}
+          >
+            <AnyReactComponent
+              lat={59.955413}
+              lng={30.337844}
+              text="My Marker"
+            />
+          </GoogleMapReact>
+      {/* </Box> */}
+    </Box>
+   
     </>
     )
 }

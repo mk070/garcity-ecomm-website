@@ -76,10 +76,10 @@ import 'swiper/css';
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import { Autoplay, Navigation } from 'swiper/modules';
 import SwiperCore from 'swiper';
-import tops from '../../assets/images/productpage/1.png';
-import blacks from '../../assets/images/productpage/4.png';
-import tshirts from '../../assets/images/productpage/3.png';
-import colors from '../../assets/images/productpage/2.png';
+import img1 from '../../assets/images/Home/banner/img1.png';
+import img2 from '../../assets/images/Home/banner/img2.png';
+import img3 from '../../assets/images/Home/banner/img3.png';
+import img4 from '../../assets/images/Home/banner/img4.png';
 import './Herosection.css'
 
 SwiperCore.use([Navigation, Autoplay]); // Add Autoplay to the list of SwiperCore modules
@@ -113,42 +113,48 @@ export const Herosection = () => {
       >
         <SwiperSlide>
           
+<<<<<<< HEAD
           <Box sx={{ position: 'relative' }}>
             <img src={tops} style={{ width: '100%' }} alt="Slide 1" />
 
             <Box sx={{ position: 'absolute',backgroundColor:"#DF9573", color: '#FFF4F1', 
+=======
+          <Box sx={{ position: 'relative',objectFit:"contain" }}>
+            <img src={img1} style={{ width: '100%' }} alt="Slide 1" />
+            {/* <Box sx={{ position: 'absolute',backgroundColor:"#DF9573", color: '#FFF4F1', 
+>>>>>>> ab8a3d540a7262a0cdc96ae54897523ceb9d7bda
             top: '50%', left: '50%', padding:'50px 20px', borderRadius:'60px 0 60px 0',  transform: 'translate(-50%, -50%)', textAlign: 'center', height:{xs:'40px'} }}>
               <Typography variant={"h4"} sx={{fontSize:{lg:'35px', xs:'20px'}, margin:'0',}}>Content for Slide 1</Typography>
               <Typography variant="body1" sx={{display:{xs:'none', sm:'block'}}}>Additional content goes here...</Typography>
-            </Box>
+            </Box> */}
           </Box>
         </SwiperSlide>
 
         <SwiperSlide>
           <Box sx={{ position: 'relative' }}>
-            <img src={blacks} style={{ width: '100%' }} alt="Slide 2" />
-            <Box sx={{ position: 'absolute',backgroundColor:"#FFF4F1", top: '50%', left: '50%', padding:'50px 20px', borderRadius:'0 60px 0 60px',  transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#372B29',height:{xs:'40px'} }}>
+            <img src={img2} style={{ width: '100%',objectFit:"fill" }} alt="Slide 2" />
+            {/* <Box sx={{ position: 'absolute',backgroundColor:"#FFF4F1", top: '50%', left: '50%', padding:'50px 20px', borderRadius:'0 60px 0 60px',  transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#372B29',height:{xs:'40px'} }}>
               <Typography variant="h4" sx={{fontSize:{lg:'35px', xs:'20px'}, margin:'0',}}>Content for Slide 2</Typography>
               <Typography variant="body1" sx={{display:{xs:'none', sm:'block'}}}>Additional content goes here...</Typography>
-            </Box>
+            </Box> */}
           </Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box sx={{ position: 'relative' }}>
-            <img src={tshirts} style={{ width: '100%' }} alt="Slide 3" />
-            <Box sx={{ position: 'absolute', backgroundColor:"#DF9573",color: '#FFF4F1',top: '50%', padding:'50px 20px', borderRadius:'60px 0 60px 0', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+            <img src={img3} style={{ width: '100%',objectFit:"fill" }} alt="Slide 3" />
+            {/* <Box sx={{ position: 'absolute', backgroundColor:"#DF9573",color: '#FFF4F1',top: '50%', padding:'50px 20px', borderRadius:'60px 0 60px 0', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
               <Typography variant="h4" sx={{fontSize:{lg:'35px', xs:'20px'}, margin:'0',}}>Content for Slide 3</Typography>
               <Typography variant="body1" sx={{display:{xs:'none', sm:'block'}}}>Additional content goes here...</Typography>
-            </Box>
+            </Box> */}
           </Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box sx={{ position: 'relative' }}>
-            <img src={colors} style={{ width: '100%' }} alt="Slide 4" />
-            <Box sx={{ position: 'absolute',backgroundColor:"#FFF4F1", top: '50%', left: '50%',  padding:'50px 20px', borderRadius:'0 60px 0 60px', transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#372B29' }}>
+            <img src={img4} style={{ width: '100%',objectFit:"fill" }} alt="Slide 4" />
+            {/* <Box sx={{ position: 'absolute',backgroundColor:"#FFF4F1", top: '50%', left: '50%',  padding:'50px 20px', borderRadius:'0 60px 0 60px', transform: 'translate(-50%, -50%)', textAlign: 'center', color: '#372B29' }}>
               <Typography variant="h4" sx={{fontSize:{lg:'35px', xs:'20px'}, margin:'0',}}>Content for Slide 4</Typography>
               <Typography variant="body1" sx={{display:{xs:'none', sm:'block'}}}>Additional content goes here...</Typography>
-            </Box>
+            </Box> */}
           </Box>
         </SwiperSlide>
       </Swiper>

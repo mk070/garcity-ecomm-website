@@ -1,16 +1,34 @@
-import React from 'react'
+import {React,useState,useEffect} from 'react'
 import {Box, Typography,Button} from '@mui/material'
 import img1 from "../../assets/images/contactus/contact.png"
 import img2 from "../../assets/images/contactus/location.png"
 import img3 from "../../assets/images/contactus/clock.png"
 
 export const Hero = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100); // Adjust the delay time (in milliseconds) as needed
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <Box sx={{height:{sm:"100vh"},display:"flex",justifyContent:"center",alignItems:"center",flexDirection:{sm:"column"}}}>
 
         <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:{sm:"column"},mb:{sm:"90px"}}}>
-                 <Typography sx={{fontSize: '40px', fontFamily: 'integral-Regular !important'}}>Hello Let's work Together</Typography>
-                 <Typography sx={{fontSize:{sm:"20px"},textAlign: 'center' ,mt:{sm:"30px"}}}>We are always happy to help you! <br /> Give us a call or Whatsapp App or e-mail us and we’ll have a happy person get back to you right away.</Typography>
+        <Typography
+            sx={{
+                fontSize: '40px',
+                fontFamily: 'integral-Regular !important',
+                opacity: isVisible ? 1 : 0,
+                transition: 'opacity 1s ease-out' // Adjust timing function and duration as needed
+            }}
+            >
+            Hello Let's work Together
+            </Typography>                
+             <Typography sx={{fontSize:{sm:"20px"},textAlign: 'center' ,mt:{sm:"30px"}}}>We are always happy to help you! 😊<br /> Give us a call or Whatsapp App or e-mail us and we’ll have a happy person get back to you right away.</Typography>
                  <a href="https://cal.com/garcity" style={{ textDecoration: 'none' }}> {/* Replace 'https://example.com' with your actual URL */}
                     <Button
                         sx={{
@@ -46,7 +64,7 @@ export const Hero = () => {
             </Box>            
             <Box sx={{width:{sm:"100%"},height:{sm:"100%"},borderRight:" 1px solid black",display:"flex",flexDirection:{sm:"column"},justifyContent:"center",alignItems:"center"}}>
                         <img src={img3} className='aboutusicon' alt="" srcset="" />
-                        <Typography sx={{textAlign: 'center',mt:{sm:"30px"} }}>Monday to Sunday : 9Am to 6Pm <br />
+                        <Typography sx={{textAlign: 'center',mt:{sm:"30px"} }}>Monday to Saturday : 9Am to 6Pm <br />
                                 Sunday: Holiday
                         </Typography>
             </Box>            

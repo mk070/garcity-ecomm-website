@@ -115,4 +115,17 @@ body {
 
 .aboutusicon{
   width: 50px;
+  animation: floatAnimation 3s infinite ease-in-out; /* Adjust duration and other properties as needed */
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.4));
+}
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the amount of vertical translation */
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

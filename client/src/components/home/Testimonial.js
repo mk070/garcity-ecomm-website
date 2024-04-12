@@ -67,8 +67,7 @@ const Testimonial = () => {
             speed: 5000,
             rewind: true,
             rewindByDrag: true,
-          }}
-        >
+          }} >
           {reviews.map((review) => (
             <SplideSlide key={review.id}>
               <img className="review-img" src={review.image} alt="" />

@@ -23,6 +23,7 @@ img {
 .title {
   text-align: center;
   margin-bottom: 2rem;
+  margin-top:150px;
 }
 
 .title h2 {
@@ -70,6 +71,7 @@ img {
 /* Splide customization */
 .splide__track {
   border-radius: 1rem;
+  margin-bottom:250px;
 }
 
 .splide__slide {
@@ -80,6 +82,7 @@ img {
   border-radius: 1rem;
   gap: 1rem;
   height: 300px;
+  
 }
 
 .slider-container .content .text {

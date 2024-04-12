@@ -44,7 +44,7 @@ export const InputForm = () => {
   return (
     <>
        
-        <Box sx={{display:"flex",flexDirection:{sm:"column"},alignItems:"center",height:{sm:"90vh"}}}>
+        <Box sx={{display:"flex",flexDirection:{sm:"column", },alignItems:"center",height:{sm:"90vh"}}}>
           <Typography  mx={10} variant='h3'
           sx={{
             fontSize: isSmallScreen ? '30px' : '50px',

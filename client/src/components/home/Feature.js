@@ -38,7 +38,7 @@ export const Feature = () => {
       
       sx={{
         marginTop: '40px',
-        marginBottom: { sm: '10px' },
+        marginBottom: { sm: '10px' , xs:'150px'},
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',

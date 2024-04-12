@@ -15,9 +15,9 @@ export const Hero = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <Box sx={{height:{sm:"100vh"},display:"flex",justifyContent:"center",alignItems:"center",flexDirection:{sm:"column"}}}>
+    <Box sx={{height:{sm:"100vh"},display:"flex",justifyContent:"center",alignItems:"center",flexDirection:{lg:"column", xs:'column'}}}>
 
-        <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:{sm:"column"},mb:{sm:"90px"}}}>
+        <Box sx={{display:"flex",justifyContent:"center",alignItems:"center",flexDirection:{sm:"column", xs:'column'},mb:{sm:"90px"}}}>
         <Typography
             sx={{
                 fontSize: '40px',
@@ -48,7 +48,7 @@ export const Hero = () => {
                     </Button>
                  </a>
         </Box>
-        <Box sx={{height:{sm:"30%"},display:"flex",flexDirection:{sm:"row"},}}> 
+        <Box sx={{height:{sm:"30%"},display:"flex",flexDirection:{sm:"row", xs:'column'},}}> 
             <Box sx={{width:{sm:"100%"},height:{sm:"100%"},borderRight:" 1px solid black",display:"flex",flexDirection:{sm:"column"},justifyContent:"center",alignItems:"center"}}> 
                 <img src={img1} className='aboutusicon' alt="" srcset="" />
                 <Typography sx={{textAlign: 'center',mt:{sm:"30px"} }}>1/354 H Asm garden Ksn puram 3rd street,

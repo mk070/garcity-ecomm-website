@@ -62,7 +62,7 @@ export const Hero = () => {
                                 remindme.garments@gmail.com
                         </Typography>
             </Box>            
-            <Box sx={{width:{sm:"100%"},height:{sm:"100%"},borderRight:" 1px solid black",display:"flex",flexDirection:{sm:"column"},justifyContent:"center",alignItems:"center"}}>
+            <Box sx={{width:{sm:"100%"},height:{sm:"100%"},display:"flex",flexDirection:{sm:"column"},justifyContent:"center",alignItems:"center"}}>
                         <img src={img3} className='aboutusicon' alt="" srcset="" />
                         <Typography sx={{textAlign: 'center',mt:{sm:"30px"} }}>Monday to Saturday : 9Am to 6Pm <br />
                                 Sunday: Holiday

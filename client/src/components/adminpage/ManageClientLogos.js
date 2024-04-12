@@ -16,6 +16,7 @@ export const ManageClientLogos = () => {
   const [showUploadConfirmation, setShowUploadConfirmation] = useState(false);
   const [imageName, setImageName] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
+  const MAX_LIMIT = 9;
 
   const convertToBase64 = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -27,6 +28,12 @@ export const ManageClientLogos = () => {
       return;
     }
   
+    // Check if already reached maximum limit
+    if (uploadedImages.length >= MAX_LIMIT) {
+      alert(`You can upload maximum ${MAX_LIMIT} images.`);
+      return;
+    }
+  
     setIsLoading(true);
   
     const reader = new FileReader();
@@ -35,7 +42,6 @@ export const ManageClientLogos = () => {
     reader.onload = async () => {
       try {
         const imageData = reader.result.split(',')[1]; // Get base64 data portion
-        // console.log('imagedtaa:',imageData)
         const response = await fetch('/api/Client/upload', {
           method: 'POST',
           headers: {
@@ -118,8 +124,9 @@ export const ManageClientLogos = () => {
   return (
     <>
       <Appbar />
-      <Box sx={{display:'flex', flexDirection:{sm:'row'}}}>
-        <Sidebar />
+      <Sidebar />
+
+      <Box sx={{display:'flex', flexDirection:{sm:'row'},ml:{sm:"240px"}}}>
         <Box sx={{width:{sm:"100%"}}}>
           <Box sx={{ mt: { sm: '65px' }, display: 'flex', alignItems: 'center', padding: { sm: '40px 130px' } }}>
             <Box sx={{ flexGrow: 1 }}>

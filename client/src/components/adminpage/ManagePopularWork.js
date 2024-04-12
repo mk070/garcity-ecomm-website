@@ -1,4 +1,3 @@
-// ManageGallery.js
 
 import React, { useState, useEffect } from 'react';
 import { Box, Button, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Snackbar, CircularProgress, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
@@ -17,6 +16,7 @@ export const ManagePopularWork = () => {
   const [showUploadConfirmation, setShowUploadConfirmation] = useState(false);
   const [imageName, setImageName] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
+  const MAX_LIMIT = 4;
 
   const convertToBase64 = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -27,16 +27,20 @@ export const ManagePopularWork = () => {
       alert('Please select a file');
       return;
     }
-  
+
+    if (uploadedImages.length >= MAX_LIMIT) {
+      alert(`Maximum limit of ${MAX_LIMIT} images reached`);
+      return;
+    }
+
     setIsLoading(true);
-  
+
     const reader = new FileReader();
-    reader.readAsDataURL(selectedFile); // Read the file as a data URL
-  
+    reader.readAsDataURL(selectedFile);
+
     reader.onload = async () => {
       try {
-        const imageData = reader.result.split(',')[1]; // Get base64 data portion
-        // console.log('imagedtaa:',imageData)
+        const imageData = reader.result.split(',')[1];
         const response = await fetch('/api/PopularWork/upload', {
           method: 'POST',
           headers: {
@@ -44,15 +48,14 @@ export const ManagePopularWork = () => {
           },
           body: JSON.stringify({
             imageName: selectedFile.name,
-            imageData // Pass the base64 image data to the backend
+            imageData
           })
         });
-  
+
         if (response.ok) {
           setUploadSuccess(true);
-          await fetchImages(); // Wait for the images to be fetched again
-          setShowUploadConfirmation(true); // Show upload confirmation message
-          // Hide upload confirmation message after 3 seconds
+          await fetchImages();
+          setShowUploadConfirmation(true);
           setTimeout(() => setShowUploadConfirmation(false), 3000);
         } else {
           console.error('Upload failed');
@@ -119,8 +122,9 @@ export const ManagePopularWork = () => {
   return (
     <>
       <Appbar />
-      <Box sx={{display:'flex', flexDirection:{sm:'row'}}}>
-        <Sidebar />
+      <Sidebar />
+
+      <Box sx={{display:'flex', flexDirection:{sm:'row'},ml:{sm:"240px"}}}>
         <Box sx={{width:{sm:"100%"}}}>
           <Box sx={{ mt: { sm: '65px' }, display: 'flex', alignItems: 'center', padding: { sm: '40px 130px' } }}>
             <Box sx={{ flexGrow: 1 }}>

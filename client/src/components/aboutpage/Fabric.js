@@ -25,13 +25,14 @@ const Fabric = () => {
           FABRICATION
         </Typography>
         <Typography height={100} sx={{ width: '100%', marginLeft: '80px', marginBottom: '50px' }}>
-        Get premium fabrics customized to your needs, including material,
-        GSM, and colors. Specializing in cotton and polyester varieties for tailored perfection.  
-        Get premium fabrics customized to your needs, including material,
-        GSM, and colors.  Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-        GSM, and colors.  Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-        GSM, and colors. Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-      
+        At our facility, we meticulously craft fabrics to your specifications, ensuring exceptional
+        quality and durability. Choose from a diverse range of materials, including cotton,
+        polyester, and blends, tailored to your unique requirements. Our state-of-the-art
+        equipment and techniques guarantee precise color, pattern, and texture adjustments,
+        resulting in fabrics of superior quality and consistency. Embracing sustainable practices,
+        we prioritize eco-friendly production methods and materials throughout the fabrication
+        process. With a robust supply chain and efficient production processes, we guarantee
+        timely delivery of your fabric orders, regardless of size or scope.
   </Typography>
       </Box>
 

@@ -26,13 +26,12 @@ const Shipping = () => {
         WORLDWIDE SHIPPING
         </Typography>
         <Typography height={100} sx={{ width: '100%', marginLeft: '80px', marginBottom: '50px' }}>
-        Get premium fabrics customized to your needs, including material,
-        GSM, and colors. Specializing in cotton and polyester varieties for tailored perfection.  
-        Get premium fabrics customized to your needs, including material,
-        GSM, and colors.  Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-        GSM, and colors.  Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-        GSM, and colors. Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-      
+          Count on our reliable and efficient shipping services to seamlessly deliver your products
+          worldwide, ensuring they reach their intended destination safely and on schedule.
+          Whether by air or sea, we handle your shipping needs with the utmost care and
+          precision, allowing you to focus on scaling your business. With our proven track record of
+          reliability and professionalism, you can trust us to manage your shipping requirements
+          seamlessly, providing you with peace of mind and convenience every step of the way
   </Typography>
       </Box>
 

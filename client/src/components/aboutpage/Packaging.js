@@ -25,13 +25,14 @@ const Packaging = () => {
         CUSTOM PACKING
         </Typography>
         <Typography height={100} sx={{ width: '90%', marginBottom: '50px' }}>
-          Get premium fabrics customized to your needs, including material,
-          GSM, and colors. Specializing in cotton and polyester varieties for tailored perfection.  
-          Get premium fabrics customized to your needs, including material,
-          GSM, and colors.  Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-          GSM, and colors.  Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-          GSM, and colors. Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-      
+          Elevate your brand's presentation with our bespoke packaging solutions, meticulously
+          designed to leave a lasting impression on your discerning customers. We offer an
+          extensive selection of sustainable packaging options, carefully curated to align with your
+          brand's identity and values. From eco-friendly materials to customized designs, we'll
+          collaborate with you to create packaging that not only showcases your commitment to
+          sustainability but also reinforces your brand message. Enhance the unboxing
+          experience and delight your customers with our premium packaging solutions that
+          elevate the perceived value of your products.
         </Typography>
       </Box>
 

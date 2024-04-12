@@ -26,13 +26,12 @@ const Printing = () => {
         CUSTOM PRINTING
         </Typography>
         <Typography height={100} sx={{ width: '90%', marginBottom: '50px' }}>
-        Get premium fabrics customized to your needs, including material,
-        GSM, and colors. Specializing in cotton and polyester varieties for tailored perfection.  
-        Get premium fabrics customized to your needs, including material,
-        GSM, and colors.  Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-        GSM, and colors.  Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-        GSM, and colors. Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-      
+        Elevate your designs with our comprehensive printing services, meticulously tailored to
+        bring your creative vision to life. From traditional screen printing techniques to cuttingedge digital and sublimation methods, we offer a diverse range of options to suit your
+        unique needs. Our skilled team ensures vibrant colors, precise detailing, and top-notch
+        quality in every print, ensuring your garments stand out from the crowd. With our
+        extensive printing options, you can personalize your creations and make a lasting
+        impression that resonates with your audience.
         </Typography>
       </Box>
 

@@ -2,7 +2,7 @@ import React from 'react'
 import  Banner  from '../components/categories/Banner'
 import { Breadcrumbs } from '@mui/material'
 import IconBreadcrumbs from '../components/categories/Breadcrums'
-import banner from "../assets/images/mensWear/mens.png"
+import banner from "../assets/images/mensWear/1.png"
 import { Collections } from '../components/categories/Collections'
 
 import image1 from "../assets/images/mensWear/hoodie.png"

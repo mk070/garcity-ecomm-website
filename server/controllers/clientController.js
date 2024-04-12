@@ -1,10 +1,12 @@
-import GalleryImage from '../mongodb/models/galleryImage.js';
 
-export const uploadGalleryImage = async (req, res) => {
+
+import ClientImage from '../mongodb/models/clientImage.js';
+
+export const uploadClientImage = async (req, res) => {
     try {
       const { imageName, imageData } = req.body; // Assuming the frontend sends image name and data
   
-      const image = new GalleryImage({
+      const image = new ClientImage({
         name: imageName,
         img: imageData // Store base64 encoded image data directly
       });
@@ -19,9 +21,9 @@ export const uploadGalleryImage = async (req, res) => {
 
 
 
-export const getGalleryImages = async (req, res) => {
+export const getClientImages = async (req, res) => {
   try {
-    const images = await GalleryImage.find({}, 'name img');
+    const images = await ClientImage.find({}, 'name img');
     res.json(images);
   } catch (error) {
     console.error('Error fetching images:', error);
@@ -29,10 +31,10 @@ export const getGalleryImages = async (req, res) => {
   }
 };
 
-export const deleteGalleryImage = async (req, res) => {
+export const deleteClientImage = async (req, res) => {
   try {
     const { id } = req.params;
-    await GalleryImage.findByIdAndDelete(id);
+    await ClientImage.findByIdAndDelete(id);
     res.status(204).end();
   } catch (error) {
     console.error('Error deleting image:', error);

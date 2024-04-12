@@ -7,7 +7,7 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { Sidebar } from './Sidebar';
 import { Appbar } from './Appbar';
 
-export const ManageGallery = () => {
+export const ManagePopularWork = () => {
   const [uploadedImages, setUploadedImages] = useState([]);
   const [isUploadSuccess, setUploadSuccess] = useState(false);
   const [isDeleteSuccess, setDeleteSuccess] = useState(false);
@@ -37,7 +37,7 @@ export const ManageGallery = () => {
       try {
         const imageData = reader.result.split(',')[1]; // Get base64 data portion
         // console.log('imagedtaa:',imageData)
-        const response = await fetch('/api/gallery/upload', {
+        const response = await fetch('/api/PopularWork/upload', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ export const ManageGallery = () => {
   const handleDelete = async (id) => {
     try {
       setIsLoading(true);
-      const response = await fetch(`/api/gallery/images/${id}`, {
+      const response = await fetch(`/api/PopularWork/images/${id}`, {
         method: 'DELETE',
       });
 
@@ -100,7 +100,7 @@ export const ManageGallery = () => {
 
   const fetchImages = async () => {
     try {
-      const response = await fetch('/api/gallery/images');
+      const response = await fetch('/api/PopularWork/images');
       if (response.ok) {
         const images = await response.json();
         setUploadedImages(images);
@@ -125,7 +125,7 @@ export const ManageGallery = () => {
           <Box sx={{ mt: { sm: '65px' }, display: 'flex', alignItems: 'center', padding: { sm: '40px 130px' } }}>
             <Box sx={{ flexGrow: 1 }}>
               <Typography variant="h5" gutterBottom>
-                Upload Gallery images here
+                Upload PopularWork images here
               </Typography>
             </Box>
             <form onSubmit={handleUpload}>

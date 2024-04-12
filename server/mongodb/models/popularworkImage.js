@@ -1,7 +1,7 @@
-// server/mongodb/models/galleryImage.js
+// server/mongodb/models/PopularWorkImage.js
 import mongoose from 'mongoose';
 
-const galleryImageSchema = new mongoose.Schema({
+const PopularWorkImageSchema = new mongoose.Schema({
     name: {
         type: String,
         required: false
@@ -12,6 +12,6 @@ const galleryImageSchema = new mongoose.Schema({
     }
 });
 
-const GalleryImage = mongoose.model('GalleryImage', galleryImageSchema);
+const PopularWorkImage = mongoose.model('PopularWorkImage', PopularWorkImageSchema);
 
-export default GalleryImage;
+export default PopularWorkImage;

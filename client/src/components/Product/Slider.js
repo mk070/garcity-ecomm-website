@@ -15,7 +15,7 @@ export const Slider = () => {
         
        display="flex" sx={{
         alignItems:"center",
-        margin:'0 100px',
+        margin:{sm:'0 100px', xs:'0 20px'},
         position:"relative",
       borderRadius:"20px",overflow:"hidden", 
       height: { sm: '390px' },
@@ -25,14 +25,14 @@ export const Slider = () => {
       <Typography
           sx={{
             position: 'absolute',
-            fontSize: '100px',
+            fontSize: {sm:'100px', xs:'40px'},
             zIndex: '100',
             color: 'white',
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             fontFamily: 'integral-Regular !important',
             top: '50%', // Adjusted top value to center vertically
             transform: 'translateY(-50%) ', // Added this line to center vertically
-            left: '350px'
+            left: {sm:'350px', xs:'55px'}
           }}
         >
           Products

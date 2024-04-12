@@ -1,13 +1,15 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import img1 from '../../assets/images/gallery/banner.jpg';
 import Text from "./Text";
 
 import './gallery.css';
 
 const Hero = () => {
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
 
@@ -39,7 +41,7 @@ const Hero = () => {
              <Box sx={{position:'absolute',bottom:'-70px',left:"51%", width:{sm:'30%'}}}>
              <div class="mouse"></div>
              </Box>
-              <img width={'100%'} style={{ marginRight: '0px', marginBottom: '80px' }} src={img1} alt="" />
+              <img width={'100%'} style={{ marginTop:isSmallScreen?'300px':'',marginRight: '0px', marginBottom: '80px' }} src={img1} alt="" />
             
           </div>
         </div>

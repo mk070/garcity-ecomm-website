@@ -1,11 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { useMediaQuery } from '@mui/material';
 
 const Text = () => {
+    const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
     const textRef = useRef(null);
     const tweens = useRef([]);
 
     useEffect(() => {
+       
         // GSAP animation
         const text = textRef.current;
         const chars = text.textContent.split('');
@@ -15,7 +18,7 @@ const Text = () => {
             const span = document.createElement('span');
             span.textContent = char;
             span.style.position = 'relative';
-            span.style.fontSize = '100px';
+            span.style.fontSize = isSmallScreen?'50px':'100px';
             span.style.fontFamily = 'integral-Regular';
             span.style.top = '100%'; // Initially move the character below the container
             text.appendChild(span);
@@ -43,9 +46,9 @@ const Text = () => {
             <header style={{
                 display: 'grid',
                 placeContent: 'center',
-                height: '100vh',
+                height: isSmallScreen? '50vh':'100vh',
                 position:'absolute',
-                left:"35%",
+                left:isSmallScreen?"15%":"35%",
                 top:'10%'
                 // backgroundColor:'#fbe0db'
             }}>

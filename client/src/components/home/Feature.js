@@ -37,7 +37,7 @@ export const Feature = () => {
     <Box
       
       sx={{
-        marginTop: { sm: '40px' },
+        marginTop: '40px',
         marginBottom: { sm: '10px' },
         display: 'flex',
         justifyContent: 'space-around',
@@ -70,7 +70,7 @@ export const Feature = () => {
           <img width={'102%'} src={img} style={{ position: 'absolute', top: '1px', right: '2px', transform: 'rotate(1deg)' }} alt="" srcSet="" />
         </Box>
 
-        <Box ref={featureRef} sx={{ width: { sm: '60%' }, display: 'flex', pt: '30px', flexDirection: 'column', ml:{lg:'120px'},  padding:'20px' }}>
+        <Box ref={featureRef} sx={{ width: { sm: '60%' }, display: 'flex', pt: '30px', flexDirection: 'column', ml:{lg:'120px'},  padding:'20px', position:'relative' }}>
 
           <Typography variant="h4" sx={{ fontSize: { xs:'24px',sm: '32px' } , fontFamily: "integral-Regular  !important", marginBottom:{xs:'30px'}  }} color>
             Why Garcity ?

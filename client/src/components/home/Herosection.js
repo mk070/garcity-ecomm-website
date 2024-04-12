@@ -157,9 +157,9 @@ export const Herosection = () => {
         color: '#fff', // White text color
         padding: '10px', 
         position: 'absolute', 
-        top:isSmallScreen ?'60%' : '50%', 
-        width:"40px",
-        height:"40px",
+        top:isSmallScreen ?'62%' : '50%', 
+        width:isSmallScreen?"30px":"40px",
+        height:isSmallScreen?"30px":"40px",
         transform: 'translateY(-50%)',
         borderRadius: '50%', // Circular shape
         cursor: 'pointer', // Cursor changes to pointer on hover
@@ -173,9 +173,9 @@ export const Herosection = () => {
         color: '#fff', // White text color
         padding: '10px', 
         position: 'absolute', 
-        top:isSmallScreen ?'65%' : '50%', 
-        width:"40px",
-        height:"40px",
+        top:isSmallScreen ?'70%' : '50%', 
+        width:isSmallScreen?"30px":"40px",
+        height:isSmallScreen?"30px":"40px",
         transform: 'translateY(-90%)',
         borderRadius: '50%', // Circular shape
         cursor: 'pointer', // Cursor changes to pointer on hover

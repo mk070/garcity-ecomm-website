@@ -41,11 +41,11 @@ export const Specialities = () => {
         <Typography  sx={{ fontSize:{xs:'24px', sm:'32px'}, fontFamily: "integral-Regular  !important" }}> Our Specialities</Typography>
       </Box>
 
-      <Box sx={{ display: 'flex', mt: { sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: '35px', sm: '0 100px' }, background: 'linear-gradient(to top, #FFF4F1, #fff)',    
+      <Box sx={{ display: 'flex', mt: { sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: '35px', sm: '0 100px' }, background: 'linear-gradient(to top, #FFF4F1, #fff)',   
     }}>
 
         <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 
-        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px'}}>
+        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px',borderRadius:'20px' }}>
           <Typography variant='h3'>01.</Typography>
           <Typography variant='h5' sx={{ marginBottom: '30px' }}>Customization Excellence:</Typography>
           <Typography variant='body1' sx={{ marginTop: { sm: '30px' } }}>We offer top-notch
@@ -58,7 +58,7 @@ export const Specialities = () => {
         </Box>
 
         <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 
-        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px'}}>
+        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px',borderRadius:'20px' }}>
           <Typography variant='h3'>02.</Typography>
           <Typography variant='h5' sx={{ marginBottom: '30px' }}>Printing Services:</Typography>
           <Typography sx={{ marginTop: { sm: '30px' } }}>Experience professional
@@ -70,7 +70,7 @@ export const Specialities = () => {
         </Box>
 
         <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 
-        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px'}}>
+        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px',borderRadius:'20px' }}>
           <Typography variant='h3'>03.</Typography>
           <Typography variant='h5' sx={{ marginBottom: '30px' }}>Fabrication Excellence:</Typography>
           <Typography sx={{ marginTop: { sm: '30px' } }}>We excel in fabrication,

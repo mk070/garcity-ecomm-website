@@ -21,14 +21,22 @@ export const Brands = () => {
   return (
     <Box sx={{my:{xs:5}}}>
         <Marquee gradient autoFill speed={90}>
-          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:"50px"}} src={logo1} alt="" />
-          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:"50px"}} src={logo2} alt="" />
-          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:"50px"}} src={logo3} alt="" />
-          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:"50px"}} src={logo4} alt="" />
-          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:"50px"}} src={logo5} alt="" />
-          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:"50px"}} src={logo6} alt="" />
-          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:"50px"}} src={logo7} alt="" />
-          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:"50px"}} src={logo8} alt="" />
+          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:isSmallScreen?"20px":"50px"}} src={logo1} alt="" />
+          
+          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:isSmallScreen?"20px":"50px"}} src={logo2} alt="" />
+          
+          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:isSmallScreen?"20px":"50px"}} src={logo3} alt="" />
+          
+          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:isSmallScreen?"20px":"50px"}} src={logo4} alt="" />
+          
+          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:isSmallScreen?"20px":"50px"}} src={logo5} alt="" />
+          
+          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:isSmallScreen?"20px":"50px"}} src={logo6} alt="" />
+          
+          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:isSmallScreen?"20px":"50px"}} src={logo7} alt="" />
+          
+          <img width={isSmallScreen?'50px':'85px'} style={{marginRight:isSmallScreen?"20px":"50px"}} src={logo8} alt="" />
+          
         </Marquee>
 
     </Box>

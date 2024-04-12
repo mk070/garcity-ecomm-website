@@ -85,10 +85,10 @@ export const About = () => {
       <div className="wrapper">
         <div className="horizontal-wrapper">
           <div className="section sticky"><Fabric /></div>
+          {/*<div className="section sticky"><Design /></div>
           <div className="section sticky"><Printing /></div>
-          <div className="section sticky"><Design /></div>
           <div className="section sticky"><Packaging /></div>
-          <div className="section sticky"><Shipping /></div>
+          <div className="section sticky"><Shipping /></div>  */}
         </div>
       </div>
     </>

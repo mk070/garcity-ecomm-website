@@ -39,9 +39,9 @@ export const Details = () => {
   return (
 
 
-      <Box sx={{ display: 'flex', mt: { sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: '90px 0', sm: '0 100px' }}}>
+      <Box sx={{ display: 'flex', mt: { xs:'30px',sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: '90px 30px', sm: '0 100px' }, gap:'30px'}}>
 
-        <Box className="speciality-box" sx={{ borderRadius:{sm:"30px"} ,mr: { sm: '20px' }, backgroundColor:"#FFF4F1",color:'#372B29 !important',boxShadow:"5px 5px 2px #c3c3c3,-5px -5px 2px #fdfdfd",padding: { sm: '60px 60px' } }}>
+        <Box className="speciality-box" sx={{ borderRadius:{sm:"30px"} ,mr: { sm: '20px' }, backgroundColor:"#FFF4F1",color:'#372B29 !important',boxShadow:"5px 5px 2px #c3c3c3,-5px -5px 2px #fdfdfd",padding: {xs:'40px', sm: '60px 60px' },  }}>
           {/* <Typography variant='h3' sx={{fontFamily: "integral-Regular  !important" }} >01.</Typography> */}
           <Box sx={{width:{sm:'100%'}, height:{sm:"95px"}}}>
                 <img src={mission} alt="" style={{width:"90px", height:"100%",marginBottom:'0'}} srcset="" /> 
@@ -53,7 +53,7 @@ export const Details = () => {
           </Typography>
         </Box>
 
-        <Box className="speciality-box" sx={{ borderRadius:{sm:"30px"} ,mr: { sm: '20px' }, backgroundColor:"#FFF4F1",color:'#372B29 !important',boxShadow:"5px 5px 2px #c3c3c3,-5px -5px 2px #fdfdfd", padding: { sm: '60px 60px' } }}>
+        <Box className="speciality-box" sx={{ borderRadius:{sm:"30px"} ,mr: { sm: '20px' }, backgroundColor:"#FFF4F1",color:'#372B29 !important',boxShadow:"5px 5px 2px #c3c3c3,-5px -5px 2px #fdfdfd", padding: {xs:'40px',sm: '60px 60px' } }}>
           {/* <Typography variant='h3' sx={{fontFamily: "integral-Regular  !important" }} >02.</Typography> */}
 
           <Box sx={{width:{sm:'100%'}, height:{sm:"95px !important"}}}>
@@ -68,7 +68,7 @@ export const Details = () => {
           </Typography>
         </Box>
 
-        <Box className="speciality-box" sx={{borderRadius:{sm:"30px"} , mr: { sm: '20px' }, backgroundColor:"#FFF4F1",color:'#372B29 !important',boxShadow:"5px 5px 2px #c3c3c3,-5px -5px 2px #fdfdfd", padding: { sm: '60px 60px' } }}>
+        <Box className="speciality-box" sx={{borderRadius:{sm:"30px"} , mr: { sm: '20px' }, backgroundColor:"#FFF4F1",color:'#372B29 !important',boxShadow:"5px 5px 2px #c3c3c3,-5px -5px 2px #fdfdfd", padding: { xs:'40px', sm: '60px 60px' } }}>
           {/* <Typography variant='h3' sx={{fontFamily: "integral-Regular  !important" }} >03.</Typography> */}
 
           <Box sx={{width:{sm:'100%'}, height:{sm:"95px"}}}>

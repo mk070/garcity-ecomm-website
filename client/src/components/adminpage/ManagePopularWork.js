@@ -37,7 +37,7 @@ export const ManagePopularWork = () => {
       try {
         const imageData = reader.result.split(',')[1]; // Get base64 data portion
         // console.log('imagedtaa:',imageData)
-        const response = await fetch('/api/gallery/upload', {
+        const response = await fetch('/api/PopularWork/upload', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ export const ManagePopularWork = () => {
   const handleDelete = async (id) => {
     try {
       setIsLoading(true);
-      const response = await fetch(`/api/gallery/images/${id}`, {
+      const response = await fetch(`/api/PopularWork/images/${id}`, {
         method: 'DELETE',
       });
 
@@ -100,7 +100,7 @@ export const ManagePopularWork = () => {
 
   const fetchImages = async () => {
     try {
-      const response = await fetch('/api/gallery/images');
+      const response = await fetch('/api/PopularWork/images');
       if (response.ok) {
         const images = await response.json();
         setUploadedImages(images);

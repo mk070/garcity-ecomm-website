@@ -4,7 +4,7 @@ import * as dotenv from 'dotenv';
 import cors from 'cors';
 import connectdb from './mongodb/connect.js';
 import multer from 'multer';
-import galleryRoutes from './routes/galleryRoutes.js';
+import Routes from './routes/Routes.js';
 
 dotenv.config();
 
@@ -28,7 +28,7 @@ const upload = multer({
 });
 
 // Use gallery routes
-app.use('/api/gallery', galleryRoutes);
+app.use('/api', Routes);
 
 // Define a route handler for the root path ("/")
 app.get('/', (req, res) => {

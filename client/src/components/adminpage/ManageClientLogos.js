@@ -1,4 +1,3 @@
-// ManageGallery.js
 
 import React, { useState, useEffect } from 'react';
 import { Box, Button, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Snackbar, CircularProgress, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
@@ -37,7 +36,7 @@ export const ManageClientLogos = () => {
       try {
         const imageData = reader.result.split(',')[1]; // Get base64 data portion
         // console.log('imagedtaa:',imageData)
-        const response = await fetch('/api/gallery/upload', {
+        const response = await fetch('/api/Client/upload', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -70,7 +69,7 @@ export const ManageClientLogos = () => {
   const handleDelete = async (id) => {
     try {
       setIsLoading(true);
-      const response = await fetch(`/api/gallery/images/${id}`, {
+      const response = await fetch(`/api/Client/images/${id}`, {
         method: 'DELETE',
       });
 
@@ -100,7 +99,7 @@ export const ManageClientLogos = () => {
 
   const fetchImages = async () => {
     try {
-      const response = await fetch('/api/gallery/images');
+      const response = await fetch('/api/Client/images');
       if (response.ok) {
         const images = await response.json();
         setUploadedImages(images);

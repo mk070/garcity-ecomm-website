@@ -124,13 +124,14 @@ const Design = () => {
           DESIGNING
         </Typography>
         <Typography height={100} sx={{ width: '100%', marginLeft: '80px', marginBottom: '50px' }}>
-        Get premium fabrics customized to your needs, including material,
-        GSM, and colors. Specializing in cotton and polyester varieties for tailored perfection.  
-        Get premium fabrics customized to your needs, including material,
-        GSM, and colors.  Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-        GSM, and colors.  Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-        GSM, and colors. Specializing in cotton and polyester varieties for tailored perfection. Specializing in cotton and polyester varieties for tailored perfection 
-      
+        From conceptualization to realization, our experienced team is committed to
+        transforming your ideas into stunning realities. We offer a full spectrum of design
+        services, guiding you through every stage of the process with expert assistance.
+        Whether it involves crafting intricate tech packs or refining your creative vision, we're
+        here to help you bring your designs to life. With our meticulous attention to detail and
+        unwavering dedication to excellence, we ensure that your garments embody your
+        unique style and vision, setting you apart as a trendsetter in the industry.
+
   </Typography>
       </Box>
 

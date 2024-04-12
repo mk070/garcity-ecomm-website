@@ -1,5 +1,3 @@
-// ManageGallery.js
-
 import React, { useState, useEffect } from 'react';
 import { Box, Button, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Snackbar, CircularProgress, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -17,6 +15,7 @@ export const ManageGallery = () => {
   const [showUploadConfirmation, setShowUploadConfirmation] = useState(false);
   const [imageName, setImageName] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
+  const MAX_LIMIT = 9;
 
   const convertToBase64 = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -28,6 +27,16 @@ export const ManageGallery = () => {
       return;
     }
   
+    if (!selectedFile.type.startsWith('image/')) {
+      alert('Please select an image file');
+      return;
+    }
+
+    if (uploadedImages.length >= MAX_LIMIT) {
+      alert(`You can upload only ${MAX_LIMIT} images.`);
+      return;
+    }
+  
     setIsLoading(true);
   
     const reader = new FileReader();
@@ -36,7 +45,6 @@ export const ManageGallery = () => {
     reader.onload = async () => {
       try {
         const imageData = reader.result.split(',')[1]; // Get base64 data portion
-        // console.log('imagedtaa:',imageData)
         const response = await fetch('/api/gallery/upload', {
           method: 'POST',
           headers: {
@@ -64,8 +72,6 @@ export const ManageGallery = () => {
       }
     };
   };
-  
-  
   
   const handleDelete = async (id) => {
     try {
@@ -119,8 +125,9 @@ export const ManageGallery = () => {
   return (
     <>
       <Appbar />
-      <Box sx={{display:'flex', flexDirection:{sm:'row'}}}>
-        <Sidebar />
+      <Sidebar />
+      <Box sx={{display:'flex', flexDirection:{sm:'row'}, ml:{sm:'240px'}}}>
+        
         <Box sx={{width:{sm:"100%"}}}>
           <Box sx={{ mt: { sm: '65px' }, display: 'flex', alignItems: 'center', padding: { sm: '40px 130px' } }}>
             <Box sx={{ flexGrow: 1 }}>

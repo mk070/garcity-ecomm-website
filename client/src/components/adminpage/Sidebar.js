@@ -51,7 +51,7 @@ export const Sidebar = ({ setShowGallery, setshowPopularWork ,setshowYoutube,set
     <>
       <Box
         component="nav"
-        sx={{ width: 240, flexShrink: 0, pt: { sm: '65px' },height:{sm:'100vh'},backgroundColor:"#FFF4F1" }}
+        sx={{ width: 240, flexShrink: 0, pt: { sm: '65px' },height:{sm:'100vh'},backgroundColor:"#FFF4F1",position:"fixed" }}
       >
         <List>
           {/* <ListItem button  component={Link} to="/gallery" > onClick={handleDashboardClick} 

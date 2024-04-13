@@ -87,11 +87,7 @@ export const About = () => {
         <div className="horizontal-wrapper">
           <div className="section sticky"><Fabric /></div>
          <div className="section sticky"><Design /></div>
-<<<<<<< HEAD
-           {/*<div className="section sticky"><Printing /></div>
-=======
           {/*  <div className="section sticky"><Printing /></div>
->>>>>>> 2c166cb24f332aa4f7127621e239ccf4919be05f
           <div className="section sticky"><Packaging /></div>
           <div className="section sticky"><Shipping /></div>  */}
         </div>

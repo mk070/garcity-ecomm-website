@@ -73,11 +73,12 @@ export const About = () => {
         marginTop={10}
         variant='h3'
         position={'sticky'}
-        top={90}
+        
         sx={{
           fontSize: isSmallScreen ? '30px' : '50px',
           fontFamily: 'integral-Regular !important',
           marginBottom: '1px',
+          top:{sm:"90px", xs:'98px'},
         }}
       >
         Services we <span style={{ fontFamily: ['integral-Regular'].join(','), color: '#DF9573' }}>offer</span><br /><br />
@@ -85,8 +86,8 @@ export const About = () => {
       <div className="wrapper">
         <div className="horizontal-wrapper">
           <div className="section sticky"><Fabric /></div>
-          {/*<div className="section sticky"><Design /></div>
-          <div className="section sticky"><Printing /></div>
+         <div className="section sticky"><Design /></div>
+          {/*  <div className="section sticky"><Printing /></div>
           <div className="section sticky"><Packaging /></div>
           <div className="section sticky"><Shipping /></div>  */}
         </div>

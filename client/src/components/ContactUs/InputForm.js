@@ -44,14 +44,16 @@ export const InputForm = () => {
   return (
     <>
        
-        <Box sx={{display:"flex",flexDirection:{sm:"column", },alignItems:"center",height:{sm:"90vh"}}}>
+        <Box sx={{display:"flex",flexDirection:{sm:"column",xs:'column' },alignItems:"center",height:{sm:"90vh"}, mt:{xs:'40px'}}}>
           <Typography  mx={10} variant='h3'
           sx={{
-            fontSize: isSmallScreen ? '30px' : '50px',
+            fontSize: isSmallScreen ? '24px' : '50px',
             marginBottom: '50px',
+            fontWeight:{xs:'600'},
+            width:{sm:'auto',xs:'224px'}
           }}>Get in touch with us! </Typography>
 
-          <Box  marginLeft={10} marginRight={10} sx={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '700px' }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px', width:{xs:'400px',sm: '700px'},marginLeft:{xs:'2px',sm:'10'}, marginRight:{sm:'10', xs:'30px'}, mb:{xs:'100px'}, padding:{xs:'14px'} }}>
 
             <TextField id="outlined-basic" label="First Name"  onChange={handleInputChange}  variant="outlined" sx={{
               width: isSmallScreen ? '300px' : '100%',
@@ -67,7 +69,7 @@ export const InputForm = () => {
 
             }} />
 
-            <Box sx={{display:"flex",flexDirection:{sm:"row"}}}>
+            <Box sx={{display:"flex",flexDirection:{sm:"row", xs:'column'}, gap:{sm:'0',xs:'20px'}}}>
             <TextField id="outlined-basic" label="Email Address" onChange={handleInputChange} variant="outlined" sx={{
               width: isSmallScreen ? '300px' : '100%',
               marginLeft: isSmallScreen ?'50px' : '',
@@ -88,10 +90,12 @@ export const InputForm = () => {
             }} />
             <Button onClick={handleFormSubmit}
               sx={{
-              display: { xs: 'none', sm: 'flex' },
+              display: { xs: 'block', sm: 'flex' },
               background: '#DF9573',
               mt: { xs: '0px', sm: '30px' },
               borderRadius: '30px',
+              ml:{sm:'auto',xs:'100px'},
+              width:{sm:'auto',xs:'200px'}, 
               '&:hover': {
                   backgroundColor: '#1E1E1E',
                   color: '', // Add hover effect

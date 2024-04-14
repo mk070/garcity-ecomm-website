@@ -97,10 +97,13 @@ export default function Fqa (){
      width:5%;
      display:flex; // Adjust margin as needed
    }
+
    .row-title-text{
     display: flex;
     flex-direction: row;
-    width:100%   }
+    width:100%  
+ }
+
     .faq-row-wrapper{
         background-color:#FFF4F1; 
         padding:60px;
@@ -110,9 +113,18 @@ export default function Fqa (){
     .row-content-text{
         margin: 20px 0;
     }
+
+    @media(max-width:700px){
+        .faq-row-wrapper{
+            padding:30px;
+        }
+        .row-title-text:before {
+            margin-right:50px;
+        }
+    }
  `;
     return (
-        <Box sx={{margin:{sm:'20px 120px'}}}>
+        <Box sx={{margin:{sm:'20px 120px'}, padding:{xs:'15px'}}}>
                <style>{customCss}</style> {/* Inject custom CSS */}
 
             <Faq 

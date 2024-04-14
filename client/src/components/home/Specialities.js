@@ -47,7 +47,7 @@ export const Specialities = () => {
         <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 
         padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px',borderRadius:'20px' }}>
           <Typography variant='h3'>01.</Typography>
-          <Typography variant='h5' sx={{ marginBottom: '30px' }}>Customization Excellence:</Typography>
+          <Typography variant='h5' sx={{ margin: {sm:'30px 0'} }}>Customization Excellence:</Typography>
           <Typography variant='body1' sx={{ marginTop: { sm: '30px' } }}>We offer top-notch
             customization options,
             empowering you to

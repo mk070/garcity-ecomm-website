@@ -75,10 +75,10 @@ export const About = () => {
         position={'sticky'}
         
         sx={{
-          fontSize: isSmallScreen ? '30px' : '50px',
+          fontSize: isSmallScreen ? '24px' : '50px',
           fontFamily: 'integral-Regular !important',
           marginBottom: '1px',
-          top:{sm:"90px", xs:'98px'},
+          top:{sm:"90px", xs:'75px'},
         }}
       >
         Services we <span style={{ fontFamily: ['integral-Regular'].join(','), color: '#DF9573' }}>offer</span><br /><br />

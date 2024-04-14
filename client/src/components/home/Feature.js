@@ -28,7 +28,7 @@ export const Feature = () => {
       tl.fromTo(
         featureRef.current.querySelectorAll('.point'),
         { x: '100%', opacity: 0 },
-        { x: '0%', opacity: 1, stagger: 0.5, ease: 'power3.out' }
+        { x: '0%', opacity: 1, stagger: 0.4, ease: 'power3.out' }
       );
     }
   }, [isVisible]);
@@ -65,7 +65,7 @@ export const Feature = () => {
           flexDirection: { sm: 'row', xs: 'column' },
         }}
       >
-        <Box sx={{ width: { sm: '30%', xs: '60%' }, mt: '', position: 'relative', marginLeft:{xs:'75px', lg:'0'} }}>
+        <Box sx={{ width: { sm: '33%', xs: '60%' }, mt: {sm:'50px'}, position: 'relative', marginLeft:{xs:'75px', lg:'0'} }}>
           <img width={'100%'} src={bgimg} alt="" srcSet="" />
           <img width={'102%'} src={img} style={{ position: 'absolute', top: '1px', right: '2px', transform: 'rotate(1deg)' }} alt="" srcSet="" />
         </Box>

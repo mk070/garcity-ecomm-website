@@ -32,7 +32,7 @@ export const Slider = () => {
             fontFamily: 'integral-Regular !important',
             top: '50%', // Adjusted top value to center vertically
             transform: 'translateY(-50%) ', // Added this line to center vertically
-            left: {sm:'350px', xs:'55px'}
+            left: {sm:'350px', xs:'40px'}
           }}
         >
           Products

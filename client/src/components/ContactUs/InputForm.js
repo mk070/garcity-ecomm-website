@@ -50,7 +50,7 @@ export const InputForm = () => {
             fontSize: isSmallScreen ? '24px' : '50px',
             marginBottom: '50px',
             fontWeight:{xs:'600'},
-            width:{xs:'224px'}
+            width:{sm:'auto',xs:'224px'}
           }}>Get in touch with us! </Typography>
 
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px', width:{xs:'400px',sm: '700px'},marginLeft:{xs:'2px',sm:'10'}, marginRight:{sm:'10', xs:'30px'}, mb:{xs:'100px'}, padding:{xs:'14px'} }}>
@@ -94,8 +94,8 @@ export const InputForm = () => {
               background: '#DF9573',
               mt: { xs: '0px', sm: '30px' },
               borderRadius: '30px',
-              ml:{xs:'100px'},
-              width:{xs:'200px'}, 
+              ml:{sm:'auto',xs:'100px'},
+              width:{sm:'auto',xs:'200px'}, 
               '&:hover': {
                   backgroundColor: '#1E1E1E',
                   color: '', // Add hover effect

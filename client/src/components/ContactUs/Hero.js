@@ -48,21 +48,22 @@ export const Hero = () => {
                     </Button>
                  </a>
         </Box>
-        <Box sx={{height:{sm:"30%"},display:"flex",flexDirection:{sm:"row", xs:'column'},mt:{xs:'60px'}}}> 
-            <Box sx={{width:{sm:"100%"},height:{sm:"100%"},borderRight:{xs:'none',sm:" 1px solid black"},display:"flex",flexDirection:{sm:"column"},justifyContent:"center",alignItems:"center", padding:{xs:'30px 10px'}, bgcolor:{xs:'#FFF4F1', sm:'none'}, borderRadius:'20px'}}> 
+        <Box sx={{height:{sm:"30%"},display:"flex",flexDirection:{sm:"row", xs:'column'},mt:{sm:'10px',xs:'60px'}}}> 
+        
+            <Box sx={{width:{sm:"100%"},height:{sm:"100%"},borderRight:{xs:'none',sm:" 1px solid black"},display:"flex",flexDirection:{sm:"column"},justifyContent:"center",alignItems:"center", padding:{xs:'30px 10px'}, bgcolor:{xs:'#FFF4F1', sm:'transparent'}, borderRadius:{sm:'0',xs:'20px'}, mt:{xs:'30px'}}}> 
                 <img src={img1} className='aboutusicon' alt="" srcset="" />
                 <Typography sx={{textAlign: 'center',mt:{sm:"30px"}, ml:{xs:'40px'} }}>1/354 H Asm garden Ksn puram 3rd street,
                             semmipalayam palladam, 
                             Tiruppur - 641662
                 </Typography>
             </Box>                        
-            <Box sx={{width:{sm:"100%"},height:{sm:"100%"},borderRight:{xs:'none',sm:" 1px solid black"},display:"flex",flexDirection:{sm:"column"},justifyContent:"center",alignItems:"center", padding:{xs:'30px 10px'}, bgcolor:{xs:'#FFF4F1', sm:'none'}, borderRadius:'20px', mt:{xs:'30px'}}}> 
+            <Box sx={{width:{sm:"100%"},height:{sm:"100%"},borderRight:{xs:'none',sm:" 1px solid black"},display:"flex",flexDirection:{sm:"column"},justifyContent:"center",alignItems:"center", padding:{xs:'30px 10px'}, bgcolor:{xs:'#FFF4F1', sm:'transparent'}, borderRadius:{sm:'0',xs:'20px'}, mt:{xs:'30px'}}}> 
             <img src={img2} className='aboutusicon' alt="" />
                         <Typography sx={{textAlign: 'center',mt:{xs:'-20px',sm:"30px"} }}> +91 9363091528 <br />
                                 remindme.garments@gmail.com
                         </Typography>
             </Box>            
-            <Box sx={{width:{sm:"100%"},height:{sm:"100%"},borderRight:{xs:'none',sm:" 1px solid black"},display:"flex",flexDirection:{sm:"column"},justifyContent:"center",alignItems:"center", padding:{xs:'30px 10px'}, bgcolor:{xs:'#FFF4F1', sm:'none'}, borderRadius:'20px', mt:{xs:'30px'}}}> 
+            <Box sx={{width:{sm:"100%"},height:{sm:"100%"},borderRight:{xs:'none',sm:" 1px solid black"},display:"flex",flexDirection:{sm:"column"},justifyContent:"center",alignItems:"center", padding:{xs:'30px 10px'}, bgcolor:{xs:'#FFF4F1', sm:'transparent'}, borderRadius:{sm:'0',xs:'20px'}, mt:{xs:'30px'}}}> 
                         <img src={img3} className='aboutusicon' alt="" srcset="" />
                         <Typography sx={{textAlign: 'center',mt:{sm:"30px"} }}>Monday to Saturday : 9Am to 6Pm <br />
                                 Sunday: Holiday

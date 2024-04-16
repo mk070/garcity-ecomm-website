@@ -13,7 +13,7 @@ const app = express();
 
 // Enable CORS middleware
 app.use(cors({
-    origin: 'http://localhost:3000', // Adjust the origin based on your frontend URL
+    origin: 'https://garcity-ecomm-website.vercel.app/', // Adjust the origin based on your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
 }));

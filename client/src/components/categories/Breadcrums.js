@@ -10,7 +10,7 @@ import GrainIcon from '@mui/icons-material/Grain';
 export default function IconBreadcrumbs({lastBreadcrumb} ) {
   return (
     <Box sx={{paddingLeft: { sm:'110px', xs:'15px' }, mb:{sm:'30px'}, mt:{xs:'30px'}}}>
-      <Breadcrumbs aria-label="breadcrumb">
+      <Breadcrumbs aria-label="breadcrumb" sx={{fontSize:{xs:"14px",sm:'16px'}}}>
         <Link
           underline="hover"
           sx={{ display: 'flex', alignItems: 'center' }}

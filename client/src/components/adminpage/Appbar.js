@@ -24,7 +24,7 @@ export const Appbar = () => {
   };
   return (
         <>
-          <AppBar  sx={{ top: 'auto',mb:'50px', backgroundColor:"#FFF4F1",display:'flex'}}>
+          <AppBar  sx={{ top: '0',mb:'50px', backgroundColor:"#FFF4F1",display:'flex'}}>
             <Toolbar sx={{justifyContent:'space-between'}}>
               <img src={Logo} width={'8%'} alt="" srcset="" />
           

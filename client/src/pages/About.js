@@ -73,11 +73,11 @@ export const About = () => {
         marginTop={10}
         variant='h3'
         position={'sticky'}
-        
+        zIndex={-1}
         sx={{
           fontSize: isSmallScreen ? '24px' : '50px',
           fontFamily: 'integral-Regular !important',
-          marginBottom: '1px',
+          marginBottom: '0px',
           top:{sm:"90px", xs:'75px'},
         }}
       >
@@ -86,10 +86,10 @@ export const About = () => {
       <div className="wrapper">
         <div className="horizontal-wrapper">
           <div className="section sticky"><Fabric /></div>
-         <div className="section sticky"><Design /></div>
-            <div className="section sticky"><Printing /></div>
+          <div className="section sticky"><Design /></div>
+          <div className="section sticky"><Printing /></div>
           <div className="section sticky"><Packaging /></div>
-          <div className="section sticky"><Shipping /></div> 
+          <div className="section sticky" style={{zIndex:"1"}}><Shipping /></div> 
         </div>
       </div>
     </>

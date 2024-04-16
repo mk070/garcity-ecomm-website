@@ -18,12 +18,12 @@ export const ContactButton = () => {
 
   const handleWhatsAppClick = () => {
     // Replace '1234567890' with the actual phone number with country code
-    window.open('https://wa.me/1234567890', '_blank');
+    window.open('https://wa.me/9363091528', '_blank');
   };
 
   const handleEmailClick = () => {
     // Replace 'recipient@example.com' with the actual email address
-    window.location.href = 'mailto:recipient@example.com';
+    window.location.href = 'mailto:garcitystyle@gmail.com';
   };
 
   const actions = [

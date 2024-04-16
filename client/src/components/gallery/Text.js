@@ -46,7 +46,7 @@ const Text = () => {
             <header style={{
                 display: 'grid',
                 placeContent: 'center',
-                height: isSmallScreen? '50vh':'100vh',
+                height: isSmallScreen? '30vh':'100vh',
                 position:'absolute',
                 left:isSmallScreen?"15%":"35%",
                 top:'10%'

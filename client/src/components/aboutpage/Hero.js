@@ -12,12 +12,12 @@ export const Hero = () => {
         height:{sm:"65vh", xs:'100vh'},
         marginTop:isSmallScreen?'100px':'140px'}}>
 
-        <Box sx={{
-            width:isSmallScreen?'80%':'32%', mb:{xs:'20px'}}}> 
-            <img width={'100%'} src={hero} alt="" /></Box>
+            <Box sx={{  width:isSmallScreen?'80%':'40%', mb:{xs:'20px'}}}> 
+                <img width={'100%'} src={hero} alt="" />
+            </Box>
 
             <Box sx={{
-                width:'90%',
+                width:'100%',
                  marginLeft:{sm:'60px'}}}>
                 <Typography
                     variant='h3'

@@ -10,56 +10,22 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import WebStoriesIcon from '@mui/icons-material/WebStories';
 import FitbitIcon from '@mui/icons-material/Fitbit';
 
-export const Sidebar = ({ setShowGallery, setshowPopularWork ,setshowYoutube,setshowClientLogo}) => {
+export const Sidebar = ({}) => {
 
-  const handleGalleryClick = () => {
-    setShowGallery(true); 
-    setshowYoutube(false)
-    setshowPopularWork(false)
-    setshowClientLogo(false)
-
-  };
-  const handleDashboardClick = () => {
-    setShowGallery(true); 
-    
-   
-  };
-  const handlePopularWorkClick = () => {
-    setshowPopularWork(true)
-    setShowGallery(false); 
-    setshowYoutube(false)
-    setshowClientLogo(false)
-
-
-  };
-  const handleYoutubeClick = () => {
-    setshowYoutube(true)
-    setShowGallery(false); 
-    setshowPopularWork(false)
-    setshowClientLogo(false)
-
-  };
-  const handleClientsLogoClick = () => {
-    setshowClientLogo(true)
-    setshowYoutube(false)
-    setShowGallery(false); 
-    setshowPopularWork(false)
-
-  };
 
   return (
     <>
       <Box
         component="nav"
-        sx={{ width: 240, flexShrink: 0, pt: { sm: '65px' },height:{sm:'100vh'},backgroundColor:"#FFF4F1",position:"fixed" }}
+        sx={{ width: 240, flexShrink: 0,height:{sm:'100vh'},backgroundColor:"#FFF4F1",position:"fixed" }}
       >
         <List>
-          {/* <ListItem button  component={Link} to="/gallery" > onClick={handleDashboardClick} 
+          <ListItem button  component={Link} to="/only-admin/dashboard" > 
             <ListItemIcon>
               <DashboardIcon />
             </ListItemIcon>
             <ListItemText primary="Dashboard" />
-          </ListItem> */}
+          </ListItem>
           <ListItem button component={Link} to="/only-admin/Managegallery" > {/*onClick={handleGalleryClick}*/}
             <ListItemIcon>
               <PhotoLibraryIcon /> {/* Gallery Icon */}

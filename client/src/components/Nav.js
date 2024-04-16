@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useState} from 'react';
 import PropTypes from 'prop-types';
 import { AppBar, Typography, Box, CssBaseline, Button, Toolbar, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Menu, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -12,7 +13,7 @@ const navItems = ['Home', 'Product', 'Gallery', 'About', 'Contact'];
 export const Nav = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -73,7 +74,7 @@ export const Nav = (props) => {
                         fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
                       }}
                     >
-                      {item} <ExpandMoreIcon  onMouseEnter={handleProductMenuOpen} />
+                      {item} <ExpandMoreIcon  onMouseEnter={handleProductMenuOpen}  />
                     </Button>
 
                     <Menu

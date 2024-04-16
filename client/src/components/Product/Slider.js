@@ -15,10 +15,11 @@ export const Slider = () => {
         
        display="flex" sx={{
         alignItems:"center",
-        margin:{sm:'0 100px', xs:'0 20px'},
+        justifyContent:"center",
+        margin:{sm:'0 100px', xs:'-10px 0 0 0'},
         position:"relative",
       borderRadius:"20px",overflow:"hidden", 
-      height: { sm: '390px' },
+      height: { sm: '390px' ,xs:"150px"},
       boxShadow:" rgba(0, 0, 0, 0.25) 0px 10px 20px -12px",
       marginBottom: '60px',
     }}>
@@ -32,7 +33,7 @@ export const Slider = () => {
             fontFamily: 'integral-Regular !important',
             top: '50%', // Adjusted top value to center vertically
             transform: 'translateY(-50%) ', // Added this line to center vertically
-            left: {sm:'350px', xs:'55px'}
+            // left: {sm:'350px', xs:'35px'}
           }}
         >
           Products

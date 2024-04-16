@@ -14,7 +14,7 @@ export const Maps = () => {
   return (
     <>
     
-    <Box sx={{ height: '70vh',padding:{sm:"0 130px"} ,display:"flex", alignItems:"center",marginBottom:"100px", padding:{xs:'20px'}}}>
+    <Box sx={{ height: {sm:'70vh',xs:'60vh'},padding:{sm:"0 130px",xs:'0 10px'} ,display:"flex", alignItems:"center",marginBottom:"100px"}}>
       {/* <Box> */}
           <GoogleMapReact
             bootstrapURLKeys={{ key: "" }}

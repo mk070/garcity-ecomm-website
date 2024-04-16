@@ -1,19 +1,42 @@
 import "../../styles/slider.css";
-import React from 'react';
-import { useState } from "react";
+import { React, useEffect, useState } from 'react';
 import Slider from "react-slick";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
-// Import your images
+
+// Default  images
 import slide_image_1 from '../../assets/images/popularcollection/image1.png';
 import slide_image_2 from '../../assets/images/popularcollection/image2.png';
 import slide_image_3 from '../../assets/images/popularcollection/image3.png';
 import slide_image_4 from '../../assets/images/popularcollection/image4.png';
 import slide_image_5 from '../../assets/images/popularcollection/image5.png';
 
-const images = [slide_image_1,slide_image_2,slide_image_3,slide_image_4,slide_image_5];
+const default_images = [slide_image_1,slide_image_2,slide_image_3,slide_image_4,slide_image_5];
+
 
 export const Homeslider = () => {
+  const [images, setImages] = useState([]);
+  const [imagesFetched, setImagesFetched] = useState(false);
+
+  const fetchImages = async () => {
+    try {
+      const response = await fetch('/api/PopularWork/images');
+      if (response.ok) {
+        const images = await response.json();
+        setImages(images);
+        setImagesFetched(true);
+      } else {
+        console.error('Failed to fetch images');
+      }
+    } catch (error) {
+      console.error('Error fetching images:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchImages();
+  }, []);
+
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
@@ -46,13 +69,23 @@ export const Homeslider = () => {
 
   return (
     <div className="App">
-      <Slider {...settings}>
-        {images.map((img, idx) => (
-          <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-            <img src={img} alt={img} />
-          </div>
-        ))}
-      </Slider>
-    </div>
+  <Slider {...settings}>
+    {imagesFetched && images.length > 3 ? (
+      images.map((image, idx) => (
+        <div className={idx === imageIndex ? "slide activeSlide" : "slide"} key={idx}>
+          <img src={`data:${image.contentType};base64,${image.img}`} alt={image} />
+        </div>
+      ))
+    ) : (
+      // Render default images when no images are fetched
+      default_images.map((img, idx) => (
+        <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+          <img src={img} alt={img} />
+        </div>
+      ))
+    )}
+  </Slider>
+</div>
+
   );
 }

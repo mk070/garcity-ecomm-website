@@ -11,11 +11,12 @@ export const Clothes = ({ category , images,names}) => {
 
   return (
     <Box sx={{padding:{sm:'0 30px'}}}>
-      <Typography marginTop="50px" mx={10} variant="h3"
+      <Typography   variant="h3"
         sx={{
-          fontSize: isSmallScreen ? '30px' : '50px',
-          
-          marginBottom: '30px',
+          fontSize: isSmallScreen ? '24px' : '50px',
+          m:{sm:'50px 0',xs:"40px 0 20px 0"},
+          display:"flex",
+          justifyContent:'center',
           '& a': {
             color: 'inherit', // Inherit text color
             textDecoration: 'none', // Remove underline
@@ -27,9 +28,9 @@ export const Clothes = ({ category , images,names}) => {
             textDecoration: 'underline'
           }
         }}>
-        <Link style={{ fontFamily: 'integral-Regular', fontWeight: 'normal', fontSize: '32px', textDecoration: 'none !important' }} to={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>{category}</Link>
+        <Link style={{ fontFamily: 'integral-Regular', fontWeight: 'normal', fontSize:{ sm:'32px',xs:"24px"}, textDecoration: 'none !important' }} to={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>{category}</Link>
       </Typography>
-      <Container maxWidth="xl" sx={{ width: "93%", marginBottom: "80px" }}>
+      <Container maxWidth="xl" sx={{ width: "86%", marginBottom: {sm:"80px",xs:'10px' }}}>
         <Swiper
           mx={10}
           slidesPerView={isSmallScreen ? 1 : 4}

@@ -12,7 +12,7 @@ const Footer = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (
-    <Box sx={{ backgroundColor: '#372B29', color: 'white', padding: '20px',width:{xs:'100%'} , height:{sm:'65vh'}}}>
+    <Box sx={{ backgroundColor: '#372B29', color: 'white', padding: '20px',width:{xs:'100%'} , height:{sm:'75vh'}}}>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={4} md={3} sx={{ textAlign: 'center' }}>
           <Box>

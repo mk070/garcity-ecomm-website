@@ -5,6 +5,7 @@ import cors from 'cors';
 import connectdb from './mongodb/connect.js';
 import multer from 'multer';
 import Routes from './routes/Routes.js';
+import nodemailer from 'nodemailer'
 
 dotenv.config();
 
@@ -29,12 +30,47 @@ const upload = multer({
 
 // Use gallery routes
 app.use('/api', Routes);
+// app.use('/gallery/api', Routes);
 
 // Define a route handler for the root path ("/")
 app.get('/', (req, res) => {
     res.send('Hello from Express!');
 });
 
+const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+      user: process.env.MAIL,
+      pass: process.env.MAIL_PASS,
+    },
+  });
+  
+  app.post('/api/send-email', async (req, res) => {
+    const { firstName, lastName, email, phoneNumber, message } = req.body;
+  
+    try {
+      const mailOptions = {
+        from: 'garcitwebsite@gmail.com',
+        to: 'mkartsoffical@gmail.com', // Change this to your own email address
+        subject: 'New Message from Contact Form',
+        html: `
+          <h1>New Message from Contact Form</h1>
+          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone Number:</strong> ${phoneNumber}</p>
+          <p><strong>Message:</strong> ${message}</p>
+        `,
+      };
+  
+      await transporter.sendMail(mailOptions);
+      console.log('Email sent successfully');
+      res.status(200).json({ message: 'Email sent successfully' });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      res.status(500).json({ error: 'Error sending email' });
+    }
+  });
+  
 const PORT = process.env.PORT || 8080;
 
 const server = async () => {

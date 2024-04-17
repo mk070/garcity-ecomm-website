@@ -8,7 +8,7 @@ const Shipping = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const [isExpanded, setIsExpanded] = useState(false); // State to track text expansion
   const [containerHeight, setContainerHeight] = useState(isSmallScreen ? '650px' : '85vh'); // Initial height
-
+// commit message
   const handleExpandCollapse = () => {
     setIsExpanded(!isExpanded); // Toggle expanded state
     setContainerHeight(isExpanded ? (isSmallScreen ? '650px' : '85vh') : '1000px'); // Update height based on expansion

@@ -73,14 +73,14 @@ export const Homeslider = () => {
     {imagesFetched && images.length > 3 ? (
       images.map((image, idx) => (
         <div className={idx === imageIndex ? "slide activeSlide" : "slide"} key={idx}>
-          <img src={`data:${image.contentType};base64,${image.img}`} alt={image} />
+          <img  loading='lazy'  src={`data:${image.contentType};base64,${image.img}`} alt={image} />
         </div>
       ))
     ) : (
       // Render default images when no images are fetched
       default_images.map((img, idx) => (
         <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-          <img src={img} alt={img} />
+          <img src={img}  loading='lazy'  alt={img} />
         </div>
       ))
     )}

@@ -66,8 +66,8 @@ export const Feature = () => {
         }}
       >
         <Box sx={{ width: { sm: '33%', xs: '60%' }, mt: {sm:'50px'}, position: 'relative', marginLeft:{xs:'75px', lg:'0'} }}>
-          <img width={'100%'} src={bgimg} alt="" srcSet="" />
-          <img width={'102%'} src={img} style={{ position: 'absolute', top: '1px', right: '2px', transform: 'rotate(1deg)' }} alt="" srcSet="" />
+          <img width={'100%'} src={bgimg}  loading='lazy'  alt="" srcSet="" />
+          <img width={'102%'} src={img}  loading='lazy' style={{ position: 'absolute', top: '1px', right: '2px', transform: 'rotate(1deg)' }} alt="" srcSet="" />
         </Box>
 
         <Box ref={featureRef} sx={{ width: { sm: '60%' }, display: 'flex', pt: '30px', flexDirection: 'column', ml:{lg:'120px'},  padding:'20px', position:'relative' }}>

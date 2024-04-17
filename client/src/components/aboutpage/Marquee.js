@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import Marquee from "react-fast-marquee";
-import pin from "../../assets/images/about/vector1.png"
 
 import quality from "../../assets/images/about/points/quality.png"
 import efficiency from "../../assets/images/about/points/energy.png"

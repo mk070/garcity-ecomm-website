@@ -110,7 +110,7 @@ body {
 
 .sticky{
   position: sticky;
-  top: 100px;
+  top: 150px;
 }
 
 .aboutusicon{
@@ -128,4 +128,17 @@ body {
   100% {
     transform: translateY(0);
   }
+}
+
+@media( max-width: 768px) {
+  .sticky{
+    position: sticky;
+    top: 59px;
+    z-index: -10;
+  }
+}
+
+.css-r9uhzn{
+  background-color: #372B29 !important;
+
 }

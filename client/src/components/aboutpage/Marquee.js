@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import Marquee from "react-fast-marquee";
-import pin from "../../assets/images/about/vector1.png"
 
 import quality from "../../assets/images/about/points/quality.png"
 import efficiency from "../../assets/images/about/points/energy.png"
@@ -15,19 +14,19 @@ export const Marquees = () => {
 
   return (
    <>
-    <Box sx={{marginTop:{sm:'50px'}}}>
-    <Marquee gradient autoFill speed={90}>
-      <Typography textTransform={'capitalize'} sx={{margin:'0 25px',   textTransform:'capitalize' }} variant='h5'>Quality </Typography>
+    <Box sx={{marginTop:{sm:'50px',xs:"20px"}}}>
+    <Marquee gradient autoFill speed={90} >
+      <Typography sx={{margin:'0 25px',  fontSize:{sm:'18px',xs:'14px'}, textTransform:'capitalize' }} variant='h5'>Quality </Typography>
       <img width={'30px'} src={quality} alt="" />
-      <Typography sx={{margin:'0 25px', }} variant='h5'>Efficiency </Typography>
+      <Typography  sx={{margin:'0 25px',  fontSize:{sm:'18px',xs:'14px'}, textTransform:'capitalize' }}variant='h5'>Efficiency </Typography>
       <img width={'30px'} src={efficiency} alt="" />
-      <Typography sx={{margin:'0 25px', }} variant='h5'>Speed </Typography>
+      <Typography  sx={{margin:'0 25px',  fontSize:{sm:'18px',xs:'14px'}, textTransform:'capitalize' }} variant='h5'>Speed </Typography>
       <img width={'30px'} src={speed} alt="" />
-      <Typography sx={{margin:'0 25px', }} variant='h5'>Sourcing </Typography>
+      <Typography  sx={{margin:'0 25px',  fontSize:{sm:'18px',xs:'14px'}, textTransform:'capitalize' }} variant='h5'>Sourcing </Typography>
       <img width={'30px'} src={Sourcing} alt="" />
-      <Typography sx={{margin:'0 25px', }} variant='h5'>Hassle-free  </Typography>
+      <Typography  sx={{margin:'0 25px',  fontSize:{sm:'18px',xs:'14px'}, textTransform:'capitalize' }} variant='h5'>Hassle-free  </Typography>
       <img width={'30px'} src={Hassle} alt="" />
-      <Typography sx={{margin:'0 25px', }} variant='h5'>Integrity </Typography>
+      <Typography  sx={{margin:'0 25px',  fontSize:{sm:'18px',xs:'14px'}, textTransform:'capitalize' }} variant='h5'>Integrity </Typography>
       <img width={'30px'} src={Integrity} alt="" />
     </Marquee>
     {/* <Marquee gradient autoFill direction='right' speed={90}>

@@ -38,11 +38,10 @@ const Hero = () => {
         <div ref={sectionRef} className="scaleDown">
           <div className="main-section">
              <Text />
-             <Box sx={{position:'absolute',bottom:'-70px',left:"51%", width:{sm:'30%'}}}>
-             <div class="mouse"></div>
+              <img width={'100%'} style={{ marginTop:isSmallScreen?'0':'',marginRight: '0px', marginBottom: '80px' }} src={img1} alt="" />
+             <Box sx={{position:'absolute',bottom:{sm:'-70px',xs:"-226px"},left:"51%", width:{sm:'30%'}}}>
+               <div class="mouse"></div>
              </Box>
-              <img width={'100%'} style={{ marginTop:isSmallScreen?'300px':'',marginRight: '0px', marginBottom: '80px' }} src={img1} alt="" />
-            
           </div>
         </div>
       </div>

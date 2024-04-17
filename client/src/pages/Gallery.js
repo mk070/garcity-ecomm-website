@@ -13,7 +13,6 @@ export const Gallery = () => {
   return (
     <>
       <Hero />
-      {/* <Text /> */}
       <Scrollsection />
       <YoutubeVideo videoUrls={sampleVideoUrls} />
     </>

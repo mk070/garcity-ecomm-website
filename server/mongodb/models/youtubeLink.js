@@ -1,4 +1,3 @@
-// server/mongodb/models/ClientImage.js
 import mongoose from 'mongoose';
 
 const YoutubeLinkSchema = new mongoose.Schema({

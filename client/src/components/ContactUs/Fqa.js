@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Faq from "react-faq-component";
 import { Box } from "@mui/material";
 import CatalogueIcon from '../../assets/images/fqa/catalogue.svg'
- 
+import q from '@mui/icons-material/QuestionMark'; 
 const data = {
     title: "Frequently asked question ",
     rows: [
@@ -91,8 +91,11 @@ const config = {
 export default function Fqa (){
    // Custom CSS to add icon to each FAQ item
    const customCss = `
+   .faq-title h2{
+    font-size:24px;
+   }
    .row-title-text:before {
-     content: url(${CatalogueIcon}); // Add icon before each FAQ item
+     content: url(${q}); // Add icon before each FAQ item
      margin-right: 1px;
      width:5%;
      display:flex; // Adjust margin as needed
@@ -101,6 +104,7 @@ export default function Fqa (){
    .row-title-text{
     display: flex;
     flex-direction: row;
+    font-size:16px;
     width:100%  
  }
 
@@ -124,7 +128,7 @@ export default function Fqa (){
     }
  `;
     return (
-        <Box sx={{margin:{sm:'20px 120px'}, padding:{xs:'15px'}}}>
+        <Box sx={{margin:{sm:'20px 120px',xs:'10px 10px'}}}>
                <style>{customCss}</style> {/* Inject custom CSS */}
 
             <Faq 

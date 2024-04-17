@@ -138,6 +138,9 @@ img {
 
 /* Media Query */
 @media (max-width: 600px) {
+  .testimonial-container{
+    margin-bottom:150px;
+  }
   .slider-container {
     height: 66vh; 
   }
@@ -181,7 +184,7 @@ img {
   .bottom-quote{
     height:50px;
     margin-left:20px;
-    top:440px
+    /* top:440px */
   }
   .slider-container .review-img {
     width: 100px;

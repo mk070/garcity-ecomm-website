@@ -76,10 +76,10 @@ import 'swiper/css';
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import { Autoplay, Navigation } from 'swiper/modules';
 import SwiperCore from 'swiper';
-import img1 from '../../assets/images/Home/banner/img1.png';
-import img2 from '../../assets/images/Home/banner/img2.png';
-import img3 from '../../assets/images/Home/banner/img3.png';
-import img4 from '../../assets/images/Home/banner/img4.png';
+import img1 from '../../assets/images/Home/banner/img1.jpg';
+import img2 from '../../assets/images/Home/banner/img2.jpg';
+import img3 from '../../assets/images/Home/banner/img3.jpg';
+import img4 from '../../assets/images/Home/banner/img4.jpg';
 import './Herosection.css'
 
 SwiperCore.use([Navigation, Autoplay]); // Add Autoplay to the list of SwiperCore modules

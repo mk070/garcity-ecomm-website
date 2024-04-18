@@ -46,14 +46,14 @@ function Scrollsection() {
     <Box sx={{ display: 'flex', padding: { sm: '40px', xs: '25px' }, justifyContent: 'center',alignItems:'center', flexDirection: { sm: "column", xs: 'column' } }}>
       <Box sx={{ display:"flex",flexDirection:{sm:'row'} }}>
         {images.slice(0, 3).map((image, index) => (
-          <Box key={index} ref={el => imageRefs.current[index] = el} sx={{  mr: { sm: '30px' },width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
+          <Box key={index} ref={el => imageRefs.current[index] = el} sx={{  mr: { sm: '30px' },width: { sm: '350px' }, marginBottom: isSmallScreen ? '20px' : '' }}>
             <img src={`data:${image.contentType};base64,${image.img}`} alt="" width={'100%'} />
           </Box>
         ))}
       </Box>
       <Box sx={{display:"flex",flexDirection:{sm:'row'}  }}>
         {images.slice(3, 6).map((image, index) => (
-          <Box key={index + 3} ref={el => imageRefs.current[index + 3] = el} sx={{ mr: { sm: '30px' }, width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
+          <Box key={index + 3} ref={el => imageRefs.current[index + 3] = el} sx={{ mr: { sm: '30px' }, width: { sm: '350px' }, marginBottom: isSmallScreen ? '20px' : '' }}>
             <img src={`data:${image.contentType};base64,${image.img}`} alt="" width={'100%'} />
           </Box>
         ))}

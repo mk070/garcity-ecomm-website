@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import { Nav } from './components/Nav';
 import Footer from './components/Footer';
@@ -27,30 +27,28 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulating a loading delay
+    // Simulate a loading delay
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 100);
+    }, 1000);
 
     // Clear timeout when component unmounts
     return () => clearTimeout(timeout);
   }, []);
 
-  const currentPath = window.location.pathname;
+
 
   // Function to check if the current path is for the admin dashboard
-  const isAdminPage = (path) => {
-    return path.startsWith('/only-admin');
-  };
-  
-  const shouldRenderFooterButtons =
-  !isAdminPage(currentPath);
+  const isAdminPage = (path) => path.startsWith('/only-admin');
 
+
+
+  const shouldRenderFooterButtons = !isAdminPage(window.location.pathname);
 
   return (
     <>
-      {shouldRenderFooterButtons  && <Nav /> }
-      
+      {shouldRenderFooterButtons && <Nav />}
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product' element={<Product />} />
@@ -69,6 +67,7 @@ function App() {
         <Route path='/only-admin/ManageYoutubevideo' element={<ManageYoutubeVideo />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
+
       {isLoading && <PageLoader />}
       {shouldRenderFooterButtons && <Footer />}
       {shouldRenderFooterButtons && <MoveupButton />}

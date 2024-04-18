@@ -6,6 +6,8 @@ import connectdb from './mongodb/connect.js';
 import multer from 'multer';
 import Routes from './routes/Routes.js';
 import nodemailer from 'nodemailer'
+import authMiddleware from './middleware/authMiddleware.js';
+import authRoutes from './routes/auth.js';
 
 dotenv.config();
 
@@ -13,7 +15,7 @@ const app = express();
 
 // Enable CORS middleware
 app.use(cors({
-    origin: 'https://garcity-ecomm-website.vercel.app/', // Adjust the origin based on your frontend URL
+    origin: 'http://localhost:3000/', // Adjust the origin based on your frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
 }));
@@ -28,14 +30,19 @@ const upload = multer({
   },
 });
 
-// Use gallery routes
-app.use('/api', Routes);
-// app.use('/gallery/api', Routes);
 
-// Define a route handler for the root path ("/")
+app.use('/api/auth', authRoutes);
+
+app.get('/api/protected', authMiddleware, (req, res) => {
+  res.json({ message: 'Protected route', userId: req.userId });
+});
+
+app.use('/api', Routes);
+
 app.get('/', (req, res) => {
     res.send('Hello from Express!');
 });
+
 
 const transporter = nodemailer.createTransport({
     service: 'Gmail',

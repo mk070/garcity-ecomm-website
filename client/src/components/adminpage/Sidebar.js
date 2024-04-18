@@ -17,7 +17,7 @@ export const Sidebar = ({}) => {
     <>
       <Box
         component="nav"
-        sx={{ width: 240, flexShrink: 0,height:{sm:'100vh'},backgroundColor:"#FFF4F1",position:"fixed" }}
+        sx={{ top:65,width: 240, flexShrink: 0,height:{sm:'100vh'},backgroundColor:"#FFF4F1",position:"fixed" }}
       >
         <List>
           <ListItem button  component={Link} to="/only-admin/dashboard" > 

@@ -240,6 +240,7 @@ export const ManageGallery = () => {
           </Dialog>
         </Box>
       </Box>
+
     </>
   );
 };

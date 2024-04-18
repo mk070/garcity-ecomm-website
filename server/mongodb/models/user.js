@@ -1,33 +1,10 @@
-import mongoose from "mongoose";
-import bcrypt from "bcrypt";
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    password: { type: String, required: true }
-});
+  username: { type: String, unique: true },
+  password: String,
+}, { collection: 'users' }); // Specify the collection name here
 
-// Pre-save hook to hash the password before saving the user data
-userSchema.pre("save", async function (next) {
-    // Only hash the password if it's modified or newly created
-    if (!this.isModified("password")) {
-        return next();
-    }
+const User = mongoose.model('User', userSchema);
 
-    try {
-        // Generate a salt
-        const salt = await bcrypt.genSalt(10);
-
-        // Hash the password with the salt
-        const hashedPassword = await bcrypt.hash(this.password, salt);
-
-        // Replace the plain password with the hashed password
-        this.password = hashedPassword;
-        next();
-    } catch (error) {
-        next(error);
-    }
-});
-
-const userModel = mongoose.model("User", userSchema);
-
-export default userModel;
+export default User;

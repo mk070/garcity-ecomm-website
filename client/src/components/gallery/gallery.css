@@ -169,12 +169,16 @@ body {
 }
 
 @media(max-width:600px){
+  .container{
+    margin-top:-10px;
+  }
+
   .scaleDown{
     height: 0;
     top:0;
   }
   .container{
-    height: 50vh;
+    height: 38vh;
   }
   .mouse{
     width: 15px;

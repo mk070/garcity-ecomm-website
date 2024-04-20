@@ -8,8 +8,9 @@ export const Hero = () => {
   return (
         <Box sx={{
         display:'flex',
-        flexDirection:isSmallScreen ? 'column': 'row', margin:isSmallScreen ? '0 30px':'0 120px',
-        height:{sm:"65vh", xs:'100vh'},
+        flexDirection:isSmallScreen ? 'column': 'row', 
+        margin:isSmallScreen ? '0 30px':'0 120px',
+        height:{sm:"65vh", xs:'93vh'},
         marginTop:isSmallScreen?'100px':'140px'}}>
 
             <Box sx={{  width:isSmallScreen?'80%':'40%', mb:{xs:'20px'}}}> 

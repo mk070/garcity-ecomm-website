@@ -74,7 +74,7 @@ export const Nav = (props) => {
                         fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
                       }}
                     >
-                      {item} <ExpandMoreIcon  onMouseEnter={handleProductMenuOpen}  />
+                      {item} <ExpandMoreIcon  onMouseEnter={handleProductMenuOpen} onMouseLeave={handleProductMenuClose} />
                     </Button>
 
                     <Menu

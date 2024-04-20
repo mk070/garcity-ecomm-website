@@ -26,7 +26,7 @@ export const Login = ({ history }) => { // Receive history object as prop
       const response = await fetch('/api/auth/login', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({ username, password }),
       });
@@ -42,6 +42,7 @@ export const Login = ({ history }) => { // Receive history object as prop
 
       // Redirect to dashboard
       navigate('/only-admin/dashboard');
+      
     } catch (error) {
       setError(error.message);
     }

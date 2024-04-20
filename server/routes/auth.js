@@ -8,15 +8,12 @@ const router = express.Router();
 router.post('/login', async (req, res) => {
     const { username, password } = req.body;
   
-    console.log('Login request received for username:', username);
   
     try {
       // Find user by username
       const user = await User.findOne({ username }).lean();
   
-      console.log('User found in database:', user);
-      console.log('Plaintext Password:', password);
-        console.log('Hashed Password (from database):', user.password);
+    
 
   
       if (!user) {

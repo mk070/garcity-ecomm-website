@@ -13,7 +13,7 @@ export const Hero = () => {
         height:{sm:"65vh", xs:'93vh'},
         marginTop:isSmallScreen?'100px':'140px'}}>
 
-            <Box sx={{  width:isSmallScreen?'100%':'45%', mb:{xs:'20px'}}}> 
+            <Box sx={{  width:isSmallScreen?'100%':'50%', mb:{xs:'20px'}}}> 
                 <img width={'100%'} src={hero} alt="" />
             </Box>
 
@@ -27,7 +27,7 @@ export const Hero = () => {
                         fontFamily:"integral-Regular  !important",
                     }}
                 >                   
-                    ‘ MAKE YOUR OWN CLOTHING STYLE WITH <span style={{ color: '#DF9573', fontWeight:700, fontFamily:'inherit' }}>  GARCITY ‘</span></Typography>
+                    ‘ MAKE YOUR OWN <br /> CLOTHING STYLE WITH <span style={{ color: '#DF9573', fontWeight:700, fontFamily:'inherit' }}>  GARCITY ‘</span></Typography>
                     {/* <Typography sx={{marginTop:{sm:'20px' }, paddingRight:{sm:'90px'} ,fontSize:{sm:"24px !important"}, fontWeight:'200px'}}>History:</Typography> */}
                     <Typography sx={{marginTop:{xs:'30px',sm:'20px' }, paddingRight:{sm:'150px'} ,fontSize:{sm:"18px !important"}}}>
                         Founded in 2007, GARCITY began as a small garment manufacturing operation in

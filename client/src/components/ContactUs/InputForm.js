@@ -97,7 +97,7 @@ export const InputForm = () => {
   };
 
   return (
-    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh',minWidth: '100%' }}>
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh',minWidth: '100%',mb:{sm:'20px',xs:'0'} }}>
       <Box sx={{width:'100%',padding:{sm:"0 260px",xs:'0 30px' }}}>
         <Typography variant='h3' sx={{fontSize:{sm:"42px",xs:"24px"}, marginBottom: '20px' }}>Get in touch with us! </Typography>
         <Box>

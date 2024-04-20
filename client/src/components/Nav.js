@@ -18,6 +18,9 @@ export const Nav = (props) => {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
+  const handleDrawerclose = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
 
   const handleProductMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -28,6 +31,7 @@ export const Nav = (props) => {
   };
 
   const handleProductMenuItemClick = () => {
+    setMobileOpen((prevState) => !prevState);
     setAnchorEl(null);
   };
 
@@ -74,8 +78,11 @@ export const Nav = (props) => {
                         fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
                       }}
                     >
-                      {item} <ExpandMoreIcon  onMouseEnter={handleProductMenuOpen} onMouseLeave={handleProductMenuClose} />
+                      {item} 
                     </Button>
+                    <IconButton onMouseEnter={handleProductMenuOpen} >
+                      <ExpandMoreIcon />
+                    </IconButton>
 
                     <Menu
                       id="product-menu"
@@ -133,43 +140,49 @@ export const Nav = (props) => {
             <Divider />
             <List>
               {navItems.map((item) => (
+                
                 <ListItem key={item} disablePadding>
-                  {item === 'Product' ? (
-                    <ListItemButton
-                      aria-controls={anchorEl ? 'product-menu-mobile' : undefined}
-                      aria-haspopup="true"
-                      component={Link} // Use Link component for routing
-                      to="/product" 
-                      sx={{
-                        textAlign: 'start',
-                        fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
-                        '&:hover': {
-                          backgroundColor: '#FFF4F1', // Add hover effect
-                        },
-                      }}
-                    >
-                      <ListItemText primary={item} />
-                      <ExpandMoreIcon onMouseEnter={handleProductMenuOpen} onMouseLeave={handleProductMenuClose}/>
-                    </ListItemButton>
-                  ) : (
-                    <><ListItemButton
-                        component={Link}
-                        to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} // Define routes
-                        sx={{
-                          textAlign: 'start',
-                          fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
-                          '&:hover': {
-                            backgroundColor: '#FFF4F1', // Add hover effect
-                          },
-                        }}
-                      >
-                        <ListItemText primary={item} />
-                      </ListItemButton>
-                        
-                      </>
-                    
-                  )}
-                </ListItem>
+                {item === 'Product' ? (
+                  <>
+                  <ListItemButton
+                  aria-controls={anchorEl ? 'product-menu-mobile' : undefined}
+                  aria-haspopup="true"
+                  component={Link} // Use Link component for routing
+                  to="/product" 
+                  onClick={handleDrawerclose}
+                  sx={{
+                    textAlign: 'start',
+                    fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
+                    '&:hover': {
+                      backgroundColor: '#FFF4F1', // Add hover effect
+                    },
+                  }}
+                >
+                  <ListItemText primary={item} />
+                </ListItemButton>
+                <IconButton onMouseEnter={handleProductMenuOpen} onMouseLeave={handleProductMenuClose } >
+                  <ExpandMoreIcon />
+                </IconButton>
+                </>
+                
+                ) : (
+                  <ListItemButton
+                    component={Link}
+                    to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} // Define routes
+                    onClick={handleDrawerclose} // Close drawer when any other item is clicked
+                    sx={{
+                      textAlign: 'start',
+                      fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
+                      '&:hover': {
+                        backgroundColor: '#FFF4F1', // Add hover effect
+                      },
+                    }}
+                  >
+                    <ListItemText primary={item} />
+                  </ListItemButton>
+                )}
+              </ListItem>
+              
               ))}
             </List>
           </Box>

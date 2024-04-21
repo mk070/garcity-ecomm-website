@@ -39,7 +39,7 @@ const Hero = () => {
           <div className="main-section">
              <Text />
               <img width={'100%'} style={{ marginTop:isSmallScreen?'0':'',marginRight: '0px', marginBottom: '80px' }} src={img1} alt="" />
-             <Box sx={{position:'absolute',bottom:{sm:'-70px',xs:"-226px"},left:"51%", width:{sm:'30%'}}}>
+             <Box sx={{position:'absolute',bottom:{sm:'-70px',xs:"-190px"},left:"51%", width:{sm:'30%'}}}>
                <div class="mouse"></div>
              </Box>
           </div>

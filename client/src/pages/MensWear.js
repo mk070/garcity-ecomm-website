@@ -1,4 +1,4 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import  Banner  from '../components/categories/Banner'
 import { Breadcrumbs } from '@mui/material'
 import IconBreadcrumbs from '../components/categories/Breadcrums'
@@ -18,6 +18,10 @@ import image10 from "../assets/images/mensWear/V neck half sleeve t-shirt.png"
 
 
 export const MensWear = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+
+  },[])
   return (
     <>
         <Banner image={banner} />

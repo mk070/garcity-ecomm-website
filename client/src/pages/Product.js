@@ -1,4 +1,4 @@
-import React from 'react'
+import {React,useEffect} from 'react'
 import {Box, Container, Grid} from "@mui/material"
 import { Slider } from '../components/Product/Slider'
 import { Clothes } from '../components/Product/Clothes'
@@ -30,6 +30,10 @@ import image16 from "../assets/images/sportsWear/Track Jacket.png"
 
 
 export const Product = () => {
+   useEffect(()=>{
+      window.scrollTo(0, 0);
+  
+    },[])
   return (
   <>
      <Slider/>

@@ -8,29 +8,31 @@ const Text = () => {
     const tweens = useRef([]);
 
     useEffect(() => {
-       
-        // GSAP animation
-        const text = textRef.current;
-        const chars = text.textContent.split('');
-        text.textContent = ''; // Clear the text content
+        const timeout = setTimeout(() => {
 
-        chars.forEach((char, index) => {
-            const span = document.createElement('span');
-            span.textContent = char;
-            span.style.position = 'relative';
-            span.style.fontSize = isSmallScreen?'50px':'100px';
-            span.style.fontFamily = 'integral-Regular';
-            span.style.top = '100%'; // Initially move the character below the container
-            text.appendChild(span);
+            // GSAP animation
+            const text = textRef.current;
+            const chars = text.textContent.split('');
+            text.textContent = ''; // Clear the text content
 
-            const tween = gsap.to(span, {
-                top: 0,
-                delay: 0.1 * index, // Delay each character's animation
-                duration: 0.7
-            });
+            chars.forEach((char, index) => {
+                const span = document.createElement('span');
+                span.textContent = char;
+                span.style.position = 'relative';
+                span.style.fontSize = isSmallScreen?'50px':'100px';
+                span.style.fontFamily = 'integral-Regular';
+                span.style.top = '100%'; // Initially move the character below the container
+                text.appendChild(span);
 
-            tweens.current.push(tween);
-        });
+                const tween = gsap.to(span, {
+                    top: 0,
+                    delay: 0.1 * index, // Delay each character's animation
+                    duration: 0.7
+                });
+
+                tweens.current.push(tween);
+            });}
+        , 100); 
 
         // Cleanup function
         return () => {

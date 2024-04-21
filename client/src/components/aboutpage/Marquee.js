@@ -14,7 +14,7 @@ export const Marquees = () => {
 
   return (
    <>
-    <Box sx={{marginTop:{sm:'50px',xs:"20px"}}}>
+    <Box sx={{marginTop:{sm:'50px',xs:"0px"}}}>
     <Marquee gradient autoFill speed={90} >
       <Typography sx={{margin:'0 25px',  fontSize:{sm:'18px',xs:'14px'}, textTransform:'capitalize' }} variant='h5'>Quality </Typography>
       <img width={'30px'} src={quality} alt="" />

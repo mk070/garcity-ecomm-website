@@ -52,12 +52,13 @@ export const Clothes = ({ category , images,names}) => {
                     }
                   }}>
                     <CardActionArea>
+                      <a href={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>
                       <CardMedia
                         component="img"
                         height="300"
                         image={image}
                         className="zoom-image"
-                      />
+                      /></a>
                     </CardActionArea>
                   </Card>
                   <Typography sx={{ margin: "13px 0", paddingLeft: "10px" }}>{names[index]}</Typography>

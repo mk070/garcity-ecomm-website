@@ -17,8 +17,8 @@ export const Dashboard = () => {
     <>
       <Appbar />
       <Sidebar />
-      <Box sx={{m:{sm:'60px 0 0 70px'},height:{sm:'80vh'}}}>
-        <Typography> Hi ,Welcome to Garcity Admin panel</Typography>
+      <Box sx={{m:{sm:'64px 0 0 240px'},height:{sm:'80vh'}}}>
+        <Typography variant='h4'> Hi ,Welcome to Garcity Admin panel</Typography>
       </Box>
     </>
     

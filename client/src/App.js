@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
-import { Nav } from './components/Nav';
+import  Nav  from './components/Nav';
 import Footer from './components/Footer';
 import { Home } from './pages/Home';
 import { Product } from './pages/Product';
@@ -27,30 +27,33 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulating a loading delay
+    // Simulate a loading delay
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 100);
+    }, 1000);
 
     // Clear timeout when component unmounts
     return () => clearTimeout(timeout);
   }, []);
 
-  const currentPath = window.location.pathname;
+  // Function to check if the user is authenticated (you need to implement this logic)
+  const isAuthenticated = () => {
+    // Check if the JWT token exists in local storage
+    const token = localStorage.getItem('token');
+
+    // Return true if the token exists, false otherwise
+    return !!token; // !! converts the token value to a boolean
+  };
 
   // Function to check if the current path is for the admin dashboard
-  const isAdminPage = (path) => {
-    return path.startsWith('/only-admin');
-  };
-  
-  const shouldRenderFooterButtons =
-  !isAdminPage(currentPath);
+  const isAdminPage = (path) => path.startsWith('/only-admin');
 
+  const shouldRenderFooterButtons = !isAdminPage(window.location.pathname);
 
   return (
     <>
-      {shouldRenderFooterButtons  && <Nav /> }
-      
+      {shouldRenderFooterButtons && <Nav />}
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product' element={<Product />} />
@@ -61,14 +64,70 @@ function App() {
         <Route path='/gallery' element={<Gallery />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/only-admin' element={<Admin />} />
-        <Route path='/only-admin/dashboard' element={<Dashboard />} />
-        <Route path='/only-admin/Managegallery' element={<ManageGallery />} />
-        <Route path='/only-admin/Managelogo' element={<ManageClientLogos />} />
-        <Route path='/only-admin/ManagePopularWork' element={<ManagePopularWork />} />
-        <Route path='/only-admin/ManageYoutubevideo' element={<ManageYoutubeVideo />} />
+        <Route
+          path='/only-admin'
+          element={
+            isAuthenticated() ? (
+              <Navigate to='/only-admin/dashboard' replace />
+            ) : (
+              <Admin />
+            )
+          }
+        />
+
+        <Route
+          path='/only-admin/dashboard'
+          element={
+            isAuthenticated() ? (
+              <Dashboard />
+            ) : (
+              <Navigate to='/only-admin' replace />
+            )
+          }
+        />
+        <Route
+          path='/only-admin/Managegallery'
+          element={
+            isAuthenticated() ? (
+              <ManageGallery />
+            ) : (
+              <Navigate to='/only-admin' replace />
+            )
+          }
+        />
+        <Route
+          path='/only-admin/Managelogo'
+          element={
+            isAuthenticated() ? (
+              <ManageClientLogos />
+            ) : (
+              <Navigate to='/only-admin' replace />
+            )
+          }
+        />
+        <Route
+          path='/only-admin/ManagePopularWork'
+          element={
+            isAuthenticated() ? (
+              <ManagePopularWork />
+            ) : (
+              <Navigate to='/only-admin' replace />
+            )
+          }
+        />
+        <Route
+          path='/only-admin/ManageYoutubevideo'
+          element={
+            isAuthenticated() ? (
+              <ManageYoutubeVideo />
+            ) : (
+              <Navigate to='/only-admin' replace />
+            )
+          }
+        />
         <Route path='/*' element={<NotFound />} />
       </Routes>
+
       {isLoading && <PageLoader />}
       {shouldRenderFooterButtons && <Footer />}
       {shouldRenderFooterButtons && <MoveupButton />}

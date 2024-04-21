@@ -92,7 +92,8 @@ export default function Fqa (){
    // Custom CSS to add icon to each FAQ item
    const customCss = `
    .faq-title h2{
-    font-size:24px;
+    font-size:32px;
+    margin-bottom:20px;
    }
    .row-title-text:before {
      content: url(${q}); // Add icon before each FAQ item
@@ -104,7 +105,7 @@ export default function Fqa (){
    .row-title-text{
     display: flex;
     flex-direction: row;
-    font-size:16px;
+    font-size:20px;
     width:100%  
  }
 
@@ -114,6 +115,10 @@ export default function Fqa (){
         border-radius:30px;
     }
 
+    .row-content-text p{
+        font-size:18px;
+
+    }
     .row-content-text{
         margin: 20px 0;
     }
@@ -125,6 +130,16 @@ export default function Fqa (){
         .row-title-text:before {
             margin-right:50px;
         }
+        .faq-title h2{
+            font-size:24px;
+        }
+        .row-content-text p{
+            font-size:16px;
+    
+        }
+        .row-title-text{
+            font-size:18px;
+         }
     }
  `;
     return (

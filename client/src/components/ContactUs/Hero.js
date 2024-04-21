@@ -15,14 +15,14 @@ export const Hero = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <Box sx={{height:{sm:"100vh"},display:"flex",justifyContent:"center",alignItems:"center",flexDirection:{lg:"column", xs:'column'}, padding:{xs:'30px'}}}>
+    <Box sx={{height:{sm:"100vh"}, display:"flex",justifyContent:"center",alignItems:"center",flexDirection:{lg:"column", xs:'column'}, padding:{xs:'30px',sm:'0'}}}>
 
-        <Box sx={{display:"flex",justifyContent:{sm:"center",xs:"flex-start"},height:{xs:'75vh'},alignItems:"center",flexDirection:{sm:"column", xs:'column'},mb:{sm:"20px"}}}>
+        <Box sx={{display:"flex",justifyContent:{sm:"center",xs:"flex-start"},height:{xs:'75vh',sm:"40vh"},alignItems:"center",flexDirection:{sm:"column", xs:'column'},mb:{sm:"20px"}}}>
         <Typography
             sx={{textAlign:"center",
                 fontSize: {xs:'34px', sm:'40px'},
                 lineHeight:{xs:"44px",sm:'100px'},
-                mt:{sm:'',xs:'50px'},
+                mt:{sm:'0',xs:'50px'},
                 fontFamily: 'integral-Regular !important',
                 opacity: isVisible ? 1 : 0,
                 transition: 'opacity 1s ease-out' // Adjust timing function and duration as needed

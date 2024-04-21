@@ -4,13 +4,48 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import Logo from "../../assets/images/logo.png";
+import { useNavigate } from 'react-router-dom';
+
 import './login.css';
 
-export const Login = () => {
+export const Login = ({ history }) => { // Receive history object as prop
   const [showPassword, setShowPassword] = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleTogglePassword = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      if (!response.ok) {
+        const errorMessage = await response.text();
+        throw new Error(errorMessage || 'Login failed');
+      }
+
+      const { token } = await response.json();
+
+      localStorage.setItem('token', token);
+
+      // Redirect to dashboard
+      navigate('/only-admin/dashboard');
+      
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   return (
@@ -25,7 +60,7 @@ export const Login = () => {
           </Box>
           <Box
             component="form"
-
+            onSubmit={handleLogin}
             sx={{
               '& .MuiTextField-root': { my: 1, width: '100%' },
             }}
@@ -38,6 +73,8 @@ export const Login = () => {
               label="Username"
               variant="outlined"
               fullWidth
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <TextField
               required
@@ -46,6 +83,8 @@ export const Login = () => {
               label="Password"
               variant="outlined"
               fullWidth
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               InputProps={{
                 endAdornment: (
                   <IconButton onClick={handleTogglePassword} edge="end">
@@ -57,11 +96,14 @@ export const Login = () => {
             <Button variant="contained" type="submit" fullWidth>
               Log in
             </Button>
+            {error && (
+              <Typography color="error" variant="body2" sx={{ mt: 1 }}>
+                {error}
+              </Typography>
+            )}
           </Box>
         </Grid>
       </Grid>
     </Container>
   );
 };
-
-export default Login;

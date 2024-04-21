@@ -169,23 +169,28 @@ body {
 }
 
 @media(max-width:600px){
+  .container{
+    margin-top:-10px;
+    height: 32vh;
+
+
+  }
+
   .scaleDown{
     height: 0;
     top:0;
   }
-  .container{
-    height: 50vh;
-  }
+
   .mouse{
-    width: 15px;
-	height: 30px;
+    width: 10px;
+	height: 20px;
 	border: 1px solid #333;
 	border-radius: 60px;
 	position: relative;
 	&::before {
 		content: '';
-		width: 6px;
-		height: 6px;
+		width: 4px;
+		height: 4px;
 		position: absolute;
 		top: 10px;
 		left: 50%;

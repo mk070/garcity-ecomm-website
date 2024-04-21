@@ -12,10 +12,10 @@ const Footer = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (
-    <Box sx={{ backgroundColor: '#372B29', color: 'white', padding: '20px',width:{xs:'100%'} , height:{sm:'75vh'}}}>
+    <Box sx={{ backgroundColor: '#372B29', color: 'white', padding: '20px',width:{xs:'100%'} , height:{sm:'60vh'}}}>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={4} md={3} sx={{ textAlign: 'center' }}>
-          <Box>
+          <Box sx={{display:"flex",flexDirection:{xs:"row",sm:"column"}}}>
             <img src={logo} width={isSmallScreen? '30%' :'40%'} alt="" />
             <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}, textAlign:{sm:'start'},paddingLeft:{sm:'20px'}}} mt={2}>Garcity, is more than just a garment manufacturer – we are the architects of your unique style.</Typography>
           </Box>
@@ -39,10 +39,10 @@ const Footer = () => {
               <YouTubeIcon sx={{ mr: 1 ,width:{xs:'20px'}}} />
               <Link href="http://youtube.com/@Garcitystyle" sx={{ color: 'white', textDecoration: 'none',fontSize:{sm:"16px",xs:'14px'} , '&:hover': { textDecoration: 'underline' } }}>YouTube</Link>
             </Box>
-            <Box sx={{ display: 'flex', alignItems: 'center',mb:{sm:'20px',xs:'8px'} }}>
+            {/* <Box sx={{ display: 'flex', alignItems: 'center',mb:{sm:'20px',xs:'8px'} }}>
               <PinterestIcon sx={{ mr: 1 ,width:{xs:'20px'}}} />
               <Link href="http://in.pinterest.com/garcitystyle" sx={{ color: 'white', textDecoration: 'none',fontSize:{sm:"16px",xs:'14px'} , '&:hover': { textDecoration: 'underline' } }}>Pinterest</Link>
-            </Box>
+            </Box> */}
             <Box sx={{ display: 'flex', alignItems: 'center' ,mb:{sm:'20px',xs:'8px'}}}>
               <XIcon sx={{ mr: 1 ,width:{xs:'20px'}}} />
               <Link href="https://twitter.com/Garcitystyle" sx={{ color: 'white', textDecoration: 'none',fontSize:{sm:"16px",xs:'14px'} , '&:hover': { textDecoration: 'underline' } }}>X</Link>
@@ -70,7 +70,7 @@ const Footer = () => {
         </Grid>
         {/* Other Grid items follow similar pattern */}
       </Grid>
-      <Typography sx={{fontSize:{xs:'14px',sm:'16px'},mt:{sm:'100px', xs:'80px'}}} variant="body2" align="center">
+      <Typography sx={{fontSize:{xs:'14px',sm:'16px'},mt:{sm:'50px', xs:'80px'}}} variant="body2" align="center">
         {'Copyright © '}
         Garcity {new Date().getFullYear()}.
       </Typography>

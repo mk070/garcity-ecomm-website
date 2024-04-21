@@ -32,7 +32,7 @@ const Text = () => {
 
                 tweens.current.push(tween);
             });}
-        , 1000); 
+        , 100); 
 
         // Cleanup function
         return () => {

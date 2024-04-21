@@ -7,7 +7,7 @@ import img2 from "../../assets/images/about/5 SERVICES IMAGES/WORLDWIDE SHIPPING
 const Shipping = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const [isExpanded, setIsExpanded] = useState(false); // State to track text expansion
-  const [containerHeight, setContainerHeight] = useState(isSmallScreen ? '650px' : '85vh'); // Initial height
+  const [containerHeight, setContainerHeight] = useState(isSmallScreen ? '650px' : '85vh'); // 
 // commit message
   const handleExpandCollapse = () => {
     setIsExpanded(!isExpanded); // Toggle expanded state

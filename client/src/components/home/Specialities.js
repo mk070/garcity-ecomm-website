@@ -37,7 +37,7 @@ export const Specialities = () => {
   return (
     <Box ref={specialitiesRef} sx={{ display: {sm:'block', xl:"flex"}, flexDirection: { sm: 'column' } }}>
 
-      <Box sx={{ width: { sm: '100%' }, padding: { sm: '60px' },mt:{xs:'40px'} ,display: 'flex', justifyContent: 'center', fontFamily: 'Satoshi-Regular' }}>
+      <Box sx={{ width: { sm: '100%' }, padding: { sm: '60px' },mt:{xs:'40px',sm:"0px"} ,display: 'flex', justifyContent: 'center', fontFamily: 'Satoshi-Regular' }}>
         <Typography  sx={{ fontSize:{xs:'24px', sm:'32px'}, fontFamily: "integral-Regular  !important" }}> Our Specialities</Typography>
       </Box>
 
@@ -45,7 +45,7 @@ export const Specialities = () => {
     }}>
 
         <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 
-        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px',borderRadius:'20px' }}>
+        padding: {xs:'30px', sm: '50px 60px 0px 60px'} , height:{xs:'350px', sm:'400px'}, marginBottom:'30px',borderRadius:'20px' }}>
           <Typography variant='h3'>01.</Typography>
           <Typography variant='h5' sx={{ margin: {sm:'30px 0',xs:'20px 0'} }}>Customization Excellence:</Typography>
           <Typography variant='body1' sx={{ marginTop: { sm: '30px' } }}>We offer top-notch
@@ -58,19 +58,19 @@ export const Specialities = () => {
         </Box>
 
         <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 
-        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px',borderRadius:'20px' }}>
+        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', sm:'400px'}, marginBottom:'30px',borderRadius:'20px' }}>
           <Typography variant='h3'>02.</Typography>
           <Typography variant='h5' sx={{ margin: {sm:'30px 0',xs:'20px 0'} }}>Printing Services:</Typography>
           <Typography sx={{ marginTop: { sm: '30px' } }}>Experience professional
             printing for your custom
             designs, logos, or messages,
             delivering high-quality results
-            that align with your visio
+            that align with your vision
           </Typography>
         </Box>
 
         <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 
-        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', lg:'450px'}, marginBottom:'30px',borderRadius:'20px' }}>
+        padding: {xs:'30px', sm: '50px 60px'} , height:{xs:'350px', sm:'400px'}, marginBottom:'30px',borderRadius:'20px' }}>
           <Typography variant='h3'>03.</Typography>
           <Typography variant='h5' sx={{ margin: {sm:'30px 0',xs:'20px 0'}  }}>Fabrication Excellence:</Typography>
           <Typography sx={{ marginTop: { sm: '30px' } }}>We excel in fabrication,

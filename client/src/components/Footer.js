@@ -53,11 +53,11 @@ const Footer = () => {
         <Grid item xs={6} sm={6} md={3} sx={{ textAlign: 'center' , mt:{sm:'40px',xs:'20px'}}}>
           <Box sx={{  paddingLeft:{sm:'60px',xs:"30px"},marginBottom: '20px' , textAlign:'start'}}>
             <Typography variant='h5' sx={{fontSize:{xs:'18px',sm:'26px'}}} mb={2}>Info</Typography>
-            <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}}} mb={1}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Home</Link></Typography>
-            <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}}} mb={1}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Product</Link></Typography>
-            <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}}} mb={1}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Gallery</Link></Typography>
-            <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}}} mb={1}><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>About us</Link></Typography>
-            <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}}} ><Link href="#" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Contact us</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}}} mb={1}><Link href="/" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Home</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}}} mb={1}><Link href="/product" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Product</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}}} mb={1}><Link href="/gallery" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Gallery</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}}} mb={1}><Link href="/about" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>About us</Link></Typography>
+            <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}}} ><Link href="/contact" sx={{ color: 'white', textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}>Contact us</Link></Typography>
           </Box>
         </Grid>
         <Grid item xs={12} sm={6} md={3} sx={{ textAlign: 'center' , mt:{sm:'40px'}}}>

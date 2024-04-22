@@ -24,7 +24,7 @@ export const Clothes = ({ category , images,names}) => {
           },
           '& a:hover': {
             color: '#DF9573',
-            transform: 'scale(8)',
+            transform: 'scale(1)',
             textDecoration: 'underline'
           }
         }}>

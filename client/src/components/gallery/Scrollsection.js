@@ -50,54 +50,68 @@ function Scrollsection() {
   //     });
   //   });
   // }, [images]);
+
   useEffect(() => {
     gsap.to(imgRefs.current, {
-      y: isSmallScreen ? -30 :-180,
-      stagger:isSmallScreen ?  0.6 : 0.2,
+      y: isSmallScreen ? -50 :-180,
+      stagger:isSmallScreen ?  0.8 : 0.2,
       ease: 'power1.out',
       scrollTrigger: {
         trigger: imgRefs.current,
         scrub: true,
       },
     });
-  }, []);
+  }, [images]);
+  const renderImages = () => {
+    return images.map((image, index) => (
+      <Box key={index} ref={el => (imgRefs.current[index] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: '30px' }}>
+        <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+      </Box>
+    ));
+  };
 
   return (
     <>
       {images.length > 0 ? (
         <>
-         <Box sx={{ display: 'flex', padding: { sm: '40px', xs: '5px' }, justifyContent: 'center', alignItems: 'center', flexDirection: { sm: "column", xs: 'column' } }}>
-
-          <Box sx={{ display:"flex", flexDirection:{sm:'row'} }}>
-            {images.slice(0, 3).map((image, index) => (
-              <Box key={index} ref={el => imageRefs.current[index] = el} sx={{  mr: { sm: '30px' ,xs:'8px'},width: { sm: '350px' }, marginBottom: isSmallScreen ? '20px' : '' }}>
-                <img src={`data:${image.contentType};base64,${image.img}`} alt="" width={'100%'} />
-              </Box>
-            ))}
-          </Box>
-          <Box sx={{display:"flex",flexDirection:{sm:'row'}  }}>
-            {images.slice(3, 6).map((image, index) => (
-              <Box key={index + 3} ref={el => imageRefs.current[index + 3] = el} sx={{ mr: { sm: '30px' ,xs:'8px'}, width: { sm: '350px' }, marginBottom: isSmallScreen ? '20px' : '' }}>
-                <img src={`data:${image.contentType};base64,${image.img}`} alt="" width={'100%'} />
-              </Box>
-            ))}
-          </Box>
-          <Box sx={{display:"flex",flexDirection:{sm:'row'} }}>
-            {images.slice(6, 9).map((image, index) => (
-              <Box key={index + 6} ref={el => imageRefs.current[index + 6] = el} sx={{ mr: { sm: '30px',xs:'8px'},  width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
-                <img src={`data:${image.contentType};base64,${image.img}`} alt="" width={'100%'} />
-              </Box>
-            ))}
-          </Box>
+        <Box
+            sx={{
+              display: 'flex',
+              padding: { sm: '40px', xs: '5px' },
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexDirection: { sm: 'row', xs: 'row' },
+            }}
+          >
+            <Box sx={{ mr: { sm: '30px' } }}>
+              {images.slice(0, 3).map((image, index) => (
+                <Box key={index} ref={el => (imgRefs.current[index] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+                </Box>
+              ))}
+            </Box>
+            <Box sx={{ mr: { sm: '30px' } }}>
+              {images.slice(3, 6).map((image, index) => (
+                <Box key={index + 3} ref={el => (imgRefs.current[index + 3] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+                </Box>
+              ))}
+            </Box>
+            <Box>
+              {images.slice(6, 9).map((image, index) => (
+                <Box key={index + 6} ref={el => (imgRefs.current[index + 6] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+                </Box>
+              ))}
+            </Box>
           </Box>
         </>
       ) : (
         <>
-        
            <Box
               sx={{
                 display: 'flex',
-                padding: { sm: '40px', xs: '5px' },
+                padding: { sm: '40px 0px 0px 0px', xs: '5px' },
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexDirection: { sm: 'row', xs: 'row' },

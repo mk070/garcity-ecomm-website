@@ -8,7 +8,6 @@ const Text = () => {
     const tweens = useRef([]);
 
     useEffect(() => {
-        const timeout = setTimeout(() => {
             // const header = document.getElementById('header');
             // header.style.display = 'flex';
             // GSAP animation
@@ -32,8 +31,7 @@ const Text = () => {
                 });
 
                 tweens.current.push(tween);
-            });}
-        , 10); 
+            });
 
         // Cleanup function
         return () => {

@@ -1,5 +1,6 @@
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
+import gif from '../../assets/gifs/aboutus.webm'
 import hero from '../../assets/images/about/dress.png';
 
 export const Hero = () => {
@@ -14,7 +15,7 @@ export const Hero = () => {
         marginTop:isSmallScreen?'100px':'140px'}}>
 
             <Box sx={{  width:isSmallScreen?'100%':'50%', mb:{xs:'20px'}}}> 
-                <img width={'100%'} src={hero} alt="" />
+                <video autoPlay style={{ boxShadow:"black 1px 0px 4px 0px",borderRadius:'20px'}} loop width={'100%'} src={gif} alt="" />
             </Box>
 
             <Box sx={{

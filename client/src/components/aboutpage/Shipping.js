@@ -3,7 +3,7 @@ import { Container, Typography, Box, useMediaQuery, Button } from '@mui/material
 import img1 from "../../assets/images/about/5 SERVICES IMAGES/WORLDWIDE SHIPPING2.png";
 import img2 from "../../assets/images/about/5 SERVICES IMAGES/WORLDWIDE SHIPPING.png";
 
-
+// imsge
 const Shipping = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const [isExpanded, setIsExpanded] = useState(false); // State to track text expansion

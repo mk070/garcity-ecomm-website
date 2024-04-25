@@ -141,7 +141,7 @@ function Scrollsection() {
                   <img src={img4} width={'100%'} alt="" />
                 </Box>
                 <Box ref={el => (imgRefs.current[4] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
-                  <img src={img5} width={'100%'} alt="" />
+                  <img src={img7} width={'100%'} alt="" />
                 </Box>
                 <Box ref={el => (imgRefs.current[5] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
                   <img src={img6} width={'100%'} alt="" />
@@ -149,7 +149,7 @@ function Scrollsection() {
               </Box>
               <Box>
                 <Box ref={el => (imgRefs.current[6] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
-                  <img src={img7} width={'100%'} alt="" />
+                  <img src={img5} width={'100%'} alt="" />
                 </Box>
                 <Box ref={el => (imgRefs.current[7] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
                   <img src={img8} width={'100%'} alt="" />

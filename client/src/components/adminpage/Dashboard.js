@@ -17,8 +17,10 @@ export const Dashboard = () => {
     <>
       <Appbar />
       <Sidebar />
-      <Box sx={{m:{sm:'64px 0 0 240px'},height:{sm:'80vh'}}}>
+      <Box sx={{m:{sm:'100px 0 0 300px'},height:{sm:'80vh'}}}>
         <Typography variant='h4'> Hi ,Welcome to Garcity Admin panel</Typography>
+        <Typography variant='h6'> make sure to upload images lessthan '400kb'</Typography>
+        Typo
       </Box>
     </>
     

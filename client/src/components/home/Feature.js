@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import bgimg from '../../assets/images/bgimg.png';
 import img from '../../assets/images/feature1.png';
 import gsap from 'gsap';
+import gif from '../../assets/gifs/home.webm'
 
 export const Feature = () => {
   const featureRef = useRef(null);
@@ -40,39 +41,21 @@ export const Feature = () => {
         marginTop: '40px',
         marginBottom: { sm: '10px' , xs:'10px'},
         display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'center',
         padding: { sm: '60px 180px', xs: '40px 20px' },
-        flexDirection: 'column',
+        flexDirection: {sm:'row',xs:'column'},
         bgcolor: '#FFF4F1',
       }}
     >
-      <Box
-        sx={{
-          display: 'flex',
-          width: '100%',
-          flexDirection: 'row',
-          ml: '0px',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      ></Box>
 
-      <Box
-        sx={{
-          display: 'flex',
-          mt: { sm: '30px', xs: '40px' },
-          flexDirection: { sm: 'row', xs: 'column' },
-        }}
-      >
-        <Box sx={{ width: { sm: '33%', xs: '60%' }, mt: {sm:'50px'}, position: 'relative', marginLeft:{xs:'75px', lg:'0'} }}>
-          <img width={'100%'} src={bgimg}  loading='lazy'  alt="" srcSet="" />
-          <img width={'102%'} src={img}  loading='lazy' style={{ position: 'absolute', top: '1px', right: '2px', transform: 'rotate(1deg)' }} alt="" srcSet="" />
+        <Box sx={{width:{sm:'90%'},  mt: {sm:'50px'}, position: 'relative', borderRadius:{sm:'30px',xs:'20px'}}}>
+          {/* <img width={'100%'} src={bgimg}  loading='lazy'  alt="" srcSet="" /> */}
+
+          <video  autoPlay loop width={'100%'} src={gif}  loading='lazy' style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'20px'}} alt="" srcSet="" />
         </Box>
 
-        <Box ref={featureRef} sx={{ width: { sm: '60%' }, display: 'flex', pt: '30px', flexDirection: 'column', ml:{lg:'120px'},  padding:'20px', position:'relative' }}>
+        <Box ref={featureRef} sx={{ ml:{sm:'30px',xs:'0'}, display: 'flex', pt: '30px', flexDirection: 'column',  padding:'20px', position:'relative' }}>
 
-          <Typography variant="h4" sx={{ fontSize: { xs:'24px',sm: '32px' } , fontFamily: "integral-Regular  !important", marginBottom:{xs:'30px'}  }} color>
+          <Typography variant="h4" sx={{ textAlign: 'center',fontSize: { xs:'24px',sm: '32px' } , fontFamily: "integral-Regular  !important", marginBottom:{xs:'30px',sm:'30px'}  }} color>
             Why Garcity ?
           </Typography>
           <Box sx={{ mt: { sm: '30px' } }}>
@@ -102,7 +85,7 @@ export const Feature = () => {
             </Typography>
           </Box>
         </Box>
-      </Box>
+
     </Box>
   );
 };

@@ -4,11 +4,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Box, useMediaQuery } from "@mui/material";
 
 // Import default images
-import img1 from '../../assets/images/popularcollection/image1.png';
-import img2 from '../../assets/images/popularcollection/image2.png';
-import img3 from '../../assets/images/popularcollection/image3.png';
+import img1 from '../../assets/images/gallery/1.jpg';
+import img2 from '../../assets/images/gallery/2.jpg';
+import img3 from '../../assets/images/gallery/3.jpg';
+import img4 from '../../assets/images/gallery/4.jpg';
+import img5 from '../../assets/images/gallery/5.jpg';
+import img6 from '../../assets/images/gallery/6.jpg';
+import img7 from '../../assets/images/gallery/7.jpg';
+import img8 from '../../assets/images/gallery/8.jpg';
+import img9 from '../../assets/images/gallery/9.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const defaultimages = [img1,img2,img3,img4,img5,img6,img7,img8,img9]
 
 function Scrollsection() {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
@@ -50,110 +58,107 @@ function Scrollsection() {
   //     });
   //   });
   // }, [images]);
+
   useEffect(() => {
     gsap.to(imgRefs.current, {
-      y: -180,
-      stagger: 0.2,
+      y: isSmallScreen ? -50 :-180,
+      stagger:isSmallScreen ?  0.8 : 0.2,
       ease: 'power1.out',
       scrollTrigger: {
         trigger: imgRefs.current,
         scrub: true,
       },
     });
-  }, []);
+  }, [images]);
+  const renderImages = () => {
+    return images.map((image, index) => (
+      <Box key={index} ref={el => (imgRefs.current[index] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: '30px' }}>
+        <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+      </Box>
+    ));
+  };
 
   return (
     <>
       {images.length > 0 ? (
         <>
-         <Box sx={{ display: 'flex', padding: { sm: '40px', xs: '5px' }, justifyContent: 'center', alignItems: 'center', flexDirection: { sm: "column", xs: 'column' } }}>
-
-          <Box sx={{ display:"flex", flexDirection:{sm:'row'} }}>
-            {images.slice(0, 3).map((image, index) => (
-              <Box key={index} ref={el => imageRefs.current[index] = el} sx={{  mr: { sm: '30px' ,xs:'8px'},width: { sm: '350px' }, marginBottom: isSmallScreen ? '20px' : '' }}>
-                <img src={`data:${image.contentType};base64,${image.img}`} alt="" width={'100%'} />
-              </Box>
-            ))}
-          </Box>
-          <Box sx={{display:"flex",flexDirection:{sm:'row'}  }}>
-            {images.slice(3, 6).map((image, index) => (
-              <Box key={index + 3} ref={el => imageRefs.current[index + 3] = el} sx={{ mr: { sm: '30px' ,xs:'8px'}, width: { sm: '350px' }, marginBottom: isSmallScreen ? '20px' : '' }}>
-                <img src={`data:${image.contentType};base64,${image.img}`} alt="" width={'100%'} />
-              </Box>
-            ))}
-          </Box>
-          <Box sx={{display:"flex",flexDirection:{sm:'row'} }}>
-            {images.slice(6, 9).map((image, index) => (
-              <Box key={index + 6} ref={el => imageRefs.current[index + 6] = el} sx={{ mr: { sm: '30px',xs:'8px'},  width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
-                <img src={`data:${image.contentType};base64,${image.img}`} alt="" width={'100%'} />
-              </Box>
-            ))}
-          </Box>
+        <Box
+            sx={{
+              display: 'flex',
+              padding: { sm: '40px', xs: '5px' },
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexDirection: { sm: 'row', xs: 'row' },
+            }}
+          >
+            <Box sx={{ mr: { sm: '30px' } }}>
+              {images.slice(0, 3).map((image, index) => (
+                <Box key={index} ref={el => (imgRefs.current[index] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+                </Box>
+              ))}
+            </Box>
+            <Box sx={{ mr: { sm: '30px' } }}>
+              {images.slice(3, 6).map((image, index) => (
+                <Box key={index + 3} ref={el => (imgRefs.current[index + 3] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+                </Box>
+              ))}
+            </Box>
+            <Box>
+              {images.slice(6, 9).map((image, index) => (
+                <Box key={index + 6} ref={el => (imgRefs.current[index + 6] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+                </Box>
+              ))}
+            </Box>
           </Box>
         </>
       ) : (
         <>
-        {/* <Box sx={{ display: 'flex', padding: { sm: '40px', xs: '5px' }, justifyContent: 'center', alignItems: 'center', flexDirection: { sm: "row", xs: 'row' } }}>
-
-            <Box sx={{mr:{sm:'30px'}}}>
-              <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}><img src={img1} width={'100%'} alt="" srcset="" /></Box>
-              <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':'' }}> <img src={img2} width={'100%'}  alt="" srcset="" /></Box>
-              <Box className="img" sx={{width:{sm:'350px'},  marginBottom:isSmallScreen?'50px':''}}><img src={img3} width={'100%'} alt="" srcset="" /></Box>
-            </Box>
-            <Box sx={{mr:{sm:'30px'}}}>
-              <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}><img  width={'100%'}src={img2} alt="" srcset="" /></Box>
-              <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}> <img width={'100%'} src={img3} alt="" srcset="" /></Box>
-              <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}><img  width={'100%'}src={img1} alt="" srcset="" /></Box>
-            </Box>
-            <Box>
-              <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}> <img width={'100%'} src={img3} alt="" srcset="" /></Box>
-              <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}><img  width={'100%'}src={img2} alt="" srcset="" /></Box>
-              <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}><img  width={'100%'}src={img1} alt="" srcset="" /></Box>
-            </Box>
-          </Box> */}
            <Box
-      sx={{
-        display: 'flex',
-        padding: { sm: '40px', xs: '5px' },
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: { sm: 'row', xs: 'row' },
-      }}
-    >
-      <Box sx={{ mr: { sm: '30px' } }}>
-        <Box ref={el => (imgRefs.current[0] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
-          <img src={img1} width={'100%'} alt="" />
-        </Box>
-        <Box ref={el => (imgRefs.current[1] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
-          <img src={img2} width={'100%'} alt="" />
-        </Box>
-        <Box ref={el => (imgRefs.current[2] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
-          <img src={img3} width={'100%'} alt="" />
-        </Box>
-      </Box>
-      <Box sx={{ mr: { sm: '30px' } }}>
-        <Box ref={el => (imgRefs.current[3] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
-          <img src={img2} width={'100%'} alt="" />
-        </Box>
-        <Box ref={el => (imgRefs.current[4] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
-          <img src={img3} width={'100%'} alt="" />
-        </Box>
-        <Box ref={el => (imgRefs.current[5] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
-          <img src={img1} width={'100%'} alt="" />
-        </Box>
-      </Box>
-      <Box>
-        <Box ref={el => (imgRefs.current[6] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
-          <img src={img3} width={'100%'} alt="" />
-        </Box>
-        <Box ref={el => (imgRefs.current[7] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
-          <img src={img2} width={'100%'} alt="" />
-        </Box>
-        <Box ref={el => (imgRefs.current[8] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '50px' : '' }}>
-          <img src={img1} width={'100%'} alt="" />
-        </Box>
-      </Box>
-    </Box>
+              sx={{
+                display: 'flex',
+                padding: { sm: '40px 0px 0px 0px', xs: '5px' },
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: { sm: 'row', xs: 'row' },
+              }}
+            >
+              <Box sx={{ mr: { sm: '30px' } }}>
+                <Box ref={el => (imgRefs.current[0] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img1} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[1] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img2} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[2] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img3} width={'100%'} alt="" />
+                </Box>
+              </Box>
+              <Box sx={{ mr: { sm: '30px' } }}>
+                <Box ref={el => (imgRefs.current[3] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img4} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[4] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img7} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[5] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img6} width={'100%'} alt="" />
+                </Box>
+              </Box>
+              <Box>
+                <Box ref={el => (imgRefs.current[6] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img5} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[7] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img8} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[8] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img9} width={'100%'} alt="" />
+                </Box>
+              </Box>
+            </Box>
         </>
       )}
     </>

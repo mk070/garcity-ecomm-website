@@ -8,8 +8,8 @@ const Text = () => {
     const tweens = useRef([]);
 
     useEffect(() => {
-        const timeout = setTimeout(() => {
-
+            // const header = document.getElementById('header');
+            // header.style.display = 'flex';
             // GSAP animation
             const text = textRef.current;
             const chars = text.textContent.split('');
@@ -31,8 +31,7 @@ const Text = () => {
                 });
 
                 tweens.current.push(tween);
-            });}
-        , 100); 
+            });
 
         // Cleanup function
         return () => {
@@ -51,11 +50,12 @@ const Text = () => {
                 height: isSmallScreen? '30vh':'100vh',
                 position:'absolute',
                 left:isSmallScreen?"15%":"35%",
-                top:'10%'
+                top:'10%',
+                // display:'none'
                 // backgroundColor:'#fbe0db'
             }}>
                 
-                <h1 ref={textRef}>Gallery</h1>
+                <h1  ref={textRef}>Gallery</h1>
                 
             </header>
             

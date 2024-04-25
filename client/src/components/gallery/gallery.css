@@ -15,7 +15,7 @@ body,
 }
 
 body {
-  background-color: #ffe9e5;
+  /* background-color: #ffe9e5; */
 }
 
 .hero__header {
@@ -171,7 +171,7 @@ body {
 @media(max-width:600px){
   .container{
     margin-top:-10px;
-    height: 32vh;
+    height: 37vh;
 
 
   }

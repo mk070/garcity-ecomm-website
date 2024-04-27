@@ -47,7 +47,7 @@ export const Feature = () => {
       }}
     >
 
-        <Box sx={{width:{sm:'90%'},  mt: {sm:'50px'}, position: 'relative', borderRadius:{sm:'30px',xs:'20px'}}}>
+        <Box sx={{width:{sm:'90%'},  mt: {sm:'50px'}, p:{sm:'0',xs:'20px'},position: 'relative', borderRadius:{sm:'30px',xs:'20px'}}}>
           {/* <img width={'100%'} src={bgimg}  loading='lazy'  alt="" srcSet="" /> */}
 
           <video  autoPlay loop width={'100%'} src={gif}  loading='lazy' style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'20px'}} alt="" srcSet="" />

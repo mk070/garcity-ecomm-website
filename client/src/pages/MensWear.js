@@ -27,7 +27,7 @@ export const MensWear = () => {
         <Banner image={banner} />
         <IconBreadcrumbs lastBreadcrumb='Mens wear'/>
         <Collections
-          names={['hoodie' ,'Joggers','Oversized-tshirt','Polo-tshirt','Roundneck-full-sleeve-tshirt','Roundneck-half-sleeve-tshirt','Roundneck-sleeveless-tshirt','Shorts','Sweat tshirt','Vneck half-sleeve-tshirt']}
+          names={['Hoodie' ,'Joggers','Oversized-tshirt','Polo-tshirt','Roundneck-full-sleeve-tshirt','Roundneck-half-sleeve-tshirt','Roundneck-sleeveless-tshirt','Shorts','Sweat tshirt','Vneck half-sleeve-tshirt']}
           images={[image1,image2,image3,image4,image5,image6,image7,image8,image9,image10]}/>
     </>
   )

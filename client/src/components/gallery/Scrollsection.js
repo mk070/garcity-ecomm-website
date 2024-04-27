@@ -116,7 +116,56 @@ function Scrollsection() {
         </>
       ) : (
         <>
-           <Box
+        {isSmallScreen ? (
+          <>
+            <Box
+              sx={{
+                display: 'flex',
+                padding: { sm: '40px 0px 0px 0px', xs: '5px 40px' },
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection:  'column' ,
+              }}
+            >
+              <Box sx={{ mr: { sm: '30px' } }}>
+                <Box ref={el => (imgRefs.current[0] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img1} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[1] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img2} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[2] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img3} width={'100%'} alt="" />
+                </Box>
+              </Box>
+              <Box sx={{ mr: { sm: '30px' } }}>
+                <Box ref={el => (imgRefs.current[3] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img4} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[4] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img7} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[5] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img6} width={'100%'} alt="" />
+                </Box>
+              </Box>
+              <Box>
+                <Box ref={el => (imgRefs.current[6] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img5} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[7] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img8} width={'100%'} alt="" />
+                </Box>
+                <Box ref={el => (imgRefs.current[8] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                  <img src={img9} width={'100%'} alt="" />
+                </Box>
+              </Box>
+            </Box>
+          </>
+         ):(
+          <>
+
+            <Box
               sx={{
                 display: 'flex',
                 padding: { sm: '40px 0px 0px 0px', xs: '5px' },
@@ -159,6 +208,9 @@ function Scrollsection() {
                 </Box>
               </Box>
             </Box>
+            </>
+            ) 
+          }
         </>
       )}
     </>

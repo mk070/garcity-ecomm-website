@@ -80,7 +80,7 @@ const data = {
 const styles = {
     
     titleTextColor: "#372b29",
-    rowTitleColor: "rgb(223, 149, 115)",
+    rowTitleColor: "#372b29",
     bgcolor:'red'
  
 };
@@ -143,7 +143,7 @@ export default function Fqa (){
     }
  `;
     return (
-        <Box sx={{margin:{sm:'20px 120px',xs:'10px 10px'}}}>
+        <Box sx={{margin:{sm:'20px 120px 100px 120px',xs:'10px 10px'}}}>
                <style>{customCss}</style> {/* Inject custom CSS */}
 
             <Faq 

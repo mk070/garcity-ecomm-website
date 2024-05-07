@@ -5,11 +5,11 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 
 // Default  images
-import slide_image_1 from '../../assets/images/popularcollection/1-min.png';
-import slide_image_2 from '../../assets/images/popularcollection/2-min.png';
-import slide_image_3 from '../../assets/images/popularcollection/3-min.png';
-import slide_image_4 from '../../assets/images/popularcollection/4-min.png';
-import slide_image_5 from '../../assets/images/popularcollection/5-min.png';
+import slide_image_1 from '../../assets/images/gallery/1.jpg';
+import slide_image_2 from '../../assets/images/gallery/2.jpg';
+import slide_image_3 from '../../assets/images/gallery/3.jpg';
+import slide_image_4 from '../../assets/images/gallery/4.jpg';
+import slide_image_5 from '../../assets/images/gallery/5.jpg';
 
 const default_images = [slide_image_1,slide_image_2,slide_image_3,slide_image_4,slide_image_5];
 

@@ -1,4 +1,4 @@
-import { Box, Typography, useMediaQuery, Fab } from '@mui/material';
+import { Box} from '@mui/material';
 import {React,useEffect} from 'react';
 import '../App.css'
 import { Herosection } from '../components/home/Herosection';

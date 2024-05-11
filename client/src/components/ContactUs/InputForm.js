@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { Typography, useMediaQuery, Box, TextField, Button, Snackbar, CircularProgress } from "@mui/material";
 import { keyframes } from "@emotion/react";
 
+
+const API = process.env.API_URI || 'nope';
+
+console.log('api: ',API)
+
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -63,7 +68,7 @@ export const InputForm = () => {
     if (Object.keys(formErrors).length === 0) {
       try {
         setSending(true); // Start sending process
-        const response = await fetch('/api/send-email', {
+        const response = await fetch('https://api.garcity.com/api/send-email', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

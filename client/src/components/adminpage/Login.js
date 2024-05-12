@@ -42,6 +42,8 @@ export const Login = ({ history }) => { // Receive history object as prop
 
       // Redirect to dashboard
       navigate('/only-admin/dashboard');
+      window.location.reload();
+
       
     } catch (error) {
       setError(error.message);

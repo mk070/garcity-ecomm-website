@@ -15,10 +15,11 @@ const app = express();
 
 // Enable CORS middleware
 app.use(cors({
-    origin: 'http://localhost:3000/', // Adjust the origin based on your frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific HTTP methods
-    allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+  origin: ['https://garcity.com', 'http://localhost:3000', 'https://www.garcity.com'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+
 
 app.use(express.json({ limit: '50mb' }));
 

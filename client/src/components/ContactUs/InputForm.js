@@ -2,6 +2,11 @@ import React, { useState } from "react";
 import { Typography, useMediaQuery, Box, TextField, Button, Snackbar, CircularProgress } from "@mui/material";
 import { keyframes } from "@emotion/react";
 
+
+const API = process.env.API_URI || 'nope';
+
+console.log('api: ',API)
+
 const fadeIn = keyframes`
   from {
     opacity: 0;

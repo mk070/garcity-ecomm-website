@@ -66,10 +66,6 @@
       "last 1 safari version"
     ]
   },
-<<<<<<< HEAD
-=======
-  "proxy": "https://api.garcity.com/",
->>>>>>> c9b149405d0718575f6ed1c4150d21abb9ceff08
   "devDependencies": {
     "dotenv-webpack": "^8.1.0",
     "webpack": "^5.91.0",

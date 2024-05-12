@@ -31,7 +31,6 @@ export const Collections = ({ images, names }) => {
               <CardMedia
                 component="img"
                 sx={{height:{sm:'300px',xs:'200px'}}}
-               
                 image={image}
                 alt={`image-${index}`}
                 className="zoom-image"

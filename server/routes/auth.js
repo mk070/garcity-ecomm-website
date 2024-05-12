@@ -12,13 +12,9 @@ router.post('/login', async (req, res) => {
     try {
       // Find user by username
       const user = await User.findOne({ username }).lean();
-  
-    
-
-  
       if (!user) {
         console.log('User not found in database');
-        return res.status(401).json({ message: 'Invalid username or password' });
+        return res.status(401).json({ message: 'Invalid username' });
       }
   
       // Compare plaintext password with hashed password
@@ -27,7 +23,7 @@ router.post('/login', async (req, res) => {
   
       if (!match) {
         console.log('Password does not match');
-        return res.status(401).json({ message: 'Invalid username or password' });
+        return res.status(401).json({ message: 'Invalid password' });
       }
   
       // Generate JWT

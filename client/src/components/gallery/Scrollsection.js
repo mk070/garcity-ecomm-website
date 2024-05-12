@@ -4,15 +4,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Box, useMediaQuery } from "@mui/material";
 
 // Import default images
-import img1 from '../../assets/images/gallery/1.jpg';
-import img2 from '../../assets/images/gallery/2.jpg';
-import img3 from '../../assets/images/gallery/3.jpg';
-import img4 from '../../assets/images/gallery/4.jpg';
-import img5 from '../../assets/images/gallery/5.jpg';
-import img6 from '../../assets/images/gallery/6.jpg';
-import img7 from '../../assets/images/gallery/7.jpg';
-import img8 from '../../assets/images/gallery/8.jpg';
-import img9 from '../../assets/images/gallery/9.jpg';
+import img1 from '../../assets/images/gallery/1.png';
+import img2 from '../../assets/images/gallery/2.png';
+import img3 from '../../assets/images/gallery/3.png';
+import img4 from '../../assets/images/gallery/4.png';
+import img5 from '../../assets/images/gallery/5.png';
+import img6 from '../../assets/images/gallery/6.png';
+import img7 from '../../assets/images/gallery/7.png';
+import img8 from '../../assets/images/gallery/8.png';
+import img9 from '../../assets/images/gallery/9.png';
 
 gsap.registerPlugin(ScrollTrigger);
 

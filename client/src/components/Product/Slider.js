@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import {Box, Container, Typography, useMediaQuery} from "@mui/material"
 import tops from "../../assets/images/productpage/1.png"
+import topsSmall from "../../assets/images/productpage/1_small.png"
 import blacks from "../../assets/images/productpage/4.png"
 import tshirts from "../../assets/images/productpage/3.png"
 import colors from "../../assets/images/productpage/2.png"
@@ -48,6 +49,7 @@ export const Slider = () => {
       modules={[Autoplay]}
     >
       <SwiperSlide>
+      {/* <BlurHash smallImage={topsSmall} largeImage={tops}/> */}
         <img src={tops} style={{width:"100%"}} />
       </SwiperSlide>
       <SwiperSlide>

@@ -14,12 +14,9 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
     "ffmpeg": "^0.0.4",
-=======
     "crypto-browserify": "^3.12.0",
     "dotenv": "^16.4.5",
->>>>>>> 968632a89f6c3f7c1d638b344124716b7c5681eb
     "google-map-react": "^2.2.1",
     "gsap": "^3.12.5",
     "os-browserify": "^0.3.0",

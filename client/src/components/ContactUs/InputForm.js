@@ -68,7 +68,7 @@ export const InputForm = () => {
     if (Object.keys(formErrors).length === 0) {
       try {
         setSending(true); // Start sending process
-        const response = await fetch('/api/send-email', {
+        const response = await fetch('https://api.garcity.com/api/send-email', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

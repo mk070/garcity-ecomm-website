@@ -11,7 +11,7 @@
 }
 
 .slide img {
-  width: 20rem;
+  width: 24rem;
   margin: 0 auto;
   height: 100%;
 }
@@ -36,9 +36,9 @@
 }
 
 .activeSlide {
-  transform: scale(1.1);
+  transform: scale(1);
   opacity: 1;
-  height: 400px;
+  height: 430px;
 }
 
 .arrow {
@@ -99,7 +99,7 @@
         width: 100%;
       }
       .slick-current{
-        width: 185px !important;
+        width: 285px !important;
         height: 100% !important;
       }
       

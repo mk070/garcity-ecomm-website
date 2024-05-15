@@ -4,15 +4,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Box, useMediaQuery } from "@mui/material";
 
 // Import default images
-import img1 from '../../assets/images/gallery/1.png';
-import img2 from '../../assets/images/gallery/2.png';
-import img3 from '../../assets/images/gallery/3.png';
-import img4 from '../../assets/images/gallery/4.png';
-import img5 from '../../assets/images/gallery/5.png';
-import img6 from '../../assets/images/gallery/6.png';
-import img7 from '../../assets/images/gallery/7.png';
-import img8 from '../../assets/images/gallery/8.png';
-import img9 from '../../assets/images/gallery/9.png';
+import img1 from '../../assets/images/gallery/1.avif';
+import img2 from '../../assets/images/gallery/2.avif';
+import img3 from '../../assets/images/gallery/3.avif';
+import img4 from '../../assets/images/gallery/4.avif';
+import img5 from '../../assets/images/gallery/5.avif';
+import img6 from '../../assets/images/gallery/6.avif';
+import img7 from '../../assets/images/gallery/7.avif';
+import img8 from '../../assets/images/gallery/8.avif';
+import img9 from '../../assets/images/gallery/9.avif';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -175,35 +175,35 @@ function Scrollsection() {
               }}
             >
               <Box sx={{ mr: { sm: '30px' } }}>
-                <Box ref={el => (imgRefs.current[0] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img1} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[1] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img2} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[2] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img3} width={'100%'} alt="" />
                 </Box>
               </Box>
               <Box sx={{ mr: { sm: '30px' } }}>
-                <Box ref={el => (imgRefs.current[3] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img4} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[4] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img7} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[5] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img6} width={'100%'} alt="" />
                 </Box>
               </Box>
               <Box>
-                <Box ref={el => (imgRefs.current[6] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img5} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[7] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img8} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[8] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img9} width={'100%'} alt="" />
                 </Box>
               </Box>

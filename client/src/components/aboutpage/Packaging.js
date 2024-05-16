@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Typography, Box, useMediaQuery, Button } from '@mui/material';
-import img1 from "../../assets/images/about/5 SERVICES IMAGES/CUSTOM PACKAGING2.avif";
-import img2 from "../../assets/images/about/5 SERVICES IMAGES/CUSTOM PACKAGING.avif";
+import img1 from "../../assets/images/about/5 SERVICES IMAGES/CUSTOMPACKAGING2.avif";
+import img2 from "../../assets/images/about/5 SERVICES IMAGES/CUSTOMPACKAGING.avif";
 
 const Packaging = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));

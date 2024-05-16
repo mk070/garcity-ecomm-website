@@ -10,6 +10,7 @@ import slide_image_2 from '../../assets/images/gallery/2.avif';
 import slide_image_3 from '../../assets/images/gallery/3.avif';
 import slide_image_4 from '../../assets/images/gallery/4.avif';
 import slide_image_5 from '../../assets/images/gallery/5.avif';
+import { useMediaQuery } from "@mui/material";
 
 const default_images = [slide_image_1,slide_image_2,slide_image_3,slide_image_4,slide_image_5];
 
@@ -129,12 +130,14 @@ export const Homeslider = () => {
       </div>
     );
   };
+  const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
 
   const settings = {
     infinite: true,
     lazyLoad: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: isSmallScreen? 1:3,
     centerMode: true,
     centerPadding: 0,
     nextArrow: <NextArrow />,
@@ -149,7 +152,7 @@ export const Homeslider = () => {
       <Slider {...settings}>
         {imagesFetched && images.length > 3 ? (
           images.map((image, idx) => (
-            <div className={idx === imageIndex ? "slide activeSlide" : "slide"} key={idx}>
+            <div className={idx === imageIndex ? "slide activeSlide" : " side slide"} key={idx}>
               <img  loading='lazy'  src={`data:${image.contentType};base64,${image.img}`} alt={image} />
             </div>
           ))
@@ -164,4 +167,4 @@ export const Homeslider = () => {
       </Slider>
     </div>
   );
-};
+}

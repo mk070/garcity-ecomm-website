@@ -39,7 +39,7 @@ export const Popularcollection = () => {
               width:{xs:'120px'},
               fontSize:{xs:'12px'},
               background:'#DF9573',
-              mt: {xs:'0px', sm:'30px'},
+              mt: {xs:'40px', sm:'30px'},
               borderRadius:'30px',
               '&:hover': {
                 backgroundColor: '#1E1E1E', 

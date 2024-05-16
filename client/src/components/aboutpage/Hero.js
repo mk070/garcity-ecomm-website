@@ -1,7 +1,7 @@
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 import gif from '../../assets/gifs/aboutus.webm'
-import hero from '../../assets/images/about/dress.png';
+import hero from '../../assets/images/about/dress.avif';
 
 export const Hero = () => {
     const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));

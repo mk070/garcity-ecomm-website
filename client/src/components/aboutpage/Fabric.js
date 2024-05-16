@@ -1,8 +1,8 @@
 import React, { useState ,useEffect} from 'react';
 import { Container, Typography, Box, Button, useMediaQuery } from '@mui/material';
-import img2 from "../../assets/images/about/5 SERVICES IMAGES/FABRICATION2.png";
-import img1 from "../../assets/images/about/5 SERVICES IMAGES/FABRICATION.png";
-import img1Small from "../../assets/images/about/5 SERVICES IMAGES/FABRICATION_small.png";
+import img2 from "../../assets/images/about/5 SERVICES IMAGES/FABRICATION2.avif";
+import img1 from "../../assets/images/about/5 SERVICES IMAGES/FABRICATION.avif";
+import img1Small from "../../assets/images/about/5 SERVICES IMAGES/FABRICATION_small.avif";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 

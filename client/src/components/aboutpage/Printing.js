@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Typography, Box, useMediaQuery, Button } from '@mui/material';
-import img1 from "../../assets/images/about/5 SERVICES IMAGES/CUSTOM PRINTING2.png";
-import img2 from "../../assets/images/about/5 SERVICES IMAGES/CUSTOM PRINTING.png";
+import img1 from "../../assets/images/about/5 SERVICES IMAGES/CUSTOM PRINTING2.avif";
+import img2 from "../../assets/images/about/5 SERVICES IMAGES/CUSTOM PRINTING.avif";
 
 
 const Printing = () => {

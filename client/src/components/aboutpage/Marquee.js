@@ -2,12 +2,12 @@ import React from 'react'
 import { Box, Typography, useMediaQuery } from '@mui/material'
 import Marquee from "react-fast-marquee";
 
-import quality from "../../assets/images/about/points/quality.png"
-import efficiency from "../../assets/images/about/points/energy.png"
-import speed from "../../assets/images/about/points/speed.png"
-import Hassle from "../../assets/images/about/points/Hassle-free.png"
-import Sourcing from "../../assets/images/about/points/Sourcing.png"
-import Integrity from "../../assets/images/about/points/Integrity.png"
+import quality from "../../assets/images/about/points/quality.avif"
+import efficiency from "../../assets/images/about/points/energy.avif"
+import speed from "../../assets/images/about/points/speed.avif"
+import Hassle from "../../assets/images/about/points/Hassle-free.avif"
+import Sourcing from "../../assets/images/about/points/Sourcing.avif"
+import Integrity from "../../assets/images/about/points/Integrity.avif"
 
 
 export const Marquees = () => {

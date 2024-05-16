@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import { gsap, TimelineMax } from "gsap";
-import mission from "../../assets/images/about/mision.png"
-import vision from "../../assets/images/about/vision.png"
-import value from "../../assets/images/about/value.png"
+import mission from "../../assets/images/about/mision.avif"
+import vision from "../../assets/images/about/vision.avif"
+import value from "../../assets/images/about/value.avif"
 export const Details = () => {
 
   return (

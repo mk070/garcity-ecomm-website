@@ -31,7 +31,8 @@ export const Popularcollection = () => {
               },
             }} variant="contained">Know More</Button>
         </Box>
-        <Box sx={{ alignItems:{xs:'center'},flexDirection:{xs:'column'},display:{xs:'flex'} }} >
+
+        <Box sx={{alignItems:{xs:'center'},flexDirection:{xs:'column'},display:{xs:'flex'} }} >
           <Homeslider />
           
           <Button  component={Link} to="/product" sx={{

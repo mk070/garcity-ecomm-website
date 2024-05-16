@@ -175,15 +175,6 @@ function Scrollsection() {
               }}
             >
               <Box sx={{ mr: { sm: '30px' } }}>
-<<<<<<< HEAD
-                <Box  className="img" sx={{ width: { sm: '350px'}, marginBottom: isSmallScreen ? '30px' : '40px' }}>
-                  <img src={img1} width={'100%'} alt="" />
-                </Box>
-                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '40px'  }}>
-                  <img src={img2} width={'100%'} alt="" />
-                </Box>
-                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '40px'  }}>
-=======
                 <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img1} width={'100%'} alt="" />
                 </Box>
@@ -191,20 +182,10 @@ function Scrollsection() {
                   <img src={img2} width={'100%'} alt="" />
                 </Box>
                 <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
->>>>>>> ba38e5f40eb5e966edd0732fd85f1f5e2d9f6154
                   <img src={img3} width={'100%'} alt="" />
                 </Box>
               </Box>
               <Box sx={{ mr: { sm: '30px' } }}>
-<<<<<<< HEAD
-                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '40px'  }}>
-                  <img src={img4} width={'100%'} alt="" />
-                </Box>
-                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '40px'  }}>
-                  <img src={img7} width={'100%'} alt="" />
-                </Box>
-                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '40px'  }}>
-=======
                 <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img4} width={'100%'} alt="" />
                 </Box>
@@ -212,20 +193,10 @@ function Scrollsection() {
                   <img src={img7} width={'100%'} alt="" />
                 </Box>
                 <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
->>>>>>> ba38e5f40eb5e966edd0732fd85f1f5e2d9f6154
                   <img src={img6} width={'100%'} alt="" />
                 </Box>
               </Box>
               <Box>
-<<<<<<< HEAD
-                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '40px'  }}>
-                  <img src={img5} width={'100%'} alt="" />
-                </Box>
-                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '40px'  }}>
-                  <img src={img8} width={'100%'} alt="" />
-                </Box>
-                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '40px'  }}>
-=======
                 <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img5} width={'100%'} alt="" />
                 </Box>
@@ -233,7 +204,6 @@ function Scrollsection() {
                   <img src={img8} width={'100%'} alt="" />
                 </Box>
                 <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
->>>>>>> ba38e5f40eb5e966edd0732fd85f1f5e2d9f6154
                   <img src={img9} width={'100%'} alt="" />
                 </Box>
               </Box>

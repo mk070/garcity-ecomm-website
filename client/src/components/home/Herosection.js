@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // import { Box, Typography, useMediaQuery,Button  } from '@mui/material';
 // import React from 'react';
 // import { Banner } from './Banner';
@@ -71,7 +69,6 @@
 //   )
 // }
 
->>>>>>> ba38e5f40eb5e966edd0732fd85f1f5e2d9f6154
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';

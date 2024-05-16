@@ -33,6 +33,7 @@ export const Popularcollection = () => {
         </Box>
         <Box sx={{ alignItems:{xs:'center'},flexDirection:{xs:'column'},display:{xs:'flex'} }} >
           <Homeslider />
+          
           <Button  component={Link} to="/product" sx={{
               display:{sm:'none', xs:'flex'},
               width:{xs:'120px'},

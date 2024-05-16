@@ -21,6 +21,7 @@ const defaultimages = [img1,img2,img3,img4,img5,img6,img7,img8,img9]
 function Scrollsection() {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   const [images, setImages] = useState([]);
+  const [imagesFetched, setImagesFetched] = useState(false);
   const imageRefs = useRef([]);
   const imgRefs = useRef([]);
 
@@ -31,6 +32,7 @@ function Scrollsection() {
       if (response.ok) {
         const images = await response.json();
         setImages(images);
+        setImagesFetched(true);
       } else {
         console.error('Failed to fetch images');
         setImages([]);
@@ -70,17 +72,12 @@ function Scrollsection() {
       },
     });
   }, [images]);
-  const renderImages = () => {
-    return images.map((image, index) => (
-      <Box key={index} ref={el => (imgRefs.current[index] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: '30px' }}>
-        <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
-      </Box>
-    ));
-  };
+
+
 
   return (
     <>
-      {images.length > 0 ? (
+      {imagesFetched && images.length > 0 ? (
         <>
         <Box
             sx={{
@@ -93,21 +90,21 @@ function Scrollsection() {
           >
             <Box sx={{ mr: { sm: '30px' } }}>
               {images.slice(0, 3).map((image, index) => (
-                <Box key={index} ref={el => (imgRefs.current[index] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box key={index}  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
                 </Box>
               ))}
             </Box>
             <Box sx={{ mr: { sm: '30px' } }}>
               {images.slice(3, 6).map((image, index) => (
-                <Box key={index + 3} ref={el => (imgRefs.current[index + 3] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box key={index + 3} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
                 </Box>
               ))}
             </Box>
             <Box>
               {images.slice(6, 9).map((image, index) => (
-                <Box key={index + 6} ref={el => (imgRefs.current[index + 6] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box key={index + 6}  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
                 </Box>
               ))}
@@ -128,35 +125,35 @@ function Scrollsection() {
               }}
             >
               <Box sx={{ mr: { sm: '30px' } }}>
-                <Box ref={el => (imgRefs.current[0] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img1} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[1] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img2} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[2] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img3} width={'100%'} alt="" />
                 </Box>
               </Box>
               <Box sx={{ mr: { sm: '30px' } }}>
-                <Box ref={el => (imgRefs.current[3] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img4} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[4] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img7} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[5] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img6} width={'100%'} alt="" />
                 </Box>
               </Box>
               <Box>
-                <Box ref={el => (imgRefs.current[6] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img5} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[7] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img8} width={'100%'} alt="" />
                 </Box>
-                <Box ref={el => (imgRefs.current[8] = el)} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '' }}>
+                <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
                   <img src={img9} width={'100%'} alt="" />
                 </Box>
               </Box>

@@ -147,7 +147,7 @@ export const Homeslider = () => {
   return (
     <div className="App">
       <Slider {...settings}>
-        {imagesFetched && images.length > 3 ? (
+        {imagesFetched && images.length > 1 ? (
           images.map((image, idx) => (
             <div className={idx === imageIndex ? "slide activeSlide" : "slide"} key={idx}>
               <img  loading='lazy'  src={`data:${image.contentType};base64,${image.img}`} alt={image} />

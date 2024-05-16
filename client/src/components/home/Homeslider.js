@@ -140,7 +140,7 @@ export const Homeslider = () => {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 4000, // Set autoplay speed in milliseconds
+    autoplaySpeed: 60000, // Set autoplay speed in milliseconds
     beforeChange: (current, next) => setImageIndex(next),
   };
 

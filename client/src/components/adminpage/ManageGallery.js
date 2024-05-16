@@ -21,7 +21,8 @@ export const ManageGallery = () => {
     setSelectedFile(event.target.files[0]);
   };
 
-  const handleUpload = async () => {
+  const handleUpload = async (event) => {
+    event.preventDefault();
     if (!selectedFile) {
       alert('Please select a file');
       return;
@@ -135,7 +136,7 @@ export const ManageGallery = () => {
                 Upload Gallery images here
               </Typography>
             </Box>
-            <form onSubmit={handleUpload}>
+            <form onSubmit={(event) => handleUpload(event)}>
               <Box>
                 <input
                   accept="image/*"

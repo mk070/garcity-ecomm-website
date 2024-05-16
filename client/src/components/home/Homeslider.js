@@ -5,11 +5,11 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 
 // Default  images
-import slide_image_1 from '../../assets/images/gallery/1.avif';
-import slide_image_2 from '../../assets/images/gallery/2.avif';
-import slide_image_3 from '../../assets/images/gallery/3.avif';
-import slide_image_4 from '../../assets/images/gallery/4.avif';
-import slide_image_5 from '../../assets/images/gallery/5.avif';
+import slide_image_1 from '../../assets/images/popularcollection/1-min.avif';
+import slide_image_2 from '../../assets/images/popularcollection/2-min.avif';
+import slide_image_3 from '../../assets/images/popularcollection/3-min.avif';
+import slide_image_4 from '../../assets/images/popularcollection/4-min.avif';
+import slide_image_5 from '../../assets/images/popularcollection/5-min.avif';
 import { useMediaQuery } from "@mui/material";
 
 const default_images = [slide_image_1,slide_image_2,slide_image_3,slide_image_4,slide_image_5];

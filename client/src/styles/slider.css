@@ -172,6 +172,7 @@
     .App {
         width: 90%;
         margin: 1rem auto;
+        margin-bottom: 0;
         height: 360px;
       }
       

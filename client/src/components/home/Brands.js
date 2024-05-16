@@ -45,7 +45,7 @@ export const Brands = () => {
     <Box sx={{my:{xs:5}}}>
         <Marquee gradient autoFill speed={90}>
 
-           {imagesFetched && images.length >= 4 ? (
+           {imagesFetched && images.length >= 1 ? (
               images.map((image, index) => (
                  <img key={index} width={isSmallScreen?'50px':'85px'} style={{marginRight:isSmallScreen?"20px":"50px"}} src={`data:${image.contentType};base64,${image.img}`} alt="" />
       

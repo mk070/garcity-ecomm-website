@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import {Box, Container, Typography, useMediaQuery} from "@mui/material"
+import {Box, Typography} from "@mui/material"
 import tops from "../../assets/images/productpage/1.avif"
 import blacks from "../../assets/images/productpage/4.avif"
 import tshirts from "../../assets/images/productpage/3.avif"
@@ -50,23 +50,19 @@ export const Slider = () => {
       modules={[Autoplay]}
     >
       <SwiperSlide>
-      {/* <BlurHash smallImage={topsSmall} largeImage={tops}/> */}
       <LazyLoadImage src={tops} sx={{ width: '100%' }} PlaceholderSrc={tops} alt="Image Alt" loading='lazy' effect='blur'/>
       </SwiperSlide>
 
       <SwiperSlide>
       <LazyLoadImage src={blacks} sx={{ width: '100%' }} PlaceholderSrc={blacks} alt="Image Alt" loading='lazy' effect='blur'/>
-        {/* <img src={blacks} style={{width:"100%"}} /> */}
       </SwiperSlide>
 
       <SwiperSlide>
       <LazyLoadImage src={tshirts} sx={{ width: '100%' }} PlaceholderSrc={tshirts} alt="Image Alt" loading='lazy' effect='blur'/>
-        {/* <img src={tshirts} style={{width:"100%"}} /> */}
       </SwiperSlide>
 
       <SwiperSlide>
       <LazyLoadImage src={colors} sx={{ width: '100%' }} PlaceholderSrc={colors} alt="Image Alt" loading='lazy' effect='blur'/>
-        {/* <img src={colors} style={{width:"100%"}} /> */}
       </SwiperSlide>
     </Swiper>
     </Box>  

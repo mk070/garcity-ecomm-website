@@ -1,6 +1,5 @@
 import {React,useEffect} from 'react'
 import  Banner  from '../components/categories/Banner'
-import { Breadcrumbs } from '@mui/material'
 import IconBreadcrumbs from '../components/categories/Breadcrums'
 import banner from "../assets/images/sportsWear/4.avif"
 import { Collections } from '../components/categories/Collections'

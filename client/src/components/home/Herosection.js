@@ -72,7 +72,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Box, Typography, useMediaQuery } from '@mui/material';
+import { Box, useMediaQuery } from '@mui/material';
 import { Autoplay, Navigation } from 'swiper/modules';
 import SwiperCore from 'swiper';
 import img1 from '../../assets/images/Home/banner/img1.avif';

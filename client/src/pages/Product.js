@@ -1,8 +1,6 @@
 import {React,useEffect} from 'react'
-import {Box, Container, Grid} from "@mui/material"
 import { Slider } from '../components/Product/Slider'
 import { Clothes } from '../components/Product/Clothes'
-import IconBreadcrumbs from '../components/categories/Breadcrums'
 
 import image1 from "../assets/images/mensWear/hoodie.avif"
 import image2 from "../assets/images/mensWear/Oversized t-shirt.avif"

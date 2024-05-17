@@ -77,4 +77,3 @@ export const Hero = () => {
 }
 
 
-{/* <Box sx={{width:{sm:"100%"},height:{sm:"100%"},borderRight:{xs:'none',sm:" "},display:"flex",flexDirection:{sm:"column"},justifyContent:"center",alignItems:"center", padding:{xs:'30px 10px'}, bgcolor:{xs:'#FFF4F1', sm:'transparent'}, borderRadius:{sm:'0',xs:'20px'}, mt:{xs:'30px'}}}>  */}

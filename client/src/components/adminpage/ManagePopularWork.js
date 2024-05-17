@@ -14,7 +14,7 @@ export const ManagePopularWork = () => {
   const [deleteConfirmationOpen, setDeleteConfirmationOpen] = useState(false);
   const [imageToDeleteId, setImageToDeleteId] = useState(null);
   const [showUploadConfirmation, setShowUploadConfirmation] = useState(false);
-  const [imageName, setImageName] = useState('');
+  // const [imageName, setImageName] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
   const MAX_LIMIT = 5;
 

@@ -4,7 +4,6 @@ import { ScrollTrigger } from "gsap/all";
 import { Box, useMediaQuery } from "@mui/material";
 import Text from "./Text";
 import img1 from '../../assets/images/gallery/banner.avif';
-import img1_small from '../../assets/images/gallery/banner-small.avif';
 
 
 import './gallery.css';
@@ -41,7 +40,7 @@ const Hero = () => {
         <div ref={sectionRef} className="scaleDown">
           <div className="main-section">
              <Text />
-             <LazyLoadImage src={img1} sx={{ width:'100%', marginTop:isSmallScreen?'0':'',marginRight: '0px', marginBottom: '80px' }} PlaceholderSrc={img1_small} alt="Image Alt" loading='lazy' effect='blur'/>
+             <LazyLoadImage src={img1} sx={{ width:'100%', marginTop:isSmallScreen?'0':'',marginRight: '0px', marginBottom: '80px' }} PlaceholderSrc={img1} alt="Image Alt" loading='lazy' effect='blur'/>
 
               {/* <img width={'100%'} style={{ marginTop:isSmallScreen?'0':'',marginRight: '0px', marginBottom: '80px' }} src={img1} alt="" /> */}
              <Box sx={{position:'absolute',bottom:{sm:'-70px',xs:"-190px"},left:"51%", width:{sm:'30%'}}}>

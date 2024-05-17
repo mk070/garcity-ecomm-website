@@ -4,14 +4,14 @@ import { Box, useMediaQuery } from '@mui/material';
 
 // Import other logos as needed
 
-import logo1 from '../../assets/images/brands/image1.png'
-import logo2 from '../../assets/images/brands/image2.png'
-import logo3 from '../../assets/images/brands/image3.png'
-import logo4 from '../../assets/images/brands/image4.png'
-import logo5 from '../../assets/images/brands/image5.png'
-import logo6 from '../../assets/images/brands/image6.png'
-import logo7 from '../../assets/images/brands/image7.png'
-import logo8 from '../../assets/images/brands/image8.png'
+import logo1 from '../../assets/images/brands/image1.avif'
+import logo2 from '../../assets/images/brands/image2.avif'
+import logo3 from '../../assets/images/brands/image3.avif'
+import logo4 from '../../assets/images/brands/image4.avif'
+import logo5 from '../../assets/images/brands/image5.avif'
+import logo6 from '../../assets/images/brands/image6.avif'
+import logo7 from '../../assets/images/brands/image7.avif'
+import logo8 from '../../assets/images/brands/image8.avif'
 
 const default_images = [logo1,logo2,logo3,logo4,logo5,logo6,logo7,logo8];
 

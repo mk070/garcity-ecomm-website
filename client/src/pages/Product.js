@@ -11,10 +11,10 @@ import image3 from "../assets/images/mensWear/Joggers.png"
 import image4 from "../assets/images/mensWear/Sweat-t-shirt.png"
 
 
-import image5 from "../assets/images/womensWear/Jogger.png"
-import image6 from "../assets/images/womensWear/Pajama set.png"
-import image7 from "../assets/images/womensWear/Round neck sleeveless top.png"
-import image8 from "../assets/images/womensWear/Sweat-t-shirt.png"
+import image5 from "../assets/images/womensWear/Jogger.avif"
+import image6 from "../assets/images/womensWear/Pajama_set.avif"
+import image7 from "../assets/images/womensWear/Round_neck_sleeveless_top.avif"
+import image8 from "../assets/images/womensWear/Sweat-t-shirt.avif"
 
 
 import image9 from "../assets/images/kidsWear/Kids Frock.png"

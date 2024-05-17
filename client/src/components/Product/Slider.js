@@ -6,6 +6,8 @@ import tops from "../../assets/images/productpage/1.avif"
 import blacks from "../../assets/images/productpage/4.avif"
 import tshirts from "../../assets/images/productpage/3.avif"
 import colors from "../../assets/images/productpage/2.avif"
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 
 
 export const Slider = () => {
@@ -49,16 +51,22 @@ export const Slider = () => {
     >
       <SwiperSlide>
       {/* <BlurHash smallImage={topsSmall} largeImage={tops}/> */}
-        <img src={tops} style={{width:"100%"}} />
+      <LazyLoadImage src={tops} sx={{ width: '100%' }} PlaceholderSrc={tops} alt="Image Alt" loading='lazy' effect='blur'/>
       </SwiperSlide>
+
       <SwiperSlide>
-        <img src={blacks} style={{width:"100%"}} />
+      <LazyLoadImage src={blacks} sx={{ width: '100%' }} PlaceholderSrc={blacks} alt="Image Alt" loading='lazy' effect='blur'/>
+        {/* <img src={blacks} style={{width:"100%"}} /> */}
       </SwiperSlide>
+
       <SwiperSlide>
-        <img src={tshirts} style={{width:"100%"}} />
+      <LazyLoadImage src={tshirts} sx={{ width: '100%' }} PlaceholderSrc={tshirts} alt="Image Alt" loading='lazy' effect='blur'/>
+        {/* <img src={tshirts} style={{width:"100%"}} /> */}
       </SwiperSlide>
+
       <SwiperSlide>
-        <img src={colors} style={{width:"100%"}} />
+      <LazyLoadImage src={colors} sx={{ width: '100%' }} PlaceholderSrc={colors} alt="Image Alt" loading='lazy' effect='blur'/>
+        {/* <img src={colors} style={{width:"100%"}} /> */}
       </SwiperSlide>
     </Swiper>
     </Box>  

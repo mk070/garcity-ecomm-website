@@ -51,6 +51,7 @@ const Text = () => {
                 position:'absolute',
                 left:isSmallScreen?"15%":"35%",
                 top:'10%',
+                zIndex:5,
                 // display:'none'
                 // backgroundColor:'#fbe0db'
             }}>

@@ -6,12 +6,12 @@ import Quote from '../../assets/images/Home/testimonial/blockquote.svg';
 import './Testimonial.css'
 import { Typography } from '@mui/material';
 import { Box, useMediaQuery } from "@mui/material";
-import img1 from "../../assets/images/testimonial/Aviral Rawat.png"
-import img2 from "../../assets/images/testimonial/Sidhvin.png"
-import img3 from "../../assets/images/testimonial/Ajay Augustin.png"
-import img4 from "../../assets/images/testimonial/Maharshi Divekar.png"
-import img5 from "../../assets/images/testimonial/Kiran Bhodaipu.png"
-import img6 from "../../assets/images/testimonial/Shree.png"
+import img1 from "../../assets/images/testimonial/Aviral Rawat.avif"
+import img2 from "../../assets/images/testimonial/Sidhvin.avif"
+import img3 from "../../assets/images/testimonial/Ajay Augustin.avif"
+import img4 from "../../assets/images/testimonial/Maharshi Divekar.avif"
+import img5 from "../../assets/images/testimonial/Kiran Bhodaipu.avif"
+import img6 from "../../assets/images/testimonial/Shree.avif"
 
 const Testimonial = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));

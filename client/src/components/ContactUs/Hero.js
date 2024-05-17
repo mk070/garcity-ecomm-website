@@ -1,8 +1,8 @@
 import {React,useState,useEffect} from 'react'
 import {Box, Typography,Button} from '@mui/material'
-import img1 from "../../assets/images/contactus/contact.png"
-import img2 from "../../assets/images/contactus/location.png"
-import img3 from "../../assets/images/contactus/clock.png"
+import img1 from "../../assets/images/contactus/contact.avif"
+import img2 from "../../assets/images/contactus/location.avif"
+import img3 from "../../assets/images/contactus/clock.avif"
 
 export const Hero = () => {
     const [isVisible, setIsVisible] = useState(false);

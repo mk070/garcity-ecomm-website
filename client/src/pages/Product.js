@@ -17,16 +17,16 @@ import image7 from "../assets/images/womensWear/Round_neck_sleeveless_top.avif"
 import image8 from "../assets/images/womensWear/Sweat-t-shirt.avif"
 
 
-import image9 from "../assets/images/kidsWear/Kids Frock.png"
-import image10 from "../assets/images/kidsWear/Pajama set.png"
-import image11 from "../assets/images/kidsWear/Set dress.png"
-import image12 from "../assets/images/kidsWear/Sweatshirt.png"
+import image9 from "../assets/images/kidsWear/Kids_Frock.avif"
+import image10 from "../assets/images/kidsWear/Pajama_set.avif"
+import image11 from "../assets/images/kidsWear/Set_dress.avif"
+import image12 from "../assets/images/kidsWear/Sweat_shirt.avif"
 
 
-import image13 from "../assets/images/sportsWear/Basketball Shorts.png"
-import image14 from "../assets/images/sportsWear/Cropped tank top.png"
-import image15 from "../assets/images/sportsWear/Soccer Jersey.png"
-import image16 from "../assets/images/sportsWear/Track Jacket.png"
+import image13 from "../assets/images/sportsWear/Basketball_Shorts.avif"
+import image14 from "../assets/images/sportsWear/Cropped_tank_top.avif"
+import image15 from "../assets/images/sportsWear/Soccer_Jersey.avif"
+import image16 from "../assets/images/sportsWear/Track_Jacket.avif"
 
 
 export const Product = () => {

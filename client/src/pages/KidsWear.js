@@ -2,19 +2,19 @@ import {React,useEffect} from 'react'
 import  Banner  from '../components/categories/Banner'
 import { Breadcrumbs } from '@mui/material'
 import IconBreadcrumbs from '../components/categories/Breadcrums'
-import banner from "../assets/images/kidsWear/3.png"
+import banner from "../assets/images/kidsWear/3.avif"
 import { Collections } from '../components/categories/Collections'
 
 
-import image1 from "../assets/images/kidsWear/Kids Frock.png"
-import image2 from "../assets/images/kidsWear/Kids pant.png"
-import image3 from "../assets/images/kidsWear/Pajama set.png"
-import image4 from "../assets/images/kidsWear/Rompers.png"
-import image5 from "../assets/images/kidsWear/Round neck t-shirt.png"
-import image6 from "../assets/images/kidsWear/Set dress.png"
-import image7 from "../assets/images/kidsWear/Shorts.png"
-import image8 from "../assets/images/kidsWear/Sweatshirt dungaree shorts.png"
-import image9 from "../assets/images/kidsWear/Sweatshirt.png"
+import image1 from "../assets/images/kidsWear/Kids_Frock.avif"
+import image2 from "../assets/images/kidsWear/Kids_pant.avif"
+import image3 from "../assets/images/kidsWear/Pajama_set.avif"
+import image4 from "../assets/images/kidsWear/Rompers.avif"
+import image5 from "../assets/images/kidsWear/Round_neck_t-shirt.avif"
+import image6 from "../assets/images/kidsWear/Set_dress.avif"
+import image7 from "../assets/images/kidsWear/Shorts.avif"
+import image8 from "../assets/images/kidsWear/Sweat_shirt_dungaree_shorts.avif"
+import image9 from "../assets/images/kidsWear/Sweat_shirt.avif"
 
 
 export const KidsWear = () => {

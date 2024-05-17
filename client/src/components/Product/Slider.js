@@ -2,11 +2,11 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import {Box, Container, Typography, useMediaQuery} from "@mui/material"
-import tops from "../../assets/images/productpage/1.png"
-import topsSmall from "../../assets/images/productpage/1_small.png"
-import blacks from "../../assets/images/productpage/4.png"
-import tshirts from "../../assets/images/productpage/3.png"
-import colors from "../../assets/images/productpage/2.png"
+import tops from "../../assets/images/productpage/1.avif"
+import topsSmall from "../../assets/images/productpage/1_small.avif"
+import blacks from "../../assets/images/productpage/4.avif"
+import tshirts from "../../assets/images/productpage/3.avif"
+import colors from "../../assets/images/productpage/2.avif"
 
 
 export const Slider = () => {

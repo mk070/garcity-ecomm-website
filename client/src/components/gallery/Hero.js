@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { Box, useMediaQuery } from "@mui/material";
-import img1 from '../../assets/images/gallery/banner.jpg';
+import img1 from '../../assets/images/gallery/banner.avif';
 import Text from "./Text";
 
 import './gallery.css';

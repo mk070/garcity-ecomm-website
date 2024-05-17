@@ -2,19 +2,19 @@ import {React,useEffect} from 'react'
 import  Banner  from '../components/categories/Banner'
 import { Breadcrumbs } from '@mui/material'
 import IconBreadcrumbs from '../components/categories/Breadcrums'
-import banner from "../assets/images/sportsWear/4.png"
+import banner from "../assets/images/sportsWear/4.avif"
 import { Collections } from '../components/categories/Collections'
 
-import image1 from "../assets/images/sportsWear/Athletic T-Shirt.png"
-import image2 from "../assets/images/sportsWear/Basketball Shorts.png"
-import image3 from "../assets/images/sportsWear/Compression shorts.png"
-import image4 from "../assets/images/sportsWear/Cropped tank top.png"
-import image5 from "../assets/images/sportsWear/Dry fit t-shirt.png"
-import image6 from "../assets/images/sportsWear/Running leggings.png"
-import image7 from "../assets/images/sportsWear/Soccer Jersey.png"
-import image8 from "../assets/images/sportsWear/Sports bra.png"
-import image9 from "../assets/images/sportsWear/Track Jacket.png"
-import image10 from "../assets/images/sportsWear/Yoga Pants.png"
+import image1 from "../assets/images/sportsWear/Athletic_T-Shirt.avif"
+import image2 from "../assets/images/sportsWear/Basketball_Shorts.avif"
+import image3 from "../assets/images/sportsWear/Compression_shorts.avif"
+import image4 from "../assets/images/sportsWear/Cropped_tank_top.avif"
+import image5 from "../assets/images/sportsWear/Dry_fitt-shirt.avif"
+import image6 from "../assets/images/sportsWear/Running_leggings.avif"
+import image7 from "../assets/images/sportsWear/Soccer_Jersey.avif"
+import image8 from "../assets/images/sportsWear/Sports_bra.avif"
+import image9 from "../assets/images/sportsWear/Track_Jacket.avif"
+import image10 from "../assets/images/sportsWear/Yoga_Pants.avif"
 
 
 export const SportsWear = () => {

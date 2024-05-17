@@ -18,19 +18,21 @@ export const Clothes = ({ category , images,names}) => {
           display:"flex",
           justifyContent:'center',
           '& a': {
-            color: 'inherit', // Inherit text color
+            color: '#DF9573', // Inherit text color
             textDecoration: 'none', // Remove underline
             transition: 'transform 10s ease-in-out',
+            textDecoration: 'underline'
+
           },
           '& a:hover': {
-            color: '#DF9573',
+            color: 'black' ,
             transform: 'scale(1)',
             textDecoration: 'underline'
           }
         }}>
         <Link style={{ fontFamily: 'integral-Regular', fontWeight: 'normal', fontSize:{ sm:'32px',xs:"24px"}, textDecoration: 'none !important' }} to={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>{category}</Link>
       </Typography>
-      <Container maxWidth="xl" sx={{ width: "86%", marginBottom: {sm:"80px",xs:'10px' }}}>
+      <Container maxWidth="xl" sx={{ width: "86%", marginBottom: {sm:"0px",xs:'10px' }}}>
         <Swiper
           mx={10}
           slidesPerView={isSmallScreen ? 1 : 4}
@@ -68,6 +70,25 @@ export const Clothes = ({ category , images,names}) => {
           </Grid>
         </Swiper>
       </Container>
+      <Typography   variant="h3"
+        sx={{
+          fontSize: isSmallScreen ? '22px' : '32px',
+          m:{sm:'10px 0 80px 0',xs:"0px 0 30px 0"},
+          display:"flex",
+          justifyContent:'center',
+          '& a': {
+            color: 'black', // Inherit text color
+            textDecoration: 'none', // Remove underline
+            transition: 'transform 10s ease-in-out',
+          },
+          '& a:hover': {
+            color: '#DF9573' ,
+            transform: 'scale(1)',
+            // textDecoration: 'underline'
+          }
+        }}>
+        <Link style={{ fontWeight: 'normal', fontSize:{ sm:'16px',xs:"14px"}, textDecoration: 'none !important' }} to={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>For more..</Link>
+      </Typography>
 
       </Box>
   

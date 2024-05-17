@@ -5,8 +5,8 @@ import IconBreadcrumbs from '../components/categories/Breadcrums'
 import banner from "../assets/images/mensWear/1.png"
 import { Collections } from '../components/categories/Collections'
 
-import image1 from "../assets/images/mensWear/hoodie.png"
-import image2 from "../assets/images/mensWear/Joggers.png"
+import image1 from "../assets/images/mensWear/hoodie.avif"
+import image2 from "../assets/images/mensWear/Joggers.avif"
 import image3 from "../assets/images/mensWear/Oversized t-shirt.png"
 import image4 from "../assets/images/mensWear/Polo t-shirt.png"
 import image5 from "../assets/images/mensWear/Round neck full sleeve t-shirt.png"

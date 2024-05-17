@@ -4,7 +4,7 @@ import { Typography, Button } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 
-import tshirts from '../../assets/images/productpage/3.png';
+import tshirts from '../../assets/images/productpage/3.avif';
 
 export const Fabric = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));

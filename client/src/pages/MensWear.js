@@ -2,19 +2,19 @@ import {React,useEffect} from 'react'
 import  Banner  from '../components/categories/Banner'
 import { Breadcrumbs } from '@mui/material'
 import IconBreadcrumbs from '../components/categories/Breadcrums'
-import banner from "../assets/images/mensWear/1.png"
+import banner from "../assets/images/mensWear/1.avif"
 import { Collections } from '../components/categories/Collections'
 
-import image1 from "../assets/images/mensWear/hoodie.png"
-import image2 from "../assets/images/mensWear/Joggers.png"
-import image3 from "../assets/images/mensWear/Oversized t-shirt.png"
-import image4 from "../assets/images/mensWear/Polo t-shirt.png"
-import image5 from "../assets/images/mensWear/Round neck full sleeve t-shirt.png"
-import image6 from "../assets/images/mensWear/Round neck half sleeve t-shirt.png"
-import image7 from "../assets/images/mensWear/Round neck sleeveless t-shirt.png"
-import image8 from "../assets/images/mensWear/Shorts.png"
-import image9 from "../assets/images/mensWear/Sweat-t-shirt.png"
-import image10 from "../assets/images/mensWear/V neck half sleeve t-shirt.png"
+import image1 from "../assets/images/mensWear/hoodie.avif"
+import image2 from "../assets/images/mensWear/Joggers.avif"
+import image3 from "../assets/images/mensWear/Oversized t-shirt.avif"
+import image4 from "../assets/images/mensWear/Polot-shirt.avif"
+import image5 from "../assets/images/mensWear/Roundneckfullsleevet-shirt.avif"
+import image6 from "../assets/images/mensWear/Roundneckhalfsleevet-shirt.avif"
+import image7 from "../assets/images/mensWear/Roundnecksleevelesst-shirt.avif"
+import image8 from "../assets/images/mensWear/Shorts.avif"
+import image9 from "../assets/images/mensWear/Sweat-t-shirt.avif"
+import image10 from "../assets/images/mensWear/Vneckhalfsleevet-shirt.avif"
 
 
 export const MensWear = () => {

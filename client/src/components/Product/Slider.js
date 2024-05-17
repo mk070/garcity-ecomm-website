@@ -3,7 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import {Box, Container, Typography, useMediaQuery} from "@mui/material"
 import tops from "../../assets/images/productpage/1.avif"
+<<<<<<< HEAD
 import topsSmall from "../../assets/images/productpage/1_small.avif"
+=======
+>>>>>>> 1bf59ebf21e498c7b073c308de16a777cf49796f
 import blacks from "../../assets/images/productpage/4.avif"
 import tshirts from "../../assets/images/productpage/3.avif"
 import colors from "../../assets/images/productpage/2.avif"

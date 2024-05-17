@@ -4,10 +4,10 @@ import { Slider } from '../components/Product/Slider'
 import { Clothes } from '../components/Product/Clothes'
 import IconBreadcrumbs from '../components/categories/Breadcrums'
 
-import image1 from "../assets/images/mensWear/hoodie.png"
-import image2 from "../assets/images/mensWear/Oversized t-shirt.png"
+import image1 from "../assets/images/mensWear/hoodie.avif"
+import image2 from "../assets/images/mensWear/Oversized t-shirt.avif"
 import image3 from "../assets/images/mensWear/Joggers.avif"
-import image4 from "../assets/images/mensWear/Sweat-t-shirt.png"
+import image4 from "../assets/images/mensWear/Sweat-t-shirt.avif"
 
 
 import image5 from "../assets/images/womensWear/Jogger.avif"

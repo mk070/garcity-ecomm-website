@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography } from '@mui/material';
-import bgimg from '../../assets/images/bgimg.png';
-import img from '../../assets/images/feature1.png';
 import gsap from 'gsap';
 import gif from '../../assets/gifs/home.webm'
-import AnimatedGif from '../AnimatedGif';
 
 export const Feature = () => {
   const featureRef = useRef(null);

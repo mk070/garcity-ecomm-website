@@ -16,7 +16,7 @@ export const ManagePopularWork = () => {
   const [showUploadConfirmation, setShowUploadConfirmation] = useState(false);
   const [imageName, setImageName] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
-  const MAX_LIMIT = 4;
+  const MAX_LIMIT = 5;
 
   const convertToBase64 = (event) => {
     setSelectedFile(event.target.files[0]);

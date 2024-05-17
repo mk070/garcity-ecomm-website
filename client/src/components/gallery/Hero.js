@@ -2,10 +2,13 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { Box, useMediaQuery } from "@mui/material";
-import img1 from '../../assets/images/gallery/banner.avif';
 import Text from "./Text";
+import img1 from '../../assets/images/gallery/banner.avif';
+import img1_small from '../../assets/images/gallery/banner-small.avif';
+
 
 import './gallery.css';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Hero = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
@@ -38,7 +41,9 @@ const Hero = () => {
         <div ref={sectionRef} className="scaleDown">
           <div className="main-section">
              <Text />
-              <img width={'100%'} style={{ marginTop:isSmallScreen?'0':'',marginRight: '0px', marginBottom: '80px' }} src={img1} alt="" />
+             <LazyLoadImage src={img1} sx={{ width:'100%', marginTop:isSmallScreen?'0':'',marginRight: '0px', marginBottom: '80px' }} PlaceholderSrc={img1_small} alt="Image Alt" loading='lazy' effect='blur'/>
+
+              {/* <img width={'100%'} style={{ marginTop:isSmallScreen?'0':'',marginRight: '0px', marginBottom: '80px' }} src={img1} alt="" /> */}
              <Box sx={{position:'absolute',bottom:{sm:'-70px',xs:"-190px"},left:"51%", width:{sm:'30%'}}}>
                <div class="mouse"></div>
              </Box>

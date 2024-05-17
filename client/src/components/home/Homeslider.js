@@ -136,14 +136,14 @@ export const Homeslider = () => {
   const settings = {
     infinite: true,
     lazyLoad: true,
-    speed: 300,
+    speed: 100,
     slidesToShow: isSmallScreen? 1:3,
     centerMode: true,
     centerPadding: 0,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     autoplay: true, // Enable autoplay
-    autoplaySpeed: 60000, // Set autoplay speed in milliseconds
+    autoplaySpeed: 2000, // Set autoplay speed in milliseconds
     beforeChange: (current, next) => setImageIndex(next),
   };
 

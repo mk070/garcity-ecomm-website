@@ -16,9 +16,10 @@ export const Hero = () => {
 
             <Box sx={{  width:isSmallScreen?'100%':'50%', mb:{xs:'20px'}}}> 
                 {/* <video autoPlay style={{ boxShadow:"black 1px 0px 4px 0px",borderRadius:'20px'}} loop width={'100%'} src={gif} alt="" /> */}
-                <video autoPlay muted loop width={'100%'} style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'20px'}}>
+                {/* <video autoPlay muted loop width={'100%'} style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'20px'}}>
             <source src = {gif} type = "video/webm"/>
-          </video>
+          </video> */}
+                <img src={hero} alt="" width={'100%'} style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'35px'}} srcset="" />
             </Box>
 
             <Box sx={{

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import gsap from 'gsap';
 import gif from '../../assets/gifs/home.webm'
+import img from "../../assets/images/Home/why.avif"
 
 export const Feature = () => {
   const featureRef = useRef(null);
@@ -46,12 +47,12 @@ export const Feature = () => {
     >
 
         <Box sx={{width:{sm:'90%'},  mt: {sm:'50px'}, p:{sm:'0',xs:'20px'},position: 'relative', borderRadius:{sm:'30px',xs:'20px'}}}>
-          {/* <img width={'100%'} src={bgimg}  loading='lazy'  alt="" srcSet="" /> */}
+          <img width={'100%'} src={img} style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'20px'}} loading='lazy'  alt="" srcSet="" />
 
           {/* <video  autoPlay loop preload="auto" width={'100%'} src={`${gif}?v=${Date.now()}`}  loading='lazy' style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'20px'}} alt="" srcSet="" /> */}
-          <video autoPlay muted loop width={'100%'} style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'20px'}}>
+          {/* <video autoPlay muted loop width={'100%'} style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'20px'}}>
             <source src = {gif} type = "video/webm"/>
-          </video>
+          </video> */}
 
           {/* <AnimatedGif src ={gif} alt ="gif video" /> */}
         </Box>

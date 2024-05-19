@@ -59,8 +59,8 @@ const transporter = nodemailer.createTransport({
     try {
       const mailOptions = {
         from: 'garcitwebsite@gmail.com',
-        to: 'mkartsoffical@gmail.com', // Change this to your own email address
-        subject: 'New Message from Contact Form',
+        to: 'garcitystyle@gmail.com', // Change this to your own email address
+        subject: 'From Garcity.com Contact Form',
         html: `
           <h1>New Message from Contact Form</h1>
           <p><strong>Name:</strong> ${firstName} ${lastName}</p>

@@ -6,7 +6,7 @@ import { Sidebar } from './Sidebar';
 import { Appbar } from './Appbar';
 
 
-export const Dashboard = () => {
+ const Dashboard = () => {
   
   return (
     
@@ -23,3 +23,5 @@ export const Dashboard = () => {
     
   );
 };
+
+export default Dashboard;

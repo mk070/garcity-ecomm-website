@@ -10,7 +10,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; // Import ExpandMor
 const drawerWidth = 240;
 const navItems = ['Home', 'Product', 'Gallery', 'About', 'Contact'];
 
-export const Nav = (props) => {
+ const Nav = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = useState(null);

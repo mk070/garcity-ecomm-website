@@ -16,7 +16,7 @@ import image9 from "../assets/images/sportsWear/Track_Jacket.avif"
 import image10 from "../assets/images/sportsWear/Yoga_Pants.avif"
 
 
-export const SportsWear = () => {
+ const SportsWear = () => {
   useEffect(()=>{
     window.scrollTo(0, 0);
 
@@ -30,3 +30,4 @@ export const SportsWear = () => {
     </>
   )
 }
+export default SportsWear;

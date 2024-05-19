@@ -6,7 +6,7 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { Sidebar } from './Sidebar';
 import { Appbar } from './Appbar';
 
-export const ManageClientLogos = () => {
+ const ManageClientLogos = () => {
   const [uploadedImages, setUploadedImages] = useState([]);
   const [isUploadSuccess, setUploadSuccess] = useState(false);
   const [isDeleteSuccess, setDeleteSuccess] = useState(false);
@@ -243,3 +243,5 @@ export const ManageClientLogos = () => {
     </>
   );
 };
+
+export default ManageClientLogos;

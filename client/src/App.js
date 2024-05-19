@@ -1,27 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
-import  Nav  from './components/Nav';
-import Footer from './components/Footer';
-import { Home } from './pages/Home';
-import { Product } from './pages/Product';
-import { Gallery } from './pages/Gallery';
-import { About } from './pages/About';
-import { Contact } from "./pages/Contact";
-import { MensWear } from './pages/MensWear';
-import { WomensWear } from './pages/WomensWear';
-import { Admin } from './pages/Admin';
-import { Dashboard } from './components/adminpage/Dashboard';
-import { KidsWear } from './pages/KidsWear';
-import PageLoader from './components/Pageloader';
+import PageLoader from './components/Pageloader.js';
 import { MoveupButton } from './components/MoveupButton';
 import { ContactButton } from './components/ContactButton';
 import { NotFound } from './components/NotFound';
-import { SportsWear } from './pages/SportsWear';
-import { ManageGallery } from './components/adminpage/ManageGallery';
-import { ManageClientLogos } from './components/adminpage/ManageClientLogos';
-import { ManagePopularWork } from './components/adminpage/ManagePopularWork';
-import { ManageYoutubeVideo } from './components/adminpage/ManageYoutubeVideo';
+
+// Lazy load components
+const Nav = lazy(() => import('./components/Nav'));
+const Footer = lazy(() => import('./components/Footer'));
+const Home = lazy(() => import('./pages/Home'));
+const Product = lazy(() => import('./pages/Product'));
+const Gallery = lazy(() => import('./pages/Gallery'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const MensWear = lazy(() => import('./pages/MensWear'));
+const WomensWear = lazy(() => import('./pages/WomensWear'));
+const Admin = lazy(() => import('./pages/Admin'));
+const Dashboard = lazy(() => import('./components/adminpage/Dashboard'));
+const KidsWear = lazy(() => import('./pages/KidsWear'));
+const SportsWear = lazy(() => import('./pages/SportsWear'));
+const ManageGallery = lazy(() => import('./components/adminpage/ManageGallery'));
+const ManageClientLogos = lazy(() => import('./components/adminpage/ManageClientLogos'));
+const ManagePopularWork = lazy(() => import('./components/adminpage/ManagePopularWork'));
+const ManageYoutubeVideo = lazy(() => import('./components/adminpage/ManageYoutubeVideo'));
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -52,34 +54,75 @@ function App() {
 
   return (
     <>
-      {shouldRenderFooterButtons && <Nav />}
+      <Suspense fallback={<PageLoader />}>
+        {shouldRenderFooterButtons && <Nav />}
+      </Suspense>
 
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/product' element={<Product />} />
-        <Route path="/product/men'swear" element={<MensWear />} />
-        <Route path="/product/women'swear" element={<WomensWear />} />
-        <Route path="/product/kid'swear" element={<KidsWear />} />
-        <Route path='/product/sportswear' element={<SportsWear />} />
-        <Route path='/gallery' element={<Gallery />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/' element={
+          <Suspense fallback={<PageLoader />}>
+            <Home />
+          </Suspense>
+        } />
+        <Route path='/product' element={
+          <Suspense fallback={<PageLoader />}>
+            <Product />
+          </Suspense>
+        } />
+        <Route path="/product/men'swear" element={
+          <Suspense fallback={<PageLoader />}>
+            <MensWear />
+          </Suspense>
+        } />
+        <Route path="/product/women'swear" element={
+          <Suspense fallback={<PageLoader />}>
+            <WomensWear />
+          </Suspense>
+        } />
+        <Route path="/product/kid'swear" element={
+          <Suspense fallback={<PageLoader />}>
+            <KidsWear />
+          </Suspense>
+        } />
+        <Route path='/product/sportswear' element={
+          <Suspense fallback={<PageLoader />}>
+            <SportsWear />
+          </Suspense>
+        } />
+        <Route path='/gallery' element={
+          <Suspense fallback={<PageLoader />}>
+            <Gallery />
+          </Suspense>
+        } />
+        <Route path='/about' element={
+          <Suspense fallback={<PageLoader />}>
+            <About />
+          </Suspense>
+        } />
+        <Route path='/contact' element={
+          <Suspense fallback={<PageLoader />}>
+            <Contact />
+          </Suspense>
+        } />
         <Route
           path='/only-admin'
           element={
             isAuthenticated() ? (
               <Navigate to='/only-admin/dashboard' replace />
             ) : (
-              <Admin />
+              <Suspense fallback={<PageLoader />}>
+                <Admin />
+              </Suspense>
             )
           }
         />
-
         <Route
           path='/only-admin/dashboard'
           element={
             isAuthenticated() ? (
-              <Dashboard />
+              <Suspense fallback={<PageLoader />}>
+                <Dashboard />
+              </Suspense>
             ) : (
               <Navigate to='/only-admin' replace />
             )
@@ -89,7 +132,9 @@ function App() {
           path='/only-admin/Managegallery'
           element={
             isAuthenticated() ? (
-              <ManageGallery />
+              <Suspense fallback={<PageLoader />}>
+                <ManageGallery />
+              </Suspense>
             ) : (
               <Navigate to='/only-admin' replace />
             )
@@ -99,7 +144,9 @@ function App() {
           path='/only-admin/Managelogo'
           element={
             isAuthenticated() ? (
-              <ManageClientLogos />
+              <Suspense fallback={<PageLoader />}>
+                <ManageClientLogos />
+              </Suspense>
             ) : (
               <Navigate to='/only-admin' replace />
             )
@@ -109,7 +156,9 @@ function App() {
           path='/only-admin/ManagePopularWork'
           element={
             isAuthenticated() ? (
-              <ManagePopularWork />
+              <Suspense fallback={<PageLoader />}>
+                <ManagePopularWork />
+              </Suspense>
             ) : (
               <Navigate to='/only-admin' replace />
             )
@@ -119,7 +168,9 @@ function App() {
           path='/only-admin/ManageYoutubevideo'
           element={
             isAuthenticated() ? (
-              <ManageYoutubeVideo />
+              <Suspense fallback={<PageLoader />}>
+                <ManageYoutubeVideo />
+              </Suspense>
             ) : (
               <Navigate to='/only-admin' replace />
             )
@@ -128,10 +179,11 @@ function App() {
         <Route path='/*' element={<NotFound />} />
       </Routes>
 
-      {isLoading && <PageLoader />}
-      {shouldRenderFooterButtons && <Footer />}
-      {shouldRenderFooterButtons && <MoveupButton />}
-      {shouldRenderFooterButtons && <ContactButton />}
+      <Suspense fallback={<PageLoader />}>
+        {shouldRenderFooterButtons && <Footer />}
+        {shouldRenderFooterButtons && <MoveupButton />}
+        {shouldRenderFooterButtons && <ContactButton />}
+      </Suspense>
     </>
   );
 }

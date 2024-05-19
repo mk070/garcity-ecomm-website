@@ -13,7 +13,7 @@ import Design from '../components/aboutpage/Desgin';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const About = () => {
+ const About = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   
 
@@ -54,3 +54,5 @@ export const About = () => {
     </>
   );
 };
+
+export default About ; 

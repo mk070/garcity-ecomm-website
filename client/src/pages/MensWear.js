@@ -16,7 +16,7 @@ import image9 from "../assets/images/mensWear/Sweat-t-shirt.avif"
 import image10 from "../assets/images/mensWear/Vneckhalfsleevet-shirt.avif"
 
 
-export const MensWear = () => {
+ const MensWear = () => {
   useEffect(()=>{
     window.scrollTo(0, 0);
 
@@ -31,3 +31,5 @@ export const MensWear = () => {
     </>
   )
 }
+
+export default MensWear;

@@ -241,3 +241,5 @@ export const ManagePopularWork = () => {
     </>
   );
 };
+
+export default ManagePopularWork ;

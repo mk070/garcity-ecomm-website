@@ -17,7 +17,7 @@ import image8 from "../assets/images/womensWear/shorts.avif"
 import image9 from "../assets/images/womensWear/Sweat-t-shirt.avif"
 import image10 from "../assets/images/womensWear/V_neck_half_sleeve_t-shirt.avif"
 
-export const WomensWear = () => {
+ const WomensWear = () => {
   useEffect(()=>{
     window.scrollTo(0, 0);
 
@@ -33,3 +33,6 @@ export const WomensWear = () => {
     </>
   )
 }
+
+export default WomensWear ;
+

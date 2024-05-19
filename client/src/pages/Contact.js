@@ -4,7 +4,7 @@ import Fqa from '../components/ContactUs/Fqa'
 import { Hero } from '../components/ContactUs/Hero'
 import InputForm from '../components/ContactUs/InputForm'
 
-export const Contact = () => {
+ const Contact = () => {
   useEffect(()=>{
     window.scrollTo(0, 0);
 
@@ -18,3 +18,5 @@ export const Contact = () => {
     </>
   )
 }
+
+export default Contact ;

@@ -26,7 +26,7 @@ import image15 from "../assets/images/sportsWear/Soccer_Jersey.avif"
 import image16 from "../assets/images/sportsWear/Track_Jacket.avif"
 
 
-export const Product = () => {
+ const Product = () => {
    useEffect(()=>{
       window.scrollTo(0, 0);
   
@@ -59,3 +59,5 @@ export const Product = () => {
    </>
   )
 }
+
+export default Product ;

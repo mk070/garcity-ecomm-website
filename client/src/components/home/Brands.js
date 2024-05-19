@@ -52,8 +52,8 @@ export const Brands = () => {
               ))
             ) : (
               // Render default images when no images are fetched
-              default_images.map((img, idx) => (
-                 <img width={isSmallScreen?'50px':'85px'} style={{marginRight:isSmallScreen?"20px":"50px"}} src={img} alt="" />
+              default_images.map((img, index) => (
+                 <img key={index} width={isSmallScreen?'50px':'85px'} style={{marginRight:isSmallScreen?"20px":"50px"}} src={img} alt="" />
               
               ))
             )}

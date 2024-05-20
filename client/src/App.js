@@ -23,10 +23,10 @@ const Admin = lazyLoad('./pages/Admin','Admin');
 const Dashboard = lazyLoad('./components/adminpage/Dashboard','Dashboard');
 const KidsWear = lazyLoad('./pages/KidsWear','KidsWear');
 const SportsWear = lazyLoad('./pages/SportsWear','SportsWear');
-const ManageGallery = lazyLoad('./components/adminpage/ManageGallery');
-const ManageClientLogos = lazyLoad('./components/adminpage/ManageClientLogos');
-const ManagePopularWork = lazyLoad('./components/adminpage/ManagePopularWork');
-const ManageYoutubeVideo = lazyLoad('./components/adminpage/ManageYoutubeVideo');
+const ManageGallery = lazyLoad('./components/adminpage/ManageGallery','ManageGallery');
+const ManageClientLogos = lazyLoad('./components/adminpage/ManageClientLogos','ManageClientLogos');
+const ManagePopularWork = lazyLoad('./components/adminpage/ManagePopularWork','ManagePopularWork');
+const ManageYoutubeVideo = lazyLoad('./components/adminpage/ManageYoutubeVideo','ManageYoutubeVideo');
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

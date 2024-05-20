@@ -5,25 +5,28 @@ import PageLoader from './components/Pageloader.js';
 import { MoveupButton } from './components/MoveupButton';
 import { ContactButton } from './components/ContactButton';
 import { NotFound } from './components/NotFound';
-
+import { lazyLoad } from './lazyLoad.js';
+// import {Product} from './pages/Product'
+import { Home } from './pages/Home.js';
+ 
 // Lazy load components
-const Nav = lazy(() => import('./components/Nav'));
-const Footer = lazy(() => import('./components/Footer'));
-const Home = lazy(() => import('./pages/Home'));
-const Product = lazy(() => import('./pages/Product'));
-const Gallery = lazy(() => import('./pages/Gallery'));
-const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Contact'));
-const MensWear = lazy(() => import('./pages/MensWear'));
-const WomensWear = lazy(() => import('./pages/WomensWear'));
-const Admin = lazy(() => import('./pages/Admin'));
-const Dashboard = lazy(() => import('./components/adminpage/Dashboard'));
-const KidsWear = lazy(() => import('./pages/KidsWear'));
-const SportsWear = lazy(() => import('./pages/SportsWear'));
-const ManageGallery = lazy(() => import('./components/adminpage/ManageGallery'));
-const ManageClientLogos = lazy(() => import('./components/adminpage/ManageClientLogos'));
-const ManagePopularWork = lazy(() => import('./components/adminpage/ManagePopularWork'));
-const ManageYoutubeVideo = lazy(() => import('./components/adminpage/ManageYoutubeVideo'));
+const Nav = lazyLoad("./components/Nav", "Nav");
+const Footer = lazyLoad('./components/Footer','Footer');
+// const Home = lazyLoad('./pages/Home','Home');
+const Product = lazyLoad('./pages/Product','Product');
+const Gallery = lazyLoad('./pages/Gallery','Gallery');
+const About = lazyLoad('./pages/About','About');
+const Contact = lazyLoad('./pages/Contact','Contact');
+const MensWear = lazyLoad('./pages/MensWear','MensWear');
+const WomensWear = lazyLoad('./pages/WomensWear','WomensWear');
+const Admin = lazyLoad('./pages/Admin','Admin');
+const Dashboard = lazyLoad('./components/adminpage/Dashboard','Dashboard');
+const KidsWear = lazyLoad('./pages/KidsWear','KidsWear');
+const SportsWear = lazyLoad('./pages/SportsWear','SportsWear');
+const ManageGallery = lazyLoad('./components/adminpage/ManageGallery');
+const ManageClientLogos = lazyLoad('./components/adminpage/ManageClientLogos');
+const ManagePopularWork = lazyLoad('./components/adminpage/ManagePopularWork');
+const ManageYoutubeVideo = lazyLoad('./components/adminpage/ManageYoutubeVideo');
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,7 +35,7 @@ function App() {
     // Simulate a loading delay
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    });
 
     // Clear timeout when component unmounts
     return () => clearTimeout(timeout);
@@ -60,9 +63,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={
-          <Suspense fallback={<PageLoader />}>
             <Home />
-          </Suspense>
+        
         } />
         <Route path='/product' element={
           <Suspense fallback={<PageLoader />}>

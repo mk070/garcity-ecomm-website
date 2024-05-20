@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Box, useMediaQuery } from "@mui/material";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 // Import default images
 import img1 from '../../assets/images/gallery/1.avif';
@@ -47,20 +49,6 @@ function Scrollsection() {
     fetchImages();
   }, []);
 
-  // useEffect(() => {
-  //   // GSAP animation setup for each image individually
-  //   imageRefs.current.forEach((ref, index) => {
-  //     gsap.to(ref, {
-  //       scrollTrigger: {
-  //         trigger: ref,
-  //         scrub: true
-  //       },
-  //       y: isSmallScreen? 0 : -70,
-  //       stagger: isSmallScreen ? 0 : 6
-  //     });
-  //   });
-  // }, [images]);
-
   useEffect(() => {
     gsap.to(imgRefs.current, {
       y: isSmallScreen ? -50 :-180,
@@ -95,7 +83,7 @@ function Scrollsection() {
                {images.map((image, index) => (
 
                  <Box key={index}  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                   <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+                   <LazyLoadImage src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
                  </Box>
                ))}
                </Box>
@@ -116,21 +104,21 @@ function Scrollsection() {
                   <Box sx={{ mr: { sm: '30px' } }}>
                     {images.slice(0, 3).map((image, index) => (
                       <Box key={index}  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                        <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+                        <LazyLoadImage src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
                       </Box>
                     ))}
                   </Box>
                   <Box sx={{ mr: { sm: '30px' } }}>
                     {images.slice(3, 6).map((image, index) => (
                       <Box key={index + 3} className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                        <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+                        <LazyLoadImage src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
                       </Box>
                     ))}
                   </Box>
                   <Box>
                     {images.slice(6, 9).map((image, index) => (
                       <Box key={index + 6}  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                        <img src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
+                        <LazyLoadImage src={`data:${image.contentType};base64,${image.img}`} width={'100%'} alt="" />
                       </Box>
                     ))}
                   </Box>
@@ -155,35 +143,35 @@ function Scrollsection() {
               >
                 <Box sx={{ mr: { sm: '30px' } }}>
                   <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                    <img src={img1} width={'100%'} alt="" />
+                    <LazyLoadImage src={img1} width={'100%'} alt="" />
                   </Box>
                   <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                    <img src={img2} width={'100%'} alt="" />
+                    <LazyLoadImage src={img2} width={'100%'} alt="" />
                   </Box>
                   <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                    <img src={img3} width={'100%'} alt="" />
+                    <LazyLoadImage src={img3} width={'100%'} alt="" />
                   </Box>
                 </Box>
                 <Box sx={{ mr: { sm: '30px' } }}>
                   <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                    <img src={img4} width={'100%'} alt="" />
+                    <LazyLoadImage src={img4} width={'100%'} alt="" />
                   </Box>
                   <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                    <img src={img7} width={'100%'} alt="" />
+                    <LazyLoadImage src={img7} width={'100%'} alt="" />
                   </Box>
                   <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                    <img src={img6} width={'100%'} alt="" />
+                    <LazyLoadImage src={img6} width={'100%'} alt="" />
                   </Box>
                 </Box>
                 <Box>
                   <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                    <img src={img5} width={'100%'} alt="" />
+                    <LazyLoadImage src={img5} width={'100%'} alt="" />
                   </Box>
                   <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                    <img src={img8} width={'100%'} alt="" />
+                    <LazyLoadImage src={img8} width={'100%'} alt="" />
                   </Box>
                   <Box className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                    <img src={img9} width={'100%'} alt="" />
+                    <LazyLoadImage src={img9} width={'100%'} alt="" />
                   </Box>
                 </Box>
               </Box>
@@ -201,35 +189,35 @@ function Scrollsection() {
                 >
                   <Box sx={{ mr: { sm: '30px' } }}>
                     <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                      <img src={img1} width={'100%'} alt="" />
+                      <LazyLoadImage src={img1} width={'100%'} alt="" />
                     </Box>
                     <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                      <img src={img2} width={'100%'} alt="" />
+                      <LazyLoadImage src={img2} width={'100%'} alt="" />
                     </Box>
                     <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                      <img src={img3} width={'100%'} alt="" />
+                      <LazyLoadImage src={img3} width={'100%'} alt="" />
                     </Box>
                   </Box>
                   <Box sx={{ mr: { sm: '30px' } }}>
                     <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                      <img src={img4} width={'100%'} alt="" />
+                      <LazyLoadImage src={img4} width={'100%'} alt="" />
                     </Box>
                     <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                      <img src={img7} width={'100%'} alt="" />
+                      <LazyLoadImage src={img7} width={'100%'} alt="" />
                     </Box>
                     <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                      <img src={img6} width={'100%'} alt="" />
+                      <LazyLoadImage src={img6} width={'100%'} alt="" />
                     </Box>
                   </Box>
                   <Box>
                     <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                      <img src={img5} width={'100%'} alt="" />
+                      <LazyLoadImage src={img5} width={'100%'} alt="" />
                     </Box>
                     <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                      <img src={img8} width={'100%'} alt="" />
+                      <LazyLoadImage src={img8} width={'100%'} alt="" />
                     </Box>
                     <Box  className="img" sx={{ width: { sm: '350px' }, marginBottom: isSmallScreen ? '30px' : '30px' }}>
-                      <img src={img9} width={'100%'} alt="" />
+                      <LazyLoadImage src={img9} width={'100%'} alt="" />
                     </Box>
                   </Box>
                 </Box>
@@ -243,63 +231,6 @@ function Scrollsection() {
 }
 
 export default Scrollsection;
-
-
-
-// import React, { useEffect } from 'react';
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import { Box, useMediaQuery } from "@mui/material";
- 
-
-// import img1 from '../../assets/images/popularcollection/image1.png';
-// import img2 from '../../assets/images/popularcollection/image2.png';
-// import img3 from '../../assets/images/popularcollection/image3.png';
-// import img4 from '../../assets/images/popularcollection/image4.png';
-// gsap.registerPlugin(ScrollTrigger);
-
-// function Scrollsection() {
-//   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-
-//   useEffect(() => {
-//     gsap.to('.img', {
-//       scrollTrigger: {
-//         trigger: '.img',
-//         scrub: true
-//       },
-//       y: -70,
-//       stagger: 0.2
-//     });
-//   }, []);
-
-//   return (
-//     <Box  sx={{display:'flex', padding :{sm:'40px',xs:'25px'}, justifyContent:'center'  ,flexDirection:{sm:"row", xs:'column'},
-    
-//     }}>
-//       <Box sx={{mr:{sm:'30px'}}}>
-//         <Box className="img" sx={{width:{sm:'350px'},
-//       marginBottom:isSmallScreen?'50px':''
-//       }}><img src={img2} width={'100%'} alt="" srcset="" /></Box>
-//         <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':'' }}> <img src={img1}width={'100%'}  alt="" srcset="" /></Box>
-//         <Box className="img" sx={{width:{sm:'350px'},  marginBottom:isSmallScreen?'50px':''}}><img src={img2} width={'100%'} alt="" srcset="" /></Box>
-//       </Box>
-//       <Box sx={{mr:{sm:'30px'}}}>
-//         <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}><img  width={'100%'}src={img3} alt="" srcset="" /></Box>
-//         <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}> <img width={'100%'} src={img2} alt="" srcset="" /></Box>
-//         <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}><img  width={'100%'}src={img1} alt="" srcset="" /></Box>
-//       </Box>
-//       <Box>
-//         <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}> <img width={'100%'} src={img3} alt="" srcset="" /></Box>
-//         <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}><img  width={'100%'}src={img2} alt="" srcset="" /></Box>
-//         <Box className="img" sx={{width:{sm:'350px'}, marginBottom:isSmallScreen?'50px':''}}><img  width={'100%'}src={img1} alt="" srcset="" /></Box>
-//       </Box>
-
-//       {/* You can add more sections with images as needed */}
-//     </Box>
-//   );
-// }
-
-// export default Scrollsection;
 
 
 

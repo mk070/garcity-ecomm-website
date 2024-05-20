@@ -8,8 +8,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PinterestIcon from '@mui/icons-material/Pinterest';
-
-const Footer = () => {
+export const Footer = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (
@@ -82,4 +81,3 @@ const Footer = () => {
   )
 }
 
-export default Footer;

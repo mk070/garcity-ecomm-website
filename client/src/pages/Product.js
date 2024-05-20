@@ -1,6 +1,7 @@
 import {React,useEffect} from 'react'
 import { Slider } from '../components/Product/Slider'
 import { Clothes } from '../components/Product/Clothes'
+import '../App.css';
 
 import image1 from "../assets/images/mensWear/hoodie.avif"
 import image2 from "../assets/images/mensWear/Oversized t-shirt.avif"
@@ -26,7 +27,7 @@ import image15 from "../assets/images/sportsWear/Soccer_Jersey.avif"
 import image16 from "../assets/images/sportsWear/Track_Jacket.avif"
 
 
- const Product = () => {
+export const Product = () => {
    useEffect(()=>{
       window.scrollTo(0, 0);
   
@@ -59,5 +60,3 @@ import image16 from "../assets/images/sportsWear/Track_Jacket.avif"
    </>
   )
 }
-
-export default Product ;

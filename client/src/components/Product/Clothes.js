@@ -3,36 +3,39 @@ import { Typography, useMediaQuery,Box, Container, Grid, Card, CardActionArea, C
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'swiper/css/navigation';
+import '../../App.css'
 
 
-export const Clothes = ({ category , images,names}) => {
+export const Clothes = ({ category, images, names }) => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (
-    <Box sx={{padding:{sm:'0 30px'}}}>
-      <Typography   variant="h3"
+    <Box sx={{ padding: { sm: '0 30px' } }}>
+      <Typography
+        variant="h3"
         sx={{
           fontSize: isSmallScreen ? '24px' : '50px',
-          m:{sm:'50px 0',xs:"40px 0 20px 0"},
-          display:"flex",
-          justifyContent:'center',
+          m: { sm: '50px 0', xs: '40px 0 20px 0' },
+          display: "flex",
+          justifyContent: 'center',
           '& a': {
             color: '#DF9573', // Inherit text color
             textDecoration: 'none', // Remove underline
             transition: 'transform 10s ease-in-out',
             textDecoration: 'underline'
-
           },
           '& a:hover': {
-            color: 'black' ,
+            color: 'black',
             transform: 'scale(1)',
             textDecoration: 'underline'
           }
-        }}>
-        <Link style={{ fontFamily: 'integral-Regular', fontWeight: 'normal', fontSize:{ sm:'32px',xs:"24px"}, textDecoration: 'none !important' }} to={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>{category}</Link>
+        }}
+      >
+        <Link style={{ fontFamily: 'integral-Regular', fontWeight: 'normal', fontSize: { sm: '32px', xs: "24px" }, textDecoration: 'none !important' }} to={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>{category}</Link>
       </Typography>
-      <Container maxWidth="xl" sx={{ width: "86%", marginBottom: {sm:"0px",xs:'10px' }}}>
+      <Container maxWidth="xl" sx={{ width: "86%", marginBottom: { sm: "0px", xs: '10px' } }}>
         <Swiper
           mx={10}
           slidesPerView={isSmallScreen ? 1 : 4}
@@ -55,12 +58,13 @@ export const Clothes = ({ category , images,names}) => {
                   }}>
                     <CardActionArea>
                       <a href={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>
-                      <CardMedia
-                        component="img"
-                        height="300"
-                        image={image}
-                        className="zoom-image"
-                      /></a>
+                        <LazyLoadImage
+                          src={image}
+                          effect="blur"
+                          height={300}
+                          className="zoom-image"
+                        />
+                      </a>
                     </CardActionArea>
                   </Card>
                   <Typography sx={{ margin: "13px 0", paddingLeft: "10px" }}>{names[index]}</Typography>
@@ -70,28 +74,26 @@ export const Clothes = ({ category , images,names}) => {
           </Grid>
         </Swiper>
       </Container>
-      <Typography   variant="h3"
+      <Typography variant="h3"
         sx={{
           fontSize: isSmallScreen ? '22px' : '32px',
-          m:{sm:'10px 0 80px 0',xs:"0px 0 30px 0"},
-          display:"flex",
-          justifyContent:'center',
+          m: { sm: '10px 0 80px 0', xs: "0px 0 30px 0" },
+          display: "flex",
+          justifyContent: 'center',
           '& a': {
             color: 'black', // Inherit text color
             textDecoration: 'none', // Remove underline
             transition: 'transform 10s ease-in-out',
           },
           '& a:hover': {
-            color: '#DF9573' ,
+            color: '#DF9573',
             transform: 'scale(1)',
-            // textDecoration: 'underline'
           }
         }}>
-        <Link style={{ fontWeight: 'normal', fontSize:{ sm:'16px',xs:"14px"}, textDecoration: 'none !important' }} to={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>For more..</Link>
+        <Link style={{ fontWeight: 'normal', fontSize: { sm: '16px', xs: "14px" }, textDecoration: 'none !important' }} to={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>For more..</Link>
       </Typography>
-
-      </Box>
-  
+    </Box>
   );
 };
+
 

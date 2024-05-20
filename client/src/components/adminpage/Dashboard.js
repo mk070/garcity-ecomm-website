@@ -6,7 +6,7 @@ import { Sidebar } from './Sidebar';
 import { Appbar } from './Appbar';
 
 
- const Dashboard = () => {
+export const Dashboard = () => {
   
   return (
     
@@ -23,5 +23,3 @@ import { Appbar } from './Appbar';
     
   );
 };
-
-export default Dashboard;

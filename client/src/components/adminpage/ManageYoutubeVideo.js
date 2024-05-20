@@ -5,7 +5,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { Appbar } from './Appbar';
 import { Sidebar } from './Sidebar';
 
- const ManageYoutubeVideo = () => {
+export const ManageYoutubeVideo = () => {
   const [videoLink, setVideoLink] = useState('');
   const [uploadedVideos, setUploadedVideos] = useState([]);
   const [isUploadSuccess, setUploadSuccess] = useState(false);
@@ -201,5 +201,3 @@ import { Sidebar } from './Sidebar';
     </>
   );
 };
-
-export default ManageYoutubeVideo ;

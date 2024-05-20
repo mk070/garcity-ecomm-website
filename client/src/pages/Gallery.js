@@ -4,7 +4,7 @@ import Hero from '../components/gallery/Hero'
 import Text from '../components/gallery/Text'
 import { YoutubeVideo } from '../components/gallery/YoutubeVideo'
 
-const Gallery = () => {
+export const Gallery = () => {
   useEffect(()=>{
     window.scrollTo(0, 0);
 
@@ -18,5 +18,3 @@ const Gallery = () => {
     </>
   )
 }
-
-export default Gallery ;

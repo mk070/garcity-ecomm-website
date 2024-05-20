@@ -16,7 +16,7 @@ import image8 from "../assets/images/kidsWear/Sweat_shirt_dungaree_shorts.avif"
 import image9 from "../assets/images/kidsWear/Sweat_shirt.avif"
 
 
- const KidsWear = () => {
+export const KidsWear = () => {
   useEffect(()=>{
     window.scrollTo(0, 0);
 
@@ -31,5 +31,3 @@ import image9 from "../assets/images/kidsWear/Sweat_shirt.avif"
     </>
   )
 }
-
-export default KidsWear ;

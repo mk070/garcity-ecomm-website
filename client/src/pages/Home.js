@@ -8,7 +8,7 @@ import { Feature } from '../components/home/Feature';
 import Testimonial from '../components/home/Testimonial';
 import { Specialities } from '../components/home/Specialities';
 
- const Home = () => {
+export const Home = () => {
   useEffect(()=>{
     window.scrollTo(0, 0);
 
@@ -24,5 +24,3 @@ import { Specialities } from '../components/home/Specialities';
     </Box>
   );
 };
-
-export default Home ;

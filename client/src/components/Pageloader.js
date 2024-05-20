@@ -1,5 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 const PageLoader = () => {
   return (
@@ -10,47 +11,63 @@ const PageLoader = () => {
         left: 0,
         width: '100%',
         height: '100%',
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backgroundColor: '#FFF4F1',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         zIndex: 9999, // Ensure loader is above other content
+        flexDirection: 'column', // Stack bars and message vertically
       }}
     >
       <Box
         sx={{
-          position: 'relative',
-          width: 80,
-          height: 80,
-          '& .hanger': {
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            border: '4px solid',
-            borderColor: 'primary.main transparent transparent transparent',
-            borderRadius: '50%',
-            animation: 'rotate 1.2s linear infinite',
-            transformOrigin: '50% 50%',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          marginBottom: 2,
+          '& div': {
+            width: 10,
+            height: 50,
+            margin: '0 5px',
+            backgroundColor: 'black',
+            animation: 'grow 1s infinite',
           },
-          '& .hanger:nth-of-type(1)': {
-            animationDelay: '-0.45s',
+          '& div:nth-of-type(1)': {
+            animationDelay: '0s',
           },
-          '& .hanger:nth-of-type(2)': {
-            animationDelay: '-0.3s',
+          '& div:nth-of-type(2)': {
+            animationDelay: '0.1s',
           },
-          '& .hanger:nth-of-type(3)': {
-            animationDelay: '-0.15s',
+          '& div:nth-of-type(3)': {
+            animationDelay: '0.2s',
           },
-          '@keyframes rotate': {
-            '0%': { transform: 'rotate(0deg)' },
-            '100%': { transform: 'rotate(360deg)' },
+          '& div:nth-of-type(4)': {
+            animationDelay: '0.3s',
+          },
+          '& div:nth-of-type(5)': {
+            animationDelay: '0.4s',
+          },
+          '@keyframes grow': {
+            '0%, 100%': { transform: 'scaleY(0.3)' },
+            '50%': { transform: 'scaleY(1)' },
           },
         }}
       >
-        <Box className="hanger" />
-        <Box className="hanger" />
-        <Box className="hanger" />
+        <Box component="div" />
+        <Box component="div" />
+        <Box component="div" />
+        <Box component="div" />
+        <Box component="div" />
       </Box>
+      <Typography
+        sx={{
+          color: 'black',
+          fontSize: '1.5rem',
+          fontWeight: 'bold',
+        }}
+      >
+        Loading...
+      </Typography>
     </Box>
   );
 };

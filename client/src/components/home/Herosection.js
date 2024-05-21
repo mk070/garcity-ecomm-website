@@ -4,6 +4,8 @@ import 'swiper/css';
 import { Box, useMediaQuery } from '@mui/material';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Autoplay, Navigation } from 'swiper/modules';
+import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
+import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
 import SwiperCore from 'swiper';
 import img1 from '../../assets/images/Home/banner/img1.avif';
 import img2 from '../../assets/images/Home/banner/img2.avif';
@@ -85,28 +87,28 @@ export const Herosection = () => {
         </SwiperSlide>
       </Swiper>
       <div className="swiper-button-prev" style={{ 
-        left: '10px', 
-        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black background
-        color: '#fff', // White text color
+        left: isSmallScreen ? '-5px': '10px', 
+        backgroundColor: '', // Semi-transparent black background
+        color: 'white', // White text color
         padding: '10px', 
         position: 'absolute', 
-        top: isSmallScreen ? '62%' : '50%', 
+        top: isSmallScreen ? '42%' : '50%', 
         width: isSmallScreen ? "30px" : "40px",
         height: isSmallScreen ? "30px" : "40px",
         transform: 'translateY(-50%)',
-        borderRadius: '50%', // Circular shape
+         // Circular shape
         cursor: 'pointer', // Cursor changes to pointer on hover
         zIndex: '1000', // Higher z-index to appear above the swiper
     }}>
-        <FaArrowLeft /> {/* Render the left arrow icon */}
+        <KeyboardArrowLeftRoundedIcon sx={{bgcolor:'#4141418a',borderRadius: '50%'}} /> {/* Render the left arrow icon */}
     </div>
     <div className="swiper-button-next" style={{ 
         right: '10px', 
-        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black background
-        color: '#fff', // White text color
+        backgroundColor: '', // Semi-transparent black background
+        color: 'white', // White text color
         padding: '10px', 
         position: 'absolute', 
-        top: isSmallScreen ? '70%' : '50%', 
+        top: isSmallScreen ? '50%' : '50%', 
         width: isSmallScreen ? "30px" : "40px",
         height: isSmallScreen ? "30px" : "40px",
         transform: 'translateY(-90%)',
@@ -114,7 +116,7 @@ export const Herosection = () => {
         cursor: 'pointer', // Cursor changes to pointer on hover
         zIndex: '1000', // Higher z-index to appear above the swiper
     }}>
-        <FaArrowRight /> {/* Render the right arrow icon */}
+        <KeyboardArrowRightRoundedIcon  sx={{bgcolor:'#4141418a',borderRadius: '50%'}} /> {/* Render the right arrow icon */}
     </div>
 
     </Box>

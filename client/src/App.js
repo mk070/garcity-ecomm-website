@@ -57,6 +57,19 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <title>Garcity manufacturers</title>
+        <meta name="description" content="Garcity is more than just a garment manufacturer – we are the architects of your unique style." />
+        <meta property="og:title" content="Garcity - Architects of Your Unique Style" />
+        <meta property="og:description" content="Garcity is more than just a garment manufacturer – we are the architects of your unique style." />
+        <meta property="og:image" content="https://www.garcity.com/fav.png" />
+        <meta property="og:url" content="https://www.yourwebsite.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Garcity - Architects of Your Unique Style" />
+        <meta name="twitter:description" content="Garcity is more than just a garment manufacturer – we are the architects of your unique style." />
+        <meta name="twitter:image" content="https://www.garcity.com/fav.png" />
+      </Helmet>
+
       <Suspense fallback={<PageLoader />}>
         {shouldRenderFooterButtons && <Nav />}
       </Suspense>

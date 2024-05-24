@@ -59,7 +59,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Garcity manufacturers</title>
+        <title>Garcity</title>
         <meta name="description" content="Garcity is more than just a garment manufacturer – we are the architects of your unique style." />
         <meta property="og:title" content="Garcity - Architects of Your Unique Style" />
         <meta property="og:description" content="Garcity is more than just a garment manufacturer – we are the architects of your unique style." />

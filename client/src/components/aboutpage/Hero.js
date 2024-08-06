@@ -19,7 +19,7 @@ export const Hero = () => {
                 {/* <video autoPlay muted loop width={'100%'} style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'20px'}}>
             <source src = {gif} type = "video/webm"/>
           </video> */}
-                <img src={hero} alt="" width={'100%'} style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'35px'}} srcset="" />
+                <img src={hero} alt="" height={'80%'} width={'100%'} style={{ objectFit:'cover',boxShadow:"black 1px 1px 8px 0px",borderRadius:'35px'}} srcset="" />
             </Box>
 
             <Box sx={{

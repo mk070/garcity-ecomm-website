@@ -75,7 +75,7 @@ export const Footer = () => {
         Garcity {new Date().getFullYear()}.
       </Typography>
       <Typography sx={{fontSize:{xs:'14px',sm:'16px'},margin:{sm:'10px 0', xs:'10px 0'}}} variant="body2" align="center">
-        Crafted by -  <a href="https://www.instagram.com/varloom" target="_blank" rel="noopener noreferrer">Varloom</a> 
+        Crafted by -  <a href="https://varloom.com/" target="_blank" rel="noopener noreferrer"  style={{fontWeight:'bolder',color:"green"}}>Varloom</a> 
       </Typography>
     </Box>
   )

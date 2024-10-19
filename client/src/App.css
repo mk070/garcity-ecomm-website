@@ -5,6 +5,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --primary-color: #82A1D1;
+  --secondary-color: #091D3D;
+  --trinary-color: #D6A85D;
+}
+
 @keyframes floatAnimation {
     from {
       transform: translate(-20%, -20%);

@@ -44,7 +44,7 @@ export const Nav = (props) => {
   return (
     <Box sx={{ display: 'flex', marginBottom: '64px' }}>
       <CssBaseline />
-      <AppBar sx={{ backgroundColor: '#FFF4F1', color: '#372B29' }} position="fixed">
+      <AppBar sx={{ backgroundColor: 'var(--secondary-color)', color: 'white' }} position="fixed">
         <Toolbar>
           <Box sx={{ flexGrow: 1 }}>
             <img src={Logo} alt="Logo" style={{ width: '110px' }} />
@@ -53,7 +53,7 @@ export const Nav = (props) => {
             color="inherit"
             aria-label="open drawer"
             edge="end"
-            sx={{ color: '#372B29', display: { sm: 'none' } }}
+            sx={{ color: 'white', display: { sm: 'none' } }}
             onClick={handleDrawerToggle}
           >
             <MenuIcon />
@@ -71,9 +71,9 @@ export const Nav = (props) => {
                     
                       onClick={handlelink}
                       sx={{
-                        color: '#372B29',
+                        color: 'white',
                         '&:hover': {
-                          backgroundColor: '#FFF4F1', // Add hover effect
+                          backgroundColor: '', // Add hover effect
                         },
                         fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
                       }}
@@ -81,7 +81,7 @@ export const Nav = (props) => {
                       {item} 
                     </Button>
                     <IconButton onMouseEnter={handleProductMenuOpen} >
-                      <ExpandMoreIcon />
+                      <ExpandMoreIcon color=''/>
                     </IconButton>
 
                     <Menu
@@ -102,9 +102,9 @@ export const Nav = (props) => {
                     component={Link}
                     to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                     sx={{
-                      color: '#372B29',
+                      color: 'white',
                       '&:hover': {
-                        backgroundColor: '#FFF4F1', // Add hover effect
+                        backgroundColor: '', // Add hover effect
                       },
                       fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
                     }}
@@ -154,7 +154,7 @@ export const Nav = (props) => {
                     textAlign: 'start',
                     fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
                     '&:hover': {
-                      backgroundColor: '#FFF4F1', // Add hover effect
+                      backgroundColor: '', // Add hover effect
                     },
                   }}
                 >
@@ -174,7 +174,7 @@ export const Nav = (props) => {
                       textAlign: 'start',
                       fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
                       '&:hover': {
-                        backgroundColor: '#FFF4F1', // Add hover effect
+                        backgroundColor: '', // Add hover effect
                       },
                     }}
                   >

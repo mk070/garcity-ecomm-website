@@ -43,7 +43,8 @@ export const Feature = () => {
         display: 'flex',
         padding: { sm: '60px 180px', xs: '40px 20px' },
         flexDirection: {sm:'row',xs:'column'},
-        bgcolor: '#FFF4F1',
+        bgcolor: 'var(--primary-color)',
+        color:'#ffffff'
       }}
     >
 
@@ -60,7 +61,7 @@ export const Feature = () => {
 
         <Box ref={featureRef} sx={{ ml:{sm:'60px',xs:'0'}, display: 'flex', pt: '30px', flexDirection: 'column',  padding:'20px', position:'relative' }}>
 
-          <Typography variant="h4" sx={{ textAlign: 'center',fontSize: { xs:'24px',sm: '32px' } , fontFamily: "integral-Regular  !important", marginBottom:{xs:'30px',sm:'30px'}  }} color>
+          <Typography variant="h4" sx={{ textAlign: 'center',fontSize: { xs:'24px',sm: '40px' } , fontFamily: 'var(--primary-font) !important' , marginBottom:{xs:'30px',sm:'30px'}  }} color>
             Why Garcity ?
           </Typography>
           <Box sx={{ mt: { sm: '30px' } }}>

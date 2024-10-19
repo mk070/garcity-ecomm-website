@@ -111,7 +111,7 @@ const Testimonial = () => {
   return (
     <section className="testimonial-container">
       <div className="title">
-        <Typography sx={{fontSize:{sm:"32px", xs:'24px'}, fontFamily: "integral-Regular  !important" }}>Testimonial</Typography>
+        <Typography fontWeight={600} sx={{fontSize:{sm:"40px", xs:'24px'}, fontFamily: 'var(--primary-font) !important'  }}>Testimonial</Typography>
         <p>What members are saying.</p>
       </div>
 

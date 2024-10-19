@@ -6,7 +6,7 @@ body {
 }
 
 :root {
-  --primary-color: #82A1D1;
+  --primary-color: #94b8ed;
   --secondary-color: #091D3D;
   --trinary-color: #D6A85D;
 
@@ -113,14 +113,14 @@ body {
   .speciality-box {
     margin-right: 80px;
     width: 100%;
-    background-color: #372B29;
+    background-color: var(--primary-color);
     color: #FFF4F1 !important;
     transition: background-color ease-in-out 0.5s; /* Changed transition property */
   }
   
   .speciality-box:hover {
-    background-color: #FFF4F1;
-    color: #372B29!important;
+    background-color:var(--secondary-color);
+    color: var(--trinary-color)!important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
   

@@ -10,7 +10,7 @@ export const Popularcollection = () => {
       <Box sx={{display:'flex', justifyContent:'center', flexDirection:'column', bgcolor:'', paddingTop:'60px'}}>
         <Box sx={{display:'flex' , flexDirection:{sm:'row',xs:'column'}, ml:'0px', justifyContent:'space-around', alignItems:'center'}}>
           <Box sx={{width:{sm:'50%',xs:'100%'}, padding:{xs:'2rem ', sm:''} }} >
-            <Typography variant='h5' sx={{width:{xs:'100%'},fontSize:{sm:'32px'}, fontFamily: "integral-Regular  !important" }}>Popular Work</Typography>
+            <Typography variant='h4' sx={{width:{xs:'100%'},fontSize:{sm:'40px'},fontFamily: 'var(--primary-font) !important', fontWeight:'600' }}>Popular Work</Typography>
             <Typography variant="body2" sx={{mt:'20px', fontSize:{sm:'18px',xs:"16px"}}} >
               Our popular creations are crafted with utmost care for
               numerous startup brands! Begin your clothing brand
@@ -21,11 +21,11 @@ export const Popularcollection = () => {
           <Button  component={Link} to="/product" sx={{
               
               display:{xs:'none', sm:'flex'},
-              background:'#DF9573',
+              background:'var(--trinary-color)',
               mt: {xs:'0px', sm:'30px'},
               borderRadius:'30px',
               '&:hover': {
-                backgroundColor: '#1E1E1E', 
+                backgroundColor: 'var(--secondary-color)', 
                 color:'',// Add hover effect
                 transition: 'background-color 0.3s ease-in-out',
               },

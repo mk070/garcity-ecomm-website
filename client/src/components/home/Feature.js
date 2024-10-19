@@ -47,8 +47,8 @@ export const Feature = () => {
       }}
     >
 
-        <Box sx={{width:{sm:'90%'}, mt: {sm:'50px'}, p:{sm:'0',xs:'20px'},position: 'relative', borderRadius:{sm:'30px',xs:'20px'}}}>
-          <img width={'100%'} src={img} style={{ boxShadow:"black 1px 1px 8px 0px",height:'100%',borderRadius:'20px'}} loading='lazy'  alt="" srcSet="" />
+        <Box sx={{width:{md:'200%', sm:'90%'}, mt: {sm:'50px'}, p:{sm:'0',xs:'20px'},position: 'relative', borderRadius:{sm:'30px',xs:'20px'}}}>
+          <img width={'100%'} src={img} style={{ boxShadow:"black 1px 1px 8px 0px",height:'80%',borderRadius:'20px'}} loading='lazy'  alt="" srcSet="" />
 
           {/* <video  autoPlay loop preload="auto" width={'100%'} src={`${gif}?v=${Date.now()}`}  loading='lazy' style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'20px'}} alt="" srcSet="" /> */}
           {/* <video autoPlay muted loop width={'100%'} style={{ boxShadow:"black 1px 1px 8px 0px",borderRadius:'20px'}}>
@@ -58,7 +58,7 @@ export const Feature = () => {
           {/* <AnimatedGif src ={gif} alt ="gif video" /> */}
         </Box>
 
-        <Box ref={featureRef} sx={{ ml:{sm:'30px',xs:'0'}, display: 'flex', pt: '30px', flexDirection: 'column',  padding:'20px', position:'relative' }}>
+        <Box ref={featureRef} sx={{ ml:{sm:'60px',xs:'0'}, display: 'flex', pt: '30px', flexDirection: 'column',  padding:'20px', position:'relative' }}>
 
           <Typography variant="h4" sx={{ textAlign: 'center',fontSize: { xs:'24px',sm: '32px' } , fontFamily: "integral-Regular  !important", marginBottom:{xs:'30px',sm:'30px'}  }} color>
             Why Garcity ?

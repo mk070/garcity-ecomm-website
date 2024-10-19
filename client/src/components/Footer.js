@@ -12,7 +12,7 @@ export const Footer = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (
-    <Box sx={{ backgroundColor: '#372B29', color: 'white', padding: '20px',width:{xs:'100%'} , height:{sm:'60vh'}}}>
+    <Box sx={{ backgroundColor: '#372B29', color: 'white', padding: '20px', width: '100%', height: { md: 'auto', sm: 'auto' }, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={4} md={3} sx={{ textAlign: 'center' }}>
           <Box sx={{display:"flex",flexDirection:{xs:"row",sm:"column"}}}>
@@ -70,13 +70,14 @@ export const Footer = () => {
         </Grid>
         {/* Other Grid items follow similar pattern */}
       </Grid>
-      <Typography sx={{fontSize:{xs:'14px',sm:'16px'},mt:{sm:'50px', xs:'80px'}}} variant="body2" align="center">
-        {'Copyright © '}
-        Garcity {new Date().getFullYear()}.
-      </Typography>
-      <Typography sx={{fontSize:{xs:'14px',sm:'16px'},margin:{sm:'10px 0', xs:'10px 0'}}} variant="body2" align="center">
-        Crafted by -  <a href="https://varloom.com/" target="_blank" rel="noopener noreferrer"  style={{fontWeight:'bolder',color:"green"}}>Varloom</a> 
-      </Typography>
+      <Box sx={{ mt: 'auto', textAlign: 'center', paddingBottom: '10px' }}>
+    <Typography sx={{ fontSize: { xs: '14px', sm: '16px' }, mt: '10px' }} variant="body2">
+      {'Copyright © '} Garcity {new Date().getFullYear()}.
+    </Typography>
+    <Typography sx={{ fontSize: { xs: '14px', sm: '16px' }, mt: '5px' }} variant="body2">
+      Crafted by - <a href="https://varloom.com/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bolder', color: 'green' }}>Varloom</a>
+    </Typography>
+  </Box>
     </Box>
   )
 }

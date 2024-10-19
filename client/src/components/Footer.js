@@ -12,11 +12,11 @@ export const Footer = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   return (
-    <Box sx={{ backgroundColor: '#372B29', color: 'white', padding: '20px', width: '100%', height: { md: 'auto', sm: 'auto' }, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <Box sx={{ backgroundColor: 'var(--secondary-color)', color: 'white', padding: '20px', width: '100%', height: { md: 'auto', sm: 'auto' }, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', fontFamily: 'var(--secondary-font-regular), sans-serif'}}>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={4} md={3} sx={{ textAlign: 'center' }}>
-          <Box sx={{display:"flex",flexDirection:{xs:"row",sm:"column"}}}>
-            <img src={logo} width={isSmallScreen? '30%' :'40%'} alt="" />
+        <Grid item xs={12} sm={4} mt={6} md={3} sx={{ textAlign: 'center' }}>
+          <Box  ml={'30px'}  sx={{display:"flex",flexDirection:{xs:"row",sm:"column"}, }}>
+            <img src={logo}  width={isSmallScreen? '30%' :'50%'} alt="" />
             <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}, textAlign:{sm:'start'},paddingLeft:{sm:'20px'}}} mt={2}>Garcity, is more than just a garment manufacturer – we are the architects of your unique style.</Typography>
           </Box>
         </Grid>

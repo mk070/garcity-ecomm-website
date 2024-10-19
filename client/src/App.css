@@ -9,6 +9,39 @@ body {
   --primary-color: #82A1D1;
   --secondary-color: #091D3D;
   --trinary-color: #D6A85D;
+
+  --primary-font: 'MyCustomFont';
+  --secondary-font-regular: 'MySecondaryFontRegular';
+  --secondary-font-bold: 'MySecondaryFontBold';
+  --secondary-font-black: 'MySecondaryFontBlack';
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('./assets/fonts/Boston\ Angel\ Regular.ttf') format('truetype'); /* for .otf */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MySecondaryFontRegular';
+  src: url('./assets/fonts/Sukar\ Regular.ttf') format('truetype'); /* for .ttf */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MySecondaryFontBold';
+  src: url('./assets/fonts/SukarBold.ttf') format('truetype'); /* for .ttf */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MySecondaryFontBlack';
+  src: url('./assets/fonts/Sukar\ Black.ttf') format('truetype'); /* for .ttf */
+  font-weight: normal;
+  font-style: normal;
 }
 
 @keyframes floatAnimation {
@@ -74,7 +107,7 @@ body {
   }
 
   .css-5lbw0b-MuiTypography-root, .css-ahj2mt-MuiTypography-root{
-  font-family:'Satoshi-Regular',sans-serif !important;
+  font-family:'var(--secondary-font-regular)',sans-serif !important;
 
   }
   .speciality-box {

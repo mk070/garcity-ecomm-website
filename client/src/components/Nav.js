@@ -42,12 +42,12 @@ export const Nav = (props) => {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex', marginBottom: '64px' }}>
+    <Box sx={{ display: 'flex', marginBottom: '64px'}}>
       <CssBaseline />
       <AppBar sx={{ backgroundColor: 'var(--secondary-color)', color: 'white' }} position="fixed">
         <Toolbar>
           <Box sx={{ flexGrow: 1 }}>
-            <img src={Logo} alt="Logo" style={{ width: '110px' }} />
+            <img src={Logo} alt="Logo" style={{ width: '110px' , marginLeft:'50px'}} />
           </Box>
           <IconButton
             color="inherit"
@@ -75,7 +75,7 @@ export const Nav = (props) => {
                         '&:hover': {
                           backgroundColor: '', // Add hover effect
                         },
-                        fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
+                        fontFamily: ['var(--secondary-font-bold)', 'sans-serif'].join(','),
                       }}
                     >
                       {item} 
@@ -106,7 +106,7 @@ export const Nav = (props) => {
                       '&:hover': {
                         backgroundColor: '', // Add hover effect
                       },
-                      fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
+                      fontFamily: ['var(--secondary-font-bold)', 'sans-serif'].join(','),
                     }}
                   >
                     {item}
@@ -152,7 +152,7 @@ export const Nav = (props) => {
                   onClick={handleDrawerclose}
                   sx={{
                     textAlign: 'start',
-                    fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
+                    fontFamily: ['var(--secondary-font-bold)', 'sans-serif'].join(','),
                     '&:hover': {
                       backgroundColor: '', // Add hover effect
                     },
@@ -172,7 +172,7 @@ export const Nav = (props) => {
                     onClick={handleDrawerclose} // Close drawer when any other item is clicked
                     sx={{
                       textAlign: 'start',
-                      fontFamily: ['Satoshi-Regular', 'sans-serif'].join(','),
+                      fontFamily: ['var(--secondary-font-bold)', 'sans-serif'].join(','),
                       '&:hover': {
                         backgroundColor: '', // Add hover effect
                       },

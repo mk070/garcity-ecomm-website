@@ -47,7 +47,7 @@ export const Nav = (props) => {
       <AppBar sx={{ backgroundColor: 'var(--secondary-color)', color: 'white' }} position="fixed">
         <Toolbar>
           <Box sx={{ flexGrow: 1 }}>
-            <img src={Logo} alt="Logo" style={{ width: '110px' , marginLeft:'50px'}} />
+            <img src={Logo} alt="Logo" style={{ width: '110px' , marginLeft:{xs:'0', sm:'50px'}}} />
           </Box>
           <IconButton
             color="inherit"

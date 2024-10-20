@@ -11,7 +11,7 @@ const PageLoader = () => {
         left: 0,
         width: '100%',
         height: '100%',
-        backgroundColor: '#FFF4F1',
+        backgroundColor: '#d0e3ff',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

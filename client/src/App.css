@@ -6,7 +6,7 @@ body {
 }
 
 :root {
-  --primary-color: #94b8ed;
+  --primary-color: #d0e3ff;
   --secondary-color: #091D3D;
   --trinary-color: #D6A85D;
 
@@ -215,3 +215,97 @@ body {
 
 
 
+:root {
+  --primary-color: #94b8ed;
+  --secondary-color: #091D3D;
+  --trinary-color: #D6A85D;
+}
+
+/* Keyframes for fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Start below and move upwards */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at normal position */
+  }
+}
+
+/* Animation timing */
+.card-animation {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0; /* Start with hidden cards */
+}
+
+/* Stagger the appearance of the cards */
+.card-animation:nth-of-type(1) {
+  animation-delay: 0.1s;
+}
+
+.card-animation:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.card-animation:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+
+.card-animation:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+
+.card-animation:nth-of-type(5) {
+  animation-delay: 0.5s;
+}
+
+.card-animation:nth-of-type(6) {
+  animation-delay: 0.6s;
+}
+
+/* Background color styles */
+.list-bg-1 {
+  background-color: rgba(148, 184, 237, 0.1);
+}
+
+
+.list-bg-2 {
+  background-color: rgba(214, 168, 93, 0.1);
+}
+/* .list-bg-3 {
+  background-color: rgba(9, 29, 61, 0.1);
+} */
+
+/* General card styles */
+.card-content {
+  padding: 20px !important;
+  border-radius: 10px !important;
+  margin-bottom: 30px !important;
+  transition: transform 0.3s ease-in-out !important; /* Slight hover effect */
+}
+
+.card-content:hover {
+  transform: translateY(-5px) !important; /* Slight lift on hover */
+}
+
+/* Keyframe animation for the text */
+@keyframes textFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Start below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the normal position */
+  }
+}
+
+/* Apply the animation to the text */
+.text-animation {
+  animation: textFadeInUp 1s ease-out forwards !important;
+}
+
+.card-details{
+  margin-left: 20px !important;
+}

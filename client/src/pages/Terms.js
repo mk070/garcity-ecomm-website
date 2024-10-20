@@ -1,26 +1,51 @@
-import React from 'react';
+import {React,useEffect} from 'react';
 import { Box, Typography, Divider, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-import ToleranceIcon from '@mui/icons-material/Rule'; // Example icon for tolerance
-import PaymentIcon from '@mui/icons-material/AttachMoney'; // Example icon for payment terms
-import DeliveryIcon from '@mui/icons-material/LocalShipping'; // Example icon for delivery
-import RefundIcon from '@mui/icons-material/AssignmentReturn'; // Example icon for refund and return
-import GsmIcon from '@mui/icons-material/Scale'; // Example icon for GSM tolerance
-import BankIcon from '@mui/icons-material/AccountBalance'; // Example icon for payment processing
+import ToleranceIcon from '@mui/icons-material/Rule'; // Placeholder for 3D icon (Replace with 3D version)
+import PaymentIcon from '@mui/icons-material/AttachMoney'; // Placeholder for 3D icon
+import DeliveryIcon from '@mui/icons-material/LocalShipping'; // Placeholder for 3D icon
+import RefundIcon from '@mui/icons-material/AssignmentReturn'; // Placeholder for 3D icon
+import GsmIcon from '@mui/icons-material/Scale'; // Placeholder for 3D icon
+import BankIcon from '@mui/icons-material/AccountBalance'; // Placeholder for 3D icon
 
 const Terms = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+
+  },[])
   return (
     <Box sx={{ padding: '20px', maxWidth: '900px', margin: '0 auto', fontSize: '18px' }}>
-      <Typography variant="h4" gutterBottom sx={{fontSize:'65px', fontWeight: 'bold', fontFamily:'var(--primary-font) !important', textAlign: 'center' }}>
-        Terms & <span style={{ color: 'var(--trinary-color)', fontWeight:700, fontFamily:'inherit'}}>Conditions</span>
+      <Typography
+        variant="h4"
+        gutterBottom
+        className="text-animation"
+        sx={{
+          fontSize: { sm: '65px' },
+          fontWeight: 'bold',
+          fontFamily: 'var(--primary-font) !important',
+          textAlign: 'center',
+          opacity: 0,
+        }}
+      >
+        Terms &{' '}
+        <span
+          style={{
+            color: 'var(--trinary-color)',
+            fontWeight: 700,
+            fontFamily: 'inherit',
+          }}
+          className="text-animation"
+        >
+          Conditions
+        </span>
       </Typography>
 
       {/* Product Tolerances */}
-      <List sx={{ backgroundColor: 'rgba(148, 184, 237, 0.1)', padding: '20px', borderRadius: '10px', marginBottom: '20px' }}>
-        <ListItem>
+      <List className="card-animation list-bg-1 card-content !important">
+        <ListItem className='terms-cards'>
           <ListItemIcon>
-            <ToleranceIcon color="primary" />
+            <ToleranceIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
-          <ListItemText>
+          <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Product Tolerances</Typography>
             <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
               <strong>Quantity Variation:</strong> The final delivered quantity may vary by ±5% to 10%.
@@ -34,18 +59,17 @@ const Terms = () => {
           </ListItemText>
         </ListItem>
       </List>
-      <Divider />
 
       {/* Payment Terms */}
-      <List sx={{ backgroundColor: 'rgba(9, 29, 61, 0.1)', padding: '20px', borderRadius: '10px', marginBottom: '20px' }}>
+      <List className="card-animation list-bg-2 card-content">
         <ListItem>
           <ListItemIcon>
-            <PaymentIcon color="primary" />
+            <PaymentIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
-          <ListItemText>
+          <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Payment Terms</Typography>
             <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
-              <strong>Payment Structure:</strong> A 60% advance payment is required to confirm your order. The remaining 40% must be paid before the products are shipped from our facility.
+              <strong>Payment Structure:</strong> A 60% advance payment is required to confirm your order.
             </Typography>
             <Typography variant="body1" sx={{ marginTop: '5px', fontSize: '18px' }}>
               <strong>No Credit:</strong> We do not offer credit facilities. All payments must be made as per the above terms.
@@ -53,34 +77,32 @@ const Terms = () => {
           </ListItemText>
         </ListItem>
       </List>
-      <Divider />
 
       {/* Production & Delivery Timeline */}
-      <List sx={{ backgroundColor: 'rgba(214, 168, 93, 0.1)', padding: '20px', borderRadius: '10px', marginBottom: '20px' }}>
+      <List className="card-animation list-bg-1 card-content">
         <ListItem>
           <ListItemIcon>
-            <DeliveryIcon color="primary" />
+            <DeliveryIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
-          <ListItemText>
+          <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Production & Delivery Timeline</Typography>
             <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
-              <strong>Production Time:</strong> Our standard production timeline is between 14 and 30 working days, depending on the complexity of the order.
+              <strong>Production Time:</strong> Our standard production timeline is between 14 and 30 working days.
             </Typography>
             <Typography variant="body1" sx={{ marginTop: '5px', fontSize: '18px' }}>
-              <strong>Delivery Time:</strong> After dispatch, delivery typically takes 4-8 days, depending on the destination and shipping method.
+              <strong>Delivery Time:</strong> After dispatch, delivery typically takes 4-8 days.
             </Typography>
           </ListItemText>
         </ListItem>
       </List>
-      <Divider />
 
       {/* Refund, Return & Exchange Policy */}
-      <List sx={{ backgroundColor: 'rgba(148, 184, 237, 0.1)', padding: '20px', borderRadius: '10px', marginBottom: '20px' }}>
+      <List className="card-animation list-bg-2 card-content">
         <ListItem>
           <ListItemIcon>
-            <RefundIcon color="primary" />
+            <RefundIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
-          <ListItemText>
+          <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Refund, Return & Exchange Policy</Typography>
             <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
               <strong>No Returns, Refunds, or Exchanges:</strong> All sales are final. We do not accept returns, offer refunds, or facilitate exchanges.
@@ -88,15 +110,14 @@ const Terms = () => {
           </ListItemText>
         </ListItem>
       </List>
-      <Divider />
 
       {/* GSM Tolerance */}
-      <List sx={{ backgroundColor: 'rgba(9, 29, 61, 0.1)', padding: '20px', borderRadius: '10px', marginBottom: '20px' }}>
+      <List className="card-animation list-bg-1 card-content">
         <ListItem>
           <ListItemIcon>
-            <GsmIcon color="primary" />
+            <GsmIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
-          <ListItemText>
+          <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>GSM Tolerance</Typography>
             <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
               <strong>Fabric Weight:</strong> The GSM (grams per square meter) of the fabric may vary by ±5%.
@@ -104,18 +125,17 @@ const Terms = () => {
           </ListItemText>
         </ListItem>
       </List>
-      <Divider />
 
       {/* Payment Processing */}
-      <List sx={{ backgroundColor: 'rgba(214, 168, 93, 0.1)', padding: '20px', borderRadius: '10px', marginBottom: '20px' }}>
+      <List className="card-animation list-bg-2 card-content">
         <ListItem>
           <ListItemIcon>
-            <BankIcon color="primary" />
+            <BankIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
-          <ListItemText>
+          <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Payment Processing</Typography>
             <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
-              <strong>Accountable Payments Only:</strong> All payments must be made through accountable channels (bank transfer, credit/debit card, etc.). Cash payments are not accepted.
+              <strong>Accountable Payments Only:</strong> All payments must be made through accountable channels (bank transfer, credit/debit card, etc.).
             </Typography>
           </ListItemText>
         </ListItem>

@@ -86,6 +86,7 @@ export const Feature = () => {
             fontFamily: 'var(--primary-font) !important',
             marginBottom: { xs: '30px', sm: '0px' },
             color: '#091D3D', // Primary text color
+            fontWeight:'600'
           }}
         >
           Why Garcity?

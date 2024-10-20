@@ -81,7 +81,6 @@ const styles = {
     
     titleTextColor: "#372b29",
     rowTitleColor: "#372b29",
-    bgcolor:'red'
  
 };
  

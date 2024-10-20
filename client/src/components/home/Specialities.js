@@ -78,6 +78,7 @@ export const Specialities = () => {
       {isVisible && (
         <Brush
           type={1} // Set the type of the brush
+          color={'var(--trinary-color)'}
           className="brush-animate" // Apply the animation class
         >
           <Typography

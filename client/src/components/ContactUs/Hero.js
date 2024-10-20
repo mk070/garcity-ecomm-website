@@ -28,7 +28,7 @@ export const Hero = () => {
                 transition: 'opacity 1s ease-out' // Adjust timing function and duration as needed
             }}
             >
-            Hello Let's work <span style={{ color: 'var(--trinary-color)', fontWeight:700, fontFamily:'inherit'}}> Together</span> 
+            Hello Let's work <span style={{ color: 'var(--trinary-color)', fontWeight:500, fontFamily:'inherit'}}> Together</span> 
             </Typography>                
              <Typography sx={{fontSize:{sm:"20px"},textAlign: {xs:'center',sm:'center'} ,mt:{xs:'40px',sm:"30px"}}}>We are always happy to help you! 😊<br /> Give us a call or Whatsapp App or e-mail us and we’ll have a happy person get back to you right away.</Typography>
                  <a href="https://cal.com/garcity" style={{ textDecoration: 'none' }}> {/* Replace 'https://example.com' with your actual URL */}

@@ -82,14 +82,23 @@ export const Feature = () => {
           variant="h4"
           sx={{
             textAlign: 'center',
-            fontSize: { xs: '24px', sm: '40px' },
+            fontSize: { xs: '24px', sm: '45px' },
             fontFamily: 'var(--primary-font) !important',
             marginBottom: { xs: '30px', sm: '0px' },
             color: '#091D3D', // Primary text color
-            fontWeight:'600'
+            fontWeight:'550'
           }}
         >
-          Why Garcity?
+          Why <span
+          style={{
+            color: 'var(--trinary-color)',
+            fontWeight: 550,
+            fontFamily: 'inherit',
+          }}
+          className="text-animation"
+        >
+          Garcity ?
+        </span>
         </Typography>
         <Box sx={{ mt: { sm: '30px' }, color: 'black' }}>
           <Typography className="point" sx={{ fontSize: { sm: '18px' }, lineHeight: { sm: '30px' }, mb: '10px' }}>

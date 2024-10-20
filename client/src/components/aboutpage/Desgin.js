@@ -128,7 +128,7 @@ const Design = () => {
     <Container maxWidth="xl" position='sticky' sx={{pt:{xs:'20px'}, backgroundColor: "#d0e3ff", position: 'sticky', top:{sm:'80px',xs:'10px'}, height: containerHeight, marginTop: { xs: '10px' }, display: 'flex', flexDirection: { xs: 'column-reverse', sm: 'row-reverse' }, justifyContent: 'center', alignItems: 'center', gap: { xs: '1px', sm: '0px' } }}>
       
       <Box sx={{ height: { xs: '100%', sm: '100%' }, width: { sm: "100%" }, pt: { sm: "50px" }, pr: { sm: "120px" } }}>
-        <Typography mx={1} variant="h3" sx={{ fontWeight:'600',fontSize: {sm:'40px',xs:'20px'},  fontFamily: "var(--primary-font)  !important",  margin: { sm: '50px 0' ,xs:'20px 0'} }}>
+        <Typography mx={1} variant="h3" sx={{ fontWeight:'500',fontSize: {sm:'40px',xs:'20px'},  fontFamily: "var(--primary-font)  !important",  margin: { sm: '50px 0' ,xs:'20px 0'} }}>
           DESIGNING
         </Typography>
         <Typography height={isExpanded || isSmallScreen ? '100%' : '100%'}  overflow="hidden" sx={{lineHeight:{sm:'34px'}, fontSize:{sm:'18px',xs:'16px'},width: { xs: '100%', sm: '100%' }, marginBottom: '50px' }}>

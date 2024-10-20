@@ -14,7 +14,7 @@ export const Details = () => {
           <Box sx={{width:{sm:'100%'}, height:{sm:"95px"}}}>
                 <img src={mission} alt="" style={{width:"90px", height:"100%",marginBottom:'0'}} srcset="" /> 
           </Box>         
-          <Typography variant='h4' sx={{ fontWeight:'600',color:'black' ,fontFamily: "var(--primary-font)  !important" ,mb: { sm: '' ,xs:'15px'} }}>Mission:</Typography>
+          <Typography variant='h4' sx={{ fontWeight:'500',color:'black' ,fontFamily: "var(--primary-font)  !important" ,mb: { sm: '' ,xs:'15px'} }}>Mission:</Typography>
           <Typography variant='body1' sx={{ marginTop: { sm: '30px' } ,color:'black' }}>
                 Revolutionize garment manufacturing with innovative, sustainable solutions, exceeding
                 client expectations for growth and success.
@@ -29,7 +29,7 @@ export const Details = () => {
           </Box>
           
 
-          <Typography variant='h4'  sx={{fontWeight:'600',color:'black' ,  fontFamily: "var(--primary-font)  !important" ,mb: { sm: '' ,xs:'15px'} }}>Vision:</Typography>
+          <Typography variant='h4'  sx={{fontWeight:'500',color:'black' ,  fontFamily: "var(--primary-font)  !important" ,mb: { sm: '' ,xs:'15px'} }}>Vision:</Typography>
           <Typography sx={{ marginTop: { sm: '30px' },color:'black'  }}>
                 Become the go-to for premium garment manufacturing, renowned for excellence,
                 innovation, and sustainability, driving positive industry change.
@@ -43,7 +43,7 @@ export const Details = () => {
                 <img src={value} alt="" style={{width:"80px",height:"80px", marginBottom:'0'}} srcset="" /> 
           </Box>
 
-          <Typography variant='h4'  sx={{fontWeight:'600',color:'black' , fontFamily: "var(--primary-font)  !important" ,m: { sm: '' ,xs:'15px 0'} }}>Values:</Typography>
+          <Typography variant='h4'  sx={{fontWeight:'500',color:'black' , fontFamily: "var(--primary-font)  !important" ,m: { sm: '' ,xs:'15px 0'} }}>Values:</Typography>
           <Typography sx={{ marginTop: { sm: '30px' },color:'black'  }}>
            Our values are rooted in excellence, innovation, integrity, and sustainability, guiding us to deliver superior solutions while fostering trust and environmental responsibility.
           </Typography>

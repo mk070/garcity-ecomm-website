@@ -76,23 +76,27 @@ export const Specialities = () => {
       }}
     >
       {isVisible && (
-        <Brush
-          type={1} // Set the type of the brush
-          color={'var(--trinary-color)'}
-          className="brush-animate" // Apply the animation class
-        >
+      
           <Typography
             sx={{
-              fontSize: { xs: '24px', sm: '40px' },
+              fontSize: { xs: '24px', sm: '45px' },
               fontFamily: 'var(--primary-font) !important',
-              fontWeight: 600,
+              fontWeight: 550,
               color: 'black', // Text color remains black
               zIndex: 2,
             }}
           >
-            Our Specialities
+            Our <span
+          style={{
+            color: 'var(--trinary-color)',
+            fontWeight: 550,
+            fontFamily: 'inherit',
+          }}
+          className="text-animation"
+        >
+          Specialities
+        </span>
           </Typography>
-        </Brush>
       )}
     </Box>
 

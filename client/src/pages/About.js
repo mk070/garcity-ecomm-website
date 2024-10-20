@@ -34,7 +34,7 @@ export const About = () => {
         position={'sticky'}
         zIndex={-1}
         sx={{
-          fontWeight:'600',
+          fontWeight:'500',
           fontSize: isSmallScreen ? '24px' : '50px',
           fontFamily: "var(--primary-font)  !important",
           marginBottom: '0px',

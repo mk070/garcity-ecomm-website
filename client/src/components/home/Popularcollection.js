@@ -10,7 +10,18 @@ export const Popularcollection = () => {
       <Box sx={{display:'flex', justifyContent:'center', flexDirection:'column', bgcolor:'', paddingTop:'60px'}}>
         <Box sx={{display:'flex' , flexDirection:{sm:'row',xs:'column'}, ml:'0px', justifyContent:'space-around', alignItems:'center'}}>
           <Box sx={{width:{sm:'50%',xs:'100%'}, padding:{xs:'2rem ', sm:''} }} >
-            <Typography variant='h4' sx={{width:{xs:'100%'},fontSize:{sm:'40px'},fontFamily: 'var(--primary-font) !important', fontWeight:'600' }}>Popular Work</Typography>
+            <Typography variant='h4' sx={{width:{xs:'100%'}, fontSize: { xs: '24px', sm: '45px' },fontFamily: 'var(--primary-font) !important', fontWeight:'550' }}>
+              <span
+                style={{
+                  color: 'var(--trinary-color)',
+                  fontWeight: 550,
+                  fontFamily: 'inherit',
+                }}
+                className="text-animation"
+              >
+                Popular
+              </span> Work
+            </Typography>
             <Typography variant="body2" sx={{mt:'20px', fontSize:{sm:'18px',xs:"16px"}}} >
               Our popular creations are crafted with utmost care for
               numerous startup brands! Begin your clothing brand

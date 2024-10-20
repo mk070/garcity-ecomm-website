@@ -20,7 +20,7 @@ const Terms = () => {
         className="text-animation"
         sx={{
           fontSize: { sm: '65px' },
-          fontWeight: 'bold',
+          fontWeight: '500',
           fontFamily: 'var(--primary-font) !important',
           textAlign: 'center',
           opacity: 0,
@@ -30,7 +30,7 @@ const Terms = () => {
         <span
           style={{
             color: 'var(--trinary-color)',
-            fontWeight: 700,
+            fontWeight: 500,
             fontFamily: 'inherit',
           }}
           className="text-animation"

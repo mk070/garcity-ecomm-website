@@ -111,7 +111,7 @@ const Testimonial = () => {
   return (
     <section className="testimonial-container">
       <div className="title">
-        <Typography fontWeight={600} sx={{fontSize:{sm:"40px", xs:'24px'}, fontFamily: 'var(--primary-font) !important'  }}>Testimonial</Typography>
+        <Typography fontWeight={500} sx={{ fontSize: { xs: '24px', sm: '45px' }, fontFamily: 'var(--primary-font) !important'  }}>Testimonial</Typography>
         <p>What members are saying.</p>
       </div>
 
@@ -125,7 +125,7 @@ const Testimonial = () => {
   options={{
     perPage: 1,
     autoplay: true,
-    speed: 600,
+    speed: 500,
     rewind: true,
     rewindByDrag: true,
   }}

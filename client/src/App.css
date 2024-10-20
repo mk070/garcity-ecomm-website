@@ -215,11 +215,6 @@ body {
 
 
 
-:root {
-  --primary-color: #94b8ed;
-  --secondary-color: #091D3D;
-  --trinary-color: #D6A85D;
-}
 
 /* Keyframes for fade-in and slide-up animation */
 @keyframes fadeInUp {

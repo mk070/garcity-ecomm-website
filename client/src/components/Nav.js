@@ -50,7 +50,7 @@ export const Nav = (props) => {
             <img src={Logo} alt="Logo" style={{ width: '110px' , marginLeft:{xs:'0', sm:'50px'}}} />
           </Box>
           <IconButton
-            color="inherit"
+            color="white"
             aria-label="open drawer"
             edge="end"
             sx={{ color: 'white', display: { sm: 'none' } }}
@@ -80,7 +80,7 @@ export const Nav = (props) => {
                     >
                       {item} 
                     </Button>
-                    <IconButton onMouseEnter={handleProductMenuOpen} >
+                    <IconButton color='inherit' onMouseEnter={handleProductMenuOpen} >
                       <ExpandMoreIcon color=''/>
                     </IconButton>
 
@@ -160,7 +160,7 @@ export const Nav = (props) => {
                 >
                   <ListItemText primary={item} />
                 </ListItemButton>
-                <IconButton onMouseEnter={handleProductMenuOpen} onMouseLeave={handleProductMenuClose } >
+                <IconButton color='white' onMouseEnter={handleProductMenuOpen} onMouseLeave={handleProductMenuClose } >
                   <ExpandMoreIcon />
                 </IconButton>
                 </>

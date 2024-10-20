@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Box, Typography } from '@mui/material';
 import { gsap, TimelineMax } from "gsap";
+import { Brush } from 'react-brush-text'; // Import Brush from react-brush-text
 
 export const Specialities = () => {
   const specialitiesRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const boxRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -33,15 +35,67 @@ export const Specialities = () => {
 
     tl.staggerTo(".speciality-box", 1.5, { opacity: 1, y: 0, ease: "power3.out" }, 0.5);
   };
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.5 } // 50% visibility triggers the animation
+    );
+
+    if (boxRef.current) {
+      observer.observe(boxRef.current);
+    }
+
+    return () => {
+      if (boxRef.current) {
+        observer.unobserve(boxRef.current);
+      }
+    };
+  }, []);
+
+
+
 
   return (
     <Box ref={specialitiesRef} sx={{ display: {sm:'block', xl:"flex"}, flexDirection: { sm: 'column' } }}>
+<Box
+      ref={boxRef}
+      sx={{
+        width: { sm: '100%' },
+        padding: { sm: '60px' },
+        mt: { xs: '40px', sm: '0px' },
+        display: 'flex',
+        justifyContent: 'center',
+        position: 'relative',
+      }}
+    >
+      {isVisible && (
+        <Brush
+          type={1} // Set the type of the brush
+          className="brush-animate" // Apply the animation class
+        >
+          <Typography
+            sx={{
+              fontSize: { xs: '24px', sm: '40px' },
+              fontFamily: 'var(--primary-font) !important',
+              fontWeight: 600,
+              color: 'black', // Text color remains black
+              zIndex: 2,
+            }}
+          >
+            Our Specialities
+          </Typography>
+        </Brush>
+      )}
+    </Box>
 
-      <Box sx={{ width: { sm: '100%' }, padding: { sm: '60px' },mt:{xs:'40px',sm:"0px"} ,display: 'flex', justifyContent: 'center', fontFamily: 'Satoshi-Regular' }}>
-        <Typography  sx={{ fontSize:{xs:'24px', sm:'40px'}, fontFamily: 'var(--primary-font) !important', fontWeight:600}}> Our Specialities</Typography>
-      </Box>
-
-      <Box sx={{ display: 'flex', mt: { sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: '35px', sm: '0 100px' }, background: 'linear-gradient(to top, #FFF4F1, #fff)',   
+      <Box sx={{ display: 'flex', mt: { sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: '35px', sm: '0 100px' }, background: 'linear-gradient(to top, rgb(131 186 241 / 49%), #fff)',   
     }}>
 
         <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 

@@ -79,7 +79,7 @@ img {
 .splide__slide {
   display: flex;
   align-items: center;
-  background-color: #94b7edee;
+  background-color: rgba(0, 0, 0, 0.1);
   padding: 3rem 1.875rem;
   border-radius: 1rem;
   gap: 1rem;

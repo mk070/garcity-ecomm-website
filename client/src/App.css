@@ -103,18 +103,20 @@ body {
 
 
   .css-7dv1rb-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab{
-    background-color: #372B29 !important;
+    background-color: var(--secondary-color) !important;
   }
 
   .css-5lbw0b-MuiTypography-root, .css-ahj2mt-MuiTypography-root{
   font-family:'var(--secondary-font-regular)',sans-serif !important;
 
+
+  /* home-speciality-box */
   }
   .speciality-box {
     margin-right: 80px;
     width: 100%;
     background-color: var(--primary-color);
-    color: #FFF4F1 !important;
+    /* color: #FFF4F1 !important; */
     transition: background-color ease-in-out 0.5s; /* Changed transition property */
   }
   
@@ -123,6 +125,21 @@ body {
     color: var(--trinary-color)!important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   }
+  .brush-animate {
+    animation: brush-stroke 2s ease forwards; /* 2s animation for the brush stroke */
+  }
+  
+  @keyframes brush-stroke {
+    0% {
+      transform: scaleX(0); /* Start the brush as hidden (width 0) */
+      transform-origin: left; /* Animate from the left to right */
+    }
+    100% {
+      transform: scaleX(1); /* Fully reveal the brush */
+    }
+  }
+  
+  
   
 
   @keyframes fadeIn {
@@ -142,10 +159,6 @@ body {
     opacity: 0;
   }
   
-
-.contact-us{
-  
-}
 
 .sticky{
   position: sticky;

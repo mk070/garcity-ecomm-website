@@ -21,13 +21,13 @@ export const Clothes = ({ category, images, names }) => {
           display: "flex",
           justifyContent: 'center',
           '& a': {
-            color: '#DF9573', // Inherit text color
+            color: 'var(--secondary-color)', // Inherit text color
             textDecoration: 'none', // Remove underline
-            transition: 'transform 10s ease-in-out',
+            transition: 'transform 30s ease-in-out',
             textDecoration: 'underline'
           },
           '& a:hover': {
-            color: 'black',
+            color: 'var(--primary-color)',
             transform: 'scale(1)',
             textDecoration: 'underline'
           }
@@ -86,7 +86,7 @@ export const Clothes = ({ category, images, names }) => {
             transition: 'transform 10s ease-in-out',
           },
           '& a:hover': {
-            color: '#DF9573',
+            color: 'var(--primary-color)',
             transform: 'scale(1)',
           }
         }}>

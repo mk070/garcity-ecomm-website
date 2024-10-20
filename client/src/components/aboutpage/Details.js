@@ -7,15 +7,15 @@ import value from "../../assets/images/about/value.avif"
 export const Details = () => {
 
   return (
-      <Box sx={{ display: 'flex', mt: { sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: '50px 30px', sm: '0 100px' }, gap:'30px'}}>
+      <Box sx={{ display: 'flex', mt: { sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' },color:'black', padding: { xs: '50px 30px', sm: '0 100px' }, gap:'30px'}}>
 
-        <Box className="speciality-box" sx={{borderRadius:{sm:"30px"} ,mr: { sm: '20px' }, backgroundColor:'var(--primary-color)',color:'#ffffff !important',boxShadow:"5px 5px 2px #c3c3c3,-5px -5px 2px #fdfdfd",padding: {xs:'40px', sm: '60px 60px' },  }}>
+        <Box className="speciality-box" sx={{borderRadius:{sm:"30px"},color:'black' ,mr: { sm: '20px' }, backgroundColor:'var(--primary-color)',color:'#ffffff !important',boxShadow:"5px 5px 2px #c3c3c3,-5px -5px 2px #fdfdfd",padding: {xs:'40px', sm: '60px 60px' },  }}>
           {/* <Typography variant='h3' sx={{fontFamily: "integral-Regular  !important" }} >01.</Typography> */}
           <Box sx={{width:{sm:'100%'}, height:{sm:"95px"}}}>
                 <img src={mission} alt="" style={{width:"90px", height:"100%",marginBottom:'0'}} srcset="" /> 
           </Box>         
-          <Typography variant='h4' sx={{ fontWeight:'600',fontFamily: "var(--primary-font)  !important" ,mb: { sm: '' ,xs:'15px'} }}>Mission:</Typography>
-          <Typography variant='body1' sx={{ marginTop: { sm: '30px' } }}>
+          <Typography variant='h4' sx={{ fontWeight:'600',color:'black' ,fontFamily: "var(--primary-font)  !important" ,mb: { sm: '' ,xs:'15px'} }}>Mission:</Typography>
+          <Typography variant='body1' sx={{ marginTop: { sm: '30px' } ,color:'black' }}>
                 Revolutionize garment manufacturing with innovative, sustainable solutions, exceeding
                 client expectations for growth and success.
           </Typography>
@@ -29,8 +29,8 @@ export const Details = () => {
           </Box>
           
 
-          <Typography variant='h4'  sx={{fontWeight:'600',  fontFamily: "var(--primary-font)  !important" ,mb: { sm: '' ,xs:'15px'} }}>Vision:</Typography>
-          <Typography sx={{ marginTop: { sm: '30px' } }}>
+          <Typography variant='h4'  sx={{fontWeight:'600',color:'black' ,  fontFamily: "var(--primary-font)  !important" ,mb: { sm: '' ,xs:'15px'} }}>Vision:</Typography>
+          <Typography sx={{ marginTop: { sm: '30px' },color:'black'  }}>
                 Become the go-to for premium garment manufacturing, renowned for excellence,
                 innovation, and sustainability, driving positive industry change.
           </Typography>
@@ -43,8 +43,8 @@ export const Details = () => {
                 <img src={value} alt="" style={{width:"80px",height:"80px", marginBottom:'0'}} srcset="" /> 
           </Box>
 
-          <Typography variant='h4'  sx={{fontWeight:'600', fontFamily: "var(--primary-font)  !important" ,m: { sm: '' ,xs:'15px 0'} }}>Values:</Typography>
-          <Typography sx={{ marginTop: { sm: '30px' } }}>
+          <Typography variant='h4'  sx={{fontWeight:'600',color:'black' , fontFamily: "var(--primary-font)  !important" ,m: { sm: '' ,xs:'15px 0'} }}>Values:</Typography>
+          <Typography sx={{ marginTop: { sm: '30px' },color:'black'  }}>
            Our values are rooted in excellence, innovation, integrity, and sustainability, guiding us to deliver superior solutions while fostering trust and environmental responsibility.
           </Typography>
         </Box>

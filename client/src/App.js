@@ -9,6 +9,7 @@ import { lazyLoad } from './lazyLoad.js';
 // import {Product} from './pages/Product'
 import { Home } from './pages/Home.js';
 import { Helmet } from 'react-helmet';
+import  Terms  from './pages/Terms.js';
 
 // Lazy load components
 const Nav = lazyLoad("./components/Nav", "Nav");
@@ -118,6 +119,11 @@ function App() {
         <Route path='/contact' element={
           <Suspense fallback={<PageLoader />}>
             <Contact />
+          </Suspense>
+        } />
+        <Route path='/terms&conditions' element={
+          <Suspense fallback={<PageLoader />}>
+            <Terms />
           </Suspense>
         } />
         <Route

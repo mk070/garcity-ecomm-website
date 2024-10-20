@@ -32,10 +32,10 @@ export const Slider = () => {
             zIndex: '100',
             color: 'white',
             textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
-            fontFamily: 'integral-Regular !important',
+            fontFamily: 'var(--primary-font) !important',
             top: '50%', // Adjusted top value to center vertically
             transform: 'translateY(-50%) ', // Added this line to center vertically
-            left: {sm:'350px', xs:'55px'}
+            // left: {sm:'350px', xs:'55px'}
           }}
         >
           Products

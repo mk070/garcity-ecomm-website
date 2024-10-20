@@ -122,36 +122,39 @@ const Testimonial = () => {
         </blockquote>
 
         <Splide
-          options={{
-            perPage: 1,
-            autoplay: true,
-            speed: 1000,
-            rewind: true,
-            rewindByDrag: true,
-          }} >
-          {reviews.map((review) => (
-            <SplideSlide key={review.id}>
-              <img className="review-img" src={review.image} alt="" />
-              <div className="content">
-               {isSmallScreen ? 
-                (<p className="text">{review.mobilereview}</p>
-                  ):(
-                    <p className="text">{review.text}</p>
-                )}
-                <div className="info">
-                  <div className="rating">
-                    <span className="star">&#9733;</span>
-                    <span className="star">&#9733;</span>
-                    <span className="star">&#9733;</span>
-                    <span className="star">&#9733;</span>
-                    <span className="star">&#9733;</span>
-                  </div>
-                  <p className="user">{review.name}</p>
-                </div>
-              </div>
-            </SplideSlide>
-          ))}
-        </Splide>
+  options={{
+    perPage: 1,
+    autoplay: true,
+    speed: 600,
+    rewind: true,
+    rewindByDrag: true,
+  }}
+>
+  {reviews.map((review) => (
+    <SplideSlide key={review.id}>
+      <div className="testimonial-slide">
+        <img className="review-img" src={review.image} alt="" />
+        <div className="content">
+          {isSmallScreen ? (
+            <p className="text">{review.mobilereview}</p>
+          ) : (
+            <p className="text">{review.text}</p>
+          )}
+          <div className="info">
+            <div className="rating">
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+            </div>
+            <p className="user">{review.name}</p>
+          </div>
+        </div>
+      </div>
+    </SplideSlide>
+  ))}
+</Splide>
       </div>
     </section>
   );

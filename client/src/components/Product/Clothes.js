@@ -33,7 +33,7 @@ export const Clothes = ({ category, images, names }) => {
           }
         }}
       >
-        <Link style={{ fontFamily: 'integral-Regular', fontWeight: 'normal', fontSize: { sm: '32px', xs: "24px" }, textDecoration: 'none !important' }} to={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>{category}</Link>
+        <Link style={{ fontFamily: 'var(--primary-font)', fontWeight: 'normal', fontSize: { sm: '32px', xs: "24px" }, textDecoration: 'none !important' }} to={`/product/${category.toLowerCase().replace(/\s+/g, '')}`}>{category}</Link>
       </Typography>
       <Container maxWidth="xl" sx={{ width: "86%", marginBottom: { sm: "0px", xs: '10px' } }}>
         <Swiper

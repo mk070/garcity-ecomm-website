@@ -8,7 +8,7 @@ import Logo from '../assets/images/logo.png'; // Import your logo
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; // Import ExpandMoreIcon
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Product', 'Gallery', 'About', 'Contact'];
+const navItems = ['Home', 'Product', 'Gallery', 'About', 'Contact','Terms&Conditions'];
 
 export const Nav = (props) => {
   const { window } = props;

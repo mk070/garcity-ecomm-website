@@ -116,8 +116,9 @@ body {
     margin-right: 80px;
     width: 100%;
     background-color: var(--primary-color);
-    /* color: #FFF4F1 !important; */
+    /* color: red !important; */
     transition: background-color ease-in-out 0.5s; /* Changed transition property */
+    
   }
   
   .speciality-box:hover {
@@ -194,3 +195,30 @@ body {
   background-color: #372B29 !important;
 
 }
+
+/* terms and conditions */
+
+
+.terms-container {
+  background: linear-gradient(135deg, var(--primary-color) 50%, var(--secondary-color) 100%);
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.terms-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.terms-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+.terms-icon {
+  margin-bottom: 10px;
+}
+

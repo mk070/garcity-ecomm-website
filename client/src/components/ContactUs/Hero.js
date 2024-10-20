@@ -20,29 +20,30 @@ export const Hero = () => {
         <Box sx={{display:"flex",justifyContent:{sm:"center",xs:"flex-start"},height:{xs:'75vh',sm:"40vh"},alignItems:"center",flexDirection:{sm:"column", xs:'column'},mb:{sm:"20px"}}}>
         <Typography
             sx={{textAlign:"center",
-                fontSize: {xs:'34px', sm:'40px'},
+                fontSize: {xs:'34px', sm:'65px'},
                 lineHeight:{xs:"44px",sm:'100px'},
-                mt:{sm:'0',xs:'50px'},
-                fontFamily: 'integral-Regular !important',
+                 mt:{sm:'0',xs:'50px'}, 
+                fontFamily: "var(--primary-font)  !important",
                 opacity: isVisible ? 1 : 0,
                 transition: 'opacity 1s ease-out' // Adjust timing function and duration as needed
             }}
             >
-            Hello Let's work <span style={{ color: '#DF9573', fontWeight:700, fontFamily:'inherit'}}> Together</span> 
+            Hello Let's work <span style={{ color: 'var(--trinary-color)', fontWeight:700, fontFamily:'inherit'}}> Together</span> 
             </Typography>                
              <Typography sx={{fontSize:{sm:"20px"},textAlign: {xs:'center',sm:'center'} ,mt:{xs:'40px',sm:"30px"}}}>We are always happy to help you! 😊<br /> Give us a call or Whatsapp App or e-mail us and we’ll have a happy person get back to you right away.</Typography>
                  <a href="https://cal.com/garcity" style={{ textDecoration: 'none' }}> {/* Replace 'https://example.com' with your actual URL */}
                     <Button
                         sx={{
                         display: { xs: 'block', sm: 'flex' },
-                        background: '#DF9573',
+                        background: 'var(--trinary-color)',
                         mt: { xs: '80px', sm: '30px' },
                         borderRadius: '30px',
                         '&:hover': {
-                            backgroundColor: '#1E1E1E',
+                            backgroundColor: 'var(--secondary-color)',
                             color: '', // Add hover effect
                             transition: 'background-color 0.3s ease-in-out',
                         },
+                         fontFamily: "var(--secondary-font-bold)  !important"
                         }}
                         variant="contained"
                     >

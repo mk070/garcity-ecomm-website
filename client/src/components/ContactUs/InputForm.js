@@ -104,9 +104,9 @@ export const InputForm = () => {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh',minWidth: '100%',mb:{sm:'20px',xs:'0'} }}>
       <Box sx={{width:'100%',padding:{sm:"0 260px",xs:'0 30px' }}}>
-        <Typography variant='h3' sx={{fontSize:{sm:"42px",xs:"24px"}, marginBottom: '20px' }}>Get in touch with us! </Typography>
+        <Typography variant='h3' sx={{fontSize:{sm:"45px",xs:"24px"}, marginBottom: '20px',  fontFamily: "var(--primary-font)  !important" }}>Get in touch with us! </Typography>
         <Box>
-          <Box sx={{display:"flex",flexDirection:{sm:"row",xs:'column'},gap:{sm:'10px',xs:"7px"},fontSize:{sm:'2px'}}}>
+          <Box sx={{display:"flex",flexDirection:{sm:"row",xs:'column'},gap:{sm:'10px',xs:"7px"},fontSize:{sm:'2px'},  fontFamily: "var(--secondary-font-bold)  !important"}}>
             <TextField
               id="firstName"
               name="firstName"
@@ -170,7 +170,7 @@ export const InputForm = () => {
             onClick={handleFormSubmit}
             variant="contained"
             disabled={sending} // Disable button during sending process
-            sx={{ backgroundColor: '#DF9573', color: '#fff', '&:hover': { backgroundColor: '#1E1E1E' } }}
+            sx={{ backgroundColor: 'var(--trinary-color)', color: '#fffff', '&:hover': { backgroundColor: 'var(--secondary-color)' } }}
           >
             {sending ? <CircularProgress size={24} /> : 'Send Message'} {/* Show loading spinner during sending process */}
           </Button>
@@ -185,7 +185,7 @@ export const InputForm = () => {
           sx: {
             backgroundColor: '#FFF4F1',
             color: '#372B29',
-            fontFamily: 'satoshi',
+            fontFamily: 'var(--secondary-font-bold)',
             fontWeight: 'bold',
             borderRadius: '10px',
             animation: `${fadeIn} 0.5s ease`,

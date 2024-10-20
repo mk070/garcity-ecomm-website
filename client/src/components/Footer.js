@@ -8,6 +8,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PinterestIcon from '@mui/icons-material/Pinterest';
+import { height, width } from '@mui/system';
 export const Footer = () => {
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
@@ -15,8 +16,8 @@ export const Footer = () => {
     <Box sx={{ backgroundColor: 'var(--secondary-color)', color: 'white', padding: '20px', width: '100%', height: { md: 'auto', sm: 'auto' }, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', fontFamily: 'var(--secondary-font-regular), sans-serif'}}>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={4} mt={6} md={3} sx={{ textAlign: 'center' }}>
-          <Box  ml={'30px'}  sx={{display:"flex",flexDirection:{xs:"row",sm:"column"}, }}>
-            <img src={logo}  width={isSmallScreen? '30%' :'50%'} alt="" />
+          <Box sx={{ marginLeft:{ sm:'30px', xs:'0'}, display:"flex",flexDirection:{xs:"row",sm:"column"}, }}>
+            <img src={logo} height={'100px'} width={'100px'} alt="" />
             <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}, textAlign:{sm:'start'},paddingLeft:{sm:'20px'}}} mt={2}>Garcity, is more than just a garment manufacturer – we are the architects of your unique style.</Typography>
           </Box>
         </Grid>
@@ -75,7 +76,7 @@ export const Footer = () => {
       {'Copyright © '} Garcity {new Date().getFullYear()}.
     </Typography>
     <Typography sx={{ fontSize: { xs: '14px', sm: '16px' }, mt: '5px' }} variant="body2">
-      Crafted by - <a href="https://varloom.com/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bolder', color: 'green' }}>Varloom</a>
+      Crafted by - <a href="https://varloom.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration:'none', fontFamily: "var(--primary-font)  !important",fontWeight: '500', color: 'var(--trinary-color)', fontSize:'20px' }}>Varloom</a>
     </Typography>
   </Box>
     </Box>

@@ -30,7 +30,7 @@ const Shipping = () => {
     <Container maxWidth="xl"position='sticky'  sx={{pt:{xs:'20px'},backgroundColor: "white", position: 'sticky', top:{sm:'80px',xs:'120px'}, height: containerHeight, marginTop: { xs: '10px' }, display: 'flex', flexDirection: { xs: 'column-reverse', sm: 'row' }, justifyContent: 'center', alignItems: 'center', gap: { xs: '1px', sm: '100px' } }}>
       
       <Box sx={{ height: { xs: '100%', sm: '100%' }, width: { sm: "100%" }, pt: { sm: "50px" }, pl: { sm: "120px" },p:{xs:'0 10px'} }}>
-      <Typography mx={1} variant="h3" sx={{ fontSize: {sm:'40px',xs:'20px'}, fontFamily: 'integral-Regular !important',  margin: { sm: '50px 0' ,xs:'20px 0'} }}>
+      <Typography mx={1} variant="h3" sx={{fontWeight:'600', fontSize: {sm:'40px',xs:'20px'},  fontFamily: "var(--primary-font)  !important",  margin: { sm: '50px 0' ,xs:'20px 0'} }}>
         WORLDWIDE SHIPPING
         </Typography>
         <Typography height={isExpanded || isSmallScreen ? '100%' : '100%'}  overflow="hidden" sx={{lineHeight:{sm:'34px'}, fontSize:{sm:'18px',xs:'16px'},width: { xs: '100%', sm: '100%' }, marginBottom: '50px' }}>

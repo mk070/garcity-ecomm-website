@@ -76,7 +76,7 @@ export const YoutubeVideo = () => {
 
   return (
     <Box sx={{ display: "flex", flexDirection: { sm: "column",xs:'column' }, alignItems: "center", justifyContent: "center" ,mt:{sm:"60px"} } }>
-      <Typography fontFamily={"integral-Regular  !important"} sx={{ fontSize: { sm: '32px',xs:"24px" }, mb: { sm: '40px' ,xs:'30px'}, textDecorationLine: "overline" }}>Check This Out</Typography>
+      <Typography  fontFamily ={"var(--primary-font)  !important"} sx={{ fontSize: { sm: '35px',xs:"24px" }, mb: { sm: '40px' ,xs:'30px'}, textDecorationLine: "overline" }}>Check This Out</Typography>
     {links.length < 0 ?
       ( <Box sx={{ display: 'flex', borderRadius:{xs:'20px'}, flexDirection: { sm: 'row' ,xs:"column"}, width: "98vw" }}>
         {/* Render multiple YouTube videos */}
@@ -99,7 +99,7 @@ export const YoutubeVideo = () => {
           textDecorationLine: "none"
         }}
       >
-        <a href="http://youtube.com/@Garcitystyle" style={{ fontFamily:"inherit",textDecoration: 'none', color: 'inherit' }}>For more ...</a>
+        <a href="http://youtube.com/@Garcitystyle" style={{  fontFamily: "var(--primary-font)  !important",textDecoration: 'none', fontSize:'35px', color: 'inherit' }}>For more ...</a>
       </Typography>
 
     </Box>

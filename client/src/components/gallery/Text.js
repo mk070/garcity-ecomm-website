@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { useMediaQuery } from '@mui/material';
+import { useMediaQuery, Typography } from '@mui/material';
 
 const Text = () => {
     const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
@@ -19,8 +19,9 @@ const Text = () => {
                 const span = document.createElement('span');
                 span.textContent = char;
                 span.style.position = 'relative';
-                span.style.fontSize = isSmallScreen?'50px':'100px';
-                span.style.fontFamily = 'integral-Regular';
+                span.style.fontSize = isSmallScreen?'50px':'150px';
+                span.style.color = '#ffffff';
+                span.style. fontFamily= "var(--primary-font)  !important";
                 span.style.top = '100%'; // Initially move the character below the container
                 text.appendChild(span);
 
@@ -55,8 +56,7 @@ const Text = () => {
                 // display:'none'
                 // backgroundColor:'#fbe0db'
             }}>
-                
-                <h1  ref={textRef}>Gallery</h1>
+                <h1 ref={textRef}>Gallery</h1>
                 
             </header>
             

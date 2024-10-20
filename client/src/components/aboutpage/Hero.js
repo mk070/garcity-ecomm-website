@@ -28,11 +28,12 @@ export const Hero = () => {
                 <Typography
                     variant='h3'
                     sx={{
-                        fontSize:{xs : '30px',sm:'50px'},
-                        fontFamily:"integral-Regular  !important",
+                        fontSize:{xs : '30px',sm:'60px'},
+                        fontWeight:'700',
+                        fontFamily: "var(--primary-font)  !important",
                     }}
                 >                   
-                    ‘ MAKE YOUR OWN <br /> CLOTHING STYLE WITH <span style={{ color: '#DF9573', fontWeight:700, fontFamily:'inherit' }}>  GARCITY ‘</span></Typography>
+                    ‘Make your own <br/> clothing style with<span style={{ color: 'var(--trinary-color)', fontWeight:700,  fontFamily: "var(--primary-font)  !important" }}> Garcity</span>‘</Typography>
                     {/* <Typography sx={{marginTop:{sm:'20px' }, paddingRight:{sm:'90px'} ,fontSize:{sm:"24px !important"}, fontWeight:'200px'}}>History:</Typography> */}
                     <Typography sx={{marginTop:{xs:'30px',sm:'20px' }, paddingRight:{sm:'150px'} ,fontSize:{sm:"18px !important"}}}>
                         Founded in 2007, GARCITY began as a small garment manufacturing operation in

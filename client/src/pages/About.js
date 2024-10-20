@@ -34,13 +34,14 @@ export const About = () => {
         position={'sticky'}
         zIndex={-1}
         sx={{
+          fontWeight:'600',
           fontSize: isSmallScreen ? '24px' : '50px',
-          fontFamily: 'integral-Regular !important',
+          fontFamily: "var(--primary-font)  !important",
           marginBottom: '0px',
           top:{sm:"90px", xs:'75px'},
         }}
       >
-        Services we <span style={{ fontFamily: ['integral-Regular'].join(','), color: '#DF9573' }}>offer</span><br /><br />
+        Services we <span style={{ fontFamily: ['var(--primary-font)'].join(','), color: 'var(--trinary-color)' }}>offer</span><br /><br />
       </Typography>
       <div className="wrapper">
         <div className="horizontal-wrapper">

@@ -75,7 +75,7 @@ export const Footer = () => {
       {'Copyright © '} Garcity {new Date().getFullYear()}.
     </Typography>
     <Typography sx={{ fontSize: { xs: '14px', sm: '16px' }, mt: '5px' }} variant="body2">
-      Crafted by - <a href="https://varloom.com/" target="_blank" rel="noopener noreferrer" style={{ fontWeight: 'bolder', color: 'green' }}>Varloom</a>
+      Crafted by - <a href="https://varloom.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration:'none', fontFamily: "var(--primary-font)  !important",fontWeight: '500', color: 'var(--trinary-color)', fontSize:'20px' }}>Varloom</a>
     </Typography>
   </Box>
     </Box>

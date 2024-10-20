@@ -92,8 +92,10 @@ export default function Fqa (){
    // Custom CSS to add icon to each FAQ item
    const customCss = `
    .faq-title h2{
-    font-size:32px;
+    font-size:35px;
     margin-bottom:20px;
+    font-family: var(--primary-font);
+    color:#ffffff;
    }
    .row-title-text:before {
      content: url(${q}); // Add icon before each FAQ item
@@ -106,11 +108,12 @@ export default function Fqa (){
     display: flex;
     flex-direction: row;
     font-size:20px;
-    width:100%  
+    width:100%;
+    color:#ffffff;  
  }
 
     .faq-row-wrapper{
-        background-color:#FFF4F1; 
+        background-color:var(--primary-color); 
         padding:60px;
         border-radius:30px;
     }

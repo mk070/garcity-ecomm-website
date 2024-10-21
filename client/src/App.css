@@ -278,6 +278,7 @@ body {
   border-radius: 10px !important;
   margin-bottom: 30px !important;
   transition: transform 0.3s ease-in-out !important; /* Slight hover effect */
+  
 }
 
 .card-content:hover {

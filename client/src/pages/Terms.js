@@ -41,7 +41,7 @@ const Terms = () => {
 
       {/* Product Tolerances */}
       <List className="card-animation list-bg-1 card-content !important">
-        <ListItem className='terms-cards'>
+        <ListItem className='terms-cards' sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
           <ListItemIcon>
             <ToleranceIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
@@ -62,7 +62,7 @@ const Terms = () => {
 
       {/* Payment Terms */}
       <List className="card-animation list-bg-2 card-content">
-        <ListItem>
+        <ListItem sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
           <ListItemIcon>
             <PaymentIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
@@ -80,7 +80,7 @@ const Terms = () => {
 
       {/* Production & Delivery Timeline */}
       <List className="card-animation list-bg-1 card-content">
-        <ListItem>
+        <ListItem sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
           <ListItemIcon>
             <DeliveryIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
@@ -98,7 +98,7 @@ const Terms = () => {
 
       {/* Refund, Return & Exchange Policy */}
       <List className="card-animation list-bg-2 card-content">
-        <ListItem>
+        <ListItem sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
           <ListItemIcon>
             <RefundIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
@@ -113,7 +113,7 @@ const Terms = () => {
 
       {/* GSM Tolerance */}
       <List className="card-animation list-bg-1 card-content">
-        <ListItem>
+        <ListItem sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
           <ListItemIcon>
             <GsmIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
@@ -128,7 +128,7 @@ const Terms = () => {
 
       {/* Payment Processing */}
       <List className="card-animation list-bg-2 card-content">
-        <ListItem>
+        <ListItem sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
           <ListItemIcon>
             <BankIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>

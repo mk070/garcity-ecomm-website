@@ -10,7 +10,7 @@ export const Popularcollection = () => {
       <Box sx={{display:'flex', justifyContent:'center', flexDirection:'column', bgcolor:'', paddingTop:'60px'}}>
         <Box sx={{display:'flex' , flexDirection:{sm:'row',xs:'column'}, ml:'0px', justifyContent:'space-around', alignItems:'center'}}>
           <Box sx={{width:{sm:'50%',xs:'100%'}, padding:{xs:'2rem ', sm:''} }} >
-            <Typography variant='h4' sx={{width:{xs:'100%'}, fontSize: { xs: '24px', sm: '45px' },fontFamily: 'var(--primary-font) !important', fontWeight:'550' }}>
+            <Typography variant='h4' sx={{width:{xs:'100%'}, fontSize: { xs: '30px', sm: '45px' },fontFamily: 'var(--primary-font) !important', fontWeight:'550' }}>
               <span
                 style={{
                   color: 'var(--trinary-color)',
@@ -50,7 +50,7 @@ export const Popularcollection = () => {
               display:{sm:'none', xs:'flex'},
               width:{xs:'120px'},
               fontSize:{xs:'12px'},
-              background:'#DF9573',
+              background:'var(--secondary-color)',
               mt: {xs:'10px', sm:'30px'},
               borderRadius:'30px',
               '&:hover': {

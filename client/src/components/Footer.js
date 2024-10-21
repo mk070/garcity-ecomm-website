@@ -17,7 +17,7 @@ export const Footer = () => {
       <Grid container spacing={2}>
         <Grid item xs={12} sm={4} mt={6} md={3} sx={{ textAlign: 'center' }}>
           <Box sx={{ marginLeft:{ sm:'30px', xs:'0'}, display:"flex",flexDirection:{xs:"row",sm:"column"}, }}>
-            <img src={logo} height={'100px'} width={'100px'} alt="" />
+            <img src={logo} height={isSmallScreen? '80px':'100px'} width={'100px'}  alt="" />
             <Typography variant='body1' sx={{fontSize:{xs:'14px',sm:'16px'}, textAlign:{sm:'start'},paddingLeft:{sm:'20px'}}} mt={2}>Garcity, is more than just a garment manufacturer – we are the architects of your unique style.</Typography>
           </Box>
         </Grid>
@@ -71,14 +71,14 @@ export const Footer = () => {
         </Grid>
         {/* Other Grid items follow similar pattern */}
       </Grid>
-      <Box sx={{ mt: 'auto', textAlign: 'center', paddingBottom: '10px' }}>
-    <Typography sx={{ fontSize: { xs: '14px', sm: '16px' }, mt: '10px' }} variant="body2">
-      {'Copyright © '} Garcity {new Date().getFullYear()}.
-    </Typography>
-    <Typography sx={{ fontSize: { xs: '14px', sm: '16px' }, mt: '5px' }} variant="body2">
-      Crafted by - <a href="https://varloom.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration:'none', fontFamily: "var(--primary-font)  !important",fontWeight: '500', color: 'var(--trinary-color)', fontSize:'20px' }}>Varloom</a>
-    </Typography>
-  </Box>
+      <Box sx={{ mt: {xs:'20px',sm:'auto'}, textAlign: 'center', paddingBottom: '10px' }}>
+        <Typography sx={{ fontSize: { xs: '14px', sm: '16px' }, mt: '10px' }} variant="body2">
+          {'Copyright © '} Garcity {new Date().getFullYear()}.
+        </Typography>
+        <Typography sx={{ fontSize: { xs: '14px', sm: '18px' }, mt: '5px' }} variant="body2">
+          Crafted by - <a href="https://varloom.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration:'none', fontFamily: "var(--primary-font)  !important",fontWeight: '500', color: 'var(--trinary-color)', fontSize:{xs:'16px',sm:'20px'} }}>Varloom</a>
+        </Typography>
+      </Box>
     </Box>
   )
 }

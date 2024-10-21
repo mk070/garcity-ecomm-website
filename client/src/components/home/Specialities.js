@@ -100,7 +100,7 @@ export const Specialities = () => {
       )}
     </Box>
 
-      <Box sx={{ display: 'flex', mt: { sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: '35px', sm: '0 100px' }, background: 'linear-gradient(to top, rgb(131 186 241 / 49%), #fff)',   
+      <Box sx={{ display: 'flex', mt: { sm: '0px' }, flexDirection: { xs: 'column', sm: 'row' }, padding: { xs: '35px', sm: '0 100px' }, background: 'linear-gradient(to top, #d0e3ff, #fff)',   
     }}>
 
         <Box className="speciality-box" sx={{ mr: { sm: '20px' },marginBo:'20px', 

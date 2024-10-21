@@ -35,6 +35,7 @@ export const Slider = () => {
             fontFamily: 'var(--primary-font) !important',
             top: '50%', // Adjusted top value to center vertically
             transform: 'translateY(-50%) ', // Added this line to center vertically
+            fontWeight:'600'
             // left: {sm:'350px', xs:'55px'}
           }}
         >

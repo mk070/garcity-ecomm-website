@@ -47,13 +47,13 @@ const Terms = () => {
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Product Tolerances</Typography>
-            <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
+            <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: '10px', fontSize: '18px' }}>
               <strong>Quantity Variation:</strong> The final delivered quantity may vary by ±5% to 10%.
             </Typography>
-            <Typography variant="body1" sx={{ marginTop: '5px', fontSize: '18px' }}>
+            <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: '10px', fontSize: '18px' }}>
               <strong>Color Variation:</strong> Colors may vary by ±5% to 10% due to fabric and dyeing processes.
             </Typography>
-            <Typography variant="body1" sx={{ marginTop: '5px', fontSize: '18px' }}>
+            <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: '10px', fontSize: '18px' }}>
               <strong>Measurement Variation:</strong> There may be a size tolerance of ±0.5 inch.
             </Typography>
           </ListItemText>
@@ -69,10 +69,10 @@ const Terms = () => {
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Payment Terms</Typography>
-            <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
+            <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: '10px', fontSize: '18px' }}>
               <strong>Payment Structure:</strong> A 60% advance payment is required to confirm your order.
             </Typography>
-            <Typography variant="body1" sx={{ marginTop: '5px', fontSize: '18px' }}>
+            <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: '10px', fontSize: '18px' }}>
               <strong>No Credit:</strong> We do not offer credit facilities. All payments must be made as per the above terms.
             </Typography>
           </ListItemText>
@@ -88,10 +88,10 @@ const Terms = () => {
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Production & Delivery Timeline</Typography>
-            <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
+            <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: '10px', fontSize: '18px' }}>
               <strong>Production Time:</strong> Our standard production timeline is between 14 and 30 working days.
             </Typography>
-            <Typography variant="body1" sx={{ marginTop: '5px', fontSize: '18px' }}>
+            <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: '10px', fontSize: '18px' }}>
               <strong>Delivery Time:</strong> After dispatch, delivery typically takes 4-8 days.
             </Typography>
           </ListItemText>
@@ -107,7 +107,7 @@ const Terms = () => {
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Refund, Return & Exchange Policy</Typography>
-            <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
+            <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: '10px', fontSize: '18px' }}>
               <strong>No Returns, Refunds, or Exchanges:</strong> All sales are final. We do not accept returns, offer refunds, or facilitate exchanges.
             </Typography>
           </ListItemText>
@@ -123,7 +123,7 @@ const Terms = () => {
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>GSM Tolerance</Typography>
-            <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
+            <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: '10px', fontSize: '18px' }}>
               <strong>Fabric Weight:</strong> The GSM (grams per square meter) of the fabric may vary by ±5%.
             </Typography>
           </ListItemText>
@@ -139,7 +139,7 @@ const Terms = () => {
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Payment Processing</Typography>
-            <Typography variant="body1" sx={{ marginTop: '10px', fontSize: '18px' }}>
+            <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: '10px', fontSize: '18px' }}>
               <strong>Accountable Payments Only:</strong> All payments must be made through accountable channels (bank transfer, credit/debit card, etc.).
             </Typography>
           </ListItemText>

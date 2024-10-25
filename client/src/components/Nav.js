@@ -134,7 +134,7 @@ export const Nav = (props) => {
           }}
         >
           <Box sx={{ textAlign: 'center', backgroundColor: '', color: 'black' }}>
-            <Box sx={{ my: 2 }}>
+            <Box sx={{ my: 2,marginLeft:{xs:'20px'} }}>
               <img src={Logo} alt="Logo" style={{ width: '100px' }} />
             </Box>
             <Divider />

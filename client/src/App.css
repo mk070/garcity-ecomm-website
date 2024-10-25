@@ -305,3 +305,7 @@ body {
 .card-details{
   margin-left: 20px !important;
 }
+
+.css-cveggr-MuiListItemIcon-root{
+  min-width: 0px !important;
+}

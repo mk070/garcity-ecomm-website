@@ -17,7 +17,7 @@ export const Hero = () => {
   return (
     <Box sx={{height:{sm:"100vh"}, display:"flex",justifyContent:"center",alignItems:"center",flexDirection:{lg:"column", xs:'column'}, padding:{xs:'30px',sm:'0'}}}>
 
-        <Box sx={{display:"flex",justifyContent:{sm:"center",xs:"flex-start"},height:{xs:'75vh',sm:"40vh"},alignItems:"center",flexDirection:{sm:"column", xs:'column'},mb:{sm:"20px"}}}>
+        <Box sx={{display:"flex",justifyContent:{sm:"center",xs:"flex-start"},height:{xs:'60vh',sm:"40vh"},alignItems:"center",flexDirection:{sm:"column", xs:'column'},mb:{sm:"20px"}}}>
         <Typography
             sx={{textAlign:"center",
                 fontSize: {xs:'34px', sm:'65px'},

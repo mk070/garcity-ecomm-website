@@ -111,12 +111,12 @@ function App() {
             <Gallery />
           </Suspense>
         } />
-        <Route path='/about' element={
+        <Route path='/about us' element={
           <Suspense fallback={<PageLoader />}>
             <About />
           </Suspense>
         } />
-        <Route path='/contact' element={
+        <Route path='/contact us' element={
           <Suspense fallback={<PageLoader />}>
             <Contact />
           </Suspense>

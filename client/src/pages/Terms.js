@@ -41,9 +41,9 @@ const Terms = () => {
 
       {/* Product Tolerances */}
       <List className="card-animation list-bg-1 card-content !important">
-        <ListItem className='terms-cards' sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
+        <ListItem className='terms-cards' sx={{display:'flex',alignItems:{xs:'flex-start',sm:'center'},flexDirection:{xs:'row',sm:'row'}}}>
           <ListItemIcon>
-            <ToleranceIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
+            <ToleranceIcon sx={{ fontSize: { xs: '40px', sm: '50px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Product Tolerances</Typography>
@@ -62,9 +62,10 @@ const Terms = () => {
 
       {/* Payment Terms */}
       <List className="card-animation list-bg-2 card-content">
-        <ListItem sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
+        <ListItem className='terms-cards' sx={{display:'flex',alignItems:{xs:'flex-start',sm:'center'},flexDirection:{xs:'row',sm:'row'}}}>
+
           <ListItemIcon>
-            <PaymentIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
+            <PaymentIcon sx={{ fontSize: { xs: '40px', sm: '50px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Payment Terms</Typography>
@@ -80,9 +81,10 @@ const Terms = () => {
 
       {/* Production & Delivery Timeline */}
       <List className="card-animation list-bg-1 card-content">
-        <ListItem sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
+        <ListItem className='terms-cards' sx={{display:'flex',alignItems:{xs:'flex-start',sm:'center'},flexDirection:{xs:'row',sm:'row'}}}>
+
           <ListItemIcon>
-            <DeliveryIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
+            <DeliveryIcon sx={{ fontSize: { xs: '40px', sm: '50px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Production & Delivery Timeline</Typography>
@@ -98,9 +100,10 @@ const Terms = () => {
 
       {/* Refund, Return & Exchange Policy */}
       <List className="card-animation list-bg-2 card-content">
-        <ListItem sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
+        <ListItem className='terms-cards' sx={{display:'flex',alignItems:{xs:'flex-start',sm:'center'},flexDirection:{xs:'row',sm:'row'}}}>
+
           <ListItemIcon>
-            <RefundIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
+            <RefundIcon sx={{ fontSize: { xs: '40px', sm: '50px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Refund, Return & Exchange Policy</Typography>
@@ -113,9 +116,10 @@ const Terms = () => {
 
       {/* GSM Tolerance */}
       <List className="card-animation list-bg-1 card-content">
-        <ListItem sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
+        <ListItem className='terms-cards' sx={{display:'flex',alignItems:{xs:'flex-start',sm:'center'},flexDirection:{xs:'row',sm:'row'}}}>
+
           <ListItemIcon>
-            <GsmIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
+            <GsmIcon sx={{ fontSize: { xs: '40px', sm: '50px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>GSM Tolerance</Typography>
@@ -128,9 +132,10 @@ const Terms = () => {
 
       {/* Payment Processing */}
       <List className="card-animation list-bg-2 card-content">
-        <ListItem sx={{display:'flex',flexDirection:{xs:'column',sm:'row'}}}>
+        <ListItem className='terms-cards' sx={{display:'flex',alignItems:{xs:'flex-start',sm:'center'},flexDirection:{xs:'row',sm:'row'}}}>
+
           <ListItemIcon>
-            <BankIcon sx={{ fontSize: { xs: '40px', sm: '60px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
+            <BankIcon sx={{ fontSize: { xs: '40px', sm: '50px' }, color: 'var(--trinary-color)' }} /> {/* Use 3D icon */}
           </ListItemIcon>
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold' }}>Payment Processing</Typography>

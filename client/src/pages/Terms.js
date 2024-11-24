@@ -70,7 +70,7 @@ const Terms = () => {
           <ListItemText className='card-details'>
             <Typography variant="h6" sx={{ fontWeight: 'bold',textDecoration:'underline'  }}>Payment Terms</Typography>
             <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: {xs:'30px',sm:'20px'}, fontSize: '18px' }}>
-              <strong>Payment Structure:</strong> A 60% advance payment is required to confirm your order.
+              <strong>Payment Structure:</strong>A 60% advance payment is required to confirm your order. & Remaining 40% should be pay before shipment.
             </Typography>
             <Typography variant="body1" sx={{ ml:{xs:'-3.6rem', sm:'0'}, marginTop: '10px', fontSize: '18px' }}>
               <strong>No Credit:</strong> We do not offer credit facilities. All payments must be made as per the above terms.
